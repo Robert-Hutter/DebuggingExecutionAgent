@@ -1,0 +1,56 @@
+Running tests...
+Test project /app/json-c
+      Start  1: test1
+ 1/25 Test  #1: test1 ............................   Passed    3.89 sec
+      Start  2: test2
+ 2/25 Test  #2: test2 ............................   Passed    3.90 sec
+      Start  3: test4
+ 3/25 Test  #3: test4 ............................   Passed    0.64 sec
+      Start  4: testReplaceExisting
+ 4/25 Test  #4: testReplaceExisting ..............   Passed    0.60 sec
+      Start  5: test_cast
+ 5/25 Test  #5: test_cast ........................   Passed    0.70 sec
+      Start  6: test_charcase
+ 6/25 Test  #6: test_charcase ....................   Passed    0.58 sec
+      Start  7: test_compare
+ 7/25 Test  #7: test_compare .....................   Passed    0.59 sec
+      Start  8: test_deep_copy
+ 8/25 Test  #8: test_deep_copy ...................   Passed    0.69 sec
+      Start  9: test_double_serializer
+ 9/25 Test  #9: test_double_serializer ...........   Passed    0.62 sec
+      Start 10: test_float
+10/25 Test #10: test_float .......................   Passed    0.58 sec
+      Start 11: test_int_add
+11/25 Test #11: test_int_add .....................   Passed    0.59 sec
+      Start 12: test_int_get
+12/25 Test #12: test_int_get .....................   Passed    0.60 sec
+      Start 13: test_locale
+13/25 Test #13: test_locale ......................   Passed    0.64 sec
+      Start 14: test_null
+14/25 Test #14: test_null ........................   Passed    0.57 sec
+      Start 15: test_parse
+15/25 Test #15: test_parse .......................   Passed    0.71 sec
+      Start 16: test_parse_int64
+16/25 Test #16: test_parse_int64 .................   Passed    0.58 sec
+      Start 17: test_printbuf
+17/25 Test #17: test_printbuf ....................   Passed    0.60 sec
+      Start 18: test_set_serializer
+18/25 Test #18: test_set_serializer ..............   Passed    0.61 sec
+      Start 19: test_set_value
+19/25 Test #19: test_set_value ...................   Passed    0.65 sec
+      Start 20: test_strerror
+20/25 Test #20: test_strerror ....................   Passed    0.55 sec
+      Start 21: test_util_file
+21/25 Test #21: test_util_file ...................   Passed    0.63 sec
+      Start 22: test_visit
+22/25 Test #22: test_visit .......................   Passed    0.65 sec
+      Start 23: test_object_iterator
+23/25 Test #23: test_object_iterator .............   Passed    0.62 sec
+      Start 24: test_json_pointer
+24/25 Test #24: test_json_pointer ................   Passed    0.68 sec
+      Start 25: test_json_patch
+25/25 Test #25: test_json_patch ..................   Passed    0.75 sec
+
+100% tests passed, 0 tests failed out of 25
+
+Total Test time (real) =  22.24 sec

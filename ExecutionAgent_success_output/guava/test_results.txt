@@ -1,0 +1,940 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Guava Maven Parent                                                 [pom]
+[INFO] Guava: Google Core Libraries for Java                           [bundle]
+[INFO] Guava BOM                                                          [pom]
+[INFO] Guava Testing Library                                              [jar]
+[INFO] Guava Unit Tests                                                   [jar]
+[INFO] Guava GWT compatible libs                                          [jar]
+[INFO] 
+[INFO] -------------------< com.google.guava:guava-parent >--------------------
+[INFO] Building Guava Maven Parent HEAD-jre-SNAPSHOT                      [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ guava-parent ---
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-versions) @ guava-parent ---
+[INFO] 
+[INFO] -----------------------< com.google.guava:guava >-----------------------
+[INFO] Building Guava: Google Core Libraries for Java HEAD-jre-SNAPSHOT   [2/6]
+[INFO]   from guava/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[WARNING] Ignoring incompatible plugin version 4.0.0-beta-2: The plugin org.apache.maven.plugins:maven-install-plugin:4.0.0-beta-2 requires Maven version 4.0.0-rc-2
+[INFO] Latest version of plugin org.apache.maven.plugins:maven-install-plugin failed compatibility check
+[INFO] Looking for compatible RELEASE version of plugin org.apache.maven.plugins:maven-install-plugin
+[WARNING] Ignoring incompatible plugin version 4.0.0-beta-1: The plugin org.apache.maven.plugins:maven-install-plugin:4.0.0-beta-1 requires Maven version 4.0.0-beta-3
+[INFO] Selected plugin org.apache.maven.plugins:maven-install-plugin:3.1.4
+[WARNING] Ignoring incompatible plugin version 4.0.0-beta-2: The plugin org.apache.maven.plugins:maven-deploy-plugin:4.0.0-beta-2 requires Maven version 4.0.0-rc-2
+[INFO] Latest version of plugin org.apache.maven.plugins:maven-deploy-plugin failed compatibility check
+[INFO] Looking for compatible RELEASE version of plugin org.apache.maven.plugins:maven-deploy-plugin
+[WARNING] Ignoring incompatible plugin version 4.0.0-beta-1: The plugin org.apache.maven.plugins:maven-deploy-plugin:4.0.0-beta-1 requires Maven version 4.0.0-beta-3
+[INFO] Selected plugin org.apache.maven.plugins:maven-deploy-plugin:3.1.4
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ guava ---
+[INFO] Deleting /app/guava/guava/target
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-versions) @ guava ---
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-11) @ guava ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='11' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu11.78.15-ca-jdk11.0.26-linux_x64]
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-23-and-surefire-version) @ guava ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Required toolchain: jdk [ vendor='zulu' version='21' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu21.40.17-ca-jdk21.0.6-linux_x64]
+[INFO] 
+[INFO] --- toolchains:3.2.0:toolchain (default) @ guava ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for type jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ guava ---
+[INFO] Copying 8 resources from .. to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ guava ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 630 source files with javac [forked debug parameters target 1.8] to target/classes
+[WARNING] [options] bootstrap class path is not set in conjunction with -source 8
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[35,20] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[51,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[16,20] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[22,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[22,20] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[25,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[16,20] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[22,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[28,20] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[33,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/reflect/Types.java:[42,20] [removal] AccessControlException in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[1354,17] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[1362,6] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[1364,17] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[1369,48] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[1371,27] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[1372,28] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/util/concurrent/AbstractFuture.java:[1372,40] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[117,25] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[275,23] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[296,17] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[298,13] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[303,40] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[305,19] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[306,20] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/cache/Striped64.java:[306,32] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[164,25] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[175,19] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[177,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[183,39] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[185,24] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/LittleEndianByteArray.java:[185,36] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[117,25] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[275,23] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[296,17] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[298,13] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[303,40] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[305,19] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[306,20] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/hash/Striped64.java:[306,32] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[319,19] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[341,21] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[343,17] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[349,44] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[351,23] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[352,24] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/primitives/UnsignedBytes.java:[352,36] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava/src/com/google/common/base/Optional.java:[147,42] [AmbiguousMethodReference] This method's reference is ambiguous, its name and functional interface type are the same as: toJavaUtil()
+    (see https://errorprone.info/bugpattern/AmbiguousMethodReference)
+[WARNING] /app/guava/guava/src/com/google/common/base/CharMatcher.java:[1221,26] [UnicodeEscape] Using unicode escape sequences for printable ASCII characters is obfuscated, and potentially dangerous.
+    (see https://errorprone.info/bugpattern/UnicodeEscape)
+  Did you mean '+ "\u0009 \u2006\u2001\u202F\u00A0\u000C\u2009"'?
+[WARNING] /app/guava/guava/src/com/google/common/base/CharMatcher.java:[1469,14] [UnicodeEscape] Using unicode escape sequences for printable ASCII characters is obfuscated, and potentially dangerous.
+    (see https://errorprone.info/bugpattern/UnicodeEscape)
+  Did you mean '" \u00a0\u00ad\u0605\u061c\u06dd\u070f\u0891\u08e2\u1680\u180e\u200f\u202f\u2064\u206f"'?
+[WARNING] /app/guava/guava/src/com/google/common/base/CharMatcher.java:[911,17] [InlineMeSuggester] This deprecated API looks inlineable. If you'd like the body of the API to be automatically inlined to its callers, please annotate it with @InlineMe. NOTE: the suggested fix makes the method final if it was not already.
+    (see https://errorprone.info/bugpattern/InlineMeSuggester)
+  Did you mean '@InlineMe(replacement = "this.matches(character)")'?
+[WARNING] /app/guava/guava/src/com/google/common/base/Equivalence.java:[82,23] [InlineMeSuggester] This deprecated API looks inlineable. If you'd like the body of the API to be automatically inlined to its callers, please annotate it with @InlineMe. NOTE: the suggested fix makes the method final if it was not already.
+    (see https://errorprone.info/bugpattern/InlineMeSuggester)
+  Did you mean '@InlineMe(replacement = "this.equivalent(t, u)")'?
+[WARNING] /app/guava/guava/src/com/google/common/base/Platform.java:[100,22] [UnusedMethod] Method 'logPatternCompilerError' is never used.
+    (see https://errorprone.info/bugpattern/UnusedMethod)
+  Did you mean to remove this line?
+[WARNING] /app/guava/guava/src/com/google/common/base/Predicates.java:[259,8] [MissingSummary] A summary fragment is required; consider using the value of the @see block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** See {@link Predicates#alwaysTrue()}.'?
+[WARNING] /app/guava/guava/src/com/google/common/base/Predicates.java:[271,8] [MissingSummary] A summary fragment is required; consider using the value of the @see block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** See {@link Predicates#alwaysFalse()}.'?
+[WARNING] /app/guava/guava/src/com/google/common/base/Predicates.java:[283,8] [MissingSummary] A summary fragment is required; consider using the value of the @see block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** See {@link Predicates#isNull()}.'?
+[WARNING] /app/guava/guava/src/com/google/common/base/Predicates.java:[295,8] [MissingSummary] A summary fragment is required; consider using the value of the @see block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** See {@link Predicates#notNull()}.'?
+[WARNING] /app/guava/guava/src/com/google/common/base/Predicates.java:[589,28] [UndefinedEquals] Subtypes of Collection are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava/src/com/google/common/math/LongMath.java:[271,13] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -1:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/LongMath.java:[275,13] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -2:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/LongMath.java:[609,13] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -1:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/LongMath.java:[614,13] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -2:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/LongMath.java:[727,13] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -1:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/LongMath.java:[734,13] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -2:'?
+[WARNING] /app/guava/guava/src/com/google/common/cache/CacheStats.java:[144,74] [EscapedEntity] HTML entities in @code/@literal tags will appear literally in the rendered javadoc.
+    (see https://errorprone.info/bugpattern/EscapedEntity)
+[WARNING] /app/guava/guava/src/com/google/common/math/IntMath.java:[229,11] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -1:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/IntMath.java:[233,11] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -2:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/IntMath.java:[494,11] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -1:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/IntMath.java:[499,11] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -2:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/IntMath.java:[570,11] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -1:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/IntMath.java:[577,11] [UnnecessaryParentheses] These grouping parentheses are unnecessary; it is unlikely the code will be misinterpreted without them
+    (see https://errorprone.info/bugpattern/UnnecessaryParentheses)
+  Did you mean 'case  -2:'?
+[WARNING] /app/guava/guava/src/com/google/common/math/IntMath.java:[587,57] [OperatorPrecedence] Use grouping parenthesis to make the operator precedence explicit
+    (see https://errorprone.info/bugpattern/OperatorPrecedence)
+  Did you mean 'int limit = Integer.MAX_VALUE + ((b >>> (Integer.SIZE - 1)) & (k & 1));'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Sets.java:[579,52] [InlineMeSuggester] This deprecated API looks inlineable. If you'd like the body of the API to be automatically inlined to its callers, please annotate it with @InlineMe. NOTE: the suggested fix makes the method final if it was not already.
+    (see https://errorprone.info/bugpattern/InlineMeSuggester)
+  Did you mean '@InlineMe(replacement = "Collections.newSetFromMap(map)", imports = "java.util.Collections")'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Sets.java:[1182,17] [JdkObsolete] SortedSet was replaced by NavigableSet in Java 6.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[959,33] [SameNameButDifferent] The name `EntrySet` refers to [com.google.common.collect.Maps.EntrySet, com.google.common.collect.Maps.FilteredEntryMap.EntrySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'class EntrySetImpl extends Maps.EntrySet<K, V> {'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3890,17] [SameNameButDifferent] The name `EntrySet` refers to [com.google.common.collect.Maps.EntrySet, com.google.common.collect.Maps.FilteredEntryMap.EntrySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'class EntrySetImpl extends Maps.EntrySet<K, V> {'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3890,17] [SameNameButDifferent] The name `EntrySet` refers to [com.google.common.collect.Maps.EntrySet, com.google.common.collect.Maps.FilteredEntryMap.EntrySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'class EntrySetImpl extends Maps.EntrySet<K, V> {'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[4546,33] [SameNameButDifferent] The name `EntrySet` refers to [com.google.common.collect.Maps.EntrySet, com.google.common.collect.Maps.FilteredEntryMap.EntrySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'class EntrySetImpl extends Maps.EntrySet<K, V> {'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3113,17] [SameNameButDifferent] The name `EntrySet` refers to [com.google.common.collect.Maps.EntrySet, com.google.common.collect.Maps.FilteredEntryMap.EntrySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'class EntrySetImpl extends Maps.EntrySet<K, V> {'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3148,17] [SameNameButDifferent] The name `KeySet` refers to [com.google.common.collect.Maps.FilteredEntryMap.KeySet, com.google.common.collect.Maps.KeySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'return new FilteredEntryMap.KeySet();'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3242,31] [SameNameButDifferent] The name `KeySet` refers to [com.google.common.collect.Maps.FilteredEntryMap.KeySet, com.google.common.collect.Maps.KeySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'return new FilteredEntryMap.KeySet();'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3859,17] [SameNameButDifferent] The name `KeySet` refers to [com.google.common.collect.Maps.FilteredEntryMap.KeySet, com.google.common.collect.Maps.KeySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'return new FilteredEntryMap.KeySet();'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[4111,14] [SameNameButDifferent] The name `KeySet` refers to [com.google.common.collect.Maps.FilteredEntryMap.KeySet, com.google.common.collect.Maps.KeySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'return new FilteredEntryMap.KeySet();'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3238,17] [SameNameButDifferent] The name `SortedKeySet` refers to [com.google.common.collect.Maps.FilteredEntrySortedMap.SortedKeySet, com.google.common.collect.Maps.SortedKeySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'return new FilteredEntrySortedMap.SortedKeySet();'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[4157,14] [SameNameButDifferent] The name `SortedKeySet` refers to [com.google.common.collect.Maps.FilteredEntrySortedMap.SortedKeySet, com.google.common.collect.Maps.SortedKeySet] within this file. It may be confusing to have the same name refer to multiple types. Consider qualifying them for clarity.
+    (see https://errorprone.info/bugpattern/SameNameButDifferent)
+  Did you mean 'return new FilteredEntrySortedMap.SortedKeySet();'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[991,17] [JdkObsolete] SortedMap was replaced by NavigableMap in Java 6.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[2298,9] [JdkObsolete] SortedMap was replaced by NavigableMap in Java 6.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3218,17] [JdkObsolete] SortedMap was replaced by NavigableMap in Java 6.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[3242,4] [JdkObsolete] SortedSet was replaced by NavigableSet in Java 6.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava/src/com/google/common/collect/Maps.java:[4110,9] [JdkObsolete] SortedSet was replaced by NavigableSet in Java 6.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava/src/com/google/common/collect/Range.java:[330,22] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean '|| lowerBound.equals(Cut.<C>aboveAll())'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Range.java:[331,22] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean '|| upperBound.equals(Cut.<C>belowAll())) {'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Range.java:[338,22] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return !Objects.equals(lowerBound, Cut.belowAll());' or 'return !lowerBound.equals(Cut.belowAll());'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Range.java:[364,22] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return !Objects.equals(upperBound, Cut.aboveAll());' or 'return !upperBound.equals(Cut.aboveAll());'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Range.java:[418,17] [InlineMeSuggester] This deprecated API looks inlineable. If you'd like the body of the API to be automatically inlined to its callers, please annotate it with @InlineMe. NOTE: the suggested fix makes the method final if it was not already.
+    (see https://errorprone.info/bugpattern/InlineMeSuggester)
+  Did you mean '@InlineMe(replacement = "this.contains(input)")'?
+[WARNING] /app/guava/guava/src/com/google/common/collect/Range.java:[638,18] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return (Objects.equals(lower, lowerBound) && upper == upperBound) ? this : create(lower, upper);' or 'return (lower.equals(lowerBound) && upper == upperBound) ? this : create(lower, upper);'?
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (gradle-module-metadata) @ guava ---
+[INFO] Copying 1 resource from  to target/publish
+[INFO] 
+[INFO] --- bundle:5.1.8:manifest (bundle-manifest) @ guava ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /app/guava/guava/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ guava ---
+[INFO] skip non existing resourceDirectory /app/guava/guava/test
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ guava ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.3.1:test (default-test) @ guava ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- animal-sniffer:1.23:check (check-java-version-compatibility) @ guava ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+[INFO] 
+[INFO] --- bundle:5.1.8:bundle (default-bundle) @ guava ---
+[INFO] Building bundle: /app/guava/guava/target/guava-HEAD-jre-SNAPSHOT.jar
+[INFO] Writing manifest: /app/guava/guava/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- source:3.3.1:jar-no-fork (attach-sources) @ guava ---
+[INFO] Building jar: /app/guava/guava/target/guava-HEAD-jre-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.8.0:jar (attach-docs) @ guava ---
+[INFO] Toolchain in maven-javadoc-plugin: JDK[/root/.m2/jdks/zulu11.78.15-ca-jdk11.0.26-linux_x64]
+[INFO] No previous run data found, generating javadoc.
+[INFO] Building jar: /app/guava/guava/target/guava-HEAD-jre-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- build-helper:3.4.0:attach-artifact (attach-gradle-module-metadata) @ guava ---
+[INFO] 
+[INFO] ---------------------< com.google.guava:guava-bom >---------------------
+[INFO] Building Guava BOM HEAD-jre-SNAPSHOT                               [3/6]
+[INFO]   from guava-bom/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ guava-bom ---
+[INFO] 
+[INFO] --- enforcer:1.2:enforce (enforce-maven) @ guava-bom ---
+[INFO] 
+[INFO] -------------------< com.google.guava:guava-testlib >-------------------
+[INFO] Building Guava Testing Library HEAD-jre-SNAPSHOT                   [4/6]
+[INFO]   from guava-testlib/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ guava-testlib ---
+[INFO] Deleting /app/guava/guava-testlib/target
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-versions) @ guava-testlib ---
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-11) @ guava-testlib ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='11' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu11.78.15-ca-jdk11.0.26-linux_x64]
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-23-and-surefire-version) @ guava-testlib ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Required toolchain: jdk [ vendor='zulu' version='21' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu21.40.17-ca-jdk21.0.6-linux_x64]
+[INFO] 
+[INFO] --- toolchains:3.2.0:toolchain (default) @ guava-testlib ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for type jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ guava-testlib ---
+[INFO] Copying 1 resource from .. to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ guava-testlib ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 301 source files with javac [forked debug parameters target 1.8] to target/classes
+[WARNING] [options] bootstrap class path is not set in conjunction with -source 8
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/app/guava/guava-testlib/src/com/google/common/collect/testing/PerCollectionSizeTestSuiteBuilder.java:[89,85] [StringCaseLocaleUsage] Specify a `Locale` when calling `String#to{Lower,Upper}Case`. (Note: there are multiple suggested fixes; the third may be most appropriate if you're dealing with ASCII Strings.)
+    (see https://errorprone.info/bugpattern/StringCaseLocaleUsage)
+  Did you mean '"%s [collection size: %s]", name, collectionSize.toString().toLowerCase(Locale.ROOT));' or '"%s [collection size: %s]", name, collectionSize.toString().toLowerCase(Locale.getDefault()));' or '"%s [collection size: %s]", name, Ascii.toLowerCase(collectionSize.toString()));'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/features/CollectionSize.java:[61,49] [ImmutableEnumChecker] enums should be immutable: 'CollectionSize' has field 'implied' of type 'java.util.Set<com.google.common.collect.testing.features.Feature<? super java.util.Collection>>', 'Set' is mutable
+    (see https://errorprone.info/bugpattern/ImmutableEnumChecker)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractCollectionTester.java:[54,6] [MissingSummary] A summary fragment is required; consider using the value of the @see block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** See {@link AbstractContainerTester#resetContainer()}.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractCollectionTester.java:[59,6] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** Returns an array of the proper size with {@code null} inserted into the middle element.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractContainerTester.java:[57,5] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '*Returns the contents of the container under test, for use by {@link #expectContents(Object[]) expectContents(E...)} and its friends.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractContainerTester.java:[91,5] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractContainerTester.java:[192,5] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '*Returns an array of the proper size with a duplicate element. The size must be at least three.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractContainerTester.java:[229,5] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '*Returns a suitable location for a null element, to use when initializing containers for tests'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractIteratorTester.java:[59,40] [StaticAssignmentOfThrowable] Saving instances of Throwable in static fields is discouraged, prefer to create them on-demand when an exception is thrown
+    (see https://errorprone.info/bugpattern/StaticAssignmentOfThrowable)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractIteratorTester.java:[67,40] [StaticAssignmentOfThrowable] Saving instances of Throwable in static fields is discouraged, prefer to create them on-demand when an exception is thrown
+    (see https://errorprone.info/bugpattern/StaticAssignmentOfThrowable)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractIteratorTester.java:[74,40] [StaticAssignmentOfThrowable] Saving instances of Throwable in static fields is discouraged, prefer to create them on-demand when an exception is thrown
+    (see https://errorprone.info/bugpattern/StaticAssignmentOfThrowable)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractIteratorTester.java:[81,40] [StaticAssignmentOfThrowable] Saving instances of Throwable in static fields is discouraged, prefer to create them on-demand when an exception is thrown
+    (see https://errorprone.info/bugpattern/StaticAssignmentOfThrowable)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractIteratorTester.java:[140,34] [JdkObsolete] Stack is a nonstandard class that predates the Java Collections Framework; prefer ArrayDeque. Note that the Stack methods push/pop/peek correspond to the Deque methods addFirst/removeFirst/peekFirst.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractIteratorTester.java:[146,38] [JdkObsolete] Stack is a nonstandard class that predates the Java Collections Framework; prefer ArrayDeque. Note that the Stack methods push/pop/peek correspond to the Deque methods addFirst/removeFirst/peekFirst.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractMapTester.java:[54,6] [MissingSummary] A summary fragment is required; consider using the value of the @see block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** See {@link AbstractContainerTester#resetContainer()}.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractMapTester.java:[75,6] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** Returns an array of the proper size with {@code null} as the key of the middle element.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/AbstractMapTester.java:[100,6] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '/** Returns an array of the proper size with {@code null} as the value of the middle element.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/features/CollectionFeature.java:[108,49] [ImmutableEnumChecker] enums should be immutable: 'CollectionFeature' has field 'implied' of type 'java.util.Set<com.google.common.collect.testing.features.Feature<? super java.util.Collection>>', 'Set' is mutable
+    (see https://errorprone.info/bugpattern/ImmutableEnumChecker)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[302,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[310,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[332,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[392,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[524,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[551,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[610,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[709,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[925,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[1284,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[1432,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/MapInterfaceTest.java:[1483,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/SpliteratorTester.java:[256,5] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/SpliteratorTester.java:[266,5] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/SpliteratorTester.java:[276,5] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/features/ListFeature.java:[48,43] [ImmutableEnumChecker] enums should be immutable: 'ListFeature' has field 'implied' of type 'java.util.Set<com.google.common.collect.testing.features.Feature<? super java.util.List>>', 'Set' is mutable
+    (see https://errorprone.info/bugpattern/ImmutableEnumChecker)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/testers/ListSubListTester.java:[66,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/TestsForListsInJavaUtil.java:[196,23] [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'return new ArrayList<>(MinimalCollection.of(elements));'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/TestsForListsInJavaUtil.java:[330,23] [JdkObsolete] Vector performs synchronization that is usually unnecessary; prefer ArrayList.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/TestsForMapsInJavaUtil.java:[323,32] [JdkObsolete] Hashtable performs synchronization this is usually unnecessary; prefer LinkedHashMap.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/TestsForQueuesInJavaUtil.java:[110,38] [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'Queue<String> queue = new ArrayDeque<>(MinimalCollection.of(elements));'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/TestsForQueuesInJavaUtil.java:[146,23] [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+    (see https://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'return new ArrayDeque<>(MinimalCollection.of(elements));'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/features/MapFeature.java:[75,42] [ImmutableEnumChecker] enums should be immutable: 'MapFeature' has field 'implied' of type 'java.util.Set<com.google.common.collect.testing.features.Feature<? super java.util.Map>>', 'Set' is mutable
+    (see https://errorprone.info/bugpattern/ImmutableEnumChecker)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/features/SetFeature.java:[36,42] [ImmutableEnumChecker] enums should be immutable: 'SetFeature' has field 'implied' of type 'java.util.Set<com.google.common.collect.testing.features.Feature<? super java.util.Set>>', 'Set' is mutable
+    (see https://errorprone.info/bugpattern/ImmutableEnumChecker)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultimapTester.java:[54,5] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '*Returns an array of the proper size with {@code null} as the key of the middle element.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultimapTester.java:[65,5] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '*Returns an array of the proper size with {@code null} as the value of the middle element.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultimapTester.java:[76,5] [MissingSummary] A summary fragment is required; consider using the value of the @return block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '*Returns an array of the proper size with {@code null} as the key and value of the middle'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultimapTester.java:[146,5] [MissingSummary] A summary fragment is required; consider using the value of the @see block as a summary fragment instead.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+  Did you mean '*See {@link AbstractContainerTester#resetContainer()}.'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[98,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[106,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[139,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[160,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[181,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[316,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[324,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[334,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/AbstractMultisetSetCountTester.java:[352,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/ListMultimapAsMapTester.java:[97,49] [CollectionUndefinedEquality] Collection does not have well-defined equals behavior.
+    (see https://errorprone.info/bugpattern/CollectionUndefinedEquality)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultimapClearTester.java:[52,16] [UndefinedEquals] Subtypes of Multimap are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultimapEntriesTester.java:[98,16] [UndefinedEquals] Subtypes of Multimap are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultimapFeature.java:[39,47] [ImmutableEnumChecker] enums should be immutable: 'MultimapFeature' has field 'implied' of type 'java.util.Set<com.google.common.collect.testing.features.Feature<? super com.google.common.collect.Multimap>>', 'Set' is mutable
+    (see https://errorprone.info/bugpattern/ImmutableEnumChecker)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultimapPutAllMultimapTester.java:[53,16] [UndefinedEquals] Subtypes of Multimap are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetNavigationTester.java:[241,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetNavigationTester.java:[247,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetNavigationTester.java:[253,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetNavigationTester.java:[266,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetNavigationTester.java:[271,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetRemoveTester.java:[110,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetSetCountConditionallyTester.java:[61,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/MultisetSetCountConditionallyTester.java:[76,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/SetGenerators.java:[138,51] [DistinctVarargsChecker] Method expects distinct arguments at some/all positions
+    (see https://errorprone.info/bugpattern/DistinctVarargsChecker)
+  Did you mean 'return (ImmutableSet<String>) ImmutableSet.of(elements[0]);'?
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/SetMultimapAsMapTester.java:[97,49] [CollectionUndefinedEquality] Collection does not have well-defined equals behavior.
+    (see https://errorprone.info/bugpattern/CollectionUndefinedEquality)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[56,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[71,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[127,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[135,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[142,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[152,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[159,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[166,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[221,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[228,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[235,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[289,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[336,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[344,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[354,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[362,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[370,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[378,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[386,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[395,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[402,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/google/UnmodifiableCollectionTests.java:[408,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/testers/AbstractListIndexOfTester.java:[63,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/testers/AbstractListIndexOfTester.java:[88,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/testers/AbstractSetTester.java:[25,3] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/src/com/google/common/collect/testing/testers/CollectionAddAllTester.java:[65,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ guava-testlib ---
+[INFO] Copying 0 resource from test to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ guava-testlib ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 38 source files with javac [forked debug parameters target 1.8] to target/test-classes
+[WARNING] [options] bootstrap class path is not set in conjunction with -source 8
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/app/guava/guava-testlib/test/com/google/common/collect/testing/FeatureSpecificTestSuiteBuilderTest.java:[27,3] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[59,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[70,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[82,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[94,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[100,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[107,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[114,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[125,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[131,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[137,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[143,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[155,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[169,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[175,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/HelpersTest.java:[181,6] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTests.java:[77,62] [NonApiType] Prefer a java.util.Map instead. 
+    (see https://errorprone.info/bugpattern/NonApiType)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTests.java:[100,65] [NonApiType] Prefer a java.util.Map instead. 
+    (see https://errorprone.info/bugpattern/NonApiType)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTests.java:[126,65] [NonApiType] Prefer a java.util.Map instead. 
+    (see https://errorprone.info/bugpattern/NonApiType)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTests.java:[289,53] [NonApiType] Prefer a java.util.Map instead. 
+    (see https://errorprone.info/bugpattern/NonApiType)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/collect/testing/features/FeatureUtilTest.java:[46,3] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ArbitraryInstancesTest.java:[169,16] [UndefinedEquals] Subtypes of CharSequence are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+  Did you mean 'assertEquals("", ArbitraryInstances.get(CharSequence.class).toString());'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ArbitraryInstancesTest.java:[185,16] [UndefinedEquals] Subtypes of Iterable are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ArbitraryInstancesTest.java:[190,16] [UndefinedEquals] Subtypes of Collection are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ArbitraryInstancesTest.java:[191,16] [UndefinedEquals] Subtypes of ImmutableCollection are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ArbitraryInstancesTest.java:[201,16] [UndefinedEquals] Subtypes of ImmutableMultimap are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ArbitraryInstancesTest.java:[202,16] [UndefinedEquals] Subtypes of ImmutableMultimap are not guaranteed to implement a useful #equals method.
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[680,11] [UnusedMethod] Constructor 'SetWrapper' is never used.
+    (see https://errorprone.info/bugpattern/UnusedMethod)
+  Did you mean 'private SetWrapper() {}'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[1050,26] [UnusedVariable] The field 'list' is never read.
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line or to remove this line?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[727,22] [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.RuntimeException") @SuppressWarnings("unused")'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[794,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[817,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[840,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[863,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[886,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[909,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[932,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[955,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(i, that.i);' or 'return i.equals(that.i);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[977,17] [ReferenceEquality] Comparison using reference equality instead of value equality
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'return Objects.equals(s, that.s);' or 'return s.equals(that.s);'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/ClassSanityTesterTest.java:[1302,38] [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.RuntimeException") public static FactoryMethodThrows create() {'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/FakeTickerTest.java:[138,33] [NarrowCalculation] This product of integers could overflow before being implicitly cast to a long.
+    (see https://errorprone.info/bugpattern/NarrowCalculation)
+  Did you mean 'assertEquals(numberOfThreads * 2L, ticker.read());'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/FakeTickerTest.java:[158,34] [NarrowCalculation] This product of integers could overflow before being implicitly cast to a long.
+    (see https://errorprone.info/bugpattern/NarrowCalculation)
+  Did you mean 'assertEquals(incrementByNanos * ((long) numberOfThreads), ticker.read());'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/GcFinalizationTest.java:[116,2] [ClassCanBeStatic] Inner class is non-static but does not reference enclosing class
+    (see https://errorprone.info/bugpattern/ClassCanBeStatic)
+  Did you mean 'static class Interruptenator extends Thread {'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/NullPointerTesterTest.java:[193,23] [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.UnsupportedOperationException") public static void christenPoodle(String unused) {'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/NullPointerTesterTest.java:[199,23] [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.RuntimeException") public static void christenPoodle(String unused) {'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/NullPointerTesterTest.java:[1263,8] [EmptyCatch] Caught exceptions should not be ignored
+    (see https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/NullPointerTesterTest.java:[1427,10] [ClassCanBeStatic] Inner class is non-static but does not reference enclosing class
+    (see https://errorprone.info/bugpattern/ClassCanBeStatic)
+  Did you mean 'private static class Inner {'?
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/TearDownStackTest.java:[25,4] [MissingSummary] A summary line is required on public/protected Javadocs.
+    (see https://google.github.io/styleguide/javaguide.html#s7.2-summary-fragment)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/TestLogHandlerTest.java:[90,25] [StaticAssignmentOfThrowable] Saving instances of Throwable in static fields is discouraged, prefer to create them on-demand when an exception is thrown
+    (see https://errorprone.info/bugpattern/StaticAssignmentOfThrowable)
+[WARNING] /app/guava/guava-testlib/test/com/google/common/testing/anotherpackage/ForwardingWrapperTesterTest.java:[297,10] [ClassCanBeStatic] Inner class is non-static but does not reference enclosing class
+    (see https://errorprone.info/bugpattern/ClassCanBeStatic)
+  Did you mean 'private static class ForwardingRunnable implements Runnable {'?
+[INFO] 
+[INFO] --- surefire:3.3.1:test (default-test) @ guava-testlib ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- animal-sniffer:1.23:check (check-java-version-compatibility) @ guava-testlib ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+[INFO] 
+[INFO] --- jar:3.2.0:jar (default-jar) @ guava-testlib ---
+[INFO] Building jar: /app/guava/guava-testlib/target/guava-testlib-HEAD-jre-SNAPSHOT.jar
+[INFO] 
+[INFO] --- source:3.3.1:jar-no-fork (attach-sources) @ guava-testlib ---
+[INFO] Building jar: /app/guava/guava-testlib/target/guava-testlib-HEAD-jre-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.2.0:test-jar (create-test-jar) @ guava-testlib ---
+[INFO] Building jar: /app/guava/guava-testlib/target/guava-testlib-HEAD-jre-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- javadoc:3.8.0:jar (attach-docs) @ guava-testlib ---
+[INFO] Toolchain in maven-javadoc-plugin: JDK[/root/.m2/jdks/zulu11.78.15-ca-jdk11.0.26-linux_x64]
+[INFO] No previous run data found, generating javadoc.
+[INFO] Building jar: /app/guava/guava-testlib/target/guava-testlib-HEAD-jre-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --------------------< com.google.guava:guava-tests >--------------------
+[INFO] Building Guava Unit Tests HEAD-jre-SNAPSHOT                        [5/6]
+[INFO]   from guava-tests/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ guava-tests ---
+[INFO] Deleting /app/guava/guava-tests/target
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-versions) @ guava-tests ---
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-11) @ guava-tests ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='11' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu11.78.15-ca-jdk11.0.26-linux_x64]
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-23-and-surefire-version) @ guava-tests ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Required toolchain: jdk [ vendor='zulu' version='21' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu21.40.17-ca-jdk21.0.6-linux_x64]
+[INFO] 
+[INFO] --- toolchains:3.2.0:toolchain (default) @ guava-tests ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for type jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ guava-tests ---
+[INFO] Copying 1 resource from .. to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ guava-tests ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- build-helper:1.7:add-test-source (add-benchmark-sources) @ guava-tests ---
+[INFO] Test Source directory: /app/guava/guava-tests/benchmark added.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ guava-tests ---
+[INFO] Copying 6 resources from test to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ guava-tests ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 656 source files with javac [forked debug parameters target 1.8] to target/test-classes
+[WARNING] [options] bootstrap class path is not set in conjunction with -source 8
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[33,20] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[46,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[35,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[34,23] ProviderList is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[35,23] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureFallbackAtomicHelperTest.java:[26,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[30,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[585,25] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[604,19] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[606,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[611,42] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[613,21] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[614,22] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/benchmark/com/google/common/util/concurrent/ExecutionListBenchmark.java:[614,34] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/EquivalenceTest.java:[153,29] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/EquivalenceTest.java:[161,29] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/EquivalenceTest.java:[160,29] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[79,48] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[148,4] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[148,47] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[150,12] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[153,12] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[169,4] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[169,23] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[170,4] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[170,47] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[172,6] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[173,36] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[173,12] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[176,12] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[177,6] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[188,47] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[202,4] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[202,23] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[203,4] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[203,47] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[205,6] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[206,36] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[206,12] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[210,12] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FinalizableReferenceQueueClassLoaderUnloadingTest.java:[211,6] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FunctionsTest.java:[53,18] [removal] Long(long) in Long has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/base/FunctionsTest.java:[53,52] [removal] Long(long) in Long has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/InternersTest.java:[83,24] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/InternersTest.java:[84,18] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/MutableClassToInstanceMapTest.java:[87,27] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/MutableClassToInstanceMapTest.java:[88,71] [removal] Long(long) in Long has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/MutableClassToInstanceMapTest.java:[93,46] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/MutableClassToInstanceMapTest.java:[95,54] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/MutableClassToInstanceMapTest.java:[105,65] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[655,18] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[656,18] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[667,18] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[668,18] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[752,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[753,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[779,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[780,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[801,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[802,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[814,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/OrderingTest.java:[815,16] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/SetsTest.java:[596,21] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/SetsTest.java:[597,21] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/collect/SynchronizedNavigableMapTest.java:[264,47] [removal] Integer(int) in Integer has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[84,4] ProviderList is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[84,29] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[85,4] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[85,30] ProviderList is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/hash/MacHashFunctionTest.java:[91,6] Providers is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/primitives/BooleansTest.java:[593,26] [removal] Boolean(boolean) in Boolean has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/primitives/BooleansTest.java:[595,27] [removal] Boolean(boolean) in Boolean has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/reflect/ClassPathTest.java:[527,4] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/reflect/ClassPathTest.java:[527,47] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/reflect/ClassPathTest.java:[531,12] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/reflect/ClassPathTest.java:[547,4] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/reflect/ClassPathTest.java:[548,12] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/reflect/ClassPathTest.java:[556,10] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureFallbackAtomicHelperTest.java:[59,37] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureFallbackAtomicHelperTest.java:[68,26] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureInnocuousThreadTest.java:[37,10] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureInnocuousThreadTest.java:[73,31] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureInnocuousThreadTest.java:[80,4] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureInnocuousThreadTest.java:[81,12] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureInnocuousThreadTest.java:[89,10] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/AbstractFutureInnocuousThreadTest.java:[101,10] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[557,4] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[557,31] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[560,6] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[560,27] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[562,8] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[563,38] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[563,14] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[566,14] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[567,8] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /app/guava/guava-tests/test/com/google/common/util/concurrent/JSR166TestCase.java:[570,6] [removal] Policy in java.security has been deprecated and marked for removal
+[INFO] 
+[INFO] --- surefire:3.3.1:test (default-test) @ guava-tests ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- animal-sniffer:1.23:check (check-java-version-compatibility) @ guava-tests ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+[INFO] 
+[INFO] --- jar:3.2.0:jar (default-jar) @ guava-tests ---
+[INFO] Building jar: /app/guava/guava-tests/target/guava-tests-HEAD-jre-SNAPSHOT.jar
+[INFO] 
+[INFO] --- source:3.3.1:jar-no-fork (attach-sources) @ guava-tests ---
+[INFO] Building jar: /app/guava/guava-tests/target/guava-tests-HEAD-jre-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.2.0:test-jar (create-test-jar) @ guava-tests ---
+[INFO] Building jar: /app/guava/guava-tests/target/guava-tests-HEAD-jre-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ---------------------< com.google.guava:guava-gwt >---------------------
+[INFO] Building Guava GWT compatible libs HEAD-jre-SNAPSHOT               [6/6]
+[INFO]   from guava-gwt/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ guava-gwt ---
+[INFO] Deleting /app/guava/guava-gwt/target
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-versions) @ guava-gwt ---
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-11) @ guava-gwt ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='11' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu11.78.15-ca-jdk11.0.26-linux_x64]
+[INFO] 
+[INFO] --- toolchains:4.5.0:toolchain (download-23-and-surefire-version) @ guava-gwt ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Required toolchain: jdk [ vendor='zulu' version='21' ]
+[INFO] Found matching toolchain for toolchainType jdk: JDK[/root/.m2/jdks/zulu21.40.17-ca-jdk21.0.6-linux_x64]
+[INFO] 
+[INFO] --- toolchains:3.2.0:toolchain (default) @ guava-gwt ---
+[INFO] Required toolchain: jdk [ vendor='zulu' version='23' ]
+[INFO] Found matching toolchain for type jdk: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] 
+[INFO] --- dependency:3.1.1:unpack-dependencies (unpack-failureaccess-sources) @ guava-gwt ---
+[INFO] Unpacking /root/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2-sources.jar to /app/guava/guava-gwt/target/failureaccess-sources with includes "" and excludes "META-INF/MANIFEST.MF"
+[INFO] 
+[INFO] --- dependency:3.1.1:unpack-dependencies (unpack-guava-sources) @ guava-gwt ---
+[INFO] Unpacking /app/guava/guava/target/guava-HEAD-jre-SNAPSHOT-sources.jar to /app/guava/guava-gwt/target/guava-sources with includes "" and excludes "META-INF/MANIFEST.MF"
+[INFO] 
+[INFO] --- dependency:3.1.1:unpack-dependencies (unpack-guava-testlib-sources) @ guava-gwt ---
+[INFO] Unpacking /app/guava/guava-testlib/target/guava-testlib-HEAD-jre-SNAPSHOT-sources.jar to /app/guava/guava-gwt/target/guava-test-sources with includes "" and excludes "META-INF/MANIFEST.MF"
+[INFO] 
+[INFO] --- dependency:3.1.1:unpack-dependencies (unpack-guava-testlib-test-sources) @ guava-gwt ---
+[INFO] Unpacking /root/.m2/repository/com/google/guava/guava-testlib/HEAD-jre-SNAPSHOT/guava-testlib-HEAD-jre-SNAPSHOT-test-sources.jar to /app/guava/guava-gwt/target/guava-test-sources with includes "" and excludes "META-INF/MANIFEST.MF"
+[INFO] 
+[INFO] --- dependency:3.1.1:unpack-dependencies (unpack-guava-test-sources) @ guava-gwt ---
+[INFO] Unpacking /root/.m2/repository/com/google/guava/guava-tests/HEAD-jre-SNAPSHOT/guava-tests-HEAD-jre-SNAPSHOT-test-sources.jar to /app/guava/guava-gwt/target/guava-test-sources with includes "" and excludes "META-INF/MANIFEST.MF"
+[INFO] 
+[INFO] --- antrun:1.6:run (copy-gwt-files) @ guava-gwt ---
+[INFO] Executing tasks
+
+copy-gwt-resources:
+     [copy] Copying 355 files to /app/guava/guava-gwt/target/guava-gwt-sources
+     [copy] Copied 29 empty directories to 6 empty directories under /app/guava/guava-gwt/target/guava-gwt-sources
+     [copy] Copying 1 file to /app/guava/guava-gwt/target/guava-gwt-sources
+     [copy] Copying 1 file to /app/guava/guava-gwt/target/guava-gwt-sources
+     [copy] Copying 1 file to /app/guava/guava-gwt/target/guava-gwt-sources
+     [copy] Copying 57 files to /app/guava/guava-gwt/target/guava-gwt-sources
+     [copy] Copying 445 files to /app/guava/guava-gwt/target/guava-test-gwt-sources
+     [copy] Copied 36 empty directories to 7 empty directories under /app/guava/guava-gwt/target/guava-test-gwt-sources
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ guava-gwt ---
+[INFO] Copying 17 resources from src to target/classes
+[INFO] Copying 415 resources from target/guava-gwt-sources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ guava-gwt ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Recompiling the module because of changed dependency.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ guava-gwt ---
+[INFO] Copying 6 resources from test to target/test-classes
+[INFO] Copying 6 resources from test-super to target/test-classes
+[INFO] Copying 445 resources from target/guava-test-gwt-sources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ guava-gwt ---
+[INFO] Toolchain in maven-compiler-plugin: JDK[/root/.m2/jdks/zulu23.32.11-ca-jdk23.0.2-linux_x64]
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [forked debug parameters target 1.8] to target/test-classes
+[WARNING] [options] bootstrap class path is not set in conjunction with -source 8
+[INFO] 
+[INFO] --- surefire:3.3.1:test (default-test) @ guava-gwt ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- gwt:2.10.0:compile (gwt-compile) @ guava-gwt ---
+[INFO] 
+[INFO] --- jar:3.2.0:jar (default-jar) @ guava-gwt ---
+[INFO] Building jar: /app/guava/guava-gwt/target/guava-gwt-HEAD-jre-SNAPSHOT.jar
+[INFO] 
+[INFO] --- source:3.3.1:jar-no-fork (attach-sources) @ guava-gwt ---
+[INFO] Building jar: /app/guava/guava-gwt/target/guava-gwt-HEAD-jre-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.8.0:jar (attach-docs) @ guava-gwt ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Guava Maven Parent HEAD-jre-SNAPSHOT:
+[INFO] 
+[INFO] Guava Maven Parent ................................. SUCCESS [  0.227 s]
+[INFO] Guava: Google Core Libraries for Java .............. SUCCESS [ 43.930 s]
+[INFO] Guava BOM .......................................... SUCCESS [  0.115 s]
+[INFO] Guava Testing Library .............................. SUCCESS [ 26.189 s]
+[INFO] Guava Unit Tests ................................... SUCCESS [ 44.731 s]
+[INFO] Guava GWT compatible libs .......................... SUCCESS [ 17.830 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:13 min
+[INFO] Finished at: 2025-04-12T02:43:54+02:00
+[INFO] ------------------------------------------------------------------------

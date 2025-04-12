@@ -1,0 +1,958 @@
+test test_tools failed
+0:00:28 load avg: 14.90 [393/479/2] test_userlist passed
+0:00:28 load avg: 14.90 [394/479/2] test_exception_hierarchy passed
+0:00:28 load avg: 14.90 [395/479/3] test.test_asyncio.test_streams failed (2 errors)
+test_IncompleteReadError_pickleable (test.test_asyncio.test_streams.StreamTests.test_IncompleteReadError_pickleable) ... ok
+test_LimitOverrunError_pickleable (test.test_asyncio.test_streams.StreamTests.test_LimitOverrunError_pickleable) ... ok
+test___repr__ (test.test_asyncio.test_streams.StreamTests.test___repr__) ... ok
+test___repr__data (test.test_asyncio.test_streams.StreamTests.test___repr__data) ... ok
+test___repr__eof (test.test_asyncio.test_streams.StreamTests.test___repr__eof) ... ok
+test___repr__exception (test.test_asyncio.test_streams.StreamTests.test___repr__exception) ... ok
+test___repr__nondefault_limit (test.test_asyncio.test_streams.StreamTests.test___repr__nondefault_limit) ... ok
+test___repr__transport (test.test_asyncio.test_streams.StreamTests.test___repr__transport) ... ok
+test___repr__waiter (test.test_asyncio.test_streams.StreamTests.test___repr__waiter) ... ok
+test_async_writer_api (test.test_asyncio.test_streams.StreamTests.test_async_writer_api) ... ok
+test_async_writer_api_exception_after_close (test.test_asyncio.test_streams.StreamTests.test_async_writer_api_exception_after_close) ... ok
+test_at_eof (test.test_asyncio.test_streams.StreamTests.test_at_eof) ... ok
+test_drain_raises (test.test_asyncio.test_streams.StreamTests.test_drain_raises) ... ok
+test_eof_feed_when_closing_writer (test.test_asyncio.test_streams.StreamTests.test_eof_feed_when_closing_writer) ... ok
+test_exception (test.test_asyncio.test_streams.StreamTests.test_exception) ... ok
+test_exception_cancel (test.test_asyncio.test_streams.StreamTests.test_exception_cancel) ... ok
+test_exception_waiter (test.test_asyncio.test_streams.StreamTests.test_exception_waiter) ... ok
+test_feed_empty_data (test.test_asyncio.test_streams.StreamTests.test_feed_empty_data) ... ok
+test_feed_nonempty_data (test.test_asyncio.test_streams.StreamTests.test_feed_nonempty_data) ... ok
+test_invalid_limit (test.test_asyncio.test_streams.StreamTests.test_invalid_limit) ... ok
+test_loop_is_closed_resource_warnings (test.test_asyncio.test_streams.StreamTests.test_loop_is_closed_resource_warnings) ... ok
+test_multiple_drain (test.test_asyncio.test_streams.StreamTests.test_multiple_drain) ... ok
+test_open_connection (test.test_asyncio.test_streams.StreamTests.test_open_connection) ... ok
+test_open_connection_error (test.test_asyncio.test_streams.StreamTests.test_open_connection_error) ... ok
+test_open_connection_happy_eyeball_refcycles (test.test_asyncio.test_streams.StreamTests.test_open_connection_happy_eyeball_refcycles) ... ok
+test_open_connection_no_loop_ssl (test.test_asyncio.test_streams.StreamTests.test_open_connection_no_loop_ssl) ... skipped 'No ssl module'
+test_open_unix_connection (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection) ... ERROR
+test_open_unix_connection_error (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection_error) ... ERROR
+test_open_unix_connection_no_loop_ssl (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection_no_loop_ssl) ... skipped 'No ssl module'
+test_read (test.test_asyncio.test_streams.StreamTests.test_read) ... ok
+test_read_eof (test.test_asyncio.test_streams.StreamTests.test_read_eof) ... ok
+test_read_exception (test.test_asyncio.test_streams.StreamTests.test_read_exception) ... ok
+test_read_limit (test.test_asyncio.test_streams.StreamTests.test_read_limit) ... ok
+test_read_line_breaks (test.test_asyncio.test_streams.StreamTests.test_read_line_breaks) ... ok
+test_read_until_eof (test.test_asyncio.test_streams.StreamTests.test_read_until_eof) ... ok
+test_read_zero (test.test_asyncio.test_streams.StreamTests.test_read_zero) ... ok
+test_readexactly (test.test_asyncio.test_streams.StreamTests.test_readexactly) ... ok
+test_readexactly_eof (test.test_asyncio.test_streams.StreamTests.test_readexactly_eof) ... ok
+test_readexactly_exception (test.test_asyncio.test_streams.StreamTests.test_readexactly_exception) ... ok
+test_readexactly_limit (test.test_asyncio.test_streams.StreamTests.test_readexactly_limit) ... ok
+test_readexactly_zero_or_less (test.test_asyncio.test_streams.StreamTests.test_readexactly_zero_or_less) ... ok
+test_readline (test.test_asyncio.test_streams.StreamTests.test_readline) ... ok
+test_readline_empty_eof (test.test_asyncio.test_streams.StreamTests.test_readline_empty_eof) ... ok
+test_readline_eof (test.test_asyncio.test_streams.StreamTests.test_readline_eof) ... ok
+test_readline_exception (test.test_asyncio.test_streams.StreamTests.test_readline_exception) ... ok
+test_readline_limit (test.test_asyncio.test_streams.StreamTests.test_readline_limit) ... ok
+test_readline_limit_with_existing_data (test.test_asyncio.test_streams.StreamTests.test_readline_limit_with_existing_data) ... ok
+test_readline_nolimit_nowait (test.test_asyncio.test_streams.StreamTests.test_readline_nolimit_nowait) ... ok
+test_readline_read_byte_count (test.test_asyncio.test_streams.StreamTests.test_readline_read_byte_count) ... ok
+test_readuntil_bytearray (test.test_asyncio.test_streams.StreamTests.test_readuntil_bytearray) ... ok
+test_readuntil_eof (test.test_asyncio.test_streams.StreamTests.test_readuntil_eof) ... ok
+test_readuntil_limit_found_sep (test.test_asyncio.test_streams.StreamTests.test_readuntil_limit_found_sep) ... ok
+test_readuntil_multi_chunks (test.test_asyncio.test_streams.StreamTests.test_readuntil_multi_chunks) ... ok
+test_readuntil_multi_chunks_1 (test.test_asyncio.test_streams.StreamTests.test_readuntil_multi_chunks_1) ... ok
+test_readuntil_multi_separator (test.test_asyncio.test_streams.StreamTests.test_readuntil_multi_separator) ... ok
+test_readuntil_multi_separator_limit (test.test_asyncio.test_streams.StreamTests.test_readuntil_multi_separator_limit) ... ok
+test_readuntil_multi_separator_negative_offset (test.test_asyncio.test_streams.StreamTests.test_readuntil_multi_separator_negative_offset) ... ok
+test_readuntil_separator (test.test_asyncio.test_streams.StreamTests.test_readuntil_separator) ... ok
+test_start_server (test.test_asyncio.test_streams.StreamTests.test_start_server) ... ok
+test_start_tls (test.test_asyncio.test_streams.StreamTests.test_start_tls) ... skipped 'No ssl module'
+test_start_unix_server (test.test_asyncio.test_streams.StreamTests.test_start_unix_server) ... ok
+test_streamreader_constructor_use_global_loop (test.test_asyncio.test_streams.StreamTests.test_streamreader_constructor_use_global_loop) ... ok
+test_streamreader_constructor_use_running_loop (test.test_asyncio.test_streams.StreamTests.test_streamreader_constructor_use_running_loop) ... ok
+test_streamreader_constructor_without_loop (test.test_asyncio.test_streams.StreamTests.test_streamreader_constructor_without_loop) ... ok
+test_streamreaderprotocol_constructor_use_global_loop (test.test_asyncio.test_streams.StreamTests.test_streamreaderprotocol_constructor_use_global_loop) ... ok
+test_streamreaderprotocol_constructor_use_running_loop (test.test_asyncio.test_streams.StreamTests.test_streamreaderprotocol_constructor_use_running_loop) ... ok
+test_streamreaderprotocol_constructor_without_loop (test.test_asyncio.test_streams.StreamTests.test_streamreaderprotocol_constructor_without_loop) ... ok
+test_unclosed_resource_warnings (test.test_asyncio.test_streams.StreamTests.test_unclosed_resource_warnings) ... ok
+test_unclosed_server_resource_warnings (test.test_asyncio.test_streams.StreamTests.test_unclosed_server_resource_warnings) ... ok
+test_unhandled_cancel (test.test_asyncio.test_streams.StreamTests.test_unhandled_cancel) ... ok
+test_unhandled_exception (test.test_asyncio.test_streams.StreamTests.test_unhandled_exception) ... ok
+test_wait_closed_on_close (test.test_asyncio.test_streams.StreamTests.test_wait_closed_on_close) ... ok
+test_wait_closed_on_close_with_unread_data (test.test_asyncio.test_streams.StreamTests.test_wait_closed_on_close_with_unread_data) ... ok
+
+======================================================================
+ERROR: test_open_unix_connection (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_streams.py", line 64, in test_open_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_open_unix_connection_error (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_streams.py", line 123, in test_open_unix_connection_error
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+----------------------------------------------------------------------
+Ran 73 tests in 0.762s
+
+FAILED (errors=2, skipped=3)
+test test.test_asyncio.test_streams failed
+0:00:28 load avg: 14.90 [396/479/3] test_compare passed
+0:00:28 load avg: 14.90 [397/479/3] test_dbm_dumb passed
+0:00:28 load avg: 14.90 [398/479/3] test_exception_variations passed
+0:00:28 load avg: 14.90 [399/479/3] test_warnings passed
+0:00:29 load avg: 14.90 [400/479/3] test.test_inspect.test_inspect passed
+0:00:29 load avg: 14.90 [401/479/3] test_generated_cases passed
+0:00:29 load avg: 17.55 [402/479/3] test_str passed
+0:00:29 load avg: 17.55 [403/479/3] test_itertools passed
+0:00:29 load avg: 17.55 [404/479/3] test_utf8source passed
+0:00:29 load avg: 17.55 [405/479/3] test_generator_stop passed
+0:00:29 load avg: 17.55 [406/479/3] test_metaclass passed
+0:00:29 load avg: 17.55 [407/479/3] test_thread passed
+0:00:29 load avg: 17.55 [408/479/3] test_univnewlines passed
+0:00:29 load avg: 17.55 [409/479/3] test_struct passed
+0:00:29 load avg: 17.55 [410/479/3] test.test_future_stmt.test_future_flags passed
+0:00:29 load avg: 17.55 [411/479/3] test_kqueue skipped
+test_kqueue skipped -- test works only on BSD
+0:00:29 load avg: 17.55 [412/479/3] test_numeric_tower passed
+0:00:29 load avg: 17.55 [413/479/3] test_format passed
+0:00:29 load avg: 17.55 [414/479/3] test_wsgiref passed
+0:00:30 load avg: 17.55 [415/479/3] test_capi passed
+0:00:30 load avg: 17.55 [416/479/3] test_zipfile passed -- running (1): test.test_multiprocessing_spawn.test_processes (30.2 sec)
+0:00:30 load avg: 17.55 [417/479/3] test_pprint passed -- running (1): test.test_multiprocessing_spawn.test_processes (30.2 sec)
+0:00:30 load avg: 17.55 [418/479/3] test_module passed -- running (1): test.test_multiprocessing_spawn.test_processes (30.3 sec)
+0:00:30 load avg: 17.55 [419/479/3] test_codeop passed -- running (1): test.test_multiprocessing_spawn.test_processes (30.3 sec)
+0:00:30 load avg: 17.55 [420/479/3] test_codecs passed -- running (1): test.test_multiprocessing_spawn.test_processes (30.4 sec)
+0:00:30 load avg: 17.55 [421/479/3] test_winreg skipped -- running (1): test.test_multiprocessing_spawn.test_processes (30.7 sec)
+test_winreg skipped -- No module named 'winreg'
+0:00:30 load avg: 17.55 [422/479/3] test_enum passed -- running (1): test.test_multiprocessing_spawn.test_processes (30.8 sec)
+0:00:30 load avg: 17.55 [423/479/3] test.test_asyncio.test_pep492 passed -- running (2): test.test_multiprocessing_spawn.test_processes (30.8 sec), test.test_concurrent_futures.test_wait (30.1 sec)
+0:00:30 load avg: 17.55 [424/479/3] test_positional_only_arg passed -- running (2): test.test_multiprocessing_spawn.test_processes (30.9 sec), test.test_concurrent_futures.test_wait (30.1 sec)
+0:00:31 load avg: 17.55 [425/479/3] test_httpservers passed -- running (2): test.test_multiprocessing_spawn.test_processes (30.9 sec), test.test_concurrent_futures.test_wait (30.1 sec)
+0:00:31 load avg: 17.55 [426/479/3] test_typechecks passed -- running (3): test_subprocess (30.1 sec), test.test_multiprocessing_spawn.test_processes (31.2 sec), test.test_concurrent_futures.test_wait (30.4 sec)
+0:00:31 load avg: 17.55 [427/479/3] test_random passed -- running (3): test_subprocess (30.1 sec), test.test_multiprocessing_spawn.test_processes (31.2 sec), test.test_concurrent_futures.test_wait (30.4 sec)
+0:00:31 load avg: 17.55 [428/479/3] test_resource passed -- running (3): test_subprocess (30.1 sec), test.test_multiprocessing_spawn.test_processes (31.3 sec), test.test_concurrent_futures.test_wait (30.5 sec)
+0:00:31 load avg: 17.55 [429/479/3] test_signal passed -- running (3): test_subprocess (30.2 sec), test.test_multiprocessing_spawn.test_processes (31.4 sec), test.test_concurrent_futures.test_wait (30.6 sec)
+0:00:31 load avg: 17.55 [430/479/3] test_complex passed -- running (3): test_subprocess (30.3 sec), test.test_multiprocessing_spawn.test_processes (31.5 sec), test.test_concurrent_futures.test_wait (30.7 sec)
+0:00:31 load avg: 17.55 [431/479/3] test_unicode_file_functions passed -- running (4): test_subprocess (30.5 sec), test.test_multiprocessing_spawn.test_processes (31.6 sec), test_io (30.1 sec), test.test_concurrent_futures.test_wait (30.8 sec)
+0:00:31 load avg: 17.55 [432/479/3] test_file passed -- running (4): test_subprocess (30.7 sec), test.test_multiprocessing_spawn.test_processes (31.8 sec), test_io (30.3 sec), test.test_concurrent_futures.test_wait (31.0 sec)
+0:00:31 load avg: 17.55 [433/479/3] test_multiprocessing_main_handling passed -- running (4): test_subprocess (30.7 sec), test.test_multiprocessing_spawn.test_processes (31.8 sec), test_io (30.3 sec), test.test_concurrent_futures.test_wait (31.1 sec)
+0:00:31 load avg: 17.55 [434/479/3] test_copyreg passed -- running (4): test_subprocess (30.7 sec), test.test_multiprocessing_spawn.test_processes (31.9 sec), test_io (30.4 sec), test.test_concurrent_futures.test_wait (31.1 sec)
+0:00:31 load avg: 17.55 [435/479/3] test_sched passed -- running (4): test_subprocess (30.8 sec), test.test_multiprocessing_spawn.test_processes (31.9 sec), test_io (30.4 sec), test.test_concurrent_futures.test_wait (31.1 sec)
+0:00:32 load avg: 17.55 [436/479/3] test_hash passed -- running (4): test_subprocess (30.8 sec), test.test_multiprocessing_spawn.test_processes (31.9 sec), test_io (30.4 sec), test.test_concurrent_futures.test_wait (31.2 sec)
+0:00:32 load avg: 17.55 [437/479/4] test.test_asyncio.test_events failed (3 errors) -- running (4): test_subprocess (30.9 sec), test.test_multiprocessing_spawn.test_processes (32.0 sec), test_io (30.5 sec), test.test_concurrent_futures.test_wait (31.3 sec)
+test_not_implemented (test.test_asyncio.test_events.AbstractEventLoopTests.test_not_implemented) ... ok
+test_not_implemented_async (test.test_asyncio.test_events.AbstractEventLoopTests.test_not_implemented_async) ... ok
+test_add_fds_after_closing (test.test_asyncio.test_events.EPollEventLoopTests.test_add_fds_after_closing) ... ok
+test_add_signal_handler (test.test_asyncio.test_events.EPollEventLoopTests.test_add_signal_handler) ... ok
+test_bidirectional_pty (test.test_asyncio.test_events.EPollEventLoopTests.test_bidirectional_pty) ... ok
+test_call_later (test.test_asyncio.test_events.EPollEventLoopTests.test_call_later) ... ok
+test_call_soon (test.test_asyncio.test_events.EPollEventLoopTests.test_call_soon) ... ok
+test_call_soon_threadsafe (test.test_asyncio.test_events.EPollEventLoopTests.test_call_soon_threadsafe) ... ok
+test_call_soon_threadsafe_same_thread (test.test_asyncio.test_events.EPollEventLoopTests.test_call_soon_threadsafe_same_thread) ... ok
+test_close (test.test_asyncio.test_events.EPollEventLoopTests.test_close) ... ok
+test_close_running_event_loop (test.test_asyncio.test_events.EPollEventLoopTests.test_close_running_event_loop) ... ok
+test_connect_accepted_socket (test.test_asyncio.test_events.EPollEventLoopTests.test_connect_accepted_socket) ... ok
+test_connect_accepted_socket_ssl_timeout_for_plain_socket (test.test_asyncio.test_events.EPollEventLoopTests.test_connect_accepted_socket_ssl_timeout_for_plain_socket) ... ok
+test_create_connection (test.test_asyncio.test_events.EPollEventLoopTests.test_create_connection) ... ok
+test_create_connection_local_addr (test.test_asyncio.test_events.EPollEventLoopTests.test_create_connection_local_addr) ... ok
+test_create_connection_local_addr_in_use (test.test_asyncio.test_events.EPollEventLoopTests.test_create_connection_local_addr_in_use) ... ok
+test_create_connection_local_addr_nomatch_family (test.test_asyncio.test_events.EPollEventLoopTests.test_create_connection_local_addr_nomatch_family) ... ok
+test_create_connection_local_addr_skip_different_family (test.test_asyncio.test_events.EPollEventLoopTests.test_create_connection_local_addr_skip_different_family) ... ok
+test_create_datagram_endpoint (test.test_asyncio.test_events.EPollEventLoopTests.test_create_datagram_endpoint) ... ok
+test_create_datagram_endpoint_ipv6 (test.test_asyncio.test_events.EPollEventLoopTests.test_create_datagram_endpoint_ipv6) ... ok
+test_create_datagram_endpoint_sock (test.test_asyncio.test_events.EPollEventLoopTests.test_create_datagram_endpoint_sock) ... ok
+test_create_server (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server) ... ok
+test_create_server_addr_in_use (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_addr_in_use) ... ok
+test_create_server_dual_stack (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_dual_stack) ... ok
+test_create_server_multiple_hosts_ipv4 (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_multiple_hosts_ipv4) ... ok
+test_create_server_multiple_hosts_ipv6 (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_multiple_hosts_ipv6) ... ok
+test_create_server_reuse_port (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_reuse_port) ... ok
+test_create_server_sock (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_sock) ... ok
+test_create_server_ssl (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_ssl) ... skipped 'No ssl module'
+test_create_server_ssl_match_failed (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_ssl_match_failed) ... skipped 'No ssl module'
+test_create_server_ssl_verified (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_ssl_verified) ... skipped 'No ssl module'
+test_create_server_ssl_verify_failed (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_ssl_verify_failed) ... skipped 'No ssl module'
+test_create_server_trsock (test.test_asyncio.test_events.EPollEventLoopTests.test_create_server_trsock) ... ok
+test_create_ssl_connection (test.test_asyncio.test_events.EPollEventLoopTests.test_create_ssl_connection) ... skipped 'No ssl module'
+test_create_ssl_unix_connection (test.test_asyncio.test_events.EPollEventLoopTests.test_create_ssl_unix_connection) ... skipped 'No ssl module'
+test_create_unix_connection (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_connection) ... ERROR
+test_create_unix_server (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_server) ... ok
+test_create_unix_server_path_socket_error (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_server_path_socket_error) ... ok
+test_create_unix_server_ssl (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_server_ssl) ... skipped 'No ssl module'
+test_create_unix_server_ssl_verified (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_server_ssl_verified) ... skipped 'No ssl module'
+test_create_unix_server_ssl_verify_failed (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_server_ssl_verify_failed) ... skipped 'No ssl module'
+test_datagram_send_to_non_listening_address (test.test_asyncio.test_events.EPollEventLoopTests.test_datagram_send_to_non_listening_address) ... ok
+test_internal_fds (test.test_asyncio.test_events.EPollEventLoopTests.test_internal_fds) ... ok
+test_prompt_cancellation (test.test_asyncio.test_events.EPollEventLoopTests.test_prompt_cancellation) ... ok
+test_read_pipe (test.test_asyncio.test_events.EPollEventLoopTests.test_read_pipe) ... ok
+test_read_pty_output (test.test_asyncio.test_events.EPollEventLoopTests.test_read_pty_output) ... ok
+test_reader_callback (test.test_asyncio.test_events.EPollEventLoopTests.test_reader_callback) ... ok
+test_remove_fds_after_closing (test.test_asyncio.test_events.EPollEventLoopTests.test_remove_fds_after_closing) ... ok
+test_run_in_executor (test.test_asyncio.test_events.EPollEventLoopTests.test_run_in_executor) ... ok
+test_run_in_executor_cancel (test.test_asyncio.test_events.EPollEventLoopTests.test_run_in_executor_cancel) ... ok
+test_run_until_complete (test.test_asyncio.test_events.EPollEventLoopTests.test_run_until_complete) ... ok
+test_run_until_complete_nesting (test.test_asyncio.test_events.EPollEventLoopTests.test_run_until_complete_nesting) ... ok
+test_run_until_complete_stopped (test.test_asyncio.test_events.EPollEventLoopTests.test_run_until_complete_stopped) ... ok
+test_server_close (test.test_asyncio.test_events.EPollEventLoopTests.test_server_close) ... ok
+test_signal_handling_args (test.test_asyncio.test_events.EPollEventLoopTests.test_signal_handling_args) ... ok
+test_signal_handling_while_selecting (test.test_asyncio.test_events.EPollEventLoopTests.test_signal_handling_while_selecting) ... ok
+test_ssl_connect_accepted_socket (test.test_asyncio.test_events.EPollEventLoopTests.test_ssl_connect_accepted_socket) ... skipped 'No ssl module'
+test_subprocess_close_after_finish (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_close_after_finish) ... ok
+test_subprocess_close_client_stream (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_close_client_stream) ... ok
+test_subprocess_exec (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_exec) ... ok
+test_subprocess_exec_invalid_args (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_exec_invalid_args) ... ok
+test_subprocess_exitcode (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_exitcode) ... ok
+test_subprocess_interactive (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_interactive) ... ok
+test_subprocess_kill (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_kill) ... ok
+test_subprocess_send_signal (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_send_signal) ... ok
+test_subprocess_shell (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_shell) ... ok
+test_subprocess_shell_invalid_args (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_shell_invalid_args) ... ok
+test_subprocess_stderr (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_stderr) ... ok
+test_subprocess_stderr_redirect_to_stdout (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_stderr_redirect_to_stdout) ... ok
+test_subprocess_terminate (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_terminate) ... ok
+test_subprocess_wait_no_same_group (test.test_asyncio.test_events.EPollEventLoopTests.test_subprocess_wait_no_same_group) ... ok
+test_timeout_rounding (test.test_asyncio.test_events.EPollEventLoopTests.test_timeout_rounding) ... ok
+test_unclosed_pipe_transport (test.test_asyncio.test_events.EPollEventLoopTests.test_unclosed_pipe_transport) ... ok
+test_write_pipe (test.test_asyncio.test_events.EPollEventLoopTests.test_write_pipe) ... ok
+test_write_pipe_disconnect_on_close (test.test_asyncio.test_events.EPollEventLoopTests.test_write_pipe_disconnect_on_close) ... ok
+test_write_pty (test.test_asyncio.test_events.EPollEventLoopTests.test_write_pty) ... ok
+test_writer_callback (test.test_asyncio.test_events.EPollEventLoopTests.test_writer_callback) ... ok
+test_callback_with_exception (test.test_asyncio.test_events.HandleTests.test_callback_with_exception) ... ok
+test_coroutine_like_object_debug_formatting (test.test_asyncio.test_events.HandleTests.test_coroutine_like_object_debug_formatting) ... ok
+test_handle (test.test_asyncio.test_events.HandleTests.test_handle) ... ok
+test_handle_repr (test.test_asyncio.test_events.HandleTests.test_handle_repr) ... ok
+test_handle_repr_debug (test.test_asyncio.test_events.HandleTests.test_handle_repr_debug) ... ok
+test_handle_source_traceback (test.test_asyncio.test_events.HandleTests.test_handle_source_traceback) ... ok
+test_handle_weakref (test.test_asyncio.test_events.HandleTests.test_handle_weakref) ... ok
+test_event_loop_policy (test.test_asyncio.test_events.PolicyTests.test_event_loop_policy) ... ok
+test_get_event_loop (test.test_asyncio.test_events.PolicyTests.test_get_event_loop) ... ok
+test_get_event_loop_after_set_none (test.test_asyncio.test_events.PolicyTests.test_get_event_loop_after_set_none) ... ok
+test_get_event_loop_calls_set_event_loop (test.test_asyncio.test_events.PolicyTests.test_get_event_loop_calls_set_event_loop) ... ok
+test_get_event_loop_policy (test.test_asyncio.test_events.PolicyTests.test_get_event_loop_policy) ... ok
+test_get_event_loop_thread (test.test_asyncio.test_events.PolicyTests.test_get_event_loop_thread) ... ok
+test_new_event_loop (test.test_asyncio.test_events.PolicyTests.test_new_event_loop) ... ok
+test_set_event_loop (test.test_asyncio.test_events.PolicyTests.test_set_event_loop) ... ok
+test_set_event_loop_policy (test.test_asyncio.test_events.PolicyTests.test_set_event_loop_policy) ... ok
+test_add_fds_after_closing (test.test_asyncio.test_events.PollEventLoopTests.test_add_fds_after_closing) ... ok
+test_add_signal_handler (test.test_asyncio.test_events.PollEventLoopTests.test_add_signal_handler) ... ok
+test_bidirectional_pty (test.test_asyncio.test_events.PollEventLoopTests.test_bidirectional_pty) ... ok
+test_call_later (test.test_asyncio.test_events.PollEventLoopTests.test_call_later) ... ok
+test_call_soon (test.test_asyncio.test_events.PollEventLoopTests.test_call_soon) ... ok
+test_call_soon_threadsafe (test.test_asyncio.test_events.PollEventLoopTests.test_call_soon_threadsafe) ... ok
+test_call_soon_threadsafe_same_thread (test.test_asyncio.test_events.PollEventLoopTests.test_call_soon_threadsafe_same_thread) ... ok
+test_close (test.test_asyncio.test_events.PollEventLoopTests.test_close) ... ok
+test_close_running_event_loop (test.test_asyncio.test_events.PollEventLoopTests.test_close_running_event_loop) ... ok
+test_connect_accepted_socket (test.test_asyncio.test_events.PollEventLoopTests.test_connect_accepted_socket) ... ok
+test_connect_accepted_socket_ssl_timeout_for_plain_socket (test.test_asyncio.test_events.PollEventLoopTests.test_connect_accepted_socket_ssl_timeout_for_plain_socket) ... ok
+test_create_connection (test.test_asyncio.test_events.PollEventLoopTests.test_create_connection) ... ok
+test_create_connection_local_addr (test.test_asyncio.test_events.PollEventLoopTests.test_create_connection_local_addr) ... ok
+test_create_connection_local_addr_in_use (test.test_asyncio.test_events.PollEventLoopTests.test_create_connection_local_addr_in_use) ... ok
+test_create_connection_local_addr_nomatch_family (test.test_asyncio.test_events.PollEventLoopTests.test_create_connection_local_addr_nomatch_family) ... ok
+test_create_connection_local_addr_skip_different_family (test.test_asyncio.test_events.PollEventLoopTests.test_create_connection_local_addr_skip_different_family) ... ok
+test_create_datagram_endpoint (test.test_asyncio.test_events.PollEventLoopTests.test_create_datagram_endpoint) ... ok
+test_create_datagram_endpoint_ipv6 (test.test_asyncio.test_events.PollEventLoopTests.test_create_datagram_endpoint_ipv6) ... ok
+test_create_datagram_endpoint_sock (test.test_asyncio.test_events.PollEventLoopTests.test_create_datagram_endpoint_sock) ... ok
+test_create_server (test.test_asyncio.test_events.PollEventLoopTests.test_create_server) ... ok
+test_create_server_addr_in_use (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_addr_in_use) ... ok
+test_create_server_dual_stack (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_dual_stack) ... ok
+test_create_server_multiple_hosts_ipv4 (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_multiple_hosts_ipv4) ... ok
+test_create_server_multiple_hosts_ipv6 (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_multiple_hosts_ipv6) ... ok
+test_create_server_reuse_port (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_reuse_port) ... ok
+test_create_server_sock (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_sock) ... ok
+test_create_server_ssl (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_ssl) ... skipped 'No ssl module'
+test_create_server_ssl_match_failed (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_ssl_match_failed) ... skipped 'No ssl module'
+test_create_server_ssl_verified (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_ssl_verified) ... skipped 'No ssl module'
+test_create_server_ssl_verify_failed (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_ssl_verify_failed) ... skipped 'No ssl module'
+test_create_server_trsock (test.test_asyncio.test_events.PollEventLoopTests.test_create_server_trsock) ... ok
+test_create_ssl_connection (test.test_asyncio.test_events.PollEventLoopTests.test_create_ssl_connection) ... skipped 'No ssl module'
+test_create_ssl_unix_connection (test.test_asyncio.test_events.PollEventLoopTests.test_create_ssl_unix_connection) ... skipped 'No ssl module'
+test_create_unix_connection (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_connection) ... ERROR
+test_create_unix_server (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_server) ... ok
+test_create_unix_server_path_socket_error (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_server_path_socket_error) ... ok
+test_create_unix_server_ssl (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_server_ssl) ... skipped 'No ssl module'
+test_create_unix_server_ssl_verified (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_server_ssl_verified) ... skipped 'No ssl module'
+test_create_unix_server_ssl_verify_failed (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_server_ssl_verify_failed) ... skipped 'No ssl module'
+test_datagram_send_to_non_listening_address (test.test_asyncio.test_events.PollEventLoopTests.test_datagram_send_to_non_listening_address) ... ok
+test_internal_fds (test.test_asyncio.test_events.PollEventLoopTests.test_internal_fds) ... ok
+test_prompt_cancellation (test.test_asyncio.test_events.PollEventLoopTests.test_prompt_cancellation) ... ok
+test_read_pipe (test.test_asyncio.test_events.PollEventLoopTests.test_read_pipe) ... ok
+test_read_pty_output (test.test_asyncio.test_events.PollEventLoopTests.test_read_pty_output) ... ok
+test_reader_callback (test.test_asyncio.test_events.PollEventLoopTests.test_reader_callback) ... ok
+test_remove_fds_after_closing (test.test_asyncio.test_events.PollEventLoopTests.test_remove_fds_after_closing) ... ok
+test_run_in_executor (test.test_asyncio.test_events.PollEventLoopTests.test_run_in_executor) ... ok
+test_run_in_executor_cancel (test.test_asyncio.test_events.PollEventLoopTests.test_run_in_executor_cancel) ... ok
+test_run_until_complete (test.test_asyncio.test_events.PollEventLoopTests.test_run_until_complete) ... ok
+test_run_until_complete_nesting (test.test_asyncio.test_events.PollEventLoopTests.test_run_until_complete_nesting) ... ok
+test_run_until_complete_stopped (test.test_asyncio.test_events.PollEventLoopTests.test_run_until_complete_stopped) ... ok
+test_server_close (test.test_asyncio.test_events.PollEventLoopTests.test_server_close) ... ok
+test_signal_handling_args (test.test_asyncio.test_events.PollEventLoopTests.test_signal_handling_args) ... ok
+test_signal_handling_while_selecting (test.test_asyncio.test_events.PollEventLoopTests.test_signal_handling_while_selecting) ... ok
+test_ssl_connect_accepted_socket (test.test_asyncio.test_events.PollEventLoopTests.test_ssl_connect_accepted_socket) ... skipped 'No ssl module'
+test_subprocess_close_after_finish (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_close_after_finish) ... ok
+test_subprocess_close_client_stream (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_close_client_stream) ... ok
+test_subprocess_exec (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_exec) ... ok
+test_subprocess_exec_invalid_args (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_exec_invalid_args) ... ok
+test_subprocess_exitcode (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_exitcode) ... ok
+test_subprocess_interactive (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_interactive) ... ok
+test_subprocess_kill (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_kill) ... ok
+test_subprocess_send_signal (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_send_signal) ... ok
+test_subprocess_shell (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_shell) ... ok
+test_subprocess_shell_invalid_args (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_shell_invalid_args) ... ok
+test_subprocess_stderr (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_stderr) ... ok
+test_subprocess_stderr_redirect_to_stdout (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_stderr_redirect_to_stdout) ... ok
+test_subprocess_terminate (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_terminate) ... ok
+test_subprocess_wait_no_same_group (test.test_asyncio.test_events.PollEventLoopTests.test_subprocess_wait_no_same_group) ... ok
+test_timeout_rounding (test.test_asyncio.test_events.PollEventLoopTests.test_timeout_rounding) ... ok
+test_unclosed_pipe_transport (test.test_asyncio.test_events.PollEventLoopTests.test_unclosed_pipe_transport) ... ok
+test_write_pipe (test.test_asyncio.test_events.PollEventLoopTests.test_write_pipe) ... ok
+test_write_pipe_disconnect_on_close (test.test_asyncio.test_events.PollEventLoopTests.test_write_pipe_disconnect_on_close) ... ok
+test_write_pty (test.test_asyncio.test_events.PollEventLoopTests.test_write_pty) ... ok
+test_writer_callback (test.test_asyncio.test_events.PollEventLoopTests.test_writer_callback) ... ok
+test_add_fds_after_closing (test.test_asyncio.test_events.SelectEventLoopTests.test_add_fds_after_closing) ... ok
+test_add_signal_handler (test.test_asyncio.test_events.SelectEventLoopTests.test_add_signal_handler) ... ok
+test_bidirectional_pty (test.test_asyncio.test_events.SelectEventLoopTests.test_bidirectional_pty) ... ok
+test_call_later (test.test_asyncio.test_events.SelectEventLoopTests.test_call_later) ... ok
+test_call_soon (test.test_asyncio.test_events.SelectEventLoopTests.test_call_soon) ... ok
+test_call_soon_threadsafe (test.test_asyncio.test_events.SelectEventLoopTests.test_call_soon_threadsafe) ... ok
+test_call_soon_threadsafe_same_thread (test.test_asyncio.test_events.SelectEventLoopTests.test_call_soon_threadsafe_same_thread) ... ok
+test_close (test.test_asyncio.test_events.SelectEventLoopTests.test_close) ... ok
+test_close_running_event_loop (test.test_asyncio.test_events.SelectEventLoopTests.test_close_running_event_loop) ... ok
+test_connect_accepted_socket (test.test_asyncio.test_events.SelectEventLoopTests.test_connect_accepted_socket) ... ok
+test_connect_accepted_socket_ssl_timeout_for_plain_socket (test.test_asyncio.test_events.SelectEventLoopTests.test_connect_accepted_socket_ssl_timeout_for_plain_socket) ... ok
+test_create_connection (test.test_asyncio.test_events.SelectEventLoopTests.test_create_connection) ... ok
+test_create_connection_local_addr (test.test_asyncio.test_events.SelectEventLoopTests.test_create_connection_local_addr) ... ok
+test_create_connection_local_addr_in_use (test.test_asyncio.test_events.SelectEventLoopTests.test_create_connection_local_addr_in_use) ... ok
+test_create_connection_local_addr_nomatch_family (test.test_asyncio.test_events.SelectEventLoopTests.test_create_connection_local_addr_nomatch_family) ... ok
+test_create_connection_local_addr_skip_different_family (test.test_asyncio.test_events.SelectEventLoopTests.test_create_connection_local_addr_skip_different_family) ... ok
+test_create_datagram_endpoint (test.test_asyncio.test_events.SelectEventLoopTests.test_create_datagram_endpoint) ... ok
+test_create_datagram_endpoint_ipv6 (test.test_asyncio.test_events.SelectEventLoopTests.test_create_datagram_endpoint_ipv6) ... ok
+test_create_datagram_endpoint_sock (test.test_asyncio.test_events.SelectEventLoopTests.test_create_datagram_endpoint_sock) ... ok
+test_create_server (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server) ... ok
+test_create_server_addr_in_use (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_addr_in_use) ... ok
+test_create_server_dual_stack (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_dual_stack) ... ok
+test_create_server_multiple_hosts_ipv4 (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_multiple_hosts_ipv4) ... ok
+test_create_server_multiple_hosts_ipv6 (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_multiple_hosts_ipv6) ... ok
+test_create_server_reuse_port (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_reuse_port) ... ok
+test_create_server_sock (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_sock) ... ok
+test_create_server_ssl (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_ssl) ... skipped 'No ssl module'
+test_create_server_ssl_match_failed (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_ssl_match_failed) ... skipped 'No ssl module'
+test_create_server_ssl_verified (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_ssl_verified) ... skipped 'No ssl module'
+test_create_server_ssl_verify_failed (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_ssl_verify_failed) ... skipped 'No ssl module'
+test_create_server_trsock (test.test_asyncio.test_events.SelectEventLoopTests.test_create_server_trsock) ... ok
+test_create_ssl_connection (test.test_asyncio.test_events.SelectEventLoopTests.test_create_ssl_connection) ... skipped 'No ssl module'
+test_create_ssl_unix_connection (test.test_asyncio.test_events.SelectEventLoopTests.test_create_ssl_unix_connection) ... skipped 'No ssl module'
+test_create_unix_connection (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_connection) ... ERROR
+test_create_unix_server (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_server) ... ok
+test_create_unix_server_path_socket_error (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_server_path_socket_error) ... ok
+test_create_unix_server_ssl (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_server_ssl) ... skipped 'No ssl module'
+test_create_unix_server_ssl_verified (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_server_ssl_verified) ... skipped 'No ssl module'
+test_create_unix_server_ssl_verify_failed (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_server_ssl_verify_failed) ... skipped 'No ssl module'
+test_datagram_send_to_non_listening_address (test.test_asyncio.test_events.SelectEventLoopTests.test_datagram_send_to_non_listening_address) ... ok
+test_internal_fds (test.test_asyncio.test_events.SelectEventLoopTests.test_internal_fds) ... ok
+test_prompt_cancellation (test.test_asyncio.test_events.SelectEventLoopTests.test_prompt_cancellation) ... ok
+test_read_pipe (test.test_asyncio.test_events.SelectEventLoopTests.test_read_pipe) ... ok
+test_read_pty_output (test.test_asyncio.test_events.SelectEventLoopTests.test_read_pty_output) ... ok
+test_reader_callback (test.test_asyncio.test_events.SelectEventLoopTests.test_reader_callback) ... ok
+test_remove_fds_after_closing (test.test_asyncio.test_events.SelectEventLoopTests.test_remove_fds_after_closing) ... ok
+test_run_in_executor (test.test_asyncio.test_events.SelectEventLoopTests.test_run_in_executor) ... ok
+test_run_in_executor_cancel (test.test_asyncio.test_events.SelectEventLoopTests.test_run_in_executor_cancel) ... ok
+test_run_until_complete (test.test_asyncio.test_events.SelectEventLoopTests.test_run_until_complete) ... ok
+test_run_until_complete_nesting (test.test_asyncio.test_events.SelectEventLoopTests.test_run_until_complete_nesting) ... ok
+test_run_until_complete_stopped (test.test_asyncio.test_events.SelectEventLoopTests.test_run_until_complete_stopped) ... ok
+test_server_close (test.test_asyncio.test_events.SelectEventLoopTests.test_server_close) ... ok
+test_signal_handling_args (test.test_asyncio.test_events.SelectEventLoopTests.test_signal_handling_args) ... ok
+test_signal_handling_while_selecting (test.test_asyncio.test_events.SelectEventLoopTests.test_signal_handling_while_selecting) ... ok
+test_ssl_connect_accepted_socket (test.test_asyncio.test_events.SelectEventLoopTests.test_ssl_connect_accepted_socket) ... skipped 'No ssl module'
+test_subprocess_close_after_finish (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_close_after_finish) ... ok
+test_subprocess_close_client_stream (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_close_client_stream) ... ok
+test_subprocess_exec (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_exec) ... ok
+test_subprocess_exec_invalid_args (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_exec_invalid_args) ... ok
+test_subprocess_exitcode (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_exitcode) ... ok
+test_subprocess_interactive (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_interactive) ... ok
+test_subprocess_kill (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_kill) ... ok
+test_subprocess_send_signal (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_send_signal) ... ok
+test_subprocess_shell (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_shell) ... ok
+test_subprocess_shell_invalid_args (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_shell_invalid_args) ... ok
+test_subprocess_stderr (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_stderr) ... ok
+test_subprocess_stderr_redirect_to_stdout (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_stderr_redirect_to_stdout) ... ok
+test_subprocess_terminate (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_terminate) ... ok
+test_subprocess_wait_no_same_group (test.test_asyncio.test_events.SelectEventLoopTests.test_subprocess_wait_no_same_group) ... ok
+test_timeout_rounding (test.test_asyncio.test_events.SelectEventLoopTests.test_timeout_rounding) ... ok
+test_unclosed_pipe_transport (test.test_asyncio.test_events.SelectEventLoopTests.test_unclosed_pipe_transport) ... ok
+test_write_pipe (test.test_asyncio.test_events.SelectEventLoopTests.test_write_pipe) ... ok
+test_write_pipe_disconnect_on_close (test.test_asyncio.test_events.SelectEventLoopTests.test_write_pipe_disconnect_on_close) ... ok
+test_write_pty (test.test_asyncio.test_events.SelectEventLoopTests.test_write_pty) ... ok
+test_writer_callback (test.test_asyncio.test_events.SelectEventLoopTests.test_writer_callback) ... ok
+test_close (test.test_asyncio.test_events.TestAbstractServer.test_close) ... ok
+test_get_loop (test.test_asyncio.test_events.TestAbstractServer.test_get_loop) ... ok
+test_wait_closed (test.test_asyncio.test_events.TestAbstractServer.test_wait_closed) ... ok
+test_get_event_loop_new_process (test.test_asyncio.test_events.TestCGetEventLoop.test_get_event_loop_new_process) ... ok
+test_get_event_loop_returns_running_loop (test.test_asyncio.test_events.TestCGetEventLoop.test_get_event_loop_returns_running_loop) ... ok
+test_get_event_loop_returns_running_loop2 (test.test_asyncio.test_events.TestCGetEventLoop.test_get_event_loop_returns_running_loop2) ... ok
+test_get_event_loop_new_process (test.test_asyncio.test_events.TestPyGetEventLoop.test_get_event_loop_new_process) ... ok
+test_get_event_loop_returns_running_loop (test.test_asyncio.test_events.TestPyGetEventLoop.test_get_event_loop_returns_running_loop) ... ok
+test_get_event_loop_returns_running_loop2 (test.test_asyncio.test_events.TestPyGetEventLoop.test_get_event_loop_returns_running_loop2) ... ok
+test_get_loop (test.test_asyncio.test_events.TestServer.test_get_loop) ... ok
+test_hash (test.test_asyncio.test_events.TimerTests.test_hash) ... ok
+test_timer (test.test_asyncio.test_events.TimerTests.test_timer) ... ok
+test_timer_comparison (test.test_asyncio.test_events.TimerTests.test_timer_comparison) ... ok
+test_timer_repr (test.test_asyncio.test_events.TimerTests.test_timer_repr) ... ok
+test_timer_repr_debug (test.test_asyncio.test_events.TimerTests.test_timer_repr_debug) ... ok
+test_when (test.test_asyncio.test_events.TimerTests.test_when) ... ok
+
+======================================================================
+ERROR: test_create_unix_connection (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_events.py", line 551, in test_create_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_create_unix_connection (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_events.py", line 551, in test_create_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_create_unix_connection (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_events.py", line 551, in test_create_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+----------------------------------------------------------------------
+Ran 259 tests in 20.441s
+
+FAILED (errors=3, skipped=30)
+test test.test_asyncio.test_events failed
+0:00:32 load avg: 17.55 [438/479/4] test_slice passed -- running (4): test_subprocess (31.1 sec), test.test_multiprocessing_spawn.test_processes (32.2 sec), test_io (30.7 sec), test.test_concurrent_futures.test_wait (31.4 sec)
+0:00:32 load avg: 17.55 [439/479/4] test_sax passed -- running (4): test_subprocess (31.1 sec), test.test_multiprocessing_spawn.test_processes (32.2 sec), test_io (30.7 sec), test.test_concurrent_futures.test_wait (31.5 sec)
+0:00:32 load avg: 17.55 [440/479/4] test_strtod passed -- running (4): test_subprocess (31.3 sec), test.test_multiprocessing_spawn.test_processes (32.5 sec), test_io (30.9 sec), test.test_concurrent_futures.test_wait (31.7 sec)
+0:00:32 load avg: 17.55 [441/479/4] test_zipimport_support passed -- running (4): test_subprocess (31.4 sec), test.test_multiprocessing_spawn.test_processes (32.6 sec), test_io (31.0 sec), test.test_concurrent_futures.test_wait (31.8 sec)
+0:00:32 load avg: 17.55 [442/479/4] test_array passed -- running (4): test_subprocess (31.5 sec), test.test_multiprocessing_spawn.test_processes (32.7 sec), test_io (31.1 sec), test.test_concurrent_futures.test_wait (31.9 sec)
+0:00:33 load avg: 17.55 [443/479/4] test___all__ passed -- running (4): test_subprocess (32.4 sec), test.test_multiprocessing_spawn.test_processes (33.5 sec), test_io (32.0 sec), test.test_concurrent_futures.test_wait (32.7 sec)
+0:00:33 load avg: 17.55 [444/479/4] test_json passed -- running (4): test_subprocess (32.5 sec), test.test_multiprocessing_spawn.test_processes (33.6 sec), test_io (32.1 sec), test.test_concurrent_futures.test_wait (32.8 sec)
+0:00:34 load avg: 17.55 [445/479/4] test_tracemalloc passed -- running (4): test_subprocess (33.0 sec), test.test_multiprocessing_spawn.test_processes (34.1 sec), test_io (32.6 sec), test.test_concurrent_futures.test_wait (33.3 sec)
+0:00:34 load avg: 18.71 [446/479/4] test_cmd_line passed -- running (4): test_subprocess (33.2 sec), test.test_multiprocessing_spawn.test_processes (34.4 sec), test_io (32.8 sec), test.test_concurrent_futures.test_wait (33.6 sec)
+0:00:35 load avg: 18.71 [447/479/4] test_xml_etree_c passed -- running (4): test_subprocess (34.0 sec), test.test_multiprocessing_spawn.test_processes (35.1 sec), test_io (33.6 sec), test.test_concurrent_futures.test_wait (34.3 sec)
+0:00:35 load avg: 18.71 [448/479/4] test.test_multiprocessing_forkserver.test_threads passed -- running (4): test_subprocess (34.3 sec), test.test_multiprocessing_spawn.test_processes (35.4 sec), test_io (33.9 sec), test.test_concurrent_futures.test_wait (34.7 sec)
+0:00:36 load avg: 18.71 [449/479/4] test_wait3 passed -- running (4): test_subprocess (34.9 sec), test.test_multiprocessing_spawn.test_processes (36.1 sec), test_io (34.5 sec), test.test_concurrent_futures.test_wait (35.3 sec)
+0:00:36 load avg: 18.71 [450/479/4] test_threading passed -- running (4): test_subprocess (35.1 sec), test.test_multiprocessing_spawn.test_processes (36.2 sec), test_io (34.7 sec), test.test_concurrent_futures.test_wait (35.4 sec)
+0:00:36 load avg: 18.71 [451/479/4] test_interpreters passed -- running (4): test_subprocess (35.2 sec), test.test_multiprocessing_spawn.test_processes (36.3 sec), test_io (34.8 sec), test.test_concurrent_futures.test_wait (35.6 sec)
+0:00:36 load avg: 18.71 [452/479/4] test_compileall passed -- running (4): test_subprocess (35.4 sec), test.test_multiprocessing_spawn.test_processes (36.5 sec), test_io (35.0 sec), test.test_concurrent_futures.test_wait (35.8 sec)
+0:00:36 load avg: 18.71 [453/479/4] test_queue passed -- running (4): test_subprocess (35.5 sec), test.test_multiprocessing_spawn.test_processes (36.6 sec), test_io (35.1 sec), test.test_concurrent_futures.test_wait (35.9 sec)
+0:00:36 load avg: 18.71 [454/479/4] test.test_concurrent_futures.test_deadlock passed -- running (4): test_subprocess (35.6 sec), test.test_multiprocessing_spawn.test_processes (36.8 sec), test_io (35.3 sec), test.test_concurrent_futures.test_wait (36.0 sec)
+0:00:37 load avg: 18.71 [455/479/4] test_argparse passed -- running (4): test_subprocess (35.8 sec), test.test_multiprocessing_spawn.test_processes (36.9 sec), test_io (35.4 sec), test.test_concurrent_futures.test_wait (36.1 sec)
+0:00:37 load avg: 18.71 [456/479/4] test_set passed -- running (4): test_subprocess (36.4 sec), test.test_multiprocessing_spawn.test_processes (37.5 sec), test_io (36.0 sec), test.test_concurrent_futures.test_wait (36.7 sec)
+0:00:37 load avg: 18.71 [457/479/4] test_pdb passed -- running (4): test_subprocess (36.5 sec), test.test_multiprocessing_spawn.test_processes (37.6 sec), test_io (36.1 sec), test.test_concurrent_futures.test_wait (36.8 sec)
+0:00:37 load avg: 18.71 [458/479/4] test_faulthandler passed -- running (4): test_subprocess (36.7 sec), test.test_multiprocessing_spawn.test_processes (37.8 sec), test_io (36.3 sec), test.test_concurrent_futures.test_wait (37.1 sec)
+0:00:41 load avg: 18.49 [459/479/4] test_embed passed -- running (5): test_subprocess (40.3 sec), test.test_multiprocessing_spawn.test_processes (41.4 sec), test.test_multiprocessing_spawn.test_misc (32.3 sec), test_io (39.9 sec), test.test_concurrent_futures.test_wait (40.6 sec)
+0:00:42 load avg: 18.49 [460/479/4] test.test_multiprocessing_fork.test_threads passed -- running (5): test_subprocess (40.8 sec), test.test_multiprocessing_spawn.test_processes (41.9 sec), test.test_multiprocessing_spawn.test_misc (32.8 sec), test_io (40.4 sec), test.test_concurrent_futures.test_wait (41.1 sec)
+0:00:44 load avg: 18.49 [461/479/4] test_statistics passed -- running (7): test_regrtest (32.0 sec), test_subprocess (43.0 sec), test.test_multiprocessing_forkserver.test_processes (32.0 sec), test.test_multiprocessing_spawn.test_processes (44.1 sec), test.test_multiprocessing_spawn.test_misc (35.0 sec), test_io (42.6 sec), test.test_concurrent_futures.test_wait (43.3 sec)
+0:00:45 load avg: 18.29 [462/479/4] test_tarfile passed (31.0 sec) -- running (7): test_regrtest (33.2 sec), test_subprocess (44.2 sec), test.test_multiprocessing_forkserver.test_processes (33.2 sec), test.test_multiprocessing_spawn.test_processes (45.3 sec), test.test_multiprocessing_spawn.test_misc (36.2 sec), test_io (43.8 sec), test.test_concurrent_futures.test_wait (44.5 sec)
+0:00:45 load avg: 18.29 [463/479/4] test_pickle passed -- running (7): test_regrtest (33.6 sec), test_subprocess (44.6 sec), test.test_multiprocessing_forkserver.test_processes (33.6 sec), test.test_multiprocessing_spawn.test_processes (45.8 sec), test.test_multiprocessing_spawn.test_misc (36.6 sec), test_io (44.2 sec), test.test_concurrent_futures.test_wait (45.0 sec)
+0:00:46 load avg: 18.29 [464/479/4] test_io passed (45.1 sec) -- running (7): test_socket (30.8 sec), test_regrtest (34.5 sec), test_subprocess (45.5 sec), test.test_multiprocessing_forkserver.test_processes (34.5 sec), test.test_multiprocessing_spawn.test_processes (46.6 sec), test.test_multiprocessing_spawn.test_misc (37.5 sec), test.test_concurrent_futures.test_wait (45.8 sec)
+0:00:47 load avg: 18.29 [465/479/4] test.test_multiprocessing_fork.test_misc passed -- running (8): test_socket (31.6 sec), test.test_concurrent_futures.test_process_pool (30.4 sec), test_regrtest (35.3 sec), test_subprocess (46.3 sec), test.test_multiprocessing_forkserver.test_processes (35.3 sec), test.test_multiprocessing_spawn.test_processes (47.4 sec), test.test_multiprocessing_spawn.test_misc (38.3 sec), test.test_concurrent_futures.test_wait (46.7 sec)
+0:00:48 load avg: 18.29 [466/479/4] test.test_concurrent_futures.test_process_pool passed (31.1 sec) -- running (7): test_socket (32.2 sec), test_regrtest (35.9 sec), test_subprocess (46.9 sec), test.test_multiprocessing_forkserver.test_processes (35.9 sec), test.test_multiprocessing_spawn.test_processes (48.1 sec), test.test_multiprocessing_spawn.test_misc (38.9 sec), test.test_concurrent_futures.test_wait (47.3 sec)
+0:00:49 load avg: 18.29 [467/479/4] test_decimal passed -- running (7): test_socket (33.3 sec), test_regrtest (37.0 sec), test_subprocess (48.0 sec), test.test_multiprocessing_forkserver.test_processes (37.0 sec), test.test_multiprocessing_spawn.test_processes (49.1 sec), test.test_multiprocessing_spawn.test_misc (40.0 sec), test.test_concurrent_futures.test_wait (48.3 sec)
+0:00:52 load avg: 17.39 [468/479/4] test.test_asyncio.test_tasks passed -- running (7): test_socket (36.5 sec), test_regrtest (40.1 sec), test_subprocess (51.1 sec), test.test_multiprocessing_forkserver.test_processes (40.1 sec), test.test_multiprocessing_spawn.test_processes (52.3 sec), test.test_multiprocessing_spawn.test_misc (43.1 sec), test.test_concurrent_futures.test_wait (51.5 sec)
+0:00:53 load avg: 17.39 [469/479/4] test.test_concurrent_futures.test_wait passed (52.1 sec) -- running (6): test_socket (37.1 sec), test_regrtest (40.8 sec), test_subprocess (51.8 sec), test.test_multiprocessing_forkserver.test_processes (40.8 sec), test.test_multiprocessing_spawn.test_processes (52.9 sec), test.test_multiprocessing_spawn.test_misc (43.8 sec)
+0:00:54 load avg: 17.39 [470/479/4] test_xmlrpc passed -- running (6): test_socket (38.3 sec), test_regrtest (42.0 sec), test_subprocess (52.9 sec), test.test_multiprocessing_forkserver.test_processes (41.9 sec), test.test_multiprocessing_spawn.test_processes (54.1 sec), test.test_multiprocessing_spawn.test_misc (44.9 sec)
+0:00:58 load avg: 16.80 [471/479/4] test.test_multiprocessing_forkserver.test_misc passed (31.9 sec) -- running (6): test_socket (42.3 sec), test_regrtest (46.0 sec), test_subprocess (57.0 sec), test.test_multiprocessing_forkserver.test_processes (46.0 sec), test.test_multiprocessing_spawn.test_processes (58.2 sec), test.test_multiprocessing_spawn.test_misc (49.0 sec)
+0:00:58 load avg: 16.80 [472/479/4] test.test_multiprocessing_spawn.test_manager passed -- running (6): test_socket (42.6 sec), test_regrtest (46.3 sec), test_subprocess (57.3 sec), test.test_multiprocessing_forkserver.test_processes (46.3 sec), test.test_multiprocessing_spawn.test_processes (58.4 sec), test.test_multiprocessing_spawn.test_misc (49.3 sec)
+0:00:59 load avg: 16.80 [473/479/4] test.test_multiprocessing_spawn.test_misc passed (50.1 sec) -- running (5): test_socket (43.4 sec), test_regrtest (47.1 sec), test_subprocess (58.1 sec), test.test_multiprocessing_forkserver.test_processes (47.1 sec), test.test_multiprocessing_spawn.test_processes (59.2 sec)
+0:01:02 load avg: 16.25 [474/479/4] test.test_multiprocessing_fork.test_processes passed (31.1 sec) -- running (5): test_socket (46.1 sec), test_regrtest (49.8 sec), test_subprocess (1 min), test.test_multiprocessing_forkserver.test_processes (49.8 sec), test.test_multiprocessing_spawn.test_processes (1 min 1 sec)
+0:01:02 load avg: 16.25 [475/479/4] test_regrtest passed (50.0 sec) -- running (4): test_socket (46.3 sec), test_subprocess (1 min), test.test_multiprocessing_forkserver.test_processes (50.0 sec), test.test_multiprocessing_spawn.test_processes (1 min 2 sec)
+0:01:04 load avg: 15.27 [476/479/4] test_socket passed (48.5 sec) -- running (3): test_subprocess (1 min 3 sec), test.test_multiprocessing_forkserver.test_processes (52.2 sec), test.test_multiprocessing_spawn.test_processes (1 min 4 sec)
+0:01:15 load avg: 13.47 [477/479/4] test.test_multiprocessing_spawn.test_processes passed (1 min 14 sec) -- running (2): test_subprocess (1 min 13 sec), test.test_multiprocessing_forkserver.test_processes (1 min 2 sec)
+0:01:16 load avg: 13.47 [478/479/4] test.test_multiprocessing_forkserver.test_processes passed (1 min 4 sec) -- running (1): test_subprocess (1 min 15 sec)
+0:01:46 load avg: 8.53 running (1): test_subprocess (1 min 45 sec)
+0:01:57 load avg: 7.29 [479/479/4] test_subprocess passed (1 min 56 sec)
+
+== Tests result: FAILURE ==
+
+10 slowest tests:
+- test_subprocess: 1 min 56 sec
+- test.test_multiprocessing_spawn.test_processes: 1 min 14 sec
+- test.test_multiprocessing_forkserver.test_processes: 1 min 4 sec
+- test.test_concurrent_futures.test_wait: 52.1 sec
+- test.test_multiprocessing_spawn.test_misc: 50.1 sec
+- test_regrtest: 50.0 sec
+- test_socket: 48.5 sec
+- test_io: 45.1 sec
+- test.test_multiprocessing_forkserver.test_misc: 31.9 sec
+- test.test_multiprocessing_fork.test_processes: 31.1 sec
+
+40 tests skipped:
+    test.test_asyncio.test_windows_events
+    test.test_asyncio.test_windows_utils test.test_gdb.test_backtrace
+    test.test_gdb.test_cfunction test.test_gdb.test_cfunction_full
+    test.test_gdb.test_misc test.test_gdb.test_pretty_print
+    test_android test_bz2 test_ctypes test_curses test_dbm_gnu
+    test_dbm_ndbm test_dbm_sqlite3 test_devpoll test_free_threading
+    test_gzip test_idle test_kqueue test_launcher test_lzma
+    test_msvcrt test_pyrepl test_readline test_smtpnet test_sqlite3
+    test_ssl test_stable_abi_ctypes test_startfile test_tcl
+    test_tkinter test_ttk test_ttk_textonly test_turtle test_winapi
+    test_winconsoleio test_winreg test_winsound test_wmi test_zlib
+
+2 tests skipped (resource denied):
+    test_peg_generator test_zipfile64
+
+4 tests failed:
+    test.test_asyncio.test_events test.test_asyncio.test_sock_lowlevel
+    test.test_asyncio.test_streams test_tools
+
+433 tests OK.
+
+0:01:57 load avg: 7.29 Re-running 4 failed tests in verbose mode in subprocesses
+0:01:57 load avg: 7.29 Run 4 tests in parallel using 4 worker processes (timeout: 10 min, worker timeout: 15 min)
+0:01:58 load avg: 7.29 [1/4/1] test_tools failed (1 failure)
+Re-running test_tools in verbose mode (matching: test_makefile_test_folders)
+test_makefile_test_folders (test.test_tools.test_makefile.TestMakefile.test_makefile_test_folders) ... 
+  test_makefile_test_folders (test.test_tools.test_makefile.TestMakefile.test_makefile_test_folders) (relpath='test/test_pathlib/support') ... FAIL
+
+======================================================================
+FAIL: test_makefile_test_folders (test.test_tools.test_makefile.TestMakefile.test_makefile_test_folders) (relpath='test/test_pathlib/support')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_tools/test_makefile.py", line 60, in test_makefile_test_folders
+    self.assertIn(
+    ~~~~~~~~~~~~~^
+        relpath,
+        ^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+AssertionError: 'test/test_pathlib/support' not found in ['idlelib/idle_test', 'test', 'test/test_ast', 'test/test_ast/data', 'test/archivetestdata', 'test/audiodata', 'test/certdata', 'test/certdata/capath', 'test/cjkencodings', 'test/configdata', 'test/crashers', 'test/data', 'test/decimaltestdata', 'test/dtracedata', 'test/encoded_modules', 'test/leakers', 'test/libregrtest', 'test/mathdata', 'test/regrtestdata', 'test/regrtestdata/import_from_tests', 'test/regrtestdata/import_from_tests/test_regrtest_b', 'test/subprocessdata', 'test/support', 'test/support/_hypothesis_stubs', 'test/support/interpreters', 'test/test_asyncio', 'test/test_capi', 'test/test_cext', 'test/test_concurrent_futures', 'test/test_cppext', 'test/test_ctypes', 'test/test_dataclasses', 'test/test_doctest', 'test/test_email', 'test/test_email/data', 'test/test_free_threading', 'test/test_future_stmt', 'test/test_gdb', 'test/test_import', 'test/test_import/data', 'test/test_import/data/circular_imports', 'test/test_import/data/circular_imports/subpkg', 'test/test_import/data/circular_imports/subpkg2', 'test/test_import/data/circular_imports/subpkg2/parent', 'test/test_import/data/package', 'test/test_import/data/package2', 'test/test_import/data/package3', 'test/test_import/data/package4', 'test/test_import/data/unwritable', 'test/test_importlib', 'test/test_importlib/builtin', 'test/test_importlib/extension', 'test/test_importlib/frozen', 'test/test_importlib/import_', 'test/test_importlib/metadata', 'test/test_importlib/metadata/data', 'test/test_importlib/metadata/data/sources', 'test/test_importlib/metadata/data/sources/example', 'test/test_importlib/metadata/data/sources/example/example', 'test/test_importlib/metadata/data/sources/example2', 'test/test_importlib/metadata/data/sources/example2/example2', 'test/test_importlib/namespace_pkgs', 'test/test_importlib/namespace_pkgs/both_portions', 'test/test_importlib/namespace_pkgs/both_portions/foo', 'test/test_importlib/namespace_pkgs/module_and_namespace_package', 'test/test_importlib/namespace_pkgs/module_and_namespace_package/a_test', 'test/test_importlib/namespace_pkgs/not_a_namespace_pkg', 'test/test_importlib/namespace_pkgs/not_a_namespace_pkg/foo', 'test/test_importlib/namespace_pkgs/portion1', 'test/test_importlib/namespace_pkgs/portion1/foo', 'test/test_importlib/namespace_pkgs/portion2', 'test/test_importlib/namespace_pkgs/portion2/foo', 'test/test_importlib/namespace_pkgs/project1', 'test/test_importlib/namespace_pkgs/project1/parent', 'test/test_importlib/namespace_pkgs/project1/parent/child', 'test/test_importlib/namespace_pkgs/project2', 'test/test_importlib/namespace_pkgs/project2/parent', 'test/test_importlib/namespace_pkgs/project2/parent/child', 'test/test_importlib/namespace_pkgs/project3', 'test/test_importlib/namespace_pkgs/project3/parent', 'test/test_importlib/namespace_pkgs/project3/parent/child', 'test/test_importlib/partial', 'test/test_importlib/resources', 'test/test_importlib/source', 'test/test_inspect', 'test/test_interpreters', 'test/test_json', 'test/test_module', 'test/test_multiprocessing_fork', 'test/test_multiprocessing_forkserver', 'test/test_multiprocessing_spawn', 'test/test_pathlib', 'test/test_peg_generator', 'test/test_pydoc', 'test/test_pyrepl', 'test/test_sqlite3', 'test/test_tkinter', 'test/test_tomllib', 'test/test_tomllib/data', 'test/test_tomllib/data/invalid', 'test/test_tomllib/data/invalid/array', 'test/test_tomllib/data/invalid/array-of-tables', 'test/test_tomllib/data/invalid/boolean', 'test/test_tomllib/data/invalid/dates-and-times', 'test/test_tomllib/data/invalid/dotted-keys', 'test/test_tomllib/data/invalid/inline-table', 'test/test_tomllib/data/invalid/keys-and-vals', 'test/test_tomllib/data/invalid/literal-str', 'test/test_tomllib/data/invalid/multiline-basic-str', 'test/test_tomllib/data/invalid/multiline-literal-str', 'test/test_tomllib/data/invalid/table', 'test/test_tomllib/data/valid', 'test/test_tomllib/data/valid/array', 'test/test_tomllib/data/valid/dates-and-times', 'test/test_tomllib/data/valid/multiline-basic-str', 'test/test_tools', 'test/test_ttk', 'test/test_unittest', 'test/test_unittest/namespace_test_pkg', 'test/test_unittest/namespace_test_pkg/bar', 'test/test_unittest/namespace_test_pkg/noop', 'test/test_unittest/namespace_test_pkg/noop/no2', 'test/test_unittest/testmock', 'test/test_warnings', 'test/test_warnings/data', 'test/test_zipfile', 'test/test_zipfile/_path', 'test/test_zoneinfo', 'test/test_zoneinfo/data', 'test/tkinterdata', 'test/tokenizedata', 'test/tracedmodules', 'test/typinganndata', 'test/wheeldata', 'test/xmltestdata', 'test/xmltestdata/c14n-20', 'test/zipimport_data'] : 'test/test_pathlib/support' is not included in the Makefile's list of test directories to install
+
+----------------------------------------------------------------------
+Ran 1 test in 0.025s
+
+FAILED (failures=1)
+test test_tools failed
+0:01:58 load avg: 7.29 [2/4/2] test.test_asyncio.test_streams failed (2 errors)
+Re-running test.test_asyncio.test_streams in verbose mode (matching: test_open_unix_connection, test_open_unix_connection_error)
+test_open_unix_connection (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection) ... ERROR
+test_open_unix_connection_error (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection_error) ... ERROR
+
+======================================================================
+ERROR: test_open_unix_connection (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_streams.py", line 64, in test_open_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_open_unix_connection_error (test.test_asyncio.test_streams.StreamTests.test_open_unix_connection_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_streams.py", line 123, in test_open_unix_connection_error
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.018s
+
+FAILED (errors=2)
+test test.test_asyncio.test_streams failed
+0:01:58 load avg: 7.29 [3/4/3] test.test_asyncio.test_sock_lowlevel failed (3 errors)
+Re-running test.test_asyncio.test_sock_lowlevel in verbose mode (matching: test_unix_sock_client_ops, test_unix_sock_client_ops, test_unix_sock_client_ops)
+test_unix_sock_client_ops (test.test_asyncio.test_sock_lowlevel.EPollEventLoopTests.test_unix_sock_client_ops) ... ERROR
+test_unix_sock_client_ops (test.test_asyncio.test_sock_lowlevel.PollEventLoopTests.test_unix_sock_client_ops) ... ERROR
+test_unix_sock_client_ops (test.test_asyncio.test_sock_lowlevel.SelectEventLoopTests.test_unix_sock_client_ops) ... ERROR
+
+======================================================================
+ERROR: test_unix_sock_client_ops (test.test_asyncio.test_sock_lowlevel.EPollEventLoopTests.test_unix_sock_client_ops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_sock_lowlevel.py", line 462, in test_unix_sock_client_ops
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_unix_sock_client_ops (test.test_asyncio.test_sock_lowlevel.PollEventLoopTests.test_unix_sock_client_ops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_sock_lowlevel.py", line 462, in test_unix_sock_client_ops
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_unix_sock_client_ops (test.test_asyncio.test_sock_lowlevel.SelectEventLoopTests.test_unix_sock_client_ops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_sock_lowlevel.py", line 462, in test_unix_sock_client_ops
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.128s
+
+FAILED (errors=3)
+test test.test_asyncio.test_sock_lowlevel failed
+0:01:58 load avg: 7.29 [4/4/4] test.test_asyncio.test_events failed (3 errors)
+Re-running test.test_asyncio.test_events in verbose mode (matching: test_create_unix_connection, test_create_unix_connection, test_create_unix_connection)
+test_create_unix_connection (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_connection) ... ERROR
+test_create_unix_connection (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_connection) ... ERROR
+test_create_unix_connection (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_connection) ... ERROR
+
+======================================================================
+ERROR: test_create_unix_connection (test.test_asyncio.test_events.EPollEventLoopTests.test_create_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_events.py", line 551, in test_create_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_create_unix_connection (test.test_asyncio.test_events.PollEventLoopTests.test_create_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_events.py", line 551, in test_create_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+======================================================================
+ERROR: test_create_unix_connection (test.test_asyncio.test_events.SelectEventLoopTests.test_create_unix_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/cpython/Lib/test/test_asyncio/test_events.py", line 551, in test_create_unix_connection
+    with test_utils.run_test_unix_server() as httpd:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 261, in run_test_unix_server
+    yield from _run_test_server(address=path, use_ssl=use_ssl,
+                                server_cls=SilentUnixWSGIServer,
+                                server_ssl_cls=UnixSSLWSGIServer)
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 188, in _run_test_server
+    httpd = server_class(address, SilentWSGIRequestHandler)
+  File "/app/cpython/Lib/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 217, in server_bind
+    UnixHTTPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/test/test_asyncio/utils.py", line 207, in server_bind
+    socketserver.UnixStreamServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/app/cpython/Lib/socketserver.py", line 472, in server_bind
+    self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 95] Operation not supported
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.126s
+
+FAILED (errors=3)
+test test.test_asyncio.test_events failed
+4 tests failed again:
+    test.test_asyncio.test_events test.test_asyncio.test_sock_lowlevel
+    test.test_asyncio.test_streams test_tools
+
+== Tests result: FAILURE then FAILURE ==
+
+10 slowest tests:
+- test_subprocess: 1 min 56 sec
+- test.test_multiprocessing_spawn.test_processes: 1 min 14 sec
+- test.test_multiprocessing_forkserver.test_processes: 1 min 4 sec
+- test.test_concurrent_futures.test_wait: 52.1 sec
+- test.test_multiprocessing_spawn.test_misc: 50.1 sec
+- test_regrtest: 50.0 sec
+- test_socket: 48.5 sec
+- test_io: 45.1 sec
+- test.test_multiprocessing_forkserver.test_misc: 31.9 sec
+- test.test_multiprocessing_fork.test_processes: 31.1 sec
+
+40 tests skipped:
+    test.test_asyncio.test_windows_events
+    test.test_asyncio.test_windows_utils test.test_gdb.test_backtrace
+    test.test_gdb.test_cfunction test.test_gdb.test_cfunction_full
+    test.test_gdb.test_misc test.test_gdb.test_pretty_print
+    test_android test_bz2 test_ctypes test_curses test_dbm_gnu
+    test_dbm_ndbm test_dbm_sqlite3 test_devpoll test_free_threading
+    test_gzip test_idle test_kqueue test_launcher test_lzma
+    test_msvcrt test_pyrepl test_readline test_smtpnet test_sqlite3
+    test_ssl test_stable_abi_ctypes test_startfile test_tcl
+    test_tkinter test_ttk test_ttk_textonly test_turtle test_winapi
+    test_winconsoleio test_winreg test_winsound test_wmi test_zlib
+
+2 tests skipped (resource denied):
+    test_peg_generator test_zipfile64
+
+4 re-run tests:
+    test.test_asyncio.test_events test.test_asyncio.test_sock_lowlevel
+    test.test_asyncio.test_streams test_tools
+
+4 tests failed:
+    test.test_asyncio.test_events test.test_asyncio.test_sock_lowlevel
+    test.test_asyncio.test_streams test_tools
+
+433 tests OK.
+
+Total duration: 1 min 58 sec
+Total tests: run=42,478 failures=2 skipped=2,720
+Total test files: run=481/479 failed=4 skipped=40 resource_denied=2 rerun=4
+Result: FAILURE then FAILURE
+make: *** [Makefile:2214: test] Error 2

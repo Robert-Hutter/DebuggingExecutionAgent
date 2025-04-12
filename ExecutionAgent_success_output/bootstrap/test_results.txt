@@ -1,0 +1,63 @@
+> bootstrap@5.3.3 js-test
+> npm-run-all --aggregate-output --parallel js-test-karma js-test-jquery js-test-integration-*
+
+
+js/tests/integration/bundle.js → js/coverage/bundle.js...
+
+js/tests/integration/bundle-modularity.js → js/coverage/bundle-modularity.js...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+created js/coverage/bundle.js in 1.3s
+
+> bootstrap@5.3.3 js-test-integration-bundle
+> rollup --config js/tests/integration/rollup.bundle.js
+
+created js/coverage/bundle-modularity.js in 1.3s
+
+> bootstrap@5.3.3 js-test-integration-modularity
+> rollup --config js/tests/integration/rollup.bundle-modularity.js
+
+
+> bootstrap@5.3.3 js-test-jquery
+> cross-env JQUERY=true npm run js-test-karma
+
+
+> bootstrap@5.3.3 js-test-karma
+> karma start js/tests/karma.conf.js
+
+..
+Chrome Headless 135.0.0.0 (Linux x86_64): Executed 2 of 2 SUCCESS (0.074 secs / 0.01 secs)
+
+> bootstrap@5.3.3 js-test-karma
+> karma start js/tests/karma.conf.js
+
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+........
+Chrome Headless 135.0.0.0 (Linux x86_64): Executed 808 of 808 SUCCESS (24.91 secs / 24.357 secs)
+TOTAL: 808 SUCCESS
+
+=============================== Coverage summary ===============================
+Statements   : 97.59% ( 2067/2118 )
+Branches     : 91.73% ( 666/726 )
+Functions    : 98.88% ( 442/447 )
+Lines        : 97.58% ( 2022/2072 )
+================================================================================

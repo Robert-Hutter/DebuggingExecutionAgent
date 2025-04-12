@@ -1,0 +1,823 @@
+Requirement already satisfied: pip in ./venv/lib/python3.10/site-packages (25.0.1)
+Collecting alabaster==1.0.0 (from -r /app/flask/requirements/docs.txt (line 7))
+  Using cached alabaster-1.0.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting babel==2.16.0 (from -r /app/flask/requirements/docs.txt (line 9))
+  Downloading babel-2.16.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting certifi==2024.8.30 (from -r /app/flask/requirements/docs.txt (line 11))
+  Downloading certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
+Collecting charset-normalizer==3.4.0 (from -r /app/flask/requirements/docs.txt (line 13))
+  Downloading charset_normalizer-3.4.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (34 kB)
+Collecting docutils==0.21.2 (from -r /app/flask/requirements/docs.txt (line 15))
+  Using cached docutils-0.21.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting idna==3.10 (from -r /app/flask/requirements/docs.txt (line 19))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting imagesize==1.4.1 (from -r /app/flask/requirements/docs.txt (line 21))
+  Using cached imagesize-1.4.1-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting jinja2==3.1.4 (from -r /app/flask/requirements/docs.txt (line 23))
+  Downloading jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting markupsafe==3.0.2 (from -r /app/flask/requirements/docs.txt (line 25))
+  Using cached MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting packaging==24.1 (from -r /app/flask/requirements/docs.txt (line 27))
+  Downloading packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+Collecting pallets-sphinx-themes==2.3.0 (from -r /app/flask/requirements/docs.txt (line 31))
+  Using cached pallets_sphinx_themes-2.3.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting pygments==2.18.0 (from -r /app/flask/requirements/docs.txt (line 33))
+  Downloading pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting requests==2.32.3 (from -r /app/flask/requirements/docs.txt (line 37))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting snowballstemmer==2.2.0 (from -r /app/flask/requirements/docs.txt (line 39))
+  Using cached snowballstemmer-2.2.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting sphinx==8.1.3 (from -r /app/flask/requirements/docs.txt (line 41))
+  Downloading sphinx-8.1.3-py3-none-any.whl.metadata (6.4 kB)
+Collecting sphinx-notfound-page==1.0.4 (from -r /app/flask/requirements/docs.txt (line 48))
+  Downloading sphinx_notfound_page-1.0.4-py3-none-any.whl.metadata (2.9 kB)
+Collecting sphinx-tabs==3.4.7 (from -r /app/flask/requirements/docs.txt (line 50))
+  Downloading sphinx_tabs-3.4.7-py3-none-any.whl.metadata (6.3 kB)
+Collecting sphinxcontrib-applehelp==2.0.0 (from -r /app/flask/requirements/docs.txt (line 52))
+  Downloading sphinxcontrib_applehelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-devhelp==2.0.0 (from -r /app/flask/requirements/docs.txt (line 54))
+  Downloading sphinxcontrib_devhelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-htmlhelp==2.1.0 (from -r /app/flask/requirements/docs.txt (line 56))
+  Downloading sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-jsmath==1.0.1 (from -r /app/flask/requirements/docs.txt (line 58))
+  Downloading sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting sphinxcontrib-log-cabinet==1.0.1 (from -r /app/flask/requirements/docs.txt (line 60))
+  Downloading sphinxcontrib_log_cabinet-1.0.1-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting sphinxcontrib-qthelp==2.0.0 (from -r /app/flask/requirements/docs.txt (line 62))
+  Downloading sphinxcontrib_qthelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-serializinghtml==2.0.0 (from -r /app/flask/requirements/docs.txt (line 64))
+  Downloading sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting urllib3==2.2.3 (from -r /app/flask/requirements/docs.txt (line 66))
+  Downloading urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: asgiref==3.8.1 in ./venv/lib/python3.10/site-packages (from -r /app/flask/requirements/tests.txt (line 7)) (3.8.1)
+Collecting iniconfig==2.0.0 (from -r /app/flask/requirements/tests.txt (line 9))
+  Downloading iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: pluggy==1.5.0 in ./venv/lib/python3.10/site-packages (from -r /app/flask/requirements/tests.txt (line 13)) (1.5.0)
+Collecting pytest==8.3.3 (from -r /app/flask/requirements/tests.txt (line 15))
+  Downloading pytest-8.3.3-py3-none-any.whl.metadata (7.5 kB)
+Collecting python-dotenv==1.0.1 (from -r /app/flask/requirements/tests.txt (line 17))
+  Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+Collecting cffi==1.17.1 (from -r /app/flask/requirements/typing.txt (line 9))
+  Downloading cffi-1.17.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting cryptography==43.0.3 (from -r /app/flask/requirements/typing.txt (line 11))
+  Downloading cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+Collecting mypy==1.13.0 (from -r /app/flask/requirements/typing.txt (line 15))
+  Downloading mypy-1.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+Collecting mypy-extensions==1.0.0 (from -r /app/flask/requirements/typing.txt (line 17))
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting nodeenv==1.9.1 (from -r /app/flask/requirements/typing.txt (line 19))
+  Downloading nodeenv-1.9.1-py2.py3-none-any.whl.metadata (21 kB)
+Collecting pycparser==2.22 (from -r /app/flask/requirements/typing.txt (line 25))
+  Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting pyright==1.1.386 (from -r /app/flask/requirements/typing.txt (line 27))
+  Downloading pyright-1.1.386-py3-none-any.whl.metadata (6.7 kB)
+Collecting types-contextvars==2.4.7.3 (from -r /app/flask/requirements/typing.txt (line 33))
+  Downloading types_contextvars-2.4.7.3-py3-none-any.whl.metadata (1.5 kB)
+Collecting types-dataclasses==0.6.6 (from -r /app/flask/requirements/typing.txt (line 35))
+  Downloading types_dataclasses-0.6.6-py3-none-any.whl.metadata (1.3 kB)
+Collecting typing-extensions==4.12.2 (from -r /app/flask/requirements/typing.txt (line 37))
+  Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting pre-commit (from -r requirements/dev.in (line 4))
+  Downloading pre_commit-4.2.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting tox (from -r requirements/dev.in (line 5))
+  Downloading tox-4.25.0-py3-none-any.whl.metadata (3.7 kB)
+Requirement already satisfied: tomli>=2 in ./venv/lib/python3.10/site-packages (from sphinx==8.1.3->-r /app/flask/requirements/docs.txt (line 41)) (2.2.1)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in ./venv/lib/python3.10/site-packages (from pytest==8.3.3->-r /app/flask/requirements/tests.txt (line 15)) (1.2.2)
+Collecting cfgv>=2.0.0 (from pre-commit->-r requirements/dev.in (line 4))
+  Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit->-r requirements/dev.in (line 4))
+  Downloading identify-2.6.9-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting pyyaml>=5.1 (from pre-commit->-r requirements/dev.in (line 4))
+  Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit->-r requirements/dev.in (line 4))
+  Downloading virtualenv-20.30.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting cachetools>=5.5.1 (from tox->-r requirements/dev.in (line 5))
+  Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting chardet>=5.2 (from tox->-r requirements/dev.in (line 5))
+  Downloading chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting colorama>=0.4.6 (from tox->-r requirements/dev.in (line 5))
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting filelock>=3.16.1 (from tox->-r requirements/dev.in (line 5))
+  Downloading filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+INFO: pip is looking at multiple versions of tox to determine which version is compatible with other requirements. This could take a while.
+Collecting tox (from -r requirements/dev.in (line 5))
+  Downloading tox-4.24.2-py3-none-any.whl.metadata (3.7 kB)
+  Downloading tox-4.24.1-py3-none-any.whl.metadata (3.7 kB)
+  Downloading tox-4.24.0-py3-none-any.whl.metadata (3.7 kB)
+  Downloading tox-4.23.2-py3-none-any.whl.metadata (3.7 kB)
+Collecting platformdirs>=4.3.6 (from tox->-r requirements/dev.in (line 5))
+  Downloading platformdirs-4.3.7-py3-none-any.whl.metadata (11 kB)
+Collecting pyproject-api>=1.8 (from tox->-r requirements/dev.in (line 5))
+  Downloading pyproject_api-1.9.0-py3-none-any.whl.metadata (2.7 kB)
+INFO: pip is looking at multiple versions of pyproject-api to determine which version is compatible with other requirements. This could take a while.
+  Downloading pyproject_api-1.8.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit->-r requirements/dev.in (line 4))
+  Downloading distlib-0.3.9-py2.py3-none-any.whl.metadata (5.2 kB)
+Downloading alabaster-1.0.0-py3-none-any.whl (13 kB)
+Downloading babel-2.16.0-py3-none-any.whl (9.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.6/9.6 MB 30.6 MB/s eta 0:00:00
+Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+Downloading charset_normalizer-3.4.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Downloading docutils-0.21.2-py3-none-any.whl (587 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.4/587.4 kB 34.8 MB/s eta 0:00:00
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Downloading packaging-24.1-py3-none-any.whl (53 kB)
+Downloading pallets_sphinx_themes-2.3.0-py3-none-any.whl (24 kB)
+Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 55.7 MB/s eta 0:00:00
+Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading snowballstemmer-2.2.0-py2.py3-none-any.whl (93 kB)
+Downloading sphinx-8.1.3-py3-none-any.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 74.6 MB/s eta 0:00:00
+Downloading sphinx_notfound_page-1.0.4-py3-none-any.whl (8.2 kB)
+Downloading sphinx_tabs-3.4.7-py3-none-any.whl (9.7 kB)
+Downloading sphinxcontrib_applehelp-2.0.0-py3-none-any.whl (119 kB)
+Downloading sphinxcontrib_devhelp-2.0.0-py3-none-any.whl (82 kB)
+Downloading sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl (98 kB)
+Downloading sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Downloading sphinxcontrib_log_cabinet-1.0.1-py2.py3-none-any.whl (4.9 kB)
+Downloading sphinxcontrib_qthelp-2.0.0-py3-none-any.whl (88 kB)
+Downloading sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl (92 kB)
+Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)
+Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Downloading pytest-8.3.3-py3-none-any.whl (342 kB)
+Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Downloading cffi-1.17.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (446 kB)
+Downloading cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl (4.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 71.6 MB/s eta 0:00:00
+Downloading mypy-1.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (12.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 71.9 MB/s eta 0:00:00
+Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Downloading nodeenv-1.9.1-py2.py3-none-any.whl (22 kB)
+Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+Downloading pyright-1.1.386-py3-none-any.whl (18 kB)
+Downloading types_contextvars-2.4.7.3-py3-none-any.whl (2.8 kB)
+Downloading types_dataclasses-0.6.6-py3-none-any.whl (2.9 kB)
+Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Downloading pre_commit-4.2.0-py2.py3-none-any.whl (220 kB)
+Downloading tox-4.23.2-py3-none-any.whl (166 kB)
+Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Downloading chardet-5.2.0-py3-none-any.whl (199 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading filelock-3.18.0-py3-none-any.whl (16 kB)
+Downloading identify-2.6.9-py2.py3-none-any.whl (99 kB)
+Downloading platformdirs-4.3.7-py3-none-any.whl (18 kB)
+Downloading pyproject_api-1.8.0-py3-none-any.whl (13 kB)
+Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 61.6 MB/s eta 0:00:00
+Downloading virtualenv-20.30.0-py3-none-any.whl (4.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 81.5 MB/s eta 0:00:00
+Downloading distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+Installing collected packages: types-dataclasses, types-contextvars, snowballstemmer, distlib, urllib3, typing-extensions, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, pyyaml, python-dotenv, pygments, pycparser, platformdirs, packaging, nodeenv, mypy-extensions, markupsafe, iniconfig, imagesize, idna, identify, filelock, docutils, colorama, charset-normalizer, chardet, cfgv, certifi, cachetools, babel, alabaster, virtualenv, requests, pytest, pyright, pyproject-api, mypy, jinja2, cffi, tox, sphinx, pre-commit, cryptography, sphinxcontrib-log-cabinet, sphinx-tabs, sphinx-notfound-page, pallets-sphinx-themes
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing_extensions 4.13.2
+    Uninstalling typing_extensions-4.13.2:
+      Successfully uninstalled typing_extensions-4.13.2
+  Attempting uninstall: python-dotenv
+    Found existing installation: python-dotenv 1.1.0
+    Uninstalling python-dotenv-1.1.0:
+      Successfully uninstalled python-dotenv-1.1.0
+  Attempting uninstall: packaging
+    Found existing installation: packaging 24.2
+    Uninstalling packaging-24.2:
+      Successfully uninstalled packaging-24.2
+  Attempting uninstall: iniconfig
+    Found existing installation: iniconfig 2.1.0
+    Uninstalling iniconfig-2.1.0:
+      Successfully uninstalled iniconfig-2.1.0
+  Attempting uninstall: pytest
+    Found existing installation: pytest 8.3.5
+    Uninstalling pytest-8.3.5:
+      Successfully uninstalled pytest-8.3.5
+Successfully installed alabaster-1.0.0 babel-2.16.0 cachetools-5.5.2 certifi-2024.8.30 cffi-1.17.1 cfgv-3.4.0 chardet-5.2.0 charset-normalizer-3.4.0 colorama-0.4.6 cryptography-43.0.3 distlib-0.3.9 docutils-0.21.2 filelock-3.18.0 identify-2.6.9 idna-3.10 imagesize-1.4.1 iniconfig-2.0.0 jinja2-3.1.4 markupsafe-3.0.2 mypy-1.13.0 mypy-extensions-1.0.0 nodeenv-1.9.1 packaging-24.1 pallets-sphinx-themes-2.3.0 platformdirs-4.3.7 pre-commit-4.2.0 pycparser-2.22 pygments-2.18.0 pyproject-api-1.8.0 pyright-1.1.386 pytest-8.3.3 python-dotenv-1.0.1 pyyaml-6.0.2 requests-2.32.3 snowballstemmer-2.2.0 sphinx-8.1.3 sphinx-notfound-page-1.0.4 sphinx-tabs-3.4.7 sphinxcontrib-applehelp-2.0.0 sphinxcontrib-devhelp-2.0.0 sphinxcontrib-htmlhelp-2.1.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-log-cabinet-1.0.1 sphinxcontrib-qthelp-2.0.0 sphinxcontrib-serializinghtml-2.0.0 tox-4.23.2 types-contextvars-2.4.7.3 types-dataclasses-0.6.6 typing-extensions-4.12.2 urllib3-2.2.3 virtualenv-20.30.0
+Requirement already satisfied: pytest in ./venv/lib/python3.10/site-packages (from -r requirements/tests.in (line 1)) (8.3.3)
+Requirement already satisfied: asgiref in ./venv/lib/python3.10/site-packages (from -r requirements/tests.in (line 2)) (3.8.1)
+Requirement already satisfied: greenlet in ./venv/lib/python3.10/site-packages (from -r requirements/tests.in (line 3)) (3.1.1)
+Requirement already satisfied: python-dotenv in ./venv/lib/python3.10/site-packages (from -r requirements/tests.in (line 4)) (1.0.1)
+Requirement already satisfied: iniconfig in ./venv/lib/python3.10/site-packages (from pytest->-r requirements/tests.in (line 1)) (2.0.0)
+Requirement already satisfied: packaging in ./venv/lib/python3.10/site-packages (from pytest->-r requirements/tests.in (line 1)) (24.1)
+Requirement already satisfied: pluggy<2,>=1.5 in ./venv/lib/python3.10/site-packages (from pytest->-r requirements/tests.in (line 1)) (1.5.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in ./venv/lib/python3.10/site-packages (from pytest->-r requirements/tests.in (line 1)) (1.2.2)
+Requirement already satisfied: tomli>=1 in ./venv/lib/python3.10/site-packages (from pytest->-r requirements/tests.in (line 1)) (2.2.1)
+Requirement already satisfied: typing-extensions>=4 in ./venv/lib/python3.10/site-packages (from asgiref->-r requirements/tests.in (line 2)) (4.12.2)
+py313: skipped because could not find python interpreter with spec(s): py313
+py313: SKIP ⚠ in 1.19 seconds
+py312: skipped because could not find python interpreter with spec(s): py312
+py312: SKIP ⚠ in 0.01 seconds
+py311: skipped because could not find python interpreter with spec(s): py311
+py311: SKIP ⚠ in 0.01 seconds
+py310: install_deps> python -I -m pip install -r requirements/tests.txt
+py310: freeze> python -m pip freeze --all
+.pkg: install_requires> python -I -m pip install 'flit_core<4'
+.pkg: _optional_hooks> python /app/flask/venv/lib/python3.10/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: get_requires_for_build_wheel> python /app/flask/venv/lib/python3.10/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: build_wheel> python /app/flask/venv/lib/python3.10/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+py310: install_package_deps> python -I -m pip install 'Jinja2>=3.1.2' 'Werkzeug>=3.0.0' 'blinker>=1.6.2' 'click>=8.1.3' 'importlib-metadata>=3.6.0; python_version < "3.10"' 'itsdangerous>=2.1.2' -c/app/flask/.tox/py310/constraints.txt
+py310: install_package> python -I -m pip install --force-reinstall --no-deps /app/flask/.tox/.tmp/package/1/flask-3.1.0.dev0-py3-none-any.whl
+py310: commands[0]> pytest -v --tb=short --basetemp=/app/flask/.tox/tmp/py310
+============================================================================= test session starts ==============================================================================
+platform linux -- Python 3.10.17, pytest-8.3.3, pluggy-1.5.0 -- /app/flask/.tox/py310/bin/python
+cachedir: .tox/py310/.pytest_cache
+rootdir: /app/flask
+configfile: pyproject.toml
+testpaths: tests
+collected 486 items                                                                                                                                                            
+
+tests/test_appctx.py::test_basic_url_generation PASSED                                                                                                                   [  0%]
+tests/test_appctx.py::test_url_generation_requires_server_name PASSED                                                                                                    [  0%]
+tests/test_appctx.py::test_url_generation_without_context_fails PASSED                                                                                                   [  0%]
+tests/test_appctx.py::test_request_context_means_app_context PASSED                                                                                                      [  0%]
+tests/test_appctx.py::test_app_context_provides_current_app PASSED                                                                                                       [  1%]
+tests/test_appctx.py::test_app_tearing_down PASSED                                                                                                                       [  1%]
+tests/test_appctx.py::test_app_tearing_down_with_previous_exception PASSED                                                                                               [  1%]
+tests/test_appctx.py::test_app_tearing_down_with_handled_exception_by_except_block PASSED                                                                                [  1%]
+tests/test_appctx.py::test_app_tearing_down_with_handled_exception_by_app_handler PASSED                                                                                 [  1%]
+tests/test_appctx.py::test_app_tearing_down_with_unhandled_exception PASSED                                                                                              [  2%]
+tests/test_appctx.py::test_app_ctx_globals_methods PASSED                                                                                                                [  2%]
+tests/test_appctx.py::test_custom_app_ctx_globals_class PASSED                                                                                                           [  2%]
+tests/test_appctx.py::test_context_refcounts PASSED                                                                                                                      [  2%]
+tests/test_appctx.py::test_clean_pop PASSED                                                                                                                              [  2%]
+tests/test_async.py::test_async_route[/] PASSED                                                                                                                          [  3%]
+tests/test_async.py::test_async_route[/home] PASSED                                                                                                                      [  3%]
+tests/test_async.py::test_async_route[/bp/] PASSED                                                                                                                       [  3%]
+tests/test_async.py::test_async_route[/view] PASSED                                                                                                                      [  3%]
+tests/test_async.py::test_async_route[/methodview] PASSED                                                                                                                [  3%]
+tests/test_async.py::test_async_error_handler[/error] PASSED                                                                                                             [  4%]
+tests/test_async.py::test_async_error_handler[/bp/error] PASSED                                                                                                          [  4%]
+tests/test_async.py::test_async_before_after_request PASSED                                                                                                              [  4%]
+tests/test_basic.py::test_options_work PASSED                                                                                                                            [  4%]
+tests/test_basic.py::test_options_on_multiple_rules PASSED                                                                                                               [  4%]
+tests/test_basic.py::test_method_route[get] PASSED                                                                                                                       [  5%]
+tests/test_basic.py::test_method_route[post] PASSED                                                                                                                      [  5%]
+tests/test_basic.py::test_method_route[put] PASSED                                                                                                                       [  5%]
+tests/test_basic.py::test_method_route[delete] PASSED                                                                                                                    [  5%]
+tests/test_basic.py::test_method_route[patch] PASSED                                                                                                                     [  5%]
+tests/test_basic.py::test_method_route_no_methods PASSED                                                                                                                 [  6%]
+tests/test_basic.py::test_provide_automatic_options_attr PASSED                                                                                                          [  6%]
+tests/test_basic.py::test_provide_automatic_options_kwarg PASSED                                                                                                         [  6%]
+tests/test_basic.py::test_request_dispatching PASSED                                                                                                                     [  6%]
+tests/test_basic.py::test_disallow_string_for_allowed_methods PASSED                                                                                                     [  6%]
+tests/test_basic.py::test_url_mapping PASSED                                                                                                                             [  7%]
+tests/test_basic.py::test_werkzeug_routing PASSED                                                                                                                        [  7%]
+tests/test_basic.py::test_endpoint_decorator PASSED                                                                                                                      [  7%]
+tests/test_basic.py::test_session PASSED                                                                                                                                 [  7%]
+tests/test_basic.py::test_session_path PASSED                                                                                                                            [  8%]
+tests/test_basic.py::test_session_using_application_root PASSED                                                                                                          [  8%]
+tests/test_basic.py::test_session_using_session_settings PASSED                                                                                                          [  8%]
+tests/test_basic.py::test_session_using_samesite_attribute PASSED                                                                                                        [  8%]
+tests/test_basic.py::test_missing_session PASSED                                                                                                                         [  8%]
+tests/test_basic.py::test_session_expiration PASSED                                                                                                                      [  9%]
+tests/test_basic.py::test_session_stored_last PASSED                                                                                                                     [  9%]
+tests/test_basic.py::test_session_special_types PASSED                                                                                                                   [  9%]
+tests/test_basic.py::test_session_cookie_setting PASSED                                                                                                                  [  9%]
+tests/test_basic.py::test_session_vary_cookie PASSED                                                                                                                     [  9%]
+tests/test_basic.py::test_session_refresh_vary PASSED                                                                                                                    [ 10%]
+tests/test_basic.py::test_flashes PASSED                                                                                                                                 [ 10%]
+tests/test_basic.py::test_extended_flashing PASSED                                                                                                                       [ 10%]
+tests/test_basic.py::test_request_processing PASSED                                                                                                                      [ 10%]
+tests/test_basic.py::test_request_preprocessing_early_return PASSED                                                                                                      [ 10%]
+tests/test_basic.py::test_after_request_processing PASSED                                                                                                                [ 11%]
+tests/test_basic.py::test_teardown_request_handler PASSED                                                                                                                [ 11%]
+tests/test_basic.py::test_teardown_request_handler_debug_mode PASSED                                                                                                     [ 11%]
+tests/test_basic.py::test_teardown_request_handler_error PASSED                                                                                                          [ 11%]
+tests/test_basic.py::test_before_after_request_order PASSED                                                                                                              [ 11%]
+tests/test_basic.py::test_error_handling PASSED                                                                                                                          [ 12%]
+tests/test_basic.py::test_error_handling_processing PASSED                                                                                                               [ 12%]
+tests/test_basic.py::test_baseexception_error_handling PASSED                                                                                                            [ 12%]
+tests/test_basic.py::test_before_request_and_routing_errors PASSED                                                                                                       [ 12%]
+tests/test_basic.py::test_user_error_handling PASSED                                                                                                                     [ 12%]
+tests/test_basic.py::test_http_error_subclass_handling PASSED                                                                                                            [ 13%]
+tests/test_basic.py::test_errorhandler_precedence PASSED                                                                                                                 [ 13%]
+tests/test_basic.py::test_trap_bad_request_key_error[False-None-True-True] PASSED                                                                                        [ 13%]
+tests/test_basic.py::test_trap_bad_request_key_error[True-None-False-True] PASSED                                                                                        [ 13%]
+tests/test_basic.py::test_trap_bad_request_key_error[False-True-False-False] PASSED                                                                                      [ 13%]
+tests/test_basic.py::test_trapping_of_all_http_exceptions PASSED                                                                                                         [ 14%]
+tests/test_basic.py::test_error_handler_after_processor_error PASSED                                                                                                     [ 14%]
+tests/test_basic.py::test_enctype_debug_helper PASSED                                                                                                                    [ 14%]
+tests/test_basic.py::test_response_types PASSED                                                                                                                          [ 14%]
+tests/test_basic.py::test_response_type_errors PASSED                                                                                                                    [ 15%]
+tests/test_basic.py::test_make_response PASSED                                                                                                                           [ 15%]
+tests/test_basic.py::test_make_response_with_response_instance PASSED                                                                                                    [ 15%]
+tests/test_basic.py::test_jsonify_no_prettyprint[True] PASSED                                                                                                            [ 15%]
+tests/test_basic.py::test_jsonify_no_prettyprint[False] PASSED                                                                                                           [ 15%]
+tests/test_basic.py::test_jsonify_mimetype PASSED                                                                                                                        [ 16%]
+tests/test_basic.py::test_json_dump_dataclass PASSED                                                                                                                     [ 16%]
+tests/test_basic.py::test_jsonify_args_and_kwargs_check PASSED                                                                                                           [ 16%]
+tests/test_basic.py::test_url_generation PASSED                                                                                                                          [ 16%]
+tests/test_basic.py::test_build_error_handler PASSED                                                                                                                     [ 16%]
+tests/test_basic.py::test_build_error_handler_reraise PASSED                                                                                                             [ 17%]
+tests/test_basic.py::test_url_for_passes_special_values_to_build_error_handler PASSED                                                                                    [ 17%]
+tests/test_basic.py::test_static_files PASSED                                                                                                                            [ 17%]
+tests/test_basic.py::test_static_url_path PASSED                                                                                                                         [ 17%]
+tests/test_basic.py::test_static_url_path_with_ending_slash PASSED                                                                                                       [ 17%]
+tests/test_basic.py::test_static_url_empty_path PASSED                                                                                                                   [ 18%]
+tests/test_basic.py::test_static_url_empty_path_default PASSED                                                                                                           [ 18%]
+tests/test_basic.py::test_static_folder_with_pathlib_path PASSED                                                                                                         [ 18%]
+tests/test_basic.py::test_static_folder_with_ending_slash PASSED                                                                                                         [ 18%]
+tests/test_basic.py::test_static_route_with_host_matching PASSED                                                                                                         [ 18%]
+tests/test_basic.py::test_request_locals PASSED                                                                                                                          [ 19%]
+tests/test_basic.py::test_server_name_subdomain PASSED                                                                                                                   [ 19%]
+tests/test_basic.py::test_exception_propagation[TESTING] PASSED                                                                                                          [ 19%]
+tests/test_basic.py::test_exception_propagation[PROPAGATE_EXCEPTIONS] PASSED                                                                                             [ 19%]
+tests/test_basic.py::test_exception_propagation[DEBUG] PASSED                                                                                                            [ 19%]
+tests/test_basic.py::test_exception_propagation[None] PASSED                                                                                                             [ 20%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-True-True-True] PASSED                                                                                        [ 20%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-True-True-False] PASSED                                                                                       [ 20%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-True-False-True] PASSED                                                                                       [ 20%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-True-False-False] PASSED                                                                                      [ 20%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-False-True-True] PASSED                                                                                       [ 21%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-False-True-False] PASSED                                                                                      [ 21%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-False-False-True] PASSED                                                                                      [ 21%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[None-False-False-False] PASSED                                                                                     [ 21%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-True-True-True] PASSED                                                                                        [ 22%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-True-True-False] PASSED                                                                                       [ 22%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-True-False-True] PASSED                                                                                       [ 22%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-True-False-False] PASSED                                                                                      [ 22%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-False-True-True] PASSED                                                                                       [ 22%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-False-True-False] PASSED                                                                                      [ 23%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-False-False-True] PASSED                                                                                      [ 23%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[True-False-False-False] PASSED                                                                                     [ 23%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-True-True-True] PASSED                                                                                       [ 23%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-True-True-False] PASSED                                                                                      [ 23%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-True-False-True] PASSED                                                                                      [ 24%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-True-False-False] PASSED                                                                                     [ 24%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-False-True-True] PASSED                                                                                      [ 24%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-False-True-False] PASSED                                                                                     [ 24%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-False-False-True] PASSED                                                                                     [ 24%]
+tests/test_basic.py::test_werkzeug_passthrough_errors[False-False-False-False] PASSED                                                                                    [ 25%]
+tests/test_basic.py::test_max_content_length PASSED                                                                                                                      [ 25%]
+tests/test_basic.py::test_url_processors PASSED                                                                                                                          [ 25%]
+tests/test_basic.py::test_inject_blueprint_url_defaults PASSED                                                                                                           [ 25%]
+tests/test_basic.py::test_nonascii_pathinfo PASSED                                                                                                                       [ 25%]
+tests/test_basic.py::test_no_setup_after_first_request PASSED                                                                                                            [ 26%]
+tests/test_basic.py::test_routing_redirect_debugging PASSED                                                                                                              [ 26%]
+tests/test_basic.py::test_route_decorator_custom_endpoint PASSED                                                                                                         [ 26%]
+tests/test_basic.py::test_get_method_on_g PASSED                                                                                                                         [ 26%]
+tests/test_basic.py::test_g_iteration_protocol PASSED                                                                                                                    [ 26%]
+tests/test_basic.py::test_subdomain_basic_support PASSED                                                                                                                 [ 27%]
+tests/test_basic.py::test_subdomain_matching PASSED                                                                                                                      [ 27%]
+tests/test_basic.py::test_subdomain_matching_with_ports PASSED                                                                                                           [ 27%]
+tests/test_basic.py::test_subdomain_matching_other_name[False] PASSED                                                                                                    [ 27%]
+tests/test_basic.py::test_subdomain_matching_other_name[True] PASSED                                                                                                     [ 27%]
+tests/test_basic.py::test_multi_route_rules PASSED                                                                                                                       [ 28%]
+tests/test_basic.py::test_multi_route_class_views PASSED                                                                                                                 [ 28%]
+tests/test_basic.py::test_run_defaults PASSED                                                                                                                            [ 28%]
+tests/test_basic.py::test_run_server_port PASSED                                                                                                                         [ 28%]
+tests/test_basic.py::test_run_from_config[None-None-pocoo.org:8080-pocoo.org-8080] PASSED                                                                                [ 29%]
+tests/test_basic.py::test_run_from_config[localhost-None-pocoo.org:8080-localhost-8080] PASSED                                                                           [ 29%]
+tests/test_basic.py::test_run_from_config[None-80-pocoo.org:8080-pocoo.org-80] PASSED                                                                                    [ 29%]
+tests/test_basic.py::test_run_from_config[localhost-80-pocoo.org:8080-localhost-80] PASSED                                                                               [ 29%]
+tests/test_basic.py::test_run_from_config[localhost-0-localhost:8080-localhost-0] PASSED                                                                                 [ 29%]
+tests/test_basic.py::test_run_from_config[None-None-localhost:8080-localhost-8080] PASSED                                                                                [ 30%]
+tests/test_basic.py::test_run_from_config[None-None-localhost:0-localhost-0] PASSED                                                                                      [ 30%]
+tests/test_basic.py::test_max_cookie_size PASSED                                                                                                                         [ 30%]
+tests/test_basic.py::test_app_freed_on_zero_refcount PASSED                                                                                                              [ 30%]
+tests/test_blueprints.py::test_blueprint_specific_error_handling PASSED                                                                                                  [ 30%]
+tests/test_blueprints.py::test_blueprint_specific_user_error_handling PASSED                                                                                             [ 31%]
+tests/test_blueprints.py::test_blueprint_app_error_handling PASSED                                                                                                       [ 31%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[-/-/] PASSED                                                                                                       [ 31%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/--/] PASSED                                                                                                       [ 31%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/-/-/] PASSED                                                                                                      [ 31%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/foo--/foo] PASSED                                                                                                 [ 32%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/--/foo/] PASSED                                                                                               [ 32%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[-/bar-/bar] PASSED                                                                                                 [ 32%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/-/bar-/foo/bar] PASSED                                                                                        [ 32%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/-bar-/foo/bar] PASSED                                                                                         [ 32%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/foo-/bar-/foo/bar] PASSED                                                                                         [ 33%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/-//bar-/foo/bar] PASSED                                                                                       [ 33%]
+tests/test_blueprints.py::test_blueprint_prefix_slash[/foo//-/bar-/foo/bar] PASSED                                                                                       [ 33%]
+tests/test_blueprints.py::test_blueprint_url_defaults PASSED                                                                                                             [ 33%]
+tests/test_blueprints.py::test_blueprint_url_processors PASSED                                                                                                           [ 33%]
+tests/test_blueprints.py::test_templates_and_static PASSED                                                                                                               [ 34%]
+tests/test_blueprints.py::test_default_static_max_age PASSED                                                                                                             [ 34%]
+tests/test_blueprints.py::test_templates_list PASSED                                                                                                                     [ 34%]
+tests/test_blueprints.py::test_dotted_name_not_allowed PASSED                                                                                                            [ 34%]
+tests/test_blueprints.py::test_empty_name_not_allowed PASSED                                                                                                             [ 34%]
+tests/test_blueprints.py::test_dotted_names_from_app PASSED                                                                                                              [ 35%]
+tests/test_blueprints.py::test_empty_url_defaults PASSED                                                                                                                 [ 35%]
+tests/test_blueprints.py::test_route_decorator_custom_endpoint PASSED                                                                                                    [ 35%]
+tests/test_blueprints.py::test_route_decorator_custom_endpoint_with_dots PASSED                                                                                          [ 35%]
+tests/test_blueprints.py::test_endpoint_decorator PASSED                                                                                                                 [ 36%]
+tests/test_blueprints.py::test_template_filter PASSED                                                                                                                    [ 36%]
+tests/test_blueprints.py::test_add_template_filter PASSED                                                                                                                [ 36%]
+tests/test_blueprints.py::test_template_filter_with_name PASSED                                                                                                          [ 36%]
+tests/test_blueprints.py::test_add_template_filter_with_name PASSED                                                                                                      [ 36%]
+tests/test_blueprints.py::test_template_filter_with_template PASSED                                                                                                      [ 37%]
+tests/test_blueprints.py::test_template_filter_after_route_with_template PASSED                                                                                          [ 37%]
+tests/test_blueprints.py::test_add_template_filter_with_template PASSED                                                                                                  [ 37%]
+tests/test_blueprints.py::test_template_filter_with_name_and_template PASSED                                                                                             [ 37%]
+tests/test_blueprints.py::test_add_template_filter_with_name_and_template PASSED                                                                                         [ 37%]
+tests/test_blueprints.py::test_template_test PASSED                                                                                                                      [ 38%]
+tests/test_blueprints.py::test_add_template_test PASSED                                                                                                                  [ 38%]
+tests/test_blueprints.py::test_template_test_with_name PASSED                                                                                                            [ 38%]
+tests/test_blueprints.py::test_add_template_test_with_name PASSED                                                                                                        [ 38%]
+tests/test_blueprints.py::test_template_test_with_template PASSED                                                                                                        [ 38%]
+tests/test_blueprints.py::test_template_test_after_route_with_template PASSED                                                                                            [ 39%]
+tests/test_blueprints.py::test_add_template_test_with_template PASSED                                                                                                    [ 39%]
+tests/test_blueprints.py::test_template_test_with_name_and_template PASSED                                                                                               [ 39%]
+tests/test_blueprints.py::test_add_template_test_with_name_and_template PASSED                                                                                           [ 39%]
+tests/test_blueprints.py::test_context_processing PASSED                                                                                                                 [ 39%]
+tests/test_blueprints.py::test_template_global PASSED                                                                                                                    [ 40%]
+tests/test_blueprints.py::test_request_processing PASSED                                                                                                                 [ 40%]
+tests/test_blueprints.py::test_app_request_processing PASSED                                                                                                             [ 40%]
+tests/test_blueprints.py::test_app_url_processors PASSED                                                                                                                 [ 40%]
+tests/test_blueprints.py::test_nested_blueprint PASSED                                                                                                                   [ 40%]
+tests/test_blueprints.py::test_nested_callback_order PASSED                                                                                                              [ 41%]
+tests/test_blueprints.py::test_nesting_url_prefixes[/parent-/child-None-None] PASSED                                                                                     [ 41%]
+tests/test_blueprints.py::test_nesting_url_prefixes[/parent-None-None-/child] PASSED                                                                                     [ 41%]
+tests/test_blueprints.py::test_nesting_url_prefixes[None-None-/parent-/child] PASSED                                                                                     [ 41%]
+tests/test_blueprints.py::test_nesting_url_prefixes[/other-/something-/parent-/child] PASSED                                                                             [ 41%]
+tests/test_blueprints.py::test_nesting_subdomains PASSED                                                                                                                 [ 42%]
+tests/test_blueprints.py::test_child_and_parent_subdomain PASSED                                                                                                         [ 42%]
+tests/test_blueprints.py::test_unique_blueprint_names PASSED                                                                                                             [ 42%]
+tests/test_blueprints.py::test_self_registration PASSED                                                                                                                  [ 42%]
+tests/test_blueprints.py::test_blueprint_renaming PASSED                                                                                                                 [ 43%]
+tests/test_cli.py::test_cli_name PASSED                                                                                                                                  [ 43%]
+tests/test_cli.py::test_find_best_app PASSED                                                                                                                             [ 43%]
+tests/test_cli.py::test_prepare_import[test-path0-test] PASSED                                                                                                           [ 43%]
+tests/test_cli.py::test_prepare_import[test.py-path1-test] PASSED                                                                                                        [ 43%]
+tests/test_cli.py::test_prepare_import[a/test-path2-test] PASSED                                                                                                         [ 44%]
+tests/test_cli.py::test_prepare_import[test/__init__.py-path3-test] PASSED                                                                                               [ 44%]
+tests/test_cli.py::test_prepare_import[test/__init__-path4-test] PASSED                                                                                                  [ 44%]
+tests/test_cli.py::test_prepare_import[value5-path5-cliapp.inner1] PASSED                                                                                                [ 44%]
+tests/test_cli.py::test_prepare_import[value6-path6-cliapp.inner1.inner2] PASSED                                                                                         [ 44%]
+tests/test_cli.py::test_prepare_import[test.a.b-path7-test.a.b] PASSED                                                                                                   [ 45%]
+tests/test_cli.py::test_prepare_import[value8-path8-cliapp.app] PASSED                                                                                                   [ 45%]
+tests/test_cli.py::test_prepare_import[value9-path9-cliapp.message.txt] PASSED                                                                                           [ 45%]
+tests/test_cli.py::test_locate_app[cliapp.app-None-testapp] PASSED                                                                                                       [ 45%]
+tests/test_cli.py::test_locate_app[cliapp.app-testapp-testapp] PASSED                                                                                                    [ 45%]
+tests/test_cli.py::test_locate_app[cliapp.factory-None-app] PASSED                                                                                                       [ 46%]
+tests/test_cli.py::test_locate_app[cliapp.factory-create_app-app] PASSED                                                                                                 [ 46%]
+tests/test_cli.py::test_locate_app[cliapp.factory-create_app()-app] PASSED                                                                                               [ 46%]
+tests/test_cli.py::test_locate_app[cliapp.factory-create_app2("foo", "bar")-app2_foo_bar] PASSED                                                                         [ 46%]
+tests/test_cli.py::test_locate_app[cliapp.factory-create_app2("foo", "bar", )-app2_foo_bar] PASSED                                                                       [ 46%]
+tests/test_cli.py::test_locate_app[cliapp.factory- create_app () -app] PASSED                                                                                            [ 47%]
+tests/test_cli.py::test_locate_app_raises[notanapp.py-None] PASSED                                                                                                       [ 47%]
+tests/test_cli.py::test_locate_app_raises[cliapp/app-None] PASSED                                                                                                        [ 47%]
+tests/test_cli.py::test_locate_app_raises[cliapp.app-notanapp] PASSED                                                                                                    [ 47%]
+tests/test_cli.py::test_locate_app_raises[cliapp.factory-create_app2("foo")] PASSED                                                                                      [ 47%]
+tests/test_cli.py::test_locate_app_raises[cliapp.factory-create_app(] PASSED                                                                                             [ 48%]
+tests/test_cli.py::test_locate_app_raises[cliapp.factory-no_app] PASSED                                                                                                  [ 48%]
+tests/test_cli.py::test_locate_app_raises[cliapp.importerrorapp-None] PASSED                                                                                             [ 48%]
+tests/test_cli.py::test_locate_app_raises[cliapp.message.txt-None] PASSED                                                                                                [ 48%]
+tests/test_cli.py::test_locate_app_suppress_raise PASSED                                                                                                                 [ 48%]
+tests/test_cli.py::test_get_version PASSED                                                                                                                               [ 49%]
+tests/test_cli.py::test_scriptinfo PASSED                                                                                                                                [ 49%]
+tests/test_cli.py::test_app_cli_has_app_context PASSED                                                                                                                   [ 49%]
+tests/test_cli.py::test_with_appcontext PASSED                                                                                                                           [ 49%]
+tests/test_cli.py::test_appgroup_app_context PASSED                                                                                                                      [ 50%]
+tests/test_cli.py::test_flaskgroup_app_context PASSED                                                                                                                    [ 50%]
+tests/test_cli.py::test_flaskgroup_debug[True] PASSED                                                                                                                    [ 50%]
+tests/test_cli.py::test_flaskgroup_debug[False] PASSED                                                                                                                   [ 50%]
+tests/test_cli.py::test_flaskgroup_nested PASSED                                                                                                                         [ 50%]
+tests/test_cli.py::test_no_command_echo_loading_error PASSED                                                                                                             [ 51%]
+tests/test_cli.py::test_help_echo_loading_error PASSED                                                                                                                   [ 51%]
+tests/test_cli.py::test_help_echo_exception PASSED                                                                                                                       [ 51%]
+tests/test_cli.py::TestRoutes::test_simple PASSED                                                                                                                        [ 51%]
+tests/test_cli.py::TestRoutes::test_sort PASSED                                                                                                                          [ 51%]
+tests/test_cli.py::TestRoutes::test_all_methods PASSED                                                                                                                   [ 52%]
+tests/test_cli.py::TestRoutes::test_no_routes PASSED                                                                                                                     [ 52%]
+tests/test_cli.py::TestRoutes::test_subdomain PASSED                                                                                                                     [ 52%]
+tests/test_cli.py::TestRoutes::test_host PASSED                                                                                                                          [ 52%]
+tests/test_cli.py::test_load_dotenv PASSED                                                                                                                               [ 52%]
+tests/test_cli.py::test_dotenv_path PASSED                                                                                                                               [ 53%]
+tests/test_cli.py::test_dotenv_optional PASSED                                                                                                                           [ 53%]
+tests/test_cli.py::test_disable_dotenv_from_env PASSED                                                                                                                   [ 53%]
+tests/test_cli.py::test_run_cert_path PASSED                                                                                                                             [ 53%]
+tests/test_cli.py::test_run_cert_adhoc PASSED                                                                                                                            [ 53%]
+tests/test_cli.py::test_run_cert_import PASSED                                                                                                                           [ 54%]
+tests/test_cli.py::test_run_cert_no_ssl PASSED                                                                                                                           [ 54%]
+tests/test_cli.py::test_cli_blueprints PASSED                                                                                                                            [ 54%]
+tests/test_cli.py::test_cli_empty PASSED                                                                                                                                 [ 54%]
+tests/test_cli.py::test_run_exclude_patterns PASSED                                                                                                                      [ 54%]
+tests/test_config.py::test_config_from_pyfile PASSED                                                                                                                     [ 55%]
+tests/test_config.py::test_config_from_object PASSED                                                                                                                     [ 55%]
+tests/test_config.py::test_config_from_file_json PASSED                                                                                                                  [ 55%]
+tests/test_config.py::test_config_from_file_toml SKIPPED (tomllib added in 3.11)                                                                                         [ 55%]
+tests/test_config.py::test_from_prefixed_env PASSED                                                                                                                      [ 55%]
+tests/test_config.py::test_from_prefixed_env_custom_prefix PASSED                                                                                                        [ 56%]
+tests/test_config.py::test_from_prefixed_env_nested PASSED                                                                                                               [ 56%]
+tests/test_config.py::test_config_from_mapping PASSED                                                                                                                    [ 56%]
+tests/test_config.py::test_config_from_class PASSED                                                                                                                      [ 56%]
+tests/test_config.py::test_config_from_envvar PASSED                                                                                                                     [ 56%]
+tests/test_config.py::test_config_from_envvar_missing PASSED                                                                                                             [ 57%]
+tests/test_config.py::test_config_missing PASSED                                                                                                                         [ 57%]
+tests/test_config.py::test_config_missing_file PASSED                                                                                                                    [ 57%]
+tests/test_config.py::test_custom_config_class PASSED                                                                                                                    [ 57%]
+tests/test_config.py::test_session_lifetime PASSED                                                                                                                       [ 58%]
+tests/test_config.py::test_get_namespace PASSED                                                                                                                          [ 58%]
+tests/test_config.py::test_from_pyfile_weird_encoding[utf-8] PASSED                                                                                                      [ 58%]
+tests/test_config.py::test_from_pyfile_weird_encoding[iso-8859-15] PASSED                                                                                                [ 58%]
+tests/test_config.py::test_from_pyfile_weird_encoding[latin-1] PASSED                                                                                                    [ 58%]
+tests/test_converters.py::test_custom_converters PASSED                                                                                                                  [ 59%]
+tests/test_converters.py::test_context_available PASSED                                                                                                                  [ 59%]
+tests/test_helpers.py::TestSendfile::test_send_file PASSED                                                                                                               [ 59%]
+tests/test_helpers.py::TestSendfile::test_static_file PASSED                                                                                                             [ 59%]
+tests/test_helpers.py::TestSendfile::test_send_from_directory PASSED                                                                                                     [ 59%]
+tests/test_helpers.py::TestUrlFor::test_url_for_with_anchor PASSED                                                                                                       [ 60%]
+tests/test_helpers.py::TestUrlFor::test_url_for_with_scheme PASSED                                                                                                       [ 60%]
+tests/test_helpers.py::TestUrlFor::test_url_for_with_scheme_not_external PASSED                                                                                          [ 60%]
+tests/test_helpers.py::TestUrlFor::test_url_for_with_alternating_schemes PASSED                                                                                          [ 60%]
+tests/test_helpers.py::TestUrlFor::test_url_with_method PASSED                                                                                                           [ 60%]
+tests/test_helpers.py::TestUrlFor::test_url_for_with_self PASSED                                                                                                         [ 61%]
+tests/test_helpers.py::test_redirect_no_app PASSED                                                                                                                       [ 61%]
+tests/test_helpers.py::test_redirect_with_app PASSED                                                                                                                     [ 61%]
+tests/test_helpers.py::test_abort_no_app PASSED                                                                                                                          [ 61%]
+tests/test_helpers.py::test_app_aborter_class PASSED                                                                                                                     [ 61%]
+tests/test_helpers.py::test_abort_with_app PASSED                                                                                                                        [ 62%]
+tests/test_helpers.py::TestNoImports::test_name_with_import_error PASSED                                                                                                 [ 62%]
+tests/test_helpers.py::TestStreaming::test_streaming_with_context PASSED                                                                                                 [ 62%]
+tests/test_helpers.py::TestStreaming::test_streaming_with_context_as_decorator PASSED                                                                                    [ 62%]
+tests/test_helpers.py::TestStreaming::test_streaming_with_context_and_custom_close PASSED                                                                                [ 62%]
+tests/test_helpers.py::TestStreaming::test_stream_keeps_session PASSED                                                                                                   [ 63%]
+tests/test_helpers.py::TestHelpers::test_get_debug_flag[-False] PASSED                                                                                                   [ 63%]
+tests/test_helpers.py::TestHelpers::test_get_debug_flag[0-False] PASSED                                                                                                  [ 63%]
+tests/test_helpers.py::TestHelpers::test_get_debug_flag[False-False] PASSED                                                                                              [ 63%]
+tests/test_helpers.py::TestHelpers::test_get_debug_flag[No-False] PASSED                                                                                                 [ 63%]
+tests/test_helpers.py::TestHelpers::test_get_debug_flag[True-True] PASSED                                                                                                [ 64%]
+tests/test_helpers.py::TestHelpers::test_make_response PASSED                                                                                                            [ 64%]
+tests/test_helpers.py::test_open_resource[r] PASSED                                                                                                                      [ 64%]
+tests/test_helpers.py::test_open_resource[rb] PASSED                                                                                                                     [ 64%]
+tests/test_helpers.py::test_open_resource[rt] PASSED                                                                                                                     [ 65%]
+tests/test_helpers.py::test_open_resource_exceptions[w] PASSED                                                                                                           [ 65%]
+tests/test_helpers.py::test_open_resource_exceptions[x] PASSED                                                                                                           [ 65%]
+tests/test_helpers.py::test_open_resource_exceptions[a] PASSED                                                                                                           [ 65%]
+tests/test_helpers.py::test_open_resource_exceptions[r+] PASSED                                                                                                          [ 65%]
+tests/test_helpers.py::test_open_resource_with_encoding[utf-8] PASSED                                                                                                    [ 66%]
+tests/test_helpers.py::test_open_resource_with_encoding[utf-16-le] PASSED                                                                                                [ 66%]
+tests/test_instance_config.py::test_explicit_instance_paths PASSED                                                                                                       [ 66%]
+tests/test_instance_config.py::test_uninstalled_module_paths PASSED                                                                                                      [ 66%]
+tests/test_instance_config.py::test_uninstalled_package_paths PASSED                                                                                                     [ 66%]
+tests/test_instance_config.py::test_uninstalled_namespace_paths PASSED                                                                                                   [ 67%]
+tests/test_instance_config.py::test_installed_module_paths[True] PASSED                                                                                                  [ 67%]
+tests/test_instance_config.py::test_installed_module_paths[False] PASSED                                                                                                 [ 67%]
+tests/test_instance_config.py::test_installed_package_paths[True] PASSED                                                                                                 [ 67%]
+tests/test_instance_config.py::test_installed_package_paths[False] PASSED                                                                                                [ 67%]
+tests/test_instance_config.py::test_prefix_package_paths[True] PASSED                                                                                                    [ 68%]
+tests/test_instance_config.py::test_prefix_package_paths[False] PASSED                                                                                                   [ 68%]
+tests/test_json.py::test_bad_request_debug_message[True] PASSED                                                                                                          [ 68%]
+tests/test_json.py::test_bad_request_debug_message[False] PASSED                                                                                                         [ 68%]
+tests/test_json.py::test_json_bad_requests PASSED                                                                                                                        [ 68%]
+tests/test_json.py::test_json_custom_mimetypes PASSED                                                                                                                    [ 69%]
+tests/test_json.py::test_json_as_unicode[True-"\\u2603"] PASSED                                                                                                          [ 69%]
+tests/test_json.py::test_json_as_unicode[False-"\u2603"] PASSED                                                                                                          [ 69%]
+tests/test_json.py::test_json_dump_to_file PASSED                                                                                                                        [ 69%]
+tests/test_json.py::test_jsonify_basic_types[0] PASSED                                                                                                                   [ 69%]
+tests/test_json.py::test_jsonify_basic_types[-1] PASSED                                                                                                                  [ 70%]
+tests/test_json.py::test_jsonify_basic_types[1] PASSED                                                                                                                   [ 70%]
+tests/test_json.py::test_jsonify_basic_types[23] PASSED                                                                                                                  [ 70%]
+tests/test_json.py::test_jsonify_basic_types[3.14] PASSED                                                                                                                [ 70%]
+tests/test_json.py::test_jsonify_basic_types[s] PASSED                                                                                                                   [ 70%]
+tests/test_json.py::test_jsonify_basic_types[longer string] PASSED                                                                                                       [ 71%]
+tests/test_json.py::test_jsonify_basic_types[True] PASSED                                                                                                                [ 71%]
+tests/test_json.py::test_jsonify_basic_types[False] PASSED                                                                                                               [ 71%]
+tests/test_json.py::test_jsonify_basic_types[None] PASSED                                                                                                                [ 71%]
+tests/test_json.py::test_jsonify_dicts PASSED                                                                                                                            [ 72%]
+tests/test_json.py::test_jsonify_arrays PASSED                                                                                                                           [ 72%]
+tests/test_json.py::test_jsonify_datetime[value0] PASSED                                                                                                                 [ 72%]
+tests/test_json.py::test_jsonify_datetime[value1] PASSED                                                                                                                 [ 72%]
+tests/test_json.py::test_jsonify_aware_datetimes[tz0] PASSED                                                                                                             [ 72%]
+tests/test_json.py::test_jsonify_aware_datetimes[tz1] PASSED                                                                                                             [ 73%]
+tests/test_json.py::test_jsonify_aware_datetimes[tz2] PASSED                                                                                                             [ 73%]
+tests/test_json.py::test_jsonify_uuid_types PASSED                                                                                                                       [ 73%]
+tests/test_json.py::test_json_decimal PASSED                                                                                                                             [ 73%]
+tests/test_json.py::test_json_attr PASSED                                                                                                                                [ 73%]
+tests/test_json.py::test_tojson_filter PASSED                                                                                                                            [ 74%]
+tests/test_json.py::test_json_customization PASSED                                                                                                                       [ 74%]
+tests/test_json.py::test_json_key_sorting PASSED                                                                                                                         [ 74%]
+tests/test_json.py::test_html_method PASSED                                                                                                                              [ 74%]
+tests/test_json_tag.py::test_dump_load_unchanged[data0] PASSED                                                                                                           [ 74%]
+tests/test_json_tag.py::test_dump_load_unchanged[data1] PASSED                                                                                                           [ 75%]
+tests/test_json_tag.py::test_dump_load_unchanged[data2] PASSED                                                                                                           [ 75%]
+tests/test_json_tag.py::test_dump_load_unchanged[data3] PASSED                                                                                                           [ 75%]
+tests/test_json_tag.py::test_dump_load_unchanged[data4] PASSED                                                                                                           [ 75%]
+tests/test_json_tag.py::test_dump_load_unchanged[data5] PASSED                                                                                                           [ 75%]
+tests/test_json_tag.py::test_dump_load_unchanged[\xff] PASSED                                                                                                            [ 76%]
+tests/test_json_tag.py::test_dump_load_unchanged[<html>] PASSED                                                                                                          [ 76%]
+tests/test_json_tag.py::test_dump_load_unchanged[data8] PASSED                                                                                                           [ 76%]
+tests/test_json_tag.py::test_dump_load_unchanged[data9] PASSED                                                                                                           [ 76%]
+tests/test_json_tag.py::test_duplicate_tag PASSED                                                                                                                        [ 76%]
+tests/test_json_tag.py::test_custom_tag PASSED                                                                                                                           [ 77%]
+tests/test_json_tag.py::test_tag_interface PASSED                                                                                                                        [ 77%]
+tests/test_json_tag.py::test_tag_order PASSED                                                                                                                            [ 77%]
+tests/test_logging.py::test_logger PASSED                                                                                                                                [ 77%]
+tests/test_logging.py::test_logger_debug PASSED                                                                                                                          [ 77%]
+tests/test_logging.py::test_existing_handler PASSED                                                                                                                      [ 78%]
+tests/test_logging.py::test_wsgi_errors_stream PASSED                                                                                                                    [ 78%]
+tests/test_logging.py::test_has_level_handler PASSED                                                                                                                     [ 78%]
+tests/test_logging.py::test_log_view_exception PASSED                                                                                                                    [ 78%]
+tests/test_regression.py::test_aborting PASSED                                                                                                                           [ 79%]
+tests/test_reqctx.py::test_teardown_on_pop PASSED                                                                                                                        [ 79%]
+tests/test_reqctx.py::test_teardown_with_previous_exception PASSED                                                                                                       [ 79%]
+tests/test_reqctx.py::test_teardown_with_handled_exception PASSED                                                                                                        [ 79%]
+tests/test_reqctx.py::test_proper_test_request_context PASSED                                                                                                            [ 79%]
+tests/test_reqctx.py::test_context_binding PASSED                                                                                                                        [ 80%]
+tests/test_reqctx.py::test_context_test PASSED                                                                                                                           [ 80%]
+tests/test_reqctx.py::test_manual_context_binding PASSED                                                                                                                 [ 80%]
+tests/test_reqctx.py::TestGreenletContextCopying::test_greenlet_context_copying SKIPPED (greenlet not installed)                                                         [ 80%]
+tests/test_reqctx.py::TestGreenletContextCopying::test_greenlet_context_copying_api SKIPPED (greenlet not installed)                                                     [ 80%]
+tests/test_reqctx.py::test_session_error_pops_context PASSED                                                                                                             [ 81%]
+tests/test_reqctx.py::test_session_dynamic_cookie_name PASSED                                                                                                            [ 81%]
+tests/test_reqctx.py::test_bad_environ_raises_bad_request PASSED                                                                                                         [ 81%]
+tests/test_reqctx.py::test_environ_for_valid_idna_completes PASSED                                                                                                       [ 81%]
+tests/test_reqctx.py::test_normal_environ_completes PASSED                                                                                                               [ 81%]
+tests/test_session_interface.py::test_open_session_with_endpoint PASSED                                                                                                  [ 82%]
+tests/test_signals.py::test_template_rendered PASSED                                                                                                                     [ 82%]
+tests/test_signals.py::test_before_render_template PASSED                                                                                                                [ 82%]
+tests/test_signals.py::test_request_signals PASSED                                                                                                                       [ 82%]
+tests/test_signals.py::test_request_exception_signal PASSED                                                                                                              [ 82%]
+tests/test_signals.py::test_appcontext_signals PASSED                                                                                                                    [ 83%]
+tests/test_signals.py::test_flash_signal PASSED                                                                                                                          [ 83%]
+tests/test_signals.py::test_appcontext_tearing_down_signal PASSED                                                                                                        [ 83%]
+tests/test_subclassing.py::test_suppressed_exception_logging PASSED                                                                                                      [ 83%]
+tests/test_templating.py::test_context_processing PASSED                                                                                                                 [ 83%]
+tests/test_templating.py::test_original_win PASSED                                                                                                                       [ 84%]
+tests/test_templating.py::test_simple_stream PASSED                                                                                                                      [ 84%]
+tests/test_templating.py::test_request_less_rendering PASSED                                                                                                             [ 84%]
+tests/test_templating.py::test_standard_context PASSED                                                                                                                   [ 84%]
+tests/test_templating.py::test_escaping PASSED                                                                                                                           [ 84%]
+tests/test_templating.py::test_no_escaping PASSED                                                                                                                        [ 85%]
+tests/test_templating.py::test_escaping_without_template_filename PASSED                                                                                                 [ 85%]
+tests/test_templating.py::test_macros PASSED                                                                                                                             [ 85%]
+tests/test_templating.py::test_template_filter PASSED                                                                                                                    [ 85%]
+tests/test_templating.py::test_add_template_filter PASSED                                                                                                                [ 86%]
+tests/test_templating.py::test_template_filter_with_name PASSED                                                                                                          [ 86%]
+tests/test_templating.py::test_add_template_filter_with_name PASSED                                                                                                      [ 86%]
+tests/test_templating.py::test_template_filter_with_template PASSED                                                                                                      [ 86%]
+tests/test_templating.py::test_add_template_filter_with_template PASSED                                                                                                  [ 86%]
+tests/test_templating.py::test_template_filter_with_name_and_template PASSED                                                                                             [ 87%]
+tests/test_templating.py::test_add_template_filter_with_name_and_template PASSED                                                                                         [ 87%]
+tests/test_templating.py::test_template_test PASSED                                                                                                                      [ 87%]
+tests/test_templating.py::test_add_template_test PASSED                                                                                                                  [ 87%]
+tests/test_templating.py::test_template_test_with_name PASSED                                                                                                            [ 87%]
+tests/test_templating.py::test_add_template_test_with_name PASSED                                                                                                        [ 88%]
+tests/test_templating.py::test_template_test_with_template PASSED                                                                                                        [ 88%]
+tests/test_templating.py::test_add_template_test_with_template PASSED                                                                                                    [ 88%]
+tests/test_templating.py::test_template_test_with_name_and_template PASSED                                                                                               [ 88%]
+tests/test_templating.py::test_add_template_test_with_name_and_template PASSED                                                                                           [ 88%]
+tests/test_templating.py::test_add_template_global PASSED                                                                                                                [ 89%]
+tests/test_templating.py::test_custom_template_loader PASSED                                                                                                             [ 89%]
+tests/test_templating.py::test_iterable_loader PASSED                                                                                                                    [ 89%]
+tests/test_templating.py::test_templates_auto_reload PASSED                                                                                                              [ 89%]
+tests/test_templating.py::test_templates_auto_reload_debug_run PASSED                                                                                                    [ 89%]
+tests/test_templating.py::test_template_loader_debugging PASSED                                                                                                          [ 90%]
+tests/test_templating.py::test_custom_jinja_env PASSED                                                                                                                   [ 90%]
+tests/test_testing.py::test_environ_defaults_from_config PASSED                                                                                                          [ 90%]
+tests/test_testing.py::test_environ_defaults PASSED                                                                                                                      [ 90%]
+tests/test_testing.py::test_environ_base_default PASSED                                                                                                                  [ 90%]
+tests/test_testing.py::test_environ_base_modified PASSED                                                                                                                 [ 91%]
+tests/test_testing.py::test_client_open_environ PASSED                                                                                                                   [ 91%]
+tests/test_testing.py::test_specify_url_scheme PASSED                                                                                                                    [ 91%]
+tests/test_testing.py::test_path_is_url PASSED                                                                                                                           [ 91%]
+tests/test_testing.py::test_environbuilder_json_dumps PASSED                                                                                                             [ 91%]
+tests/test_testing.py::test_blueprint_with_subdomain PASSED                                                                                                              [ 92%]
+tests/test_testing.py::test_redirect_keep_session PASSED                                                                                                                 [ 92%]
+tests/test_testing.py::test_session_transactions PASSED                                                                                                                  [ 92%]
+tests/test_testing.py::test_session_transactions_no_null_sessions PASSED                                                                                                 [ 92%]
+tests/test_testing.py::test_session_transactions_keep_context PASSED                                                                                                     [ 93%]
+tests/test_testing.py::test_session_transaction_needs_cookies PASSED                                                                                                     [ 93%]
+tests/test_testing.py::test_test_client_context_binding PASSED                                                                                                           [ 93%]
+tests/test_testing.py::test_reuse_client PASSED                                                                                                                          [ 93%]
+tests/test_testing.py::test_full_url_request PASSED                                                                                                                      [ 93%]
+tests/test_testing.py::test_json_request_and_response PASSED                                                                                                             [ 94%]
+tests/test_testing.py::test_client_json_no_app_context PASSED                                                                                                            [ 94%]
+tests/test_testing.py::test_subdomain PASSED                                                                                                                             [ 94%]
+tests/test_testing.py::test_nosubdomain PASSED                                                                                                                           [ 94%]
+tests/test_testing.py::test_cli_runner_class PASSED                                                                                                                      [ 94%]
+tests/test_testing.py::test_cli_invoke PASSED                                                                                                                            [ 95%]
+tests/test_testing.py::test_cli_custom_obj PASSED                                                                                                                        [ 95%]
+tests/test_testing.py::test_client_pop_all_preserved PASSED                                                                                                              [ 95%]
+tests/test_user_error_handler.py::test_error_handler_no_match PASSED                                                                                                     [ 95%]
+tests/test_user_error_handler.py::test_error_handler_subclass PASSED                                                                                                     [ 95%]
+tests/test_user_error_handler.py::test_error_handler_http_subclass PASSED                                                                                                [ 96%]
+tests/test_user_error_handler.py::test_error_handler_blueprint PASSED                                                                                                    [ 96%]
+tests/test_user_error_handler.py::test_default_error_handler PASSED                                                                                                      [ 96%]
+tests/test_user_error_handler.py::TestGenericHandlers::test_handle_class_or_code[InternalServerError] PASSED                                                             [ 96%]
+tests/test_user_error_handler.py::TestGenericHandlers::test_handle_class_or_code[500] PASSED                                                                             [ 96%]
+tests/test_user_error_handler.py::TestGenericHandlers::test_handle_generic_http PASSED                                                                                   [ 97%]
+tests/test_user_error_handler.py::TestGenericHandlers::test_handle_generic PASSED                                                                                        [ 97%]
+tests/test_views.py::test_basic_view PASSED                                                                                                                              [ 97%]
+tests/test_views.py::test_method_based_view PASSED                                                                                                                       [ 97%]
+tests/test_views.py::test_view_patching PASSED                                                                                                                           [ 97%]
+tests/test_views.py::test_view_inheritance PASSED                                                                                                                        [ 98%]
+tests/test_views.py::test_view_decorators PASSED                                                                                                                         [ 98%]
+tests/test_views.py::test_view_provide_automatic_options_attr PASSED                                                                                                     [ 98%]
+tests/test_views.py::test_implicit_head PASSED                                                                                                                           [ 98%]
+tests/test_views.py::test_explicit_head PASSED                                                                                                                           [ 98%]
+tests/test_views.py::test_endpoint_override PASSED                                                                                                                       [ 99%]
+tests/test_views.py::test_methods_var_inheritance PASSED                                                                                                                 [ 99%]
+tests/test_views.py::test_multiple_inheritance PASSED                                                                                                                    [ 99%]
+tests/test_views.py::test_remove_method_from_parent PASSED                                                                                                               [ 99%]
+tests/test_views.py::test_init_once PASSED                                                                                                                               [100%]
+
+======================================================================== 483 passed, 3 skipped in 2.35s ========================================================================
+py310: OK ✔ in 8.24 seconds
+py39: skipped because could not find python interpreter with spec(s): py39
+py39: SKIP ⚠ in 0.02 seconds
+py38: skipped because could not find python interpreter with spec(s): py38
+py38: SKIP ⚠ in 0.02 seconds
+pypy310: skipped because could not find python interpreter with spec(s): pypy310
+pypy310: SKIP ⚠ in 0.02 seconds
+py312-min: skipped because could not find python interpreter with spec(s): py312
+py312-min: SKIP ⚠ in 0.02 seconds
+py39-dev: skipped because could not find python interpreter with spec(s): py39
+py39-dev: SKIP ⚠ in 0.02 seconds
+style: install_deps> python -I -m pip install pre-commit
+style: freeze> python -m pip freeze --all
+style: commands[0]> pre-commit run --all-files
+[INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+[INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+[INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+ruff.....................................................................Passed
+ruff-format..............................................................Passed
+check for merge conflicts................................................Passed
+debug statements (python)................................................Passed
+fix utf-8 byte order marker..............................................Passed
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Passed
+style: OK ✔ in 12.55 seconds
+typing: install_deps> python -I -m pip install -r requirements/typing.txt
+typing: freeze> python -m pip freeze --all
+typing: install_package_deps> python -I -m pip install 'Jinja2>=3.1.2' 'Werkzeug>=3.0.0' 'blinker>=1.6.2' 'click>=8.1.3' 'importlib-metadata>=3.6.0; python_version < "3.10"' 'itsdangerous>=2.1.2' -c/app/flask/.tox/typing/constraints.txt
+typing: install_package> python -I -m pip install --force-reinstall --no-deps /app/flask/.tox/.tmp/package/2/flask-3.1.0.dev0-py3-none-any.whl
+typing: commands[0]> mypy
+src/flask/app.py:1248: error: Unused "type: ignore" comment  [unused-ignore]
+                rv.headers.update(headers)  # type: ignore[arg-type]
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Found 1 error in 1 file (checked 27 source files)
+typing: exit 1 (5.66 seconds) /app/flask> mypy pid=14384
+typing: FAIL ✖ in 11.84 seconds
+docs: install_deps> python -I -m pip install -r requirements/docs.txt
+docs: freeze> python -m pip freeze --all
+docs: install_package_deps> python -I -m pip install 'Jinja2>=3.1.2' 'Werkzeug>=3.0.0' 'blinker>=1.6.2' 'click>=8.1.3' 'importlib-metadata>=3.6.0; python_version < "3.10"' 'itsdangerous>=2.1.2' -c/app/flask/.tox/docs/constraints.txt
+docs: install_package> python -I -m pip install --force-reinstall --no-deps /app/flask/.tox/.tmp/package/3/flask-3.1.0.dev0-py3-none-any.whl
+docs: commands[0]> sphinx-build -E -W -b dirhtml docs docs/_build/dirhtml
+Running Sphinx v8.1.3
+loading translations [en]... done
+making output directory... done
+loading intersphinx inventory 'python' from https://docs.python.org/3/objects.inv ...
+loading intersphinx inventory 'werkzeug' from https://werkzeug.palletsprojects.com/objects.inv ...
+loading intersphinx inventory 'click' from https://click.palletsprojects.com/objects.inv ...
+loading intersphinx inventory 'jinja' from https://jinja.palletsprojects.com/objects.inv ...
+loading intersphinx inventory 'itsdangerous' from https://itsdangerous.palletsprojects.com/objects.inv ...
+loading intersphinx inventory 'sqlalchemy' from https://docs.sqlalchemy.org/objects.inv ...
+loading intersphinx inventory 'wtforms' from https://wtforms.readthedocs.io/objects.inv ...
+loading intersphinx inventory 'blinker' from https://blinker.readthedocs.io/objects.inv ...
+intersphinx inventory has moved: https://wtforms.readthedocs.io/objects.inv -> https://wtforms.readthedocs.io/en/3.1.x/objects.inv
+intersphinx inventory has moved: https://click.palletsprojects.com/objects.inv -> https://click.palletsprojects.com/en/stable/objects.inv
+intersphinx inventory has moved: https://jinja.palletsprojects.com/objects.inv -> https://jinja.palletsprojects.com/en/stable/objects.inv
+intersphinx inventory has moved: https://blinker.readthedocs.io/objects.inv -> https://blinker.readthedocs.io/en/stable/objects.inv
+intersphinx inventory has moved: https://itsdangerous.palletsprojects.com/objects.inv -> https://itsdangerous.palletsprojects.com/en/stable/objects.inv
+intersphinx inventory has moved: https://werkzeug.palletsprojects.com/objects.inv -> https://werkzeug.palletsprojects.com/en/stable/objects.inv
+intersphinx inventory has moved: https://docs.sqlalchemy.org/objects.inv -> https://docs.sqlalchemy.org/en/20/objects.inv
+building [mo]: targets for 0 po files that are out of date
+writing output... 
+building [dirhtml]: targets for 75 source files that are out of date
+updating environment: [new config] 75 added, 0 changed, 0 removed
+reading sources... [100%] web-security
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+copying assets... 
+copying static files... 
+Writing evaluated template result to /app/flask/docs/_build/dirhtml/_static/basic.css
+Writing evaluated template result to /app/flask/docs/_build/dirhtml/_static/language_data.js
+Writing evaluated template result to /app/flask/docs/_build/dirhtml/_static/documentation_options.js
+copying static files: done
+copying extra files... 
+copying extra files: done
+copying assets: done
+writing output... [100%] web-security
+generating indices... genindex py-modindex done
+writing additional pages... search done
+copying images... [100%] tutorial/flaskr_edit.png
+dumping search index in English (code: en)... done
+dumping object inventory... done
+build succeeded.
+
+The HTML pages are in docs/_build/dirhtml.
+.pkg: _exit> python /app/flask/venv/lib/python3.10/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+  py313: SKIP (1.19 seconds)
+  py312: SKIP (0.01 seconds)
+  py311: SKIP (0.01 seconds)
+  py310: OK (8.24=setup[5.46]+cmd[2.78] seconds)
+  py39: SKIP (0.02 seconds)
+  py38: SKIP (0.02 seconds)
+  pypy310: SKIP (0.02 seconds)
+  py312-min: SKIP (0.02 seconds)
+  py39-dev: SKIP (0.02 seconds)
+  style: OK (12.55=setup[2.29]+cmd[10.26] seconds)
+  typing: FAIL code 1 (11.84=setup[6.17]+cmd[5.66] seconds)
+  docs: OK (19.88=setup[6.66]+cmd[13.23] seconds)
+  evaluation failed :( (54.07 seconds)
+Tests have been run. Check the output above for results.
