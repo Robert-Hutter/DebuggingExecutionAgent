@@ -1,0 +1,1030 @@
+}
+
+      ✔ should bind error event handler
+    dispatchEvent
+      ✔ should publish packet
+    tls
+      ✔ should upgrade to TLS
+      ✔ should not upgrade to TLS, if not requested
+
+  ClientsContainer
+    getAllClients
+      ✔ should return array of clients
+    addClient
+      ✔ should push client into clients array
+    clear
+      ✔ should remove all clients
+
+  ExceptionFiltersContext
+    create
+      when filters metadata is empty
+        ✔ should return plain ExceptionHandler object
+      when filters metadata is not empty
+        ✔ should return ExceptionHandler object with exception filters
+    getGlobalMetadata
+      when contextId is static and inquirerId is nil
+        ✔ should return global filters
+      otherwise
+        ✔ should merge static global with request/transient scoped filters
+
+  RequestContextHost
+    getData
+      ✔ should return "data" property
+    getContext
+      ✔ should return "context" property
+    getPattern
+      ✔ should return "pattern" property
+
+  RpcContextCreator
+    create
+      ✔ should create exception handler
+      ✔ should create pipes context
+      ✔ should create guards context
+      when proxy called
+        ✔ should call guards consumer `tryActivate`
+        when can not activate
+          ✔ should throw forbidden exception
+    reflectCallbackParamtypes
+      ✔ should return paramtypes array
+    createGuardsFn
+      ✔ should throw exception when "tryActivate" returns false
+    exchangeKeysForValues
+      ✔ should exchange arguments keys for appropriate values
+    getParamValue
+      ✔ should call "consumer.apply"
+    createPipesFn
+      when "paramsOptions" is empty
+        ✔ returns null
+      when "paramsOptions" is not empty
+        ✔ returns function
+
+  RpcProxy
+    create
+      ✔ should method return thunk
+      ✔ should method encapsulate callback passed as argument
+      ✔ should attach "catchError" operator when observable was returned
+
+  BaseRpcContext
+    getArgs
+      ✔ should return "args" array
+    getArgByIndex
+      ✔ should return argument by index
+
+  KafkaContext
+    getTopic
+      ✔ should return topic
+    getPartition
+      ✔ should return partition
+    getMessage
+      ✔ should return original message
+    getConsumer
+      ✔ should return consumer instance
+    getHeartbeat
+      ✔ should return heartbeat callback
+    getProducer
+      ✔ should return producer instance
+
+  MqttContext
+    getTopic
+      ✔ should return topic
+    getPacket
+      ✔ should return packet
+
+  NatsContext
+    getSubject
+      ✔ should return subject
+    getHeaders
+      ✔ should return headers
+
+  RedisContext
+    getChannel
+      ✔ should return original channel
+
+  RmqContext
+    getMessage
+      ✔ should return original message
+    getChannelRef
+      ✔ should return channel reference
+    getPattern
+      ✔ should return pattern
+
+  TcpContext
+    getSubject
+      ✔ should return subject
+    getPattern
+      ✔ should return pattern
+
+  @Client
+    ✔ should enhance property with metadata
+
+  @Ctx
+    ✔ should enhance class with expected request metadata
+
+  @EventPattern
+    ✔ should enhance method with microservices:pattern metadata
+    ✔ should enhance method with microservices:pattern_extras metadata
+    ✔ should enhance method with last microservices:pattern metadata
+    ✔ should enhance method with both microservices:pattern metadata
+    decorator overloads
+      ✔ should enhance method with microservices:pattern metadata
+      ✔ should enhance method with microservices:pattern, microservices:transport metadata
+      ✔ should enhance method with microservices:pattern, microservices:pattern_extras metadata
+      ✔ should enhance method with microservices:pattern, microservices:transport and microservices:pattern_extras metadata
+      ✔ should merge with existing microservices:pattern_extras metadata
+
+  @MessagePattern
+    ✔ should enhance method with microservices:pattern metadata
+    ✔ should enhance method with microservices:pattern_extras metadata
+    decorator overloads
+      ✔ should enhance method with microservices:pattern metadata
+      ✔ should enhance method with microservices:pattern, microservices:transport metadata
+      ✔ should enhance method with microservices:pattern, microservices:pattern_extras metadata
+      ✔ should enhance method with microservices:pattern, microservices:transport and microservices:pattern_extras metadata
+      ✔ should merge with existing microservices:pattern_extras metadata
+
+  @GrpcMethod
+    ✔ should derive method and service name
+    ✔ should derive method
+    ✔ should override both method and service
+
+  @GrpcStreamMethod
+    ✔ should derive method and service name
+    ✔ should derive method
+    ✔ should override both method and service
+
+  @GrpcStreamCall
+    ✔ should derive method and service name
+    ✔ should derive method
+    ✔ should override both method and service
+
+  @Payload
+    ✔ should enhance class with expected request metadata
+
+  IdentityDeserializer
+    deserialize
+      ✔ should return the value unchanged
+
+  IncomingRequestDeserializer
+    deserialize
+      when response is not external
+        ✔ should return the same value unchanged
+      otherwise
+        when options are passed in
+          ✔ should map to the internal schema
+        when options are undefined
+          ✔ should map to proper schema with undefined values
+
+  IncomingResponseDeserializer
+    deserialize
+      when response is not external
+        ✔ should return the same value unchanged
+      otherwise
+        ✔ should map to the internal schema
+
+  KafkaResponseDeserializer
+    serialize
+      when error header is present
+        ✔ should return an object with "err"
+      when is disposed header is present
+        ✔ should return an object with "isDisposed"
+
+  RpcException
+    when string passed
+      ✔ should return error message as string
+      ✔ should set the message property
+    when object passed
+      and message property is undefined
+        ✔ should return error as object
+        ✔ should fallback error message to class name
+      and message property is not undefined
+        ✔ should return error as object
+        ✔ should return error message as the extracted "message" string
+
+  RpcExceptionsHandler
+    handle
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [RpcExceptionsHandler] Error
+      ✔ should method returns expected stream with message when exception is unknown
+      when exception is instance of WsException
+        ✔ should method emit expected status and json object
+        ✔ should method emit expected status and transform message to json
+      when "invokeCustomFilters" returns observable
+        ✔ should return observable
+    setCustomFilters
+      ✔ should set custom filters
+      ✔ should throw exception when passed argument is not an array
+    invokeCustomFilters
+      when filters array is empty
+        ✔ should return identity
+      when filters array is not empty
+        when filter exists in filters array
+          ✔ should call funcSpy
+          ✔ should call funcSpy with exception and response passed as an arguments
+          ✔ should return stream
+        when filter does not exists in filters array
+          ✔ should not call funcSpy
+          ✔ should return null
+
+  RpcParamsFactory
+    exchangeKeyForValue
+      when key is
+        RpcParamtype.PAYLOAD
+          ✔ should return a message payload object
+          ✔ should return a message payload object with parameter extraction
+        RpcParamtype.CONTEXT
+          ✔ should return a ctx object
+      when key is not available
+        ✔ should return null
+      when args are not available
+        ✔ should return null
+
+  getGrpcPackageDefinition
+    when missing both protoPath and packageDefinition
+      ✔ should throw InvalidGrpcPackageDefinitionMissingPackageDefinitionException
+    when both protoPath and packageDefinition are defined
+      ✔ should throw InvalidGrpcPackageDefinitionMutexException
+    when only protoPath is defined
+      ✔ should not throw any exception
+    when only packageDefinition is defined
+      ✔ should not throw any exception
+
+  KafkaLogger
+    ✔ error
+    ✔ nothing
+    ✔ warn
+    ✔ info
+    ✔ debug
+
+  KafkaParser
+    parse
+      ✔ undefined
+      ✔ null
+      ✔ buffer string
+      ✔ binary buffer using kafka schema registry preamble
+      ✔ buffer number
+      ✔ buffer bigint
+      ✔ buffer json
+      ✔ buffer json with key
+      ✔ buffer json with key and headers
+      ✔ parse message multiple times (simulate retry)
+
+  kafka reply partition assigner
+    assign
+      ✔ assign all partitions evenly
+    re-assign
+      ✔ assign all partitions evenly
+    protocol
+      ✔ returns the assigner name and metadata
+
+  JsonSocket connection
+    ✔ should connect, send and receive message
+    ✔ should send long messages with special characters without issues
+    ✔ should send multiple messages
+    ✔ should return true for "closed" when server disconnects
+    ✔ should return true for "closed" when client disconnects
+    ✔ should return true for "closed" when client (re)connects
+
+  JsonSocket chaining
+    ✔ should return the instance when subscribing to event
+
+  JsonSocket message parsing
+    ✔ should parse JSON strings
+    ✔ should parse JSON numbers
+    ✔ should parse JSON bools
+    ✔ should parse JSON objects
+    ✔ should parse JSON arrays
+    ✔ should parse multiple messages in one packet
+    ✔ should parse chunked messages
+    ✔ should parse chunked and multiple messages
+    ✔ should parse chunked messages with multi-byte characters
+    ✔ should parse multiple messages with unicode correctly
+    ✔ should parse multiple and chunked messages with unicode correctly
+    Error handling
+      JSON Error
+        ✔ should fail to parse invalid JSON
+        ✔ should emit error event on socket
+        ✔ should send a FIN packet
+      Corrupted length value
+        ✔ should not accept invalid content length
+        ✔ should emit error event on socket
+        ✔ should send a FIN packet
+
+  ListenersController
+    registerPatternHandlers
+      ✔ should call "addHandler" method of server for each pattern handler
+      ✔ should call "addHandler" method of server for each pattern handler with same transport
+      ✔ should call "addHandler" method of server without transportID for each pattern handler with any transport value
+      ✔ should call "addHandler" method of server with transportID for each pattern handler with self transport and without transport
+      ✔ should call "addHandler" method of server with transportID for each pattern handler without transport
+      ✔ should call "addHandler" method of server with custom transportID for pattern handler with the same custom token
+      ✔ should call "addHandler" method of server with extras data
+      when request scoped
+        ✔ should call "addHandler" with deferred proxy
+    createRequestScopedHandler
+      when "loadPerContext" resolves
+        ✔ should pass all arguments to the proxy chain
+      when "loadPerContext" throws
+        ✔ should delegate error to exception filters
+    insertEntrypointDefinition
+      ✔ should inspect & insert corresponding entrypoint definitions
+    assignClientToInstance
+      ✔ should assign client to instance
+    assignClientsToProperties
+      ✔ should bind all clients to properties
+
+  ListenerMetadataExplorer
+    explore
+      ✔ should call "scanFromPrototype" with expected arguments
+    exploreMethodMetadata
+      ✔ should return undefined when "handlerType" metadata is undefined
+      @MessagePattern
+        ✔ should return pattern properties when "handlerType" metadata is not undefined
+        ✔ should return multiple patterns when more than one is declared
+      @EventPattern
+        ✔ should return pattern properties when "handlerType" metadata is not undefined
+        ✔ should return multiple patterns when more than one is declared
+    scanForClientHooks
+      ✔ should return properties with @Client decorator
+
+  ClientsModule
+    register
+      ✔ should return an expected module ref
+      ✔ should return an expected providers array
+    registerAsync
+      ✔ should return an expected module ref
+      when useFactory
+        ✔ should return an expected providers array with useFactory
+      when useClass
+        ✔ should return an expected providers array with useClass
+TypeError: Cannot read properties of undefined (reading 'customClass')
+    at Function.isCustomClientOptions (/app/nest/packages/microservices/client/client-proxy-factory.js:40:26)
+    at Function.create (/app/nest/packages/microservices/client/client-proxy-factory.js:17:18)
+    at Object.useFactory (/app/nest/packages/microservices/module/clients.module.js:69:64)
+    at async Context.<anonymous> (/app/nest/packages/microservices/test/module/clients.module.spec.ts:101:11)
+        ✔ provider should call "createClientOptions"
+      when useExisting
+        ✔ should provide an options
+
+  IdentitySerializer
+    serialize
+      ✔ should return the value unchanged
+
+  KafkaRequestSerializer
+    serialize
+      ✔ undefined
+      ✔ null
+      ✔ string
+      ✔ number
+      ✔ buffer
+      ✔ array
+      ✔ object
+      ✔ complex object with .toString()
+      ✔ complex object without .toString()
+    serialize kafka message
+      ✔ kafka message without key
+      ✔ kafka message with key
+      ✔ kafka message with headers
+
+  MqttRecordSerializer
+    serialize
+      ✔ should parse mqtt record instance
+      ✔ should act as an identity function if msg is not an instance of MqttRecord class
+
+  NatsRecordSerializer
+    serialize
+      ✔ undefined
+      ✔ null
+      ✔ string
+      ✔ number
+      ✔ buffer
+      ✔ array
+      ✔ object
+      ✔ nats message with data and nats headers
+
+  RmqRecordSerializer
+    serialize
+      ✔ should parse rmq record instance
+      ✔ should act as an identity function if msg is not an instance of RmqRecord class
+
+  ServerFactory
+    create
+      ✔ should return tcp server by default
+      ✔ should return redis server
+      ✔ should return redis server
+      ✔ should return mqtt server
+      ✔ should return nats server
+      ✔ should return rmq server
+      ✔ should return kafka server
+      ✔ should return grpc server
+
+  ServerGrpc
+    listen
+      ✔ should call "bindEvents"
+(node:8573) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+      ✔ should call "client.start"
+      ✔ should call callback
+      when "start" throws an exception
+        ✔ should call callback with a thrown error as an argument
+    listen (multiple proto)
+      ✔ should call "bindEvents"
+      ✔ should call "client.start"
+      ✔ should call callback
+    bindEvents
+      when package does not exist
+        ✔ should throw "InvalidGrpcPackageException"
+      when package exist
+        ✔ should call "addService"
+    bindEvents (multiple proto)
+      when package does not exist
+        ✔ should throw "InvalidGrpcPackageException"
+      when package exist
+        ✔ should call "addService"
+    getServiceNames
+      ✔ should return filtered object keys
+    createService
+      ✔ should call "createServiceMethod"
+      when RX streaming
+        ✔ should call "createPattern" with proper arguments
+      when pass through streaming
+        ✔ should call "createPattern" with proper arguments
+    getMessageHandler
+[Map Entries] {
+  [
+    '{"service":"test","rpc":"TestMethod","streaming":"no_stream"}',
+    [Function (anonymous)]
+  ]
+}
+      ✔ should return handler when service name specified
+      ✔ should return handler when package name specified with service name
+      ✔ should return undefined when method name is unknown
+    createPattern
+      ✔ should return pattern
+    createServiceMethod
+      when method is a response stream
+        ✔ should call "createStreamServiceMethod"
+      when method is not a response stream
+        ✔ should call "createUnaryServiceMethod"
+      when request is a stream
+        when stream type is RX_STREAMING
+          ✔ should call "createRequestStreamMethod"
+        when stream type is PT_STREAMING
+          ✔ should call "createStreamCallMethod"
+    createStreamServiceMethod
+      ✔ should return function
+      on call
+        ✔ should call native method
+        ✔ should handle error thrown in handler
+        ✔ should close the result observable when receiving an 'cancelled' event from the client
+    createUnaryServiceMethod
+      ✔ should return observable
+      on call
+        ✔ should call native & callback methods
+        ✔ should await when a promise is return by the native
+    createRequestStreamMethod
+      ✔ should wrap call into Subject
+      ✔ should wrap call into Subject with metadata
+      when response is not a stream
+        ✔ should call callback
+        ✔ should handle error thrown in handler
+        when response is a stream
+          ✔ should call write() and end() for streams from promises
+          ✔ should drain all values emitted from the observable while waiting for the drain event from the call
+          ✔ should drain all values emitted from the observable while waiting for the drain event from the call even if the call becomes unwritable during draining
+          ✔ should wait to end until after the internal buffer has drained
+          ✔ should end the subscription to the source if the call is cancelled
+          ✔ should wait to throw errors from the observable source until after the internal buffer has drained
+    createStreamCallMethod
+      ✔ should pass through to "methodHandler"
+    loadProto
+      when proto is invalid
+        ✔ should throw InvalidProtoDefinitionException
+    close
+      ✔ should call "forceShutdown" by default
+      ✔ should call "forceShutdown" when "gracefulShutdown" is false
+      ✔ should call "tryShutdown" when "gracefulShutdown" is true
+    deserialize
+      ✔ should return parsed json
+      ✔ should not parse argument if it is not an object
+    proto interfaces parser should account for package namespaces
+      ✔ should parse multi-level proto package tree"
+      ✔ should parse single level proto package tree"
+    addHandler
+      ✔ should add handler
+
+  ServerKafka
+    listen
+      ✔ should call "bindEvents"
+      ✔ should call callback
+      when "start" throws an exception
+        ✔ should call callback with a thrown error as an argument
+    close
+      ✔ should close server
+    bindEvents
+      ✔ should not call subscribe nor run on consumer when there are no messageHandlers
+      ✔ should call subscribe and run on consumer when there are messageHandlers
+      ✔ should call subscribe with options and run on consumer when there are messageHandlers
+    getMessageHandler
+      ✔ should return function
+      handler
+        ✔ should call "handleMessage"
+    getPublisher
+      ✔ should return function
+      ✔ should call "publish" with expected arguments
+    handleMessage
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [ServerKafka] There is no matching event handler defined in the remote service. Event pattern: test.topic
+      ✔ should call "handleEvent" if correlation identifier is not present
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [ServerKafka] There is no matching event handler defined in the remote service. Event pattern: test.topic
+      ✔ should call "handleEvent" if correlation identifier is present but the reply topic is not present
+      ✔ should call event handler when "handleEvent" is called
+      ✔ should not catch error thrown by event handler as part of "handleEvent"
+      ✔ should call "handleEvent" if correlation identifier and reply topic are present but the handler is of type eventHandler
+      ✔ should NOT call "handleEvent" if correlation identifier and reply topic are present but the handler is not of type eventHandler
+      ✔ should publish NO_MESSAGE_HANDLER if pattern not exists in messageHandlers object
+      ✔ should call handler with expected arguments
+    sendMessage
+      ✔ should send message
+      ✔ should send message without reply partition
+      ✔ should send error message
+      ✔ should send `isDisposed` message
+    createClient
+      ✔ should accept a custom logCreator in client options
+
+  ServerMqtt
+    listen
+      ✔ should bind "error" event to handler
+      ✔ should bind "message" event to handler
+      ✔ should bind "connect" event to handler
+      when "start" throws an exception
+        ✔ should call callback with a thrown error as an argument
+    close
+      ✔ should end mqttClient
+    bindEvents
+      ✔ should subscribe to each pattern
+    getMessageHandler
+      ✔ should return function
+      handler
+        ✔ should call "handleMessage"
+    handleMessage
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] There is no matching event handler defined in the remote service. Event pattern: test
+      ✔ should call "handleEvent" if identifier is not present
+      ✔ should publish NO_MESSAGE_HANDLER if pattern not exists in messageHandlers object
+      ✔ should call handler with expected arguments
+    getPublisher
+      ✔ should return function
+      ✔ should call "publish" with expected arguments
+    getRequestPattern
+      ✔ should leave pattern as it is
+    getReplyPattern
+      ✔ should append "/reply" to string
+    parseMessage
+      ✔ should return parsed json
+      ✔ should not parse argument if it is not an object
+    handleEvent
+      ✔ should call handler with expected arguments
+    matchMqttPattern
+      ✔ should return true when topic matches with provided pattern
+      ✔ should return false when topic does not matches with provided pattern
+
+  ServerNats
+    listen
+      when "start" throws an exception
+        ✔ should call callback with a thrown error as an argument
+    close
+      ✔ should close natsClient
+    bindEvents
+      ✔ should subscribe to each acknowledge patterns
+    getMessageHandler
+      ✔ should return function
+      handler
+        ✔ should call "handleMessage"
+    handleMessage
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] There is no matching event handler defined in the remote service. Event pattern: test
+      ✔ should call "handleEvent" if identifier is not present
+      ✔ should publish NO_MESSAGE_HANDLER if pattern does not exist in messageHandlers object
+      ✔ should call handler with expected arguments
+    getPublisher
+      ✔ should return function
+      ✔ should call "respond" when reply topic provided
+      ✔ should not call "publish" when replyTo NOT provided
+    handleEvent
+      ✔ should call handler with expected arguments
+    handleStatusUpdates
+      ✔ should retrieve "status()" async iterator
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] NatsError: type: "disconnect", data: "localhost".
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] NatsError: type: "error", data: "{}".
+      ✔ should log "disconnect" and "error" statuses as "errors"
+[Nest] 8573  - 04/15/2025, 1:12:25 AM     LOG [Server] NatsStatus: type: "non-disconnect", data: "localhost".
+[Nest] 8573  - 04/15/2025, 1:12:25 AM     LOG [Server] NatsStatus: type: "warn", data: "{}".
+      ✔ should log other statuses as "logs"
+
+  ServerRedis
+    listen
+      ✔ should bind "error" event to handler
+      ✔ should call "RedisClient#connect()"
+      when "start" throws an exception
+        ✔ should call callback with a thrown error as an argument
+    close
+      ✔ should close pub & sub server
+    handleConnection
+      ✔ should bind "message" event to handler if wildcards are disabled
+      ✔ should bind "pmessage" event to handler if wildcards are enabled
+      ✔ should "subscribe" to each pattern if wildcards are disabled
+      ✔ should "psubscribe" to each pattern if wildcards are enabled
+    getMessageHandler
+      ✔ should return function
+    handleMessage
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] There is no matching event handler defined in the remote service. Event pattern: test
+      ✔ should call "handleEvent" if identifier is not present
+      ✔ should publish NO_MESSAGE_HANDLER if pattern not exists in messageHandlers object
+      ✔ should call handler with expected arguments
+    getPublisher
+      ✔ should return function
+      ✔ should call "publish" with expected arguments
+    parseMessage
+      ✔ should return parsed json
+      ✔ should not parse argument if it is not an object
+    getRequestPattern
+      ✔ should leave pattern as it is
+    getReplyPattern
+      ✔ should append ".reply" to string
+    getClientOptions
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] Retry time exhausted
+      ✔ should return options object with "retryStrategy" and call "createRetryStrategy"
+    createRetryStrategy
+      when is terminated
+        ✔ should return undefined
+      when "retryAttempts" does not exist
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] Retry time exhausted
+        ✔ should return undefined
+      when "attempts" count is max
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] Retry time exhausted
+        ✔ should return undefined
+      otherwise
+        ✔ should return delay (ms)
+    handleEvent
+      ✔ should call handler with expected arguments
+
+  ServerRMQ
+    constructor
+      ✔ should fallback to queueOptions.noAssert when 'noAssert' is undefined
+    listen
+      ✔ should call "createClient"
+      ✔ should bind "connect" event to handler
+      ✔ should bind "disconnect" event to handler
+      ✔ should bind "connectFailed" event to handler
+      when "start" throws an exception
+        ✔ should call callback with a thrown error as an argument
+    close
+      ✔ should close server
+      ✔ should close channel
+    handleMessage
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] There is no matching event handler defined in the remote service. Event pattern: 
+      ✔ should call "handleEvent" if identifier is not present
+      ✔ should send NO_MESSAGE_HANDLER error if key does not exists in handlers object
+      ✔ should call handler if exists in handlers object
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] There is no matching event handler defined in the remote service. Event pattern: undefined
+      ✔ should not throw if the message is an invalid json
+[Nest] 8573  - 04/15/2025, 1:12:25 AM    WARN [Server] An unsupported message was received. It has been negative acknowledged, so it will not be re-delivered. Pattern: test
+      ✔ should negative acknowledge if message does not exists in handlers object and noAck option is false
+      ✔ should not negative acknowledge if key does not exists in handlers object and noAck option is true
+    setupChannel
+      ✔ should call "assertQueue" with queue and queue options when noAssert is false
+      ✔ should not call "assertQueue" when noAssert is true
+      ✔ should call "prefetch" with prefetchCount and "isGlobalPrefetchCount"
+      ✔ should call "consumeChannel" method
+      ✔ should call "resolve" function
+    sendMessage
+      ✔ should publish message to indicated queue
+    handleEvent
+      ✔ should call handler with expected arguments
+[Nest] 8573  - 04/15/2025, 1:12:25 AM    WARN [Server] An unsupported event was received. It has been negative acknowledged, so it will not be re-delivered. Pattern: test
+      ✔ should negative acknowledge without retrying if key does not exists in handlers object and noAck option is false
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [Server] There is no matching event handler defined in the remote service. Event pattern: test
+      ✔ should not negative acknowledge if key does not exists in handlers object but noAck option is true
+
+  ServerTCP
+    bindHandler
+      ✔ should bind message and error events to handler
+    close
+      ✔ should close server
+    listen
+      ✔ should call native listen method with expected arguments
+    handleMessage
+      ✔ should send NO_MESSAGE_HANDLER error if key does not exists in handlers object
+      ✔ should call handler if exists in handlers object
+    handleClose
+      when is terminated
+        ✔ should return undefined
+      when "retryAttempts" does not exist
+        ✔ should return undefined
+      when "retryAttemptsCount" count is max
+        ✔ should return undefined
+      otherwise
+        ✔ should return delay (ms)
+    handleEvent
+      ✔ should call handler with expected arguments
+
+  Server
+    addHandler
+      ✔ should add handler
+      when handler is an event handler
+        and there are other handlers registered for the pattern already
+          ✔ should find tail and assign a handler ref to it
+    getRouteFromPattern
+      when gets 'string' pattern
+        ✔ should call 'transformPatternToRoute' with 'string' argument
+      when gets 'json' pattern as 'string'
+        ✔ should call 'transformPatternToRoute' with 'json' argument
+    send
+      when stream
+        throws exception
+          ✔ should send error and complete
+        emits response
+          ✔ should send response and "complete" event
+    transformToObservable
+      when resultOrDeferred
+        is Promise
+          ✔ should return Observable that emits the resolved value of the supplied promise
+        is Observable
+          ✔ should return the observable itself
+        is any number
+          ✔ should return Observable that emits the supplied number
+        is an array
+          ✔ should return Observable that emits the supplied array
+    getHandlers
+      ✔ should return registered handlers
+    getHandlerByPattern
+      when handler exists
+        ✔ should return expected handler
+      when handler does not exists
+        ✔ should return null
+
+  transformPatternToRoute
+    when gets 'number' value
+      ✔ should return the 'number' what is wrapped in a string
+    when gets 'string' value
+      ✔ should return the same string
+    when gets 'JSON' value
+      without nested JSON (1 level)
+        ✔ should return correct route
+      with nested JSON (2 levels)
+        ✔ should return correct route
+      with nested JSON (3 levels)
+        ✔ should return correct route
+    when gets value with incorrect type (no string/number/JSON)
+      ✔ should return the value unchanged
+
+  FilesInterceptor
+    ✔ should return metatype with expected structure
+    intercept
+      ✔ should call any() with expected params
+      ✔ should transform exception
+
+  FileFieldsInterceptor
+    ✔ should return metatype with expected structure
+    intercept
+      ✔ should call object with expected params
+      ✔ should transform exception
+
+  FileInterceptor
+    ✔ should return metatype with expected structure
+    intercept
+      ✔ should call single() with expected params
+      ✔ should transform exception
+
+  FilesInterceptor
+    ✔ should return metatype with expected structure
+    intercept
+      ✔ should call array() with expected params
+      ✔ should transform exception
+
+  NoFilesInterceptor
+    ✔ should return metatype with expected structure
+    intercept
+      ✔ should call none() with expected params
+      ✔ should transform exception
+
+  MulterModule
+    register
+      ✔ should provide an options
+    register async
+      when useFactory
+        ✔ should provide an options
+      when useExisting
+        ✔ should provide an options
+      when useClass
+        ✔ should provide an options
+        ✔ provider should call "createMulterOptions"
+
+  transformException
+    if error does not exist
+      ✔ should behave as identity
+    if error is instance of HttpException
+      ✔ should behave as identity
+    if error exists and is not instance of HttpException
+      and is LIMIT_FILE_SIZE exception
+        ✔ should return "PayloadTooLargeException"
+      and is multer exception but not a LIMIT_FILE_SIZE
+        ✔ should return "BadRequestException"
+      and is busboy/multipart exception
+        ✔ should return "BadRequestException"
+        ✔ should return "BadRequestException"
+
+  @RouteConfig
+    ✔ should enhance method with expected fastify route config
+
+  @RouteConstraints
+    has version constraints
+      ✔ should have a version constraint
+    has custom constraints
+      ✔ should set a custom constraint
+
+  SocketsContainer
+    getSocketEventsHostByPort
+      ✔ should call "serverAndEventStreamsHosts" get method with expected arguments
+    addOne
+      ✔ should call "serverAndEventStreamsHosts" set method with expected arguments
+    getAll
+      ✔ should return "serverAndEventStreamsHosts"
+    clear
+      ✔ should clear hosts collection
+
+  ExceptionFiltersContext
+    create
+      when filters metadata is empty
+        ✔ should return plain ExceptionHandler object
+      when filters metadata is not empty
+        ✔ should return ExceptionHandler object with exception filters
+
+  WsContextCreator
+    create
+      ✔ should create exception handler
+      ✔ should create pipes context
+      ✔ should create guards context
+      when proxy called
+        ✔ should call guards consumer `tryActivate`
+        when can not activate
+          ✔ should throw forbidden exception
+    reflectCallbackParamtypes
+      ✔ should return paramtypes array
+    createGuardsFn
+      ✔ should throw exception when "tryActivate" returns false
+    exchangeKeysForValues
+      ✔ should exchange arguments keys for appropriate values
+    getParamValue
+      ✔ should call "consumer.apply"
+    createPipesFn
+      when "paramsOptions" is empty
+        ✔ returns null
+      when "paramsOptions" is not empty
+        ✔ returns function
+
+  WsProxy
+    create
+      ✔ should method return thunk
+      ✔ should method encapsulate callback passed as argument
+      ✔ should attach "catchError" operator when observable was returned
+
+  @ConnectedSocket
+    ✔ should enhance class with expected request metadata
+
+  @MessagePayload
+    ✔ should enhance class with expected request metadata
+
+  WsException
+    when string passed
+      ✔ should return error message as string
+      ✔ should set the message property
+    when object passed
+      and message property is undefined
+        ✔ should return error as object
+        ✔ should fallback error message to class name
+      and message property is not undefined
+        ✔ should return error as object
+        ✔ should return error message as the extracted "message" string
+
+  WsExceptionsHandler
+    handle
+[Nest] 8573  - 04/15/2025, 1:12:25 AM   ERROR [WsExceptionsHandler] Error
+      ✔ should method emit expected status code message when exception is unknown
+      when exception is instance of WsException
+        ✔ should method emit expected status and json object
+        ✔ should method emit expected status and transform message to json
+      when "invokeCustomFilters" returns true
+        ✔ should not call `emit`
+    setCustomFilters
+      ✔ should set custom filters
+      ✔ should throw exception when passed argument is not an array
+    invokeCustomFilters
+      when filters array is empty
+        ✔ should return false
+      when filters array is not empty
+        when filter exists in filters array
+          ✔ should call funcSpy
+          ✔ should call funcSpy with exception and response passed as an arguments
+          ✔ should return true
+        when filter does not exists in filters array
+          ✔ should not call funcSpy
+          ✔ should return false
+
+  ServerAndEventStreamsFactory
+    create
+      ✔ should return expected observable socket object
+
+  WsParamsFactory
+    exchangeKeyForValue
+      when key is
+        WsParamtype.PAYLOAD
+          ✔ should return a message payload object
+          ✔ should return a message payload object with parameter extraction
+        WsParamtype.SOCKET
+          ✔ should return a connected socket object
+      when key is not available
+        ✔ should return null
+      when args are not available
+        ✔ should return null
+
+  GatewayMetadataExplorer
+    explore
+      ✔ should call "scanFromPrototype" with expected arguments
+    exploreMethodMetadata
+      ✔ should return null when "isMessageMapping" metadata is undefined
+      ✔ should return message mapping properties when "isMessageMapping" metadata is not undefined
+    scanForServerHooks
+      ✔ should return properties with @Client decorator
+
+  SocketServerProvider
+    scanForSocketServer
+      ✔ should return stored server
+      ✔ should call "createSocketServer" when server is not stored already
+      ✔ should call "decorateWithNamespace" when namespace is specified
+      when namespace is specified and server does exist already
+        ✔ should call "decorateWithNamespace" and not call "createSocketServer"
+
+  compareElementAt
+    ✔ should compare elements at the specific position in arrays
+
+  @WebSocketServer
+    ✔ should decorate server property with expected metadata
+    ✔ should set property value to null by default
+
+  @WebSocketGateway
+    ✔ should decorate transport with expected metadata
+    ✔ should decorate transport with port: 0
+    ✔ should decorate transport with expected options
+
+  @SubscribeMessage
+    ✔ should decorate transport with expected metadata
+
+  WebSocketsController
+    connectGatewayToServer
+      ✔ should throw "InvalidSocketPortException" when port is not a number
+      ✔ should call "subscribeToServerEvents" with default values when metadata is empty
+      ✔ should call "subscribeToServerEvents" when metadata is valid
+    subscribeToServerEvents
+      ✔ should call "assignServerToProperties" with expected arguments
+      ✔ should call "subscribeEvents" with expected arguments
+    inspectEntrypointDefinitions
+      ✔ should inspect & insert corresponding entrypoint definitions
+    subscribeEvents
+[Nest] 8573  - 04/15/2025, 1:12:25 AM     LOG [WebSocketsController] Test subscribed to the "undefined" message +31ms
+      ✔ should call "subscribeConnectionEvent" with expected arguments
+[Nest] 8573  - 04/15/2025, 1:12:25 AM     LOG [WebSocketsController] Test subscribed to the "undefined" message +2ms
+      ✔ should call "subscribeDisconnectEvent" with expected arguments
+[Nest] 8573  - 04/15/2025, 1:12:25 AM     LOG [WebSocketsController] Test subscribed to the "undefined" message +2ms
+      ✔ should call "subscribeInitEvent" with expected arguments
+[Nest] 8573  - 04/15/2025, 1:12:25 AM     LOG [WebSocketsController] Test subscribed to the "undefined" message +1ms
+      ✔ should bind connection handler to server
+[Nest] 8573  - 04/15/2025, 1:12:25 AM     LOG [WebSocketsController] Test subscribed to the "undefined" message +2ms
+      ✔ should call "getConnectionHandler" with expected arguments
+    getConnectionHandler
+      ✔ should return function
+      ✔ should call "next" method of connection object with expected argument
+      ✔ should call "subscribeMessages" with expected arguments
+      ✔ should call "on" method of client object with expected arguments
+    subscribeInitEvent
+      ✔ should not call subscribe method when "afterInit" method not exists
+      ✔ should call subscribe method of event object with expected arguments when "afterInit" exists
+    subscribeConnectionEvent
+      ✔ should not call subscribe method when "handleConnection" method not exists
+      ✔ should call subscribe method of event object with expected arguments when "handleConnection" exists
+    subscribeDisconnectEvent
+      ✔ should not call subscribe method when "handleDisconnect" method not exists
+      ✔ should call subscribe method of event object with expected arguments when "handleDisconnect" exists
+    subscribeMessages
+      ✔ should bind each handler to client
+    pickResult
+      when deferredResult contains value which
+        is a Promise
+          ✔ should return Promise<Observable>
+        is an Observable
+          ✔ should return Promise<Observable>
+        is an object that has the method `subscribe`
+          ✔ should return Promise<Observable>
+        is an ordinary value
+          ✔ should return Promise<Observable>
+
+
+  1655 passing (2s)
+
+Setup and installation completed successfully.

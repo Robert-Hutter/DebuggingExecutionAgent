@@ -1,0 +1,382 @@
+Scanning dependencies of target event_core_shared
+[  1%] Building C object CMakeFiles/event_core_shared.dir/buffer.c.o
+[  2%] Building C object CMakeFiles/event_core_shared.dir/bufferevent.c.o
+[  2%] Building C object CMakeFiles/event_core_shared.dir/bufferevent_filter.c.o
+[  3%] Building C object CMakeFiles/event_core_shared.dir/bufferevent_pair.c.o
+[  3%] Building C object CMakeFiles/event_core_shared.dir/bufferevent_ratelim.c.o
+[  4%] Building C object CMakeFiles/event_core_shared.dir/bufferevent_sock.c.o
+[  5%] Building C object CMakeFiles/event_core_shared.dir/event.c.o
+[  5%] Building C object CMakeFiles/event_core_shared.dir/evmap.c.o
+[  6%] Building C object CMakeFiles/event_core_shared.dir/evthread.c.o
+[  6%] Building C object CMakeFiles/event_core_shared.dir/evutil.c.o
+[  7%] Building C object CMakeFiles/event_core_shared.dir/evutil_rand.c.o
+[  7%] Building C object CMakeFiles/event_core_shared.dir/evutil_time.c.o
+[  8%] Building C object CMakeFiles/event_core_shared.dir/watch.c.o
+[  9%] Building C object CMakeFiles/event_core_shared.dir/listener.c.o
+[  9%] Building C object CMakeFiles/event_core_shared.dir/log.c.o
+[ 10%] Building C object CMakeFiles/event_core_shared.dir/signal.c.o
+[ 10%] Building C object CMakeFiles/event_core_shared.dir/strlcpy.c.o
+[ 11%] Building C object CMakeFiles/event_core_shared.dir/select.c.o
+[ 12%] Building C object CMakeFiles/event_core_shared.dir/poll.c.o
+[ 12%] Building C object CMakeFiles/event_core_shared.dir/epoll.c.o
+[ 13%] Building C object CMakeFiles/event_core_shared.dir/signalfd.c.o
+[ 13%] Linking C shared library lib/libevent_core-2.2.so
+[ 13%] Built target event_core_shared
+Scanning dependencies of target event_extra_shared
+[ 14%] Building C object CMakeFiles/event_extra_shared.dir/event_tagging.c.o
+[ 14%] Building C object CMakeFiles/event_extra_shared.dir/http.c.o
+[ 15%] Building C object CMakeFiles/event_extra_shared.dir/evdns.c.o
+[ 15%] Building C object CMakeFiles/event_extra_shared.dir/ws.c.o
+[ 16%] Building C object CMakeFiles/event_extra_shared.dir/sha1.c.o
+[ 17%] Building C object CMakeFiles/event_extra_shared.dir/evrpc.c.o
+[ 17%] Linking C shared library lib/libevent_extra-2.2.so
+[ 17%] Built target event_extra_shared
+Scanning dependencies of target http-server
+[ 17%] Building C object CMakeFiles/http-server.dir/sample/http-server.c.o
+[ 18%] Linking C executable bin/http-server
+[ 18%] Built target http-server
+Scanning dependencies of target test-dumpevents
+[ 18%] Building C object CMakeFiles/test-dumpevents.dir/test/test-dumpevents.c.o
+[ 19%] Linking C executable bin/test-dumpevents
+[ 19%] Built target test-dumpevents
+Scanning dependencies of target ws-chat-server
+[ 20%] Building C object CMakeFiles/ws-chat-server.dir/sample/ws-chat-server.c.o
+[ 21%] Linking C executable bin/ws-chat-server
+[ 21%] Built target ws-chat-server
+Scanning dependencies of target event_mbedtls_shared
+[ 22%] Building C object CMakeFiles/event_mbedtls_shared.dir/bufferevent_mbedtls.c.o
+[ 22%] Building C object CMakeFiles/event_mbedtls_shared.dir/bufferevent_ssl.c.o
+[ 23%] Linking C shared library lib/libevent_mbedtls-2.2.so
+[ 23%] Built target event_mbedtls_shared
+Scanning dependencies of target ssl-client-mbedtls
+[ 24%] Building C object CMakeFiles/ssl-client-mbedtls.dir/sample/ssl-client-mbedtls.c.o
+[ 25%] Linking C executable bin/ssl-client-mbedtls
+[ 25%] Built target ssl-client-mbedtls
+Scanning dependencies of target time-test
+[ 26%] Building C object CMakeFiles/time-test.dir/sample/time-test.c.o
+[ 26%] Linking C executable bin/time-test
+[ 26%] Built target time-test
+Scanning dependencies of target http-connect
+[ 26%] Building C object CMakeFiles/http-connect.dir/sample/http-connect.c.o
+[ 27%] Linking C executable bin/http-connect
+[ 27%] Built target http-connect
+Scanning dependencies of target signal-test
+[ 28%] Building C object CMakeFiles/signal-test.dir/sample/signal-test.c.o
+[ 28%] Linking C executable bin/signal-test
+[ 28%] Built target signal-test
+Scanning dependencies of target event-read-fifo
+[ 29%] Building C object CMakeFiles/event-read-fifo.dir/sample/event-read-fifo.c.o
+[ 29%] Linking C executable bin/event-read-fifo
+[ 29%] Built target event-read-fifo
+Scanning dependencies of target bench_http
+[ 29%] Building C object CMakeFiles/bench_http.dir/test/bench_http.c.o
+[ 30%] Linking C executable bin/bench_http
+[ 30%] Built target bench_http
+Scanning dependencies of target bench_cascade
+[ 30%] Building C object CMakeFiles/bench_cascade.dir/test/bench_cascade.c.o
+[ 31%] Linking C executable bin/bench_cascade
+[ 31%] Built target bench_cascade
+Scanning dependencies of target bench_httpclient
+[ 32%] Building C object CMakeFiles/bench_httpclient.dir/test/bench_httpclient.c.o
+[ 32%] Linking C executable bin/bench_httpclient
+[ 32%] Built target bench_httpclient
+Scanning dependencies of target https-client-mbedtls
+[ 33%] Building C object CMakeFiles/https-client-mbedtls.dir/sample/https-client.c.o
+[ 33%] Linking C executable bin/https-client-mbedtls
+[ 33%] Built target https-client-mbedtls
+Scanning dependencies of target test-changelist
+[ 33%] Building C object CMakeFiles/test-changelist.dir/test/test-changelist.c.o
+[ 34%] Linking C executable bin/test-changelist
+[ 34%] Built target test-changelist
+Scanning dependencies of target event_core_static
+[ 35%] Building C object CMakeFiles/event_core_static.dir/buffer.c.o
+[ 35%] Building C object CMakeFiles/event_core_static.dir/bufferevent.c.o
+[ 36%] Building C object CMakeFiles/event_core_static.dir/bufferevent_filter.c.o
+[ 37%] Building C object CMakeFiles/event_core_static.dir/bufferevent_pair.c.o
+[ 37%] Building C object CMakeFiles/event_core_static.dir/bufferevent_ratelim.c.o
+[ 38%] Building C object CMakeFiles/event_core_static.dir/bufferevent_sock.c.o
+[ 38%] Building C object CMakeFiles/event_core_static.dir/event.c.o
+[ 39%] Building C object CMakeFiles/event_core_static.dir/evmap.c.o
+[ 40%] Building C object CMakeFiles/event_core_static.dir/evthread.c.o
+[ 40%] Building C object CMakeFiles/event_core_static.dir/evutil.c.o
+[ 41%] Building C object CMakeFiles/event_core_static.dir/evutil_rand.c.o
+[ 41%] Building C object CMakeFiles/event_core_static.dir/evutil_time.c.o
+[ 42%] Building C object CMakeFiles/event_core_static.dir/watch.c.o
+[ 42%] Building C object CMakeFiles/event_core_static.dir/listener.c.o
+[ 43%] Building C object CMakeFiles/event_core_static.dir/log.c.o
+[ 44%] Building C object CMakeFiles/event_core_static.dir/signal.c.o
+[ 44%] Building C object CMakeFiles/event_core_static.dir/strlcpy.c.o
+[ 45%] Building C object CMakeFiles/event_core_static.dir/select.c.o
+[ 45%] Building C object CMakeFiles/event_core_static.dir/poll.c.o
+[ 46%] Building C object CMakeFiles/event_core_static.dir/epoll.c.o
+[ 46%] Building C object CMakeFiles/event_core_static.dir/signalfd.c.o
+[ 47%] Linking C static library lib/libevent_core.a
+[ 47%] Built target event_core_static
+Scanning dependencies of target event_extra_static
+[ 48%] Building C object CMakeFiles/event_extra_static.dir/event_tagging.c.o
+[ 48%] Building C object CMakeFiles/event_extra_static.dir/http.c.o
+[ 49%] Building C object CMakeFiles/event_extra_static.dir/evdns.c.o
+[ 49%] Building C object CMakeFiles/event_extra_static.dir/ws.c.o
+[ 50%] Building C object CMakeFiles/event_extra_static.dir/sha1.c.o
+[ 51%] Building C object CMakeFiles/event_extra_static.dir/evrpc.c.o
+[ 51%] Linking C static library lib/libevent_extra.a
+[ 51%] Built target event_extra_static
+Scanning dependencies of target event_pthreads_shared
+[ 51%] Building C object CMakeFiles/event_pthreads_shared.dir/evthread_pthread.c.o
+[ 52%] Linking C shared library lib/libevent_pthreads-2.2.so
+[ 52%] Built target event_pthreads_shared
+Scanning dependencies of target event_mbedtls_static
+[ 53%] Building C object CMakeFiles/event_mbedtls_static.dir/bufferevent_mbedtls.c.o
+[ 53%] Building C object CMakeFiles/event_mbedtls_static.dir/bufferevent_ssl.c.o
+[ 54%] Linking C static library lib/libevent_mbedtls.a
+[ 54%] Built target event_mbedtls_static
+Scanning dependencies of target event_static
+[ 55%] Building C object CMakeFiles/event_static.dir/buffer.c.o
+[ 55%] Building C object CMakeFiles/event_static.dir/bufferevent.c.o
+[ 56%] Building C object CMakeFiles/event_static.dir/bufferevent_filter.c.o
+[ 57%] Building C object CMakeFiles/event_static.dir/bufferevent_pair.c.o
+[ 57%] Building C object CMakeFiles/event_static.dir/bufferevent_ratelim.c.o
+[ 58%] Building C object CMakeFiles/event_static.dir/bufferevent_sock.c.o
+[ 58%] Building C object CMakeFiles/event_static.dir/event.c.o
+[ 59%] Building C object CMakeFiles/event_static.dir/evmap.c.o
+[ 60%] Building C object CMakeFiles/event_static.dir/evthread.c.o
+[ 60%] Building C object CMakeFiles/event_static.dir/evutil.c.o
+[ 61%] Building C object CMakeFiles/event_static.dir/evutil_rand.c.o
+[ 61%] Building C object CMakeFiles/event_static.dir/evutil_time.c.o
+[ 62%] Building C object CMakeFiles/event_static.dir/watch.c.o
+[ 62%] Building C object CMakeFiles/event_static.dir/listener.c.o
+[ 63%] Building C object CMakeFiles/event_static.dir/log.c.o
+[ 64%] Building C object CMakeFiles/event_static.dir/signal.c.o
+[ 64%] Building C object CMakeFiles/event_static.dir/strlcpy.c.o
+[ 65%] Building C object CMakeFiles/event_static.dir/select.c.o
+[ 65%] Building C object CMakeFiles/event_static.dir/poll.c.o
+[ 66%] Building C object CMakeFiles/event_static.dir/epoll.c.o
+[ 67%] Building C object CMakeFiles/event_static.dir/signalfd.c.o
+[ 67%] Building C object CMakeFiles/event_static.dir/event_tagging.c.o
+[ 68%] Building C object CMakeFiles/event_static.dir/http.c.o
+[ 68%] Building C object CMakeFiles/event_static.dir/evdns.c.o
+[ 69%] Building C object CMakeFiles/event_static.dir/ws.c.o
+[ 69%] Building C object CMakeFiles/event_static.dir/sha1.c.o
+[ 70%] Building C object CMakeFiles/event_static.dir/evrpc.c.o
+[ 71%] Linking C static library lib/libevent.a
+[ 71%] Built target event_static
+Scanning dependencies of target bench
+[ 71%] Building C object CMakeFiles/bench.dir/test/bench.c.o
+[ 72%] Linking C executable bin/bench
+[ 72%] Built target bench
+Scanning dependencies of target dns-example
+[ 73%] Building C object CMakeFiles/dns-example.dir/sample/dns-example.c.o
+[ 73%] Linking C executable bin/dns-example
+[ 73%] Built target dns-example
+Scanning dependencies of target test-init
+[ 74%] Building C object CMakeFiles/test-init.dir/test/test-init.c.o
+[ 75%] Linking C executable bin/test-init
+[ 75%] Built target test-init
+Scanning dependencies of target watch-timing
+[ 76%] Building C object CMakeFiles/watch-timing.dir/sample/watch-timing.c.o
+[ 76%] Linking C executable bin/watch-timing
+[ 76%] Built target watch-timing
+Scanning dependencies of target test-eof
+[ 77%] Building C object CMakeFiles/test-eof.dir/test/test-eof.c.o
+[ 77%] Linking C executable bin/test-eof
+[ 77%] Built target test-eof
+Scanning dependencies of target test-closed
+[ 77%] Building C object CMakeFiles/test-closed.dir/test/test-closed.c.o
+[ 78%] Linking C executable bin/test-closed
+[ 78%] Built target test-closed
+Scanning dependencies of target event_pthreads_static
+[ 78%] Building C object CMakeFiles/event_pthreads_static.dir/evthread_pthread.c.o
+[ 79%] Linking C static library lib/libevent_pthreads.a
+[ 79%] Built target event_pthreads_static
+Scanning dependencies of target test-fdleak
+[ 80%] Building C object CMakeFiles/test-fdleak.dir/test/test-fdleak.c.o
+[ 80%] Linking C executable bin/test-fdleak
+[ 80%] Built target test-fdleak
+Scanning dependencies of target test-weof
+[ 80%] Building C object CMakeFiles/test-weof.dir/test/test-weof.c.o
+[ 81%] Linking C executable bin/test-weof
+[ 81%] Built target test-weof
+Scanning dependencies of target test-ratelim
+[ 81%] Building C object CMakeFiles/test-ratelim.dir/test/test-ratelim.c.o
+[ 82%] Linking C executable bin/test-ratelim
+[ 82%] Built target test-ratelim
+Scanning dependencies of target event_shared
+[ 83%] Building C object CMakeFiles/event_shared.dir/buffer.c.o
+[ 83%] Building C object CMakeFiles/event_shared.dir/bufferevent.c.o
+[ 84%] Building C object CMakeFiles/event_shared.dir/bufferevent_filter.c.o
+[ 84%] Building C object CMakeFiles/event_shared.dir/bufferevent_pair.c.o
+[ 85%] Building C object CMakeFiles/event_shared.dir/bufferevent_ratelim.c.o
+[ 86%] Building C object CMakeFiles/event_shared.dir/bufferevent_sock.c.o
+[ 86%] Building C object CMakeFiles/event_shared.dir/event.c.o
+[ 87%] Building C object CMakeFiles/event_shared.dir/evmap.c.o
+[ 87%] Building C object CMakeFiles/event_shared.dir/evthread.c.o
+[ 88%] Building C object CMakeFiles/event_shared.dir/evutil.c.o
+[ 88%] Building C object CMakeFiles/event_shared.dir/evutil_rand.c.o
+[ 89%] Building C object CMakeFiles/event_shared.dir/evutil_time.c.o
+[ 90%] Building C object CMakeFiles/event_shared.dir/watch.c.o
+[ 90%] Building C object CMakeFiles/event_shared.dir/listener.c.o
+[ 91%] Building C object CMakeFiles/event_shared.dir/log.c.o
+[ 91%] Building C object CMakeFiles/event_shared.dir/signal.c.o
+[ 92%] Building C object CMakeFiles/event_shared.dir/strlcpy.c.o
+[ 92%] Building C object CMakeFiles/event_shared.dir/select.c.o
+[ 93%] Building C object CMakeFiles/event_shared.dir/poll.c.o
+[ 94%] Building C object CMakeFiles/event_shared.dir/epoll.c.o
+[ 94%] Building C object CMakeFiles/event_shared.dir/signalfd.c.o
+[ 95%] Building C object CMakeFiles/event_shared.dir/event_tagging.c.o
+[ 95%] Building C object CMakeFiles/event_shared.dir/http.c.o
+[ 96%] Building C object CMakeFiles/event_shared.dir/evdns.c.o
+[ 97%] Building C object CMakeFiles/event_shared.dir/ws.c.o
+[ 97%] Building C object CMakeFiles/event_shared.dir/sha1.c.o
+[ 98%] Building C object CMakeFiles/event_shared.dir/evrpc.c.o
+[ 98%] Linking C shared library lib/libevent-2.2.so
+[ 98%] Built target event_shared
+Scanning dependencies of target hello-world
+[ 98%] Building C object CMakeFiles/hello-world.dir/sample/hello-world.c.o
+[ 99%] Linking C executable bin/hello-world
+[ 99%] Built target hello-world
+Scanning dependencies of target test-time
+[ 99%] Building C object CMakeFiles/test-time.dir/test/test-time.c.o
+[100%] Linking C executable bin/test-time
+[100%] Built target test-time
+root@90a0218a894a:/app/libevent/build# ctest --output-on-failure
+Test project /app/libevent/build
+      Start  1: test-changelist__timerfd_EPOLL
+ 1/68 Test  #1: test-changelist__timerfd_EPOLL .......................   Passed    1.50 sec
+      Start  2: test-eof__timerfd_EPOLL
+ 2/68 Test  #2: test-eof__timerfd_EPOLL ..............................   Passed    0.00 sec
+      Start  3: test-closed__timerfd_EPOLL
+ 3/68 Test  #3: test-closed__timerfd_EPOLL ...........................   Passed    0.00 sec
+      Start  4: test-fdleak__timerfd_EPOLL
+ 4/68 Test  #4: test-fdleak__timerfd_EPOLL ...........................   Passed    0.13 sec
+      Start  5: test-init__timerfd_EPOLL
+ 5/68 Test  #5: test-init__timerfd_EPOLL .............................   Passed    0.00 sec
+      Start  6: test-time__timerfd_EPOLL
+ 6/68 Test  #6: test-time__timerfd_EPOLL .............................   Passed    1.01 sec
+      Start  7: test-weof__timerfd_EPOLL
+ 7/68 Test  #7: test-weof__timerfd_EPOLL .............................   Passed    0.00 sec
+      Start  8: test-dumpevents__timerfd_EPOLL_no_check
+ 8/68 Test  #8: test-dumpevents__timerfd_EPOLL_no_check ..............   Passed    0.00 sec
+      Start  9: test-changelist__changelist_EPOLL
+ 9/68 Test  #9: test-changelist__changelist_EPOLL ....................   Passed    1.50 sec
+      Start 10: test-eof__changelist_EPOLL
+10/68 Test #10: test-eof__changelist_EPOLL ...........................   Passed    0.00 sec
+      Start 11: test-closed__changelist_EPOLL
+11/68 Test #11: test-closed__changelist_EPOLL ........................   Passed    0.00 sec
+      Start 12: test-fdleak__changelist_EPOLL
+12/68 Test #12: test-fdleak__changelist_EPOLL ........................   Passed    0.13 sec
+      Start 13: test-init__changelist_EPOLL
+13/68 Test #13: test-init__changelist_EPOLL ..........................   Passed    0.00 sec
+      Start 14: test-time__changelist_EPOLL
+14/68 Test #14: test-time__changelist_EPOLL ..........................   Passed    1.36 sec
+      Start 15: test-weof__changelist_EPOLL
+15/68 Test #15: test-weof__changelist_EPOLL ..........................   Passed    0.00 sec
+      Start 16: test-dumpevents__changelist_EPOLL_no_check
+16/68 Test #16: test-dumpevents__changelist_EPOLL_no_check ...........   Passed    0.00 sec
+      Start 17: test-changelist__timerfd_changelist_EPOLL
+17/68 Test #17: test-changelist__timerfd_changelist_EPOLL ............   Passed    1.50 sec
+      Start 18: test-eof__timerfd_changelist_EPOLL
+18/68 Test #18: test-eof__timerfd_changelist_EPOLL ...................   Passed    0.00 sec
+      Start 19: test-closed__timerfd_changelist_EPOLL
+19/68 Test #19: test-closed__timerfd_changelist_EPOLL ................   Passed    0.00 sec
+      Start 20: test-fdleak__timerfd_changelist_EPOLL
+20/68 Test #20: test-fdleak__timerfd_changelist_EPOLL ................   Passed    0.13 sec
+      Start 21: test-init__timerfd_changelist_EPOLL
+21/68 Test #21: test-init__timerfd_changelist_EPOLL ..................   Passed    0.00 sec
+      Start 22: test-time__timerfd_changelist_EPOLL
+22/68 Test #22: test-time__timerfd_changelist_EPOLL ..................   Passed    0.11 sec
+      Start 23: test-weof__timerfd_changelist_EPOLL
+23/68 Test #23: test-weof__timerfd_changelist_EPOLL ..................   Passed    0.00 sec
+      Start 24: test-dumpevents__timerfd_changelist_EPOLL_no_check
+24/68 Test #24: test-dumpevents__timerfd_changelist_EPOLL_no_check ...   Passed    0.00 sec
+      Start 25: test-changelist__signalfd_EPOLL
+25/68 Test #25: test-changelist__signalfd_EPOLL ......................   Passed    1.51 sec
+      Start 26: test-eof__signalfd_EPOLL
+26/68 Test #26: test-eof__signalfd_EPOLL .............................   Passed    0.00 sec
+      Start 27: test-closed__signalfd_EPOLL
+27/68 Test #27: test-closed__signalfd_EPOLL ..........................   Passed    0.00 sec
+      Start 28: test-fdleak__signalfd_EPOLL
+28/68 Test #28: test-fdleak__signalfd_EPOLL ..........................   Passed    0.13 sec
+      Start 29: test-init__signalfd_EPOLL
+29/68 Test #29: test-init__signalfd_EPOLL ............................   Passed    0.00 sec
+      Start 30: test-time__signalfd_EPOLL
+30/68 Test #30: test-time__signalfd_EPOLL ............................   Passed    0.14 sec
+      Start 31: test-weof__signalfd_EPOLL
+31/68 Test #31: test-weof__signalfd_EPOLL ............................   Passed    0.00 sec
+      Start 32: test-dumpevents__signalfd_EPOLL_no_check
+32/68 Test #32: test-dumpevents__signalfd_EPOLL_no_check .............   Passed    0.00 sec
+      Start 33: test-changelist__SELECT
+33/68 Test #33: test-changelist__SELECT ..............................   Passed    1.50 sec
+      Start 34: test-eof__SELECT
+34/68 Test #34: test-eof__SELECT .....................................   Passed    0.00 sec
+      Start 35: test-closed__SELECT
+35/68 Test #35: test-closed__SELECT ..................................   Passed    0.00 sec
+      Start 36: test-fdleak__SELECT
+36/68 Test #36: test-fdleak__SELECT ..................................   Passed    0.14 sec
+      Start 37: test-init__SELECT
+37/68 Test #37: test-init__SELECT ....................................   Passed    0.00 sec
+      Start 38: test-time__SELECT
+38/68 Test #38: test-time__SELECT ....................................   Passed    1.36 sec
+      Start 39: test-weof__SELECT
+39/68 Test #39: test-weof__SELECT ....................................   Passed    0.00 sec
+      Start 40: test-dumpevents__SELECT_no_check
+40/68 Test #40: test-dumpevents__SELECT_no_check .....................   Passed    0.00 sec
+      Start 41: test-changelist__signalfd_SELECT
+41/68 Test #41: test-changelist__signalfd_SELECT .....................   Passed    1.50 sec
+      Start 42: test-eof__signalfd_SELECT
+42/68 Test #42: test-eof__signalfd_SELECT ............................   Passed    0.00 sec
+      Start 43: test-closed__signalfd_SELECT
+43/68 Test #43: test-closed__signalfd_SELECT .........................   Passed    0.00 sec
+      Start 44: test-fdleak__signalfd_SELECT
+44/68 Test #44: test-fdleak__signalfd_SELECT .........................   Passed    0.13 sec
+      Start 45: test-init__signalfd_SELECT
+45/68 Test #45: test-init__signalfd_SELECT ...........................   Passed    0.00 sec
+      Start 46: test-time__signalfd_SELECT
+46/68 Test #46: test-time__signalfd_SELECT ...........................   Passed    0.14 sec
+      Start 47: test-weof__signalfd_SELECT
+47/68 Test #47: test-weof__signalfd_SELECT ...........................   Passed    0.00 sec
+      Start 48: test-dumpevents__signalfd_SELECT_no_check
+48/68 Test #48: test-dumpevents__signalfd_SELECT_no_check ............   Passed    0.00 sec
+      Start 49: test-changelist__POLL
+49/68 Test #49: test-changelist__POLL ................................   Passed    1.50 sec
+      Start 50: test-eof__POLL
+50/68 Test #50: test-eof__POLL .......................................   Passed    0.00 sec
+      Start 51: test-closed__POLL
+51/68 Test #51: test-closed__POLL ....................................   Passed    0.00 sec
+      Start 52: test-fdleak__POLL
+52/68 Test #52: test-fdleak__POLL ....................................   Passed    0.12 sec
+      Start 53: test-init__POLL
+53/68 Test #53: test-init__POLL ......................................   Passed    0.00 sec
+      Start 54: test-time__POLL
+54/68 Test #54: test-time__POLL ......................................   Passed    0.14 sec
+      Start 55: test-weof__POLL
+55/68 Test #55: test-weof__POLL ......................................   Passed    0.00 sec
+      Start 56: test-dumpevents__POLL_no_check
+56/68 Test #56: test-dumpevents__POLL_no_check .......................   Passed    0.00 sec
+      Start 57: test-changelist__signalfd_POLL
+57/68 Test #57: test-changelist__signalfd_POLL .......................   Passed    1.50 sec
+      Start 58: test-eof__signalfd_POLL
+58/68 Test #58: test-eof__signalfd_POLL ..............................   Passed    0.00 sec
+      Start 59: test-closed__signalfd_POLL
+59/68 Test #59: test-closed__signalfd_POLL ...........................   Passed    0.00 sec
+      Start 60: test-fdleak__signalfd_POLL
+60/68 Test #60: test-fdleak__signalfd_POLL ...........................   Passed    0.12 sec
+      Start 61: test-init__signalfd_POLL
+61/68 Test #61: test-init__signalfd_POLL .............................   Passed    0.00 sec
+      Start 62: test-time__signalfd_POLL
+62/68 Test #62: test-time__signalfd_POLL .............................   Passed    0.14 sec
+      Start 63: test-weof__signalfd_POLL
+63/68 Test #63: test-weof__signalfd_POLL .............................   Passed    0.00 sec
+      Start 64: test-dumpevents__signalfd_POLL_no_check
+64/68 Test #64: test-dumpevents__signalfd_POLL_no_check ..............   Passed    0.00 sec
+      Start 65: test-ratelim__group_lim
+65/68 Test #65: test-ratelim__group_lim ..............................   Passed    5.30 sec
+      Start 66: test-ratelim__con_lim
+66/68 Test #66: test-ratelim__con_lim ................................   Passed    5.30 sec
+      Start 67: test-ratelim__group_con_lim
+67/68 Test #67: test-ratelim__group_con_lim ..........................   Passed    5.30 sec
+      Start 68: test-ratelim__group_con_lim_drain
+68/68 Test #68: test-ratelim__group_con_lim_drain ....................   Passed    5.30 sec
+
+100% tests passed, 0 tests failed out of 68
+
+Total Test time (real) =  38.82 sec

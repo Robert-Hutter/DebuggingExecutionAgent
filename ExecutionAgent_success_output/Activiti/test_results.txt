@@ -1,0 +1,1959 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Activiti :: Parent                                                 [pom]
+[[1;34mINFO[m] Activiti :: OWASP dependency-check configuration                   [pom]
+[[1;34mINFO[m] Activiti :: API :: Parent                                          [pom]
+[[1;34mINFO[m] Activiti :: API :: Dependencies BOM (Bill Of Materials)            [pom]
+[[1;34mINFO[m] Activiti :: API :: Model Common                                    [jar]
+[[1;34mINFO[m] Activiti :: API :: Runtime Common                                  [jar]
+[[1;34mINFO[m] Activiti :: API :: Process Model API                               [jar]
+[[1;34mINFO[m] Activiti :: API :: Process Runtime                                 [jar]
+[[1;34mINFO[m] Activiti :: API :: Task Model                                      [jar]
+[[1;34mINFO[m] Activiti :: API :: Task Runtime                                    [jar]
+[[1;34mINFO[m] Activiti :: Core :: Common :: Parent                               [pom]
+[[1;34mINFO[m] Activiti :: Core :: Common :: Dependencies BOM (Bill Of Materials) [pom]
+[[1;34mINFO[m] Activiti :: Spring Identity                                        [jar]
+[[1;34mINFO[m] Activiti :: Spring Security                                        [jar]
+[[1;34mINFO[m] Activiti :: Spring Security Policies                               [jar]
+[[1;34mINFO[m] Activiti :: Connector model                                        [jar]
+[[1;34mINFO[m] Activiti :: Spring Connector                                       [jar]
+[[1;34mINFO[m] Activiti :: Core :: Common :: Application                          [jar]
+[[1;34mINFO[m] Activiti :: Spring Resource Finder                                 [jar]
+[[1;34mINFO[m] Activiti :: Test                                                   [pom]
+[[1;34mINFO[m] Activiti :: Test Assertions                                        [jar]
+[[1;34mINFO[m] Activiti :: Test Local Runtime                                     [jar]
+[[1;34mINFO[m] Activiti :: Project model                                          [jar]
+[[1;34mINFO[m] Activiti :: Spring Project                                         [jar]
+[[1;34mINFO[m] Activiti :: Common :: Util                                         [jar]
+[[1;34mINFO[m] Activiti :: Expression Language Implementation for Jakarta EE      [jar]
+[[1;34mINFO[m] Activiti :: Expression Language Support                            [jar]
+[[1;34mINFO[m] Activiti :: Core :: Parent                                         [pom]
+[[1;34mINFO[m] Activiti :: Dependencies BOM (Bill Of Materials)                   [pom]
+[[1;34mINFO[m] Activiti :: Runtime API Parent                                     [pom]
+[[1;34mINFO[m] Activiti :: API :: Common Model Implementation                     [jar]
+[[1;34mINFO[m] Activiti :: BPMN Model                                             [jar]
+[[1;34mINFO[m] Activiti :: Process Validation                                     [jar]
+[[1;34mINFO[m] Activiti :: BPMN Layout                                            [jar]
+[[1;34mINFO[m] Activiti :: BPMN Converter                                         [jar]
+[[1;34mINFO[m] Activiti :: Engine                                                 [jar]
+[[1;34mINFO[m] Activiti :: API :: Common Runtime Implementation                   [jar]
+[[1;34mINFO[m] Activiti :: Spring                                                 [jar]
+[[1;34mINFO[m] Activiti :: API :: Process Model Implementation                    [jar]
+[[1;34mINFO[m] Activiti :: Spring Resource Loader                                 [jar]
+[[1;34mINFO[m] Activiti :: Process Extensions                                     [jar]
+[[1;34mINFO[m] Activiti :: API :: Process Runtime Implementation                  [jar]
+[[1;34mINFO[m] Activiti :: API :: Task Model Implementation                       [jar]
+[[1;34mINFO[m] Activiti :: API :: Task Runtime Implementation                     [jar]
+[[1;34mINFO[m] Activiti :: Image Generator                                        [jar]
+[[1;34mINFO[m] Activiti :: JSON Converter                                         [jar]
+[[1;34mINFO[m] Activiti :: Application                                            [jar]
+[[1;34mINFO[m] Activiti :: Spring Boot Starter                                    [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Tests Parent                     [pom]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Util                             [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 0                            [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 1                            [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 2                            [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 3                            [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 4                            [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 5                            [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Variables                        [jar]
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Variables                        [jar]
+[[1;34mINFO[m] Activiti :: BOM (Bill of Materials)                                [pom]
+[[1;34mINFO[m] Activiti :: Examples :: Parent                                     [pom]
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Process and Tasks Example Bean   [jar]
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Process and Tasks Example No Bean [jar]
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Connector Example                [jar]
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Process Example                  [jar]
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Task Example                     [jar]
+[[1;34mINFO[m] Activiti :: Examples :: API Spring Integration Examples            [jar]
+[[1;34mINFO[m] Activiti :: Examples :: API Web Example                            [jar]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.activiti:activiti-parent[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Parent 8.7.0-SNAPSHOT                        [1/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-parent[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-dependency-check[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: OWASP dependency-check configuration 8.7.0-SNAPSHOT [2/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-dependency-check/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.5.0:add-test-source[m [1m(add-generated-assertions-folder)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] Test Source directory: /app/Activiti/activiti-dependency-check/target/generated-test-sources/assertions added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-dependency-check[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36morg.activiti:activiti-api[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Parent 8.7.0-SNAPSHOT                 [3/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-api-dependencies[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Dependencies BOM (Bill Of Materials) 8.7.0-SNAPSHOT [4/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/activiti-api-dependencies/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-dependencies[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-api-model-shared[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Model Common 8.7.0-SNAPSHOT           [5/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/activiti-api-model-shared/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-api/activiti-api-model-shared/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-model-shared/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-model-shared/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-model-shared[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.activiti:activiti-api-runtime-shared[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Runtime Common 8.7.0-SNAPSHOT         [6/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/activiti-api-runtime-shared/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-api/activiti-api-runtime-shared/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-runtime-shared/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-runtime-shared/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-runtime-shared[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.activiti:activiti-api-process-model[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Process Model API 8.7.0-SNAPSHOT      [7/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/activiti-api-process-model/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-api/activiti-api-process-model/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-process-model/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-process-model/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-process-model[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------< [0;36morg.activiti:activiti-api-process-runtime[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Process Runtime 8.7.0-SNAPSHOT        [8/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/activiti-api-process-runtime/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-api/activiti-api-process-runtime/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-process-runtime/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-process-runtime/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-process-runtime[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.activiti:activiti-api-task-model[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Task Model 8.7.0-SNAPSHOT             [9/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/activiti-api-task-model/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-api/activiti-api-task-model/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-task-model/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-task-model/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-task-model[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-api-task-runtime[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Task Runtime 8.7.0-SNAPSHOT          [10/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-api/activiti-api-task-runtime/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-api/activiti-api-task-runtime/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-task-runtime/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-api/activiti-api-task-runtime/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-task-runtime[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.activiti:activiti-core-common[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Core :: Common :: Parent 8.7.0-SNAPSHOT     [11/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-core-common[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------< [0;36morg.activiti:activiti-core-common-dependencies[0;1m >-----------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Core :: Common :: Dependencies BOM (Bill Of Materials) 8.7.0-SNAPSHOT [12/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-core-common-dependencies/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-core-common-dependencies[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-spring-identity[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Spring Identity 8.7.0-SNAPSHOT              [13/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-spring-identity/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-spring-identity/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] Copying 3 resources from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-spring-identity[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-spring-security[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Spring Security 8.7.0-SNAPSHOT              [14/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-spring-security/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-spring-security/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.[1mLocalSpringSecurityManagerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.495 s - in org.activiti.core.common.spring.security.[1mLocalSpringSecurityManagerTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.test.[1mAuthenticationPrincipalGroupsProviderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.common.spring.security.test.[1mAuthenticationPrincipalGroupsProviderTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.test.[1mAuthenticationPrincipalIdentityProviderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.common.spring.security.test.[1mAuthenticationPrincipalIdentityProviderTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.test.[1mAuthenticationPrincipalRolesProviderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.common.spring.security.test.[1mAuthenticationPrincipalRolesProviderTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.test.[1mLocalSpringSecurityContextPrincipalProviderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.core.common.spring.security.test.[1mLocalSpringSecurityContextPrincipalProviderTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.test.[1mSimpleGrantedAuthoritiesGroupsMapperTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.common.spring.security.test.[1mSimpleGrantedAuthoritiesGroupsMapperTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.test.[1mSimpleGrantedAuthoritiesResolverTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in org.activiti.core.common.spring.security.test.[1mSimpleGrantedAuthoritiesResolverTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.test.[1mSimpleGrantedAuthoritiesRolesMapperTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.core.common.spring.security.test.[1mSimpleGrantedAuthoritiesRolesMapperTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 17, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-spring-security[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core-common/activiti-spring-security/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Spring Security' with 10 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------< [0;36morg.activiti:activiti-spring-security-policies[0;1m >-----------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Spring Security Policies 8.7.0-SNAPSHOT     [15/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-spring-security-policies/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-spring-security-policies/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] Copying 2 resources from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.policies.[1mSecurityPoliciesProcessDefinitionRestrictionApplierTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 s - in org.activiti.core.common.spring.security.policies.[1mSecurityPoliciesProcessDefinitionRestrictionApplierTest[m
+[[1;34mINFO[m] Running org.activiti.core.common.spring.security.policies.[1mSecurityPoliciesProcessInstanceRestrictionApplierTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.common.spring.security.policies.[1mSecurityPoliciesProcessInstanceRestrictionApplierTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 4, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-spring-security-policies[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core-common/activiti-spring-security-policies/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Spring Security Policies' with 9 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-connector-model[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Connector model 8.7.0-SNAPSHOT              [16/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-connector-model/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-connector-model/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-connector-model/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-connector-model/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-connector-model[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.activiti:activiti-spring-connector[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Spring Connector 8.7.0-SNAPSHOT             [17/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-spring-connector/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-spring-connector/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] Copying 10 resources from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.core.common.spring.connector.[1mConnectorDefinitionServiceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.39 s - in org.activiti.core.common.spring.connector.[1mConnectorDefinitionServiceTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 4, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-spring-connector[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core-common/activiti-spring-connector/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Spring Connector' with 2 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.activiti:activiti-spring-application[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Core :: Common :: Application 8.7.0-SNAPSHOT [18/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-spring-application/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-spring-application/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-spring-application/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.application.[1mApplicationDiscoveryTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.827 s - in org.activiti.application.[1mApplicationDiscoveryTest[m
+[[1;34mINFO[m] Running org.activiti.application.[1mApplicationServiceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.351 s - in org.activiti.application.[1mApplicationServiceTest[m
+[[1;34mINFO[m] Running org.activiti.application.deployer.[1mApplicationDeployerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.194 s - in org.activiti.application.deployer.[1mApplicationDeployerTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 5, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-spring-application[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core-common/activiti-spring-application/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Core :: Common :: Application' with 9 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36morg.activiti:activiti-spring-resource-finder[0;1m >------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Spring Resource Finder 8.7.0-SNAPSHOT       [19/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-spring-resource-finder/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-spring-resource-finder/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] Copying 6 resources from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-spring-resource-finder[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------< [0;36morg.activiti:activiti-core-test[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Test 8.7.0-SNAPSHOT                         [20/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-core-test/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-core-test[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------< [0;36morg.activiti:activiti-core-test-assertions[0;1m >-------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Test Assertions 8.7.0-SNAPSHOT              [21/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-core-test/activiti-core-test-assertions/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-core-test/activiti-core-test-assertions/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-core-test/activiti-core-test-assertions/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-core-test-assertions[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------< [0;36morg.activiti:activiti-core-test-local-runtime[0;1m >------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Test Local Runtime 8.7.0-SNAPSHOT           [22/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-core-test/activiti-core-test-local-runtime/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-core-test/activiti-core-test-local-runtime/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-core-test/activiti-core-test-local-runtime/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-core-test-local-runtime[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.activiti:activiti-project-model[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Project model 8.7.0-SNAPSHOT                [23/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-project-model/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-project-model/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-project-model/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-project-model/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-project-model[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.activiti:activiti-spring-project[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Spring Project 8.7.0-SNAPSHOT               [24/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-spring-project/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-spring-project/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] Copying 3 resources from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-spring-project[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.activiti:activiti-common-util[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Common :: Util 8.7.0-SNAPSHOT               [25/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-common-util/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-common-util/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-common-util/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.common.util.[1mDateFormatterProviderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.212 s - in org.activiti.common.util.[1mDateFormatterProviderTest[m
+[[1;34mINFO[m] Running org.activiti.common.util.conf.test.[1mUtilAutoConfigurationTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.717 s - in org.activiti.common.util.conf.test.[1mUtilAutoConfigurationTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 10, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-common-util[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core-common/activiti-common-util/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Common :: Util' with 2 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.activiti:activiti-juel-jakarta[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Expression Language Implementation for Jakarta EE 8.7.0-SNAPSHOT [26/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-juel-jakarta/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-juel-jakarta/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-juel-jakarta/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.core.el.juel.[1mExpressionFactoryImplTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 s - in org.activiti.core.el.juel.[1mExpressionFactoryImplTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.[1mObjectValueExpressionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in org.activiti.core.el.juel.[1mObjectValueExpressionTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.[1mTreeMethodExpressionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in org.activiti.core.el.juel.[1mTreeMethodExpressionTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.[1mTreeValueExpressionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in org.activiti.core.el.juel.[1mTreeValueExpressionTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.extensions.[1mMethodInvocationsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in org.activiti.core.el.juel.extensions.[1mMethodInvocationsTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.extensions.[1mNullPropertiesTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.el.juel.extensions.[1mNullPropertiesTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.extensions.[1mVarArgsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.core.el.juel.extensions.[1mVarArgsTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.misc.[1mBooleanOperationsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.activiti.core.el.juel.misc.[1mBooleanOperationsTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.misc.[1mMessagesTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.el.juel.misc.[1mMessagesTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.misc.[1mNumberOperationsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.core.el.juel.misc.[1mNumberOperationsTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.misc.[1mTypeConverterImplTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m13[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.activiti.core.el.juel.misc.[1mTypeConverterImplTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.[1mBindingsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.el.juel.tree.[1mBindingsTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.[1mNodePrinterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.core.el.juel.tree.[1mNodePrinterTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.[1mTreeStoreTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.core.el.juel.tree.[1mTreeStoreTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.[1mTreeTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.activiti.core.el.juel.tree.[1mTreeTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.[1mCacheTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.285 s - in org.activiti.core.el.juel.tree.impl.[1mCacheTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.[1mParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m16[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in org.activiti.core.el.juel.tree.impl.[1mParserTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.[1mScannerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.activiti.core.el.juel.tree.impl.[1mScannerTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstBinaryTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstBinaryTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstBooleanTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstBooleanTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstBracketTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstBracketTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstChoiceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstChoiceTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstCompositeTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstCompositeTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstDotTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstDotTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstEvalTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstEvalTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstFunctionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstFunctionTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstIdentifierTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstIdentifierTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstMethodTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstMethodTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstNestedTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstNestedTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstNullTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstNullTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstNumberTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstNumberTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstStringTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstStringTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstTextTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstTextTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.juel.tree.impl.ast.[1mAstUnaryTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.core.el.juel.tree.impl.ast.[1mAstUnaryTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 247, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-juel-jakarta[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core-common/activiti-juel-jakarta/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Expression Language Implementation for Jakarta EE' with 77 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------< [0;36morg.activiti:activiti-expression-language[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Expression Language Support 8.7.0-SNAPSHOT  [27/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core-common/activiti-expression-language/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] License: 'GPL-2.0-only' for 'MavenProject: jakarta.el:jakarta.el-api:5.0.1 @ ' is OK since it is also licensed under 'EPL-2.0'
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core-common/activiti-expression-language/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-expression-language/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core-common/activiti-expression-language/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.core.el.[1mELResolverReflectionBlockerDecoratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.534 s - in org.activiti.core.el.[1mELResolverReflectionBlockerDecoratorTest[m
+[[1;34mINFO[m] Running org.activiti.core.el.[1mJuelResolverTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in org.activiti.core.el.[1mJuelResolverTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 12, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-expression-language[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core-common/activiti-expression-language/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Expression Language Support' with 13 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36morg.activiti:activiti-core[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Core :: Parent 8.7.0-SNAPSHOT               [28/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-core[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-core[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-core[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-core[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.activiti:activiti-core-dependencies[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Dependencies BOM (Bill Of Materials) 8.7.0-SNAPSHOT [29/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/activiti-core-dependencies/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-core-dependencies[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.activiti:activiti-api-impl[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Runtime API Parent 8.7.0-SNAPSHOT           [30/67][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/activiti-api-impl/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;33mWARNING[m] The goal is skip due to packaging 'pom'
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-impl[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36morg.activiti:activiti-api-model-shared-impl[0;1m >-------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: API :: Common Model Implementation 8.7.0-SNAPSHOT [31/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/activiti-api-impl/activiti-api-model-shared-impl/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core/activiti-api-impl/activiti-api-model-shared-impl/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] Copying 2 resources from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core/activiti-api-impl/activiti-api-model-shared-impl/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-api-model-shared-impl[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------< [0;36morg.activiti:activiti-bpmn-model[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: BPMN Model 8.7.0-SNAPSHOT                   [32/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/activiti-bpmn-model/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core/activiti-bpmn-model/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core/activiti-bpmn-model/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core/activiti-bpmn-model/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.bpmn.model.[1mBaseElementTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.278 s - in org.activiti.bpmn.model.[1mBaseElementTest[m
+[[1;34mINFO[m] Running org.activiti.bpmn.model.[1mBoundaryEventTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.activiti.bpmn.model.[1mBoundaryEventTest[m
+[[1;34mINFO[m] Running org.activiti.bpmn.model.[1mServiceTaskTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.bpmn.model.[1mServiceTaskTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 10, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-bpmn-model[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core/activiti-bpmn-model/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: BPMN Model' with 95 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.activiti:activiti-process-validation[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: Process Validation 8.7.0-SNAPSHOT           [33/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/activiti-process-validation/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] License: 'GPL-2.0-only' for 'MavenProject: jakarta.el:jakarta.el-api:5.0.1 @ ' is OK since it is also licensed under 'EPL-2.0'
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core/activiti-process-validation/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core/activiti-process-validation/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.validation.validator.impl.[1mFlowElementValidatorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.723 s - in org.activiti.validation.validator.impl.[1mFlowElementValidatorTest[m
+[[1;34mINFO[m] Running org.activiti.validation.validator.impl.[1mServiceTaskValidatorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in org.activiti.validation.validator.impl.[1mServiceTaskValidatorTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 6, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-process-validation[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /app/Activiti/activiti-core/activiti-process-validation/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Activiti :: Process Validation' with 38 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.activiti:activiti-bpmn-layout[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: BPMN Layout 8.7.0-SNAPSHOT                  [34/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/activiti-bpmn-layout/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core/activiti-bpmn-layout/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core/activiti-bpmn-layout/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /app/Activiti/activiti-core/activiti-bpmn-layout/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:report[m [1m(post-unit-test)[m @ [36mactiviti-bpmn-layout[0;1m ---[m
+[[1;34mINFO[m] Skipping JaCoCo execution due to missing execution data file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.activiti:activiti-bpmn-converter[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Activiti :: BPMN Converter 8.7.0-SNAPSHOT               [35/67][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:4.3:check[m [1m(validate-license)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] Checking licenses...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-java)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(enforce-maven)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(no-duplicate-declared-dependencies)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.1.0:enforce[m [1m(ban-blacklisted-dependencies)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.11:prepare-agent[m [1m(pre-unit-test)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/app/Activiti/activiti-core/activiti-bpmn-converter/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mlicense-maven-plugin:2.0.1.alfresco-2:add-third-party[m [1m(third-party-licenses)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] Included licenses (whitelist): [ANTLR-PD, Apache 1.1 (ORO License), Apache Variant (JDOM License), Apache-2.0, BSD Variant (dom4j License), BSD Variant (FreeMarker License), BSD Variant (JCraft License), BSD-2-Clause, BSD-3-Clause, BSD-3-Clause-No-Nuclear-Warranty, CC-BY-2.5, CC0-1.0, CDDL-1.0, CDDL-1.1, CPL-1.0, EDL-1.0, Elastic-2.0, EPL-1.0, EPL-2.0, GeoAPI, GOLICENSE, GPL-2.0-only (from Nashorn), ICU, JSON, LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0, MPL-1.0, MPL-1.1, MPL-2.0, Plexus, PostgreSQL, Public-Domain, Unidata, UnRAR, UPL-1.0, WTFPL, xpp, Zlib]
+[[1;34mINFO[m] Writing third-party file to /app/Activiti/activiti-core/activiti-bpmn-converter/target/generated-sources/license/THIRD-PARTY.txt
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] Copying 14 resources from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from target/generated-sources/license to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] Copying 57 resources from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mactiviti-bpmn-converter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.activiti.bpmn.converter.[1mBpmnXMLConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.564 s - in org.activiti.bpmn.converter.[1mBpmnXMLConverterTest[m
+[[1;34mINFO[m] Running org.activiti.bpmn.converter.[1mServiceTaskXMLConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.141 s - in org.activiti.bpmn.converter.[1mServiceTaskXMLConverterTest[m
+[[1;34mINFO[m] Running org.activiti.bpmn.converter.child.[1mMultiInstanceParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in org.activiti.bpmn.converter.child.[1mMultiInstanceParserTest[m
+[[1;34mINFO[m] Running org.activiti.bpmn.converter.export.[1mMultiInstanceExportTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s - in org.activiti.bpmn.converter.export.[1mMultiInstanceExportTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mAsyncEndEventConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s - in org.activiti.editor.language.xml.[1mAsyncEndEventConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mCallActivityConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in org.activiti.editor.language.xml.[1mCallActivityConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mChineseConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.activiti.editor.language.xml.[1mChineseConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mCollaborationExtensionElementsConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.activiti.editor.language.xml.[1mCollaborationExtensionElementsConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mCommaSplitterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.activiti.editor.language.xml.[1mCommaSplitterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mCompleteConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in org.activiti.editor.language.xml.[1mCompleteConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mCustomExtensionsConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in org.activiti.editor.language.xml.[1mCustomExtensionsConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mCustomNamespaceAttributeConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.editor.language.xml.[1mCustomNamespaceAttributeConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mDataObjectConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.activiti.editor.language.xml.[1mDataObjectConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mDataStoreConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.editor.language.xml.[1mDataStoreConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mEmptyModelTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.activiti.editor.language.xml.[1mEmptyModelTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mEncodingConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.editor.language.xml.[1mEncodingConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mEndEventConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.activiti.editor.language.xml.[1mEndEventConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mErrorConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in org.activiti.editor.language.xml.[1mErrorConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mEventBasedGatewayConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.editor.language.xml.[1mEventBasedGatewayConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mEventListenerConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.editor.language.xml.[1mEventListenerConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mFormPropertiesConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.activiti.editor.language.xml.[1mFormPropertiesConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mInCompleteSignalConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.571 s - in org.activiti.editor.language.xml.[1mInCompleteSignalConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mIntermediateThrowCatchSignalEventConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.activiti.editor.language.xml.[1mIntermediateThrowCatchSignalEventConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mManualTaskConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.editor.language.xml.[1mManualTaskConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mMapExceptionConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.activiti.editor.language.xml.[1mMapExceptionConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mMessageConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.editor.language.xml.[1mMessageConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mMessageEventDefinitionConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in org.activiti.editor.language.xml.[1mMessageEventDefinitionConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mMessageFlowConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.editor.language.xml.[1mMessageFlowConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mMultiInstanceConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.activiti.editor.language.xml.[1mMultiInstanceConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mMultiInstanceUserTaskConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in org.activiti.editor.language.xml.[1mMultiInstanceUserTaskConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mMultiLineEmailHTMLTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.editor.language.xml.[1mMultiLineEmailHTMLTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mNotExecutableConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in org.activiti.editor.language.xml.[1mNotExecutableConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mOtherToolImportConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.activiti.editor.language.xml.[1mOtherToolImportConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mPoolsConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.editor.language.xml.[1mPoolsConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mPrefixConversionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 s - in org.activiti.editor.language.xml.[1mPrefixConversionTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mProcessWithCompensationConverterTest[m
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 0.127 s[1;31m <<< FAILURE![m - in org.activiti.editor.language.xml.[1mProcessWithCompensationConverterTest[m
+[[1;31mERROR[m] testConvertingAfterAutoLayout  Time elapsed: 0.127 s  <<< ERROR!
+java.lang.UnsatisfiedLinkError: /usr/local/openjdk-21/lib/libawt_xawt.so: libXrender.so.1: cannot open shared object file: No such file or directory
+	at java.base/jdk.internal.loader.NativeLibraries.load(Native Method)
+	at java.base/jdk.internal.loader.NativeLibraries$NativeLibraryImpl.open(NativeLibraries.java:331)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:197)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:139)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2418)
+	at java.base/java.lang.Runtime.load0(Runtime.java:852)
+	at java.base/java.lang.System.load(System.java:2021)
+	at java.base/jdk.internal.loader.NativeLibraries.load(Native Method)
+	at java.base/jdk.internal.loader.NativeLibraries$NativeLibraryImpl.open(NativeLibraries.java:331)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:197)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:139)
+	at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:259)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:249)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2427)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+	at java.base/java.lang.System.loadLibrary(System.java:2059)
+	at java.desktop/java.awt.image.ColorModel$1.run(ColorModel.java:211)
+	at java.desktop/java.awt.image.ColorModel$1.run(ColorModel.java:209)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.desktop/java.awt.image.ColorModel.loadLibraries(ColorModel.java:208)
+	at java.desktop/java.awt.image.ColorModel.<clinit>(ColorModel.java:221)
+	at java.desktop/java.awt.image.BufferedImage.<clinit>(BufferedImage.java:286)
+	at com.mxgraph.util.mxUtils.<clinit>(mxUtils.java:91)
+	at com.mxgraph.view.mxGraph.isSwimlane(mxGraph.java:5529)
+	at com.mxgraph.view.mxGraph.getCellContainmentArea(mxGraph.java:3936)
+	at com.mxgraph.view.mxGraph.constrainChild(mxGraph.java:3988)
+	at com.mxgraph.view.mxGraph.cellsAdded(mxGraph.java:2777)
+	at com.mxgraph.view.mxGraph.addCells(mxGraph.java:2678)
+	at com.mxgraph.view.mxGraph.addCell(mxGraph.java:2606)
+	at com.mxgraph.view.mxGraph.addCell(mxGraph.java:2588)
+	at org.activiti.bpmn.BpmnAutoLayout.handleBoundaryEvents(BpmnAutoLayout.java:254)
+	at org.activiti.bpmn.BpmnAutoLayout.layout(BpmnAutoLayout.java:159)
+	at org.activiti.bpmn.BpmnAutoLayout.handleSubProcess(BpmnAutoLayout.java:228)
+	at org.activiti.bpmn.BpmnAutoLayout.layout(BpmnAutoLayout.java:140)
+	at org.activiti.bpmn.BpmnAutoLayout.execute(BpmnAutoLayout.java:101)
+	at org.activiti.editor.language.xml.ProcessWithCompensationConverterTest.testConvertingAfterAutoLayout(ProcessWithCompensationConverterTest.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mScopedConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.editor.language.xml.[1mScopedConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mServiceTaskConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.activiti.editor.language.xml.[1mServiceTaskConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSignalConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.activiti.editor.language.xml.[1mSignalConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSimpleConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.editor.language.xml.[1mSimpleConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSimpleUserTaskConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.activiti.editor.language.xml.[1mSimpleUserTaskConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mStartEventNonInterruptingEventSubprocessConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.activiti.editor.language.xml.[1mStartEventNonInterruptingEventSubprocessConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSubProcessConverterAutoLayoutTest[m
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m2[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 0.036 s[1;31m <<< FAILURE![m - in org.activiti.editor.language.xml.[1mSubProcessConverterAutoLayoutTest[m
+[[1;31mERROR[m] convertModelToXML  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class com.mxgraph.util.mxUtils
+	at com.mxgraph.layout.hierarchical.stage.mxCoordinateAssignment.adjustParents(mxCoordinateAssignment.java:1332)
+	at com.mxgraph.layout.hierarchical.stage.mxCoordinateAssignment.setCellLocations(mxCoordinateAssignment.java:1308)
+	at com.mxgraph.layout.hierarchical.stage.mxCoordinateAssignment.execute(mxCoordinateAssignment.java:324)
+	at com.mxgraph.layout.hierarchical.mxHierarchicalLayout.placementStage(mxHierarchicalLayout.java:536)
+	at com.mxgraph.layout.hierarchical.mxHierarchicalLayout.run(mxHierarchicalLayout.java:380)
+	at com.mxgraph.layout.hierarchical.mxHierarchicalLayout.execute(mxHierarchicalLayout.java:189)
+	at com.mxgraph.layout.hierarchical.mxHierarchicalLayout.execute(mxHierarchicalLayout.java:146)
+	at org.activiti.bpmn.BpmnAutoLayout.layout(BpmnAutoLayout.java:172)
+	at org.activiti.bpmn.BpmnAutoLayout.handleSubProcess(BpmnAutoLayout.java:228)
+	at org.activiti.bpmn.BpmnAutoLayout.layout(BpmnAutoLayout.java:140)
+	at org.activiti.bpmn.BpmnAutoLayout.execute(BpmnAutoLayout.java:101)
+	at org.activiti.editor.language.xml.SubProcessConverterAutoLayoutTest.convertModelToXML(SubProcessConverterAutoLayoutTest.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.UnsatisfiedLinkError: /usr/local/openjdk-21/lib/libawt_xawt.so: libXrender.so.1: cannot open shared object file: No such file or directory [in thread "main"]
+	at java.base/jdk.internal.loader.NativeLibraries.load(Native Method)
+	at java.base/jdk.internal.loader.NativeLibraries$NativeLibraryImpl.open(NativeLibraries.java:331)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:197)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:139)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2418)
+	at java.base/java.lang.Runtime.load0(Runtime.java:852)
+	at java.base/java.lang.System.load(System.java:2021)
+	at java.base/jdk.internal.loader.NativeLibraries.load(Native Method)
+	at java.base/jdk.internal.loader.NativeLibraries$NativeLibraryImpl.open(NativeLibraries.java:331)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:197)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:139)
+	at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:259)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:249)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2427)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+	at java.base/java.lang.System.loadLibrary(System.java:2059)
+	at java.desktop/java.awt.image.ColorModel$1.run(ColorModel.java:211)
+	at java.desktop/java.awt.image.ColorModel$1.run(ColorModel.java:209)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.desktop/java.awt.image.ColorModel.loadLibraries(ColorModel.java:208)
+	at java.desktop/java.awt.image.ColorModel.<clinit>(ColorModel.java:221)
+	at java.desktop/java.awt.image.BufferedImage.<clinit>(BufferedImage.java:286)
+	at com.mxgraph.util.mxUtils.<clinit>(mxUtils.java:91)
+	at com.mxgraph.view.mxGraph.isSwimlane(mxGraph.java:5529)
+	at com.mxgraph.view.mxGraph.getCellContainmentArea(mxGraph.java:3936)
+	at com.mxgraph.view.mxGraph.constrainChild(mxGraph.java:3988)
+	at com.mxgraph.view.mxGraph.cellsAdded(mxGraph.java:2777)
+	at com.mxgraph.view.mxGraph.addCells(mxGraph.java:2678)
+	at com.mxgraph.view.mxGraph.addCell(mxGraph.java:2606)
+	at com.mxgraph.view.mxGraph.addCell(mxGraph.java:2588)
+	at org.activiti.bpmn.BpmnAutoLayout.handleBoundaryEvents(BpmnAutoLayout.java:254)
+	at org.activiti.bpmn.BpmnAutoLayout.layout(BpmnAutoLayout.java:159)
+	at org.activiti.bpmn.BpmnAutoLayout.handleSubProcess(BpmnAutoLayout.java:228)
+	at org.activiti.bpmn.BpmnAutoLayout.layout(BpmnAutoLayout.java:140)
+	at org.activiti.bpmn.BpmnAutoLayout.execute(BpmnAutoLayout.java:101)
+	at org.activiti.editor.language.xml.ProcessWithCompensationConverterTest.testConvertingAfterAutoLayout(ProcessWithCompensationConverterTest.java:51)
+	... 63 more
+
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSubProcessConverterNoDITest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.activiti.editor.language.xml.[1mSubProcessConverterNoDITest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSubProcessConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.activiti.editor.language.xml.[1mSubProcessConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSubProcessMultiDiagramConverterNoDITest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.activiti.editor.language.xml.[1mSubProcessMultiDiagramConverterNoDITest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSubProcessMultiDiagramConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.editor.language.xml.[1mSubProcessMultiDiagramConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mSubProcessWithExtensionsConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.activiti.editor.language.xml.[1mSubProcessWithExtensionsConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mTaskConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.activiti.editor.language.xml.[1mTaskConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mTextAnnotationConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.activiti.editor.language.xml.[1mTextAnnotationConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mTimerDefinitionConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.activiti.editor.language.xml.[1mTimerDefinitionConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mUserTaskConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.editor.language.xml.[1mUserTaskConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mValuedDataObjectConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.activiti.editor.language.xml.[1mValuedDataObjectConverterTest[m
+[[1;34mINFO[m] Running org.activiti.editor.language.xml.[1mValuedDataObjectWithExtensionsConverterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.activiti.editor.language.xml.[1mValuedDataObjectWithExtensionsConverterTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mErrors: [m
+[[1;31mERROR[m] [1;31m  ProcessWithCompensationConverterTest.testConvertingAfterAutoLayout:51 » UnsatisfiedLink[m
+[[1;31mERROR[m] [1;31m  SubProcessConverterAutoLayoutTest.convertModelToXML:45 » NoClassDefFound Could...[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 110, Failures: 0, Errors: 2, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for Activiti :: Parent 8.7.0-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Activiti :: Parent ................................. [1;32mSUCCESS[m [  1.443 s]
+[[1;34mINFO[m] Activiti :: OWASP dependency-check configuration ... [1;32mSUCCESS[m [  0.093 s]
+[[1;34mINFO[m] Activiti :: API :: Parent .......................... [1;32mSUCCESS[m [  0.054 s]
+[[1;34mINFO[m] Activiti :: API :: Dependencies BOM (Bill Of Materials) [1;32mSUCCESS[m [  0.050 s]
+[[1;34mINFO[m] Activiti :: API :: Model Common .................... [1;32mSUCCESS[m [  0.504 s]
+[[1;34mINFO[m] Activiti :: API :: Runtime Common .................. [1;32mSUCCESS[m [  0.134 s]
+[[1;34mINFO[m] Activiti :: API :: Process Model API ............... [1;32mSUCCESS[m [  0.177 s]
+[[1;34mINFO[m] Activiti :: API :: Process Runtime ................. [1;32mSUCCESS[m [  0.165 s]
+[[1;34mINFO[m] Activiti :: API :: Task Model ...................... [1;32mSUCCESS[m [  0.151 s]
+[[1;34mINFO[m] Activiti :: API :: Task Runtime .................... [1;32mSUCCESS[m [  0.139 s]
+[[1;34mINFO[m] Activiti :: Core :: Common :: Parent ............... [1;32mSUCCESS[m [  0.060 s]
+[[1;34mINFO[m] Activiti :: Core :: Common :: Dependencies BOM (Bill Of Materials) [1;32mSUCCESS[m [  0.049 s]
+[[1;34mINFO[m] Activiti :: Spring Identity ........................ [1;32mSUCCESS[m [  0.249 s]
+[[1;34mINFO[m] Activiti :: Spring Security ........................ [1;32mSUCCESS[m [  5.257 s]
+[[1;34mINFO[m] Activiti :: Spring Security Policies ............... [1;32mSUCCESS[m [  1.505 s]
+[[1;34mINFO[m] Activiti :: Connector model ........................ [1;32mSUCCESS[m [  0.132 s]
+[[1;34mINFO[m] Activiti :: Spring Connector ....................... [1;32mSUCCESS[m [  3.797 s]
+[[1;34mINFO[m] Activiti :: Core :: Common :: Application .......... [1;32mSUCCESS[m [  3.695 s]
+[[1;34mINFO[m] Activiti :: Spring Resource Finder ................. [1;32mSUCCESS[m [  0.129 s]
+[[1;34mINFO[m] Activiti :: Test ................................... [1;32mSUCCESS[m [  0.037 s]
+[[1;34mINFO[m] Activiti :: Test Assertions ........................ [1;32mSUCCESS[m [  0.135 s]
+[[1;34mINFO[m] Activiti :: Test Local Runtime ..................... [1;32mSUCCESS[m [  0.153 s]
+[[1;34mINFO[m] Activiti :: Project model .......................... [1;32mSUCCESS[m [  0.111 s]
+[[1;34mINFO[m] Activiti :: Spring Project ......................... [1;32mSUCCESS[m [  0.112 s]
+[[1;34mINFO[m] Activiti :: Common :: Util ......................... [1;32mSUCCESS[m [  4.282 s]
+[[1;34mINFO[m] Activiti :: Expression Language Implementation for Jakarta EE [1;32mSUCCESS[m [  2.340 s]
+[[1;34mINFO[m] Activiti :: Expression Language Support ............ [1;32mSUCCESS[m [  1.853 s]
+[[1;34mINFO[m] Activiti :: Core :: Parent ......................... [1;32mSUCCESS[m [  0.058 s]
+[[1;34mINFO[m] Activiti :: Dependencies BOM (Bill Of Materials) ... [1;32mSUCCESS[m [  0.040 s]
+[[1;34mINFO[m] Activiti :: Runtime API Parent ..................... [1;32mSUCCESS[m [  0.043 s]
+[[1;34mINFO[m] Activiti :: API :: Common Model Implementation ..... [1;32mSUCCESS[m [  0.126 s]
+[[1;34mINFO[m] Activiti :: BPMN Model ............................. [1;32mSUCCESS[m [  1.410 s]
+[[1;34mINFO[m] Activiti :: Process Validation ..................... [1;32mSUCCESS[m [  2.035 s]
+[[1;34mINFO[m] Activiti :: BPMN Layout ............................ [1;32mSUCCESS[m [  0.098 s]
+[[1;34mINFO[m] Activiti :: BPMN Converter ......................... [1;31mFAILURE[m [  5.660 s]
+[[1;34mINFO[m] Activiti :: Engine ................................. [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: API :: Common Runtime Implementation ... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring ................................. [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: API :: Process Model Implementation .... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring Resource Loader ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Process Extensions ..................... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: API :: Process Runtime Implementation .. [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: API :: Task Model Implementation ....... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: API :: Task Runtime Implementation ..... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Image Generator ........................ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: JSON Converter ......................... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Application ............................ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring Boot Starter .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Tests Parent ..... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Util ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 0 ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 1 ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 2 ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 3 ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 4 ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Set 5 ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Variables ........ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Spring :: Conformance Variables ........ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: BOM (Bill of Materials) ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: Parent ..................... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Process and Tasks Example Bean [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Process and Tasks Example No Bean [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Connector Example  [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Process Example .. [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: API Basic Task Example ..... [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: API Spring Integration Examples [1;33mSKIPPED[m
+[[1;34mINFO[m] Activiti :: Examples :: API Web Example ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  36.879 s
+[[1;34mINFO[m] Finished at: 2025-04-11T12:01:25+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.2:test[m [1m(default-test)[m on project [36mactiviti-bpmn-converter[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /app/Activiti/activiti-core/activiti-bpmn-converter/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[[1;31mERROR[m] 
+[[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+[[1;31mERROR[m]   [1mmvn <args> -rf :activiti-bpmn-converter[m
+[0m

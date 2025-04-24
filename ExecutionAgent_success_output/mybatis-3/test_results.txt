@@ -1,0 +1,1019 @@
+ionTest
+[INFO] Running org.apache.ibatis.submitted.generictyperesolution.GenericTypeResolutionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.generictyperesolution.GenericTypeResolutionTest
+[INFO] Running org.apache.ibatis.submitted.custom_collection_handling.CustomCollectionHandlingTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in org.apache.ibatis.submitted.custom_collection_handling.CustomCollectionHandlingTest
+[INFO] Running org.apache.ibatis.submitted.default_method.DefaultMethodTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.ibatis.submitted.default_method.DefaultMethodTest
+[INFO] Running org.apache.ibatis.submitted.parent_reference_3level.BlogTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in org.apache.ibatis.submitted.parent_reference_3level.BlogTest
+[INFO] Running org.apache.ibatis.submitted.blobtest.BlobTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.blobtest.BlobTest
+[INFO] Running org.apache.ibatis.submitted.mapper_type_parameter.MapperTypeParameterTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in org.apache.ibatis.submitted.mapper_type_parameter.MapperTypeParameterTest
+[INFO] Running org.apache.ibatis.submitted.discriminator.DiscriminatorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in org.apache.ibatis.submitted.discriminator.DiscriminatorTest
+[INFO] Running org.apache.ibatis.submitted.result_handler_type.DefaultResultHandlerTypeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in org.apache.ibatis.submitted.result_handler_type.DefaultResultHandlerTypeTest
+[INFO] Running org.apache.ibatis.submitted.cursor_cache_oom.CursorOomTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.880 s -- in org.apache.ibatis.submitted.cursor_cache_oom.CursorOomTest
+[INFO] Running org.apache.ibatis.submitted.call_setters_on_nulls.CallSettersOnNullsTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in org.apache.ibatis.submitted.call_setters_on_nulls.CallSettersOnNullsTest
+[INFO] Running org.apache.ibatis.submitted.call_setters_on_nulls.DoNotCallSettersOnNullsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.ibatis.submitted.call_setters_on_nulls.DoNotCallSettersOnNullsTest
+[INFO] Running org.apache.ibatis.submitted.timezone_edge_case.TimezoneEdgeCaseTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.ibatis.submitted.timezone_edge_case.TimezoneEdgeCaseTest
+[INFO] Running org.apache.ibatis.submitted.include_property.IncludePropertyTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s -- in org.apache.ibatis.submitted.include_property.IncludePropertyTest
+[INFO] Running org.apache.ibatis.submitted.include_property.IncludePropertyErrorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.submitted.include_property.IncludePropertyErrorTest
+[INFO] Running org.apache.ibatis.submitted.annotion_many_one_add_columnprefix.OneManyColumnPrefixTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in org.apache.ibatis.submitted.annotion_many_one_add_columnprefix.OneManyColumnPrefixTest
+[INFO] Running org.apache.ibatis.submitted.array_result_type.ArrayResultTypeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.array_result_type.ArrayResultTypeTest
+[INFO] Running org.apache.ibatis.submitted.map_class_name_conflict.MapperNameTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.ibatis.submitted.map_class_name_conflict.MapperNameTest
+[INFO] Running org.apache.ibatis.submitted.ognlstatic.OgnlStaticTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.ibatis.submitted.ognlstatic.OgnlStaticTest
+[INFO] Running org.apache.ibatis.submitted.use_actual_param_name.UseActualParamNameTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.ibatis.submitted.use_actual_param_name.UseActualParamNameTest
+[INFO] Running org.apache.ibatis.submitted.xml_references.EnumWithOgnlTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in org.apache.ibatis.submitted.xml_references.EnumWithOgnlTest
+[INFO] Running org.apache.ibatis.submitted.array_type_handler.ArrayTypeHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in org.apache.ibatis.submitted.array_type_handler.ArrayTypeHandlerTest
+[INFO] Running org.apache.ibatis.submitted.generictypes.GenericTypesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.ibatis.submitted.generictypes.GenericTypesTest
+[INFO] Running org.apache.ibatis.submitted.cacheorder.CacheOrderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.cacheorder.CacheOrderTest
+[INFO] Running org.apache.ibatis.submitted.global_variables_defaults.AnnotationMapperTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in org.apache.ibatis.submitted.global_variables_defaults.AnnotationMapperTest
+[INFO] Running org.apache.ibatis.submitted.global_variables_defaults.ConfigurationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.global_variables_defaults.ConfigurationTest
+[INFO] Running org.apache.ibatis.submitted.global_variables_defaults.CustomizationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.global_variables_defaults.CustomizationTest
+[INFO] Running org.apache.ibatis.submitted.global_variables_defaults.XmlMapperTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.global_variables_defaults.XmlMapperTest
+[INFO] Running org.apache.ibatis.submitted.constructor_automapping.ConstructorAutomappingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.ibatis.submitted.constructor_automapping.ConstructorAutomappingTest
+[INFO] Running org.apache.ibatis.submitted.enum_with_method.EnumWithMethodTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.ibatis.submitted.enum_with_method.EnumWithMethodTest
+[INFO] Running org.apache.ibatis.submitted.disallowdotsonnames.DisallowDotsOnNamesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.submitted.disallowdotsonnames.DisallowDotsOnNamesTest
+[INFO] Running org.apache.ibatis.submitted.javassist.JavassistTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.javassist.JavassistTest
+[INFO] Running org.apache.ibatis.submitted.quotedcolumnnames.QuotedColumnNamesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.quotedcolumnnames.QuotedColumnNamesTest
+[INFO] Running org.apache.ibatis.submitted.batch_test.BatchTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.batch_test.BatchTest
+[INFO] Running org.apache.ibatis.submitted.encoding.EncodingTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in org.apache.ibatis.submitted.encoding.EncodingTest
+[INFO] Running org.apache.ibatis.submitted.deferload_common_property.CommonPropertyDeferLoadTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s -- in org.apache.ibatis.submitted.deferload_common_property.CommonPropertyDeferLoadTest
+[INFO] Running org.apache.ibatis.submitted.literal_string.LiteralStringTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in org.apache.ibatis.submitted.literal_string.LiteralStringTest
+[INFO] Running org.apache.ibatis.submitted.stringlist.StringListTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in org.apache.ibatis.submitted.stringlist.StringListTest
+[INFO] Running org.apache.ibatis.submitted.missing_id_property.MissingIdPropertyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s -- in org.apache.ibatis.submitted.missing_id_property.MissingIdPropertyTest
+[INFO] Running org.apache.ibatis.submitted.cache.CacheTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 s -- in org.apache.ibatis.submitted.cache.CacheTest
+[INFO] Running org.apache.ibatis.submitted.member_access.MemberAccessTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 s -- in org.apache.ibatis.submitted.member_access.MemberAccessTest
+[INFO] Running org.apache.ibatis.submitted.associationtest.AssociationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.associationtest.AssociationTest
+[INFO] Running org.apache.ibatis.submitted.collectionparameters.CollectionParametersTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.collectionparameters.CollectionParametersTest
+[INFO] Running org.apache.ibatis.submitted.result_set_type.ResultSetTypeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in org.apache.ibatis.submitted.result_set_type.ResultSetTypeTest
+[INFO] Running org.apache.ibatis.submitted.association_nested.FolderMapperTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.ibatis.submitted.association_nested.FolderMapperTest
+[INFO] Running org.apache.ibatis.submitted.unmatched_prop_type.UnmatchedPropTypeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.unmatched_prop_type.UnmatchedPropTypeTest
+[INFO] Running org.apache.ibatis.submitted.includes.IncludeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in org.apache.ibatis.submitted.includes.IncludeTest
+[INFO] Running org.apache.ibatis.submitted.sqlprovider.SqlProviderTest
+[INFO] Tests run: 53, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in org.apache.ibatis.submitted.sqlprovider.SqlProviderTest
+[INFO] Running org.apache.ibatis.submitted.sqlprovider.ProviderMethodResolutionTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.sqlprovider.ProviderMethodResolutionTest
+[INFO] Running org.apache.ibatis.submitted.serializecircular.SerializeCircularTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 s -- in org.apache.ibatis.submitted.serializecircular.SerializeCircularTest
+[INFO] Running org.apache.ibatis.submitted.mapper_extend.MapperExtendTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in org.apache.ibatis.submitted.mapper_extend.MapperExtendTest
+[INFO] Running org.apache.ibatis.submitted.call_setters_on_nulls_again.MyBatisTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in org.apache.ibatis.submitted.call_setters_on_nulls_again.MyBatisTest
+[INFO] Running org.apache.ibatis.submitted.raw_sql_source.RawSqlSourceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in org.apache.ibatis.submitted.raw_sql_source.RawSqlSourceTest
+[INFO] Running org.apache.ibatis.submitted.lazy_deserialize.LazyDeserializeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in org.apache.ibatis.submitted.lazy_deserialize.LazyDeserializeTest
+[INFO] Running org.apache.ibatis.submitted.repeatable.RepeatableSelectTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.590 s -- in org.apache.ibatis.submitted.repeatable.RepeatableSelectTest
+[INFO] Running org.apache.ibatis.submitted.repeatable.RepeatableUpdateTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.121 s -- in org.apache.ibatis.submitted.repeatable.RepeatableUpdateTest
+[INFO] Running org.apache.ibatis.submitted.repeatable.RepeatableErrorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.ibatis.submitted.repeatable.RepeatableErrorTest
+[INFO] Running org.apache.ibatis.submitted.repeatable.RepeatableDeleteTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s -- in org.apache.ibatis.submitted.repeatable.RepeatableDeleteTest
+[INFO] Running org.apache.ibatis.submitted.repeatable.RepeatableInsertTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 s -- in org.apache.ibatis.submitted.repeatable.RepeatableInsertTest
+[INFO] Running org.apache.ibatis.submitted.enum_interface_type_handler.EnumInterfaceTypeHandlerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.enum_interface_type_handler.EnumInterfaceTypeHandlerTest
+[INFO] Running org.apache.ibatis.submitted.no_param_type.NoParamTypeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.no_param_type.NoParamTypeTest
+[INFO] Running org.apache.ibatis.submitted.overwritingproperties.FooMapperTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.overwritingproperties.FooMapperTest
+[INFO] Running org.apache.ibatis.submitted.typehandlerinjection.TypeHandlerInjectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.typehandlerinjection.TypeHandlerInjectionTest
+[INFO] Running org.apache.ibatis.submitted.dml_return_types.DmlMapperReturnTypesTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.ibatis.submitted.dml_return_types.DmlMapperReturnTypesTest
+[INFO] Running org.apache.ibatis.submitted.multipleiterates.MultipleIteratesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.multipleiterates.MultipleIteratesTest
+[INFO] Running org.apache.ibatis.submitted.multidb.ProviderTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.multidb.ProviderTest
+[INFO] Running org.apache.ibatis.submitted.multidb.MultiDbTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in org.apache.ibatis.submitted.multidb.MultiDbTest
+[INFO] Running org.apache.ibatis.submitted.primitive_array.PrimitiveArrayTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.primitive_array.PrimitiveArrayTest
+[INFO] Running org.apache.ibatis.submitted.empty_namespace.EmptyNamespaceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.submitted.empty_namespace.EmptyNamespaceTest
+[INFO] Running org.apache.ibatis.submitted.simplelistparameter.SimpleListParameterTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.simplelistparameter.SimpleListParameterTest
+[INFO] Running org.apache.ibatis.submitted.extends_with_constructor.NpeExtendsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in org.apache.ibatis.submitted.extends_with_constructor.NpeExtendsTest
+[INFO] Running org.apache.ibatis.submitted.localtime.LocalTimeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in org.apache.ibatis.submitted.localtime.LocalTimeTest
+[INFO] Running org.apache.ibatis.submitted.bringrags.SimpleObjectTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.ibatis.submitted.bringrags.SimpleObjectTest
+[INFO] Running org.apache.ibatis.submitted.maptypehandler.MapTypeHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.ibatis.submitted.maptypehandler.MapTypeHandlerTest
+[INFO] Running org.apache.ibatis.submitted.complex_column.ComplexColumnTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.ibatis.submitted.complex_column.ComplexColumnTest
+[INFO] Running org.apache.ibatis.submitted.annotion_many_one_add_resultmapid.OneManyResultMapTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.annotion_many_one_add_resultmapid.OneManyResultMapTest
+[INFO] Running org.apache.ibatis.submitted.emptycollection.DaoTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.ibatis.submitted.emptycollection.DaoTest
+[INFO] Running org.apache.ibatis.submitted.force_flush_on_select.ForceFlushOnSelectTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in org.apache.ibatis.submitted.force_flush_on_select.ForceFlushOnSelectTest
+[INFO] Running org.apache.ibatis.submitted.keygen.Jdbc3KeyGeneratorTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s -- in org.apache.ibatis.submitted.keygen.Jdbc3KeyGeneratorTest
+[INFO] Running org.apache.ibatis.submitted.results_id.ResultsIdTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.results_id.ResultsIdTest
+[INFO] Running org.apache.ibatis.submitted.results_id.IdConflictTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.submitted.results_id.IdConflictTest
+[INFO] Running org.apache.ibatis.submitted.record_type.RecordTypeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in org.apache.ibatis.submitted.record_type.RecordTypeTest
+[INFO] Running org.apache.ibatis.submitted.dynsql2.DynSqlTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.ibatis.submitted.dynsql2.DynSqlTest
+[INFO] Running org.apache.ibatis.submitted.heavy_initial_load.HeavyInitialLoadTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.254 s -- in org.apache.ibatis.submitted.heavy_initial_load.HeavyInitialLoadTest
+[INFO] Running org.apache.ibatis.submitted.orphan_result_maps.OrphanResultMapTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in org.apache.ibatis.submitted.orphan_result_maps.OrphanResultMapTest
+[INFO] Running org.apache.ibatis.submitted.permissions.PermissionsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.ibatis.submitted.permissions.PermissionsTest
+[INFO] Running org.apache.ibatis.submitted.order_prefix_removed.OrderPrefixRemovedTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.order_prefix_removed.OrderPrefixRemovedTest
+[INFO] Running org.apache.ibatis.submitted.lazyload_common_property.CommonPropertyLazyLoadTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in org.apache.ibatis.submitted.lazyload_common_property.CommonPropertyLazyLoadTest
+[INFO] Running org.apache.ibatis.submitted.initialized_collection_property.AuthorDAOTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.025 s -- in org.apache.ibatis.submitted.initialized_collection_property.AuthorDAOTest
+[INFO] Running org.apache.ibatis.submitted.associationtype.AssociationTypeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.ibatis.submitted.associationtype.AssociationTypeTest
+[INFO] Running org.apache.ibatis.submitted.refid_resolution.ExternalRefidResolutionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.submitted.refid_resolution.ExternalRefidResolutionTest
+[INFO] Running org.apache.ibatis.submitted.refid_resolution.RefidResolutionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.submitted.refid_resolution.RefidResolutionTest
+[INFO] Running org.apache.ibatis.submitted.camelcase.CamelCaseMappingTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.submitted.camelcase.CamelCaseMappingTest
+[INFO] Running org.apache.ibatis.submitted.integer_enum.IntegerEnumTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.submitted.integer_enum.IntegerEnumTest
+[INFO] Running org.apache.ibatis.submitted.param_name_resolve.ActualParamNameTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.ibatis.submitted.param_name_resolve.ActualParamNameTest
+[INFO] Running org.apache.ibatis.submitted.param_name_resolve.NoActualParamNameTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.submitted.param_name_resolve.NoActualParamNameTest
+[INFO] Running org.apache.ibatis.submitted.no_result_type_map.NoResultTypeMapTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in org.apache.ibatis.submitted.no_result_type_map.NoResultTypeMapTest
+[INFO] Running org.apache.ibatis.submitted.immutable_constructor.ImmutablePOJOTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.ibatis.submitted.immutable_constructor.ImmutablePOJOTest
+[INFO] Running org.apache.ibatis.submitted.criterion.CriterionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.criterion.CriterionTest
+[INFO] Running org.apache.ibatis.submitted.sptests.SPTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s -- in org.apache.ibatis.submitted.sptests.SPTest
+[INFO] Running org.apache.ibatis.submitted.lazy_immutable.ImmutablePOJOTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.lazy_immutable.ImmutablePOJOTest
+[INFO] Running org.apache.ibatis.submitted.nestedresulthandler_gh1551.NestedResultHandlerGh1551Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.ibatis.submitted.nestedresulthandler_gh1551.NestedResultHandlerGh1551Test
+[INFO] Running org.apache.ibatis.submitted.count.CountTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.submitted.count.CountTest
+[INFO] Running org.apache.ibatis.submitted.timestamp_with_timezone.TimestampWithTimezoneTypeHandlerTest
+[WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.timestamp_with_timezone.TimestampWithTimezoneTypeHandlerTest
+[INFO] Running org.apache.ibatis.submitted.arg_name_based_constructor_automapping.ArgNameBasedConstructorAutoMappingTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in org.apache.ibatis.submitted.arg_name_based_constructor_automapping.ArgNameBasedConstructorAutoMappingTest
+[INFO] Running org.apache.ibatis.submitted.typehandler.TypeHandlerTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 s -- in org.apache.ibatis.submitted.typehandler.TypeHandlerTest
+[INFO] Running org.apache.ibatis.submitted.foreach.ForEachTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s -- in org.apache.ibatis.submitted.foreach.ForEachTest
+[INFO] Running org.apache.ibatis.submitted.batch_keys.BatchKeysTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s -- in org.apache.ibatis.submitted.batch_keys.BatchKeysTest
+[INFO] Running org.apache.ibatis.submitted.language.LanguageTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.164 s -- in org.apache.ibatis.submitted.language.LanguageTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.MultipleCrossIncludeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in org.apache.ibatis.submitted.xml_external_ref.MultipleCrossIncludeTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.NonFullyQualifiedNamespaceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.ibatis.submitted.xml_external_ref.NonFullyQualifiedNamespaceTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.SameIdTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.xml_external_ref.SameIdTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.ShortNameTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.xml_external_ref.ShortNameTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.MultipleReverseIncludeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.ibatis.submitted.xml_external_ref.MultipleReverseIncludeTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.ResultMapReferenceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.ibatis.submitted.xml_external_ref.ResultMapReferenceTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.ReverseIncludeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.ibatis.submitted.xml_external_ref.ReverseIncludeTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.ResultMapExtendsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.ibatis.submitted.xml_external_ref.ResultMapExtendsTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.MultipleIncludeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.ibatis.submitted.xml_external_ref.MultipleIncludeTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.XmlExternalRefTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in org.apache.ibatis.submitted.xml_external_ref.XmlExternalRefTest
+[INFO] Running org.apache.ibatis.submitted.xml_external_ref.ParameterMapReferenceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.ibatis.submitted.xml_external_ref.ParameterMapReferenceTest
+[INFO] Running org.apache.ibatis.submitted.cursor_nested.CursorNestedTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.ibatis.submitted.cursor_nested.CursorNestedTest
+[INFO] Running org.apache.ibatis.submitted.hashmaptypehandler.HashMapTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.ibatis.submitted.hashmaptypehandler.HashMapTypeHandlerTest
+[INFO] Running org.apache.ibatis.submitted.multiple_discriminator.MultipleDiscriminatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.multiple_discriminator.MultipleDiscriminatorTest
+[INFO] Running org.apache.ibatis.submitted.primitive_result_type.PrimitiveResultTypeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.ibatis.submitted.primitive_result_type.PrimitiveResultTypeTest
+[INFO] Running org.apache.ibatis.submitted.ancestor_ref.AncestorRefTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.submitted.ancestor_ref.AncestorRefTest
+[INFO] Running org.apache.ibatis.submitted.constructor_columnprefix.ConstructorColumnPrefixTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.ibatis.submitted.constructor_columnprefix.ConstructorColumnPrefixTest
+[INFO] Running org.apache.ibatis.submitted.primitives.PrimitivesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.ibatis.submitted.primitives.PrimitivesTest
+[INFO] Running org.apache.ibatis.submitted.propertiesinmapperfiles.PropertiesInMappersTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.ibatis.submitted.propertiesinmapperfiles.PropertiesInMappersTest
+[INFO] Running org.apache.ibatis.submitted.dynsql.DynSqlTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in org.apache.ibatis.submitted.dynsql.DynSqlTest
+[INFO] Running org.apache.ibatis.submitted.column_prefix.ColumnPrefixTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in org.apache.ibatis.submitted.column_prefix.ColumnPrefixTest
+[INFO] Running org.apache.ibatis.submitted.column_prefix.ColumnPrefixAutoMappingTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in org.apache.ibatis.submitted.column_prefix.ColumnPrefixAutoMappingTest
+[INFO] Running org.apache.ibatis.submitted.column_prefix.ColumnPrefixNestedQueryTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.ibatis.submitted.column_prefix.ColumnPrefixNestedQueryTest
+[INFO] Running org.apache.ibatis.submitted.sql.HsqldbSQLTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.ibatis.submitted.sql.HsqldbSQLTest
+[INFO] Running org.apache.ibatis.submitted.nestedresulthandler.NestedResultHandlerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.ibatis.submitted.nestedresulthandler.NestedResultHandlerTest
+[INFO] Running org.apache.ibatis.submitted.inheritance.InheritanceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.ibatis.submitted.inheritance.InheritanceTest
+[INFO] Running org.apache.ibatis.submitted.duplicate_resource_loaded.DuplicateResourceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s -- in org.apache.ibatis.submitted.duplicate_resource_loaded.DuplicateResourceTest
+[INFO] Running org.apache.ibatis.submitted.ognl_enum.EnumWithOgnlTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.ognl_enum.EnumWithOgnlTest
+[INFO] Running org.apache.ibatis.submitted.basetest.BaseTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.ibatis.submitted.basetest.BaseTest
+[INFO] Running org.apache.ibatis.submitted.automapping.AutomappingTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s -- in org.apache.ibatis.submitted.automapping.AutomappingTest
+[INFO] Running org.apache.ibatis.submitted.nested.NestedForEachTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.submitted.nested.NestedForEachTest
+[INFO] Running org.apache.ibatis.submitted.foreach_map.ForEachMapTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.ibatis.submitted.foreach_map.ForEachMapTest
+[INFO] Running org.apache.ibatis.plugin.PluginTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in org.apache.ibatis.plugin.PluginTest
+[INFO] Running org.apache.ibatis.parsing.XNodeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.parsing.XNodeTest
+[INFO] Running org.apache.ibatis.parsing.PropertyParserTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.ibatis.parsing.PropertyParserTest
+[INFO] Running org.apache.ibatis.parsing.GenericTokenParserTest
+[WARNING] Tests run: 25, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.054 s -- in org.apache.ibatis.parsing.GenericTokenParserTest
+[INFO] Running org.apache.ibatis.parsing.XPathParserTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s -- in org.apache.ibatis.parsing.XPathParserTest
+[INFO] Running org.apache.ibatis.cache.SerializedCacheTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.cache.SerializedCacheTest
+[INFO] Running org.apache.ibatis.cache.ScheduledCacheTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.002 s -- in org.apache.ibatis.cache.ScheduledCacheTest
+[INFO] Running org.apache.ibatis.cache.LruCacheTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.ibatis.cache.LruCacheTest
+[INFO] Running org.apache.ibatis.cache.SoftCacheTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.195 s -- in org.apache.ibatis.cache.SoftCacheTest
+[INFO] Running org.apache.ibatis.cache.CacheKeyTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.026 s -- in org.apache.ibatis.cache.CacheKeyTest
+[INFO] Running org.apache.ibatis.cache.WeakCacheTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s -- in org.apache.ibatis.cache.WeakCacheTest
+[INFO] Running org.apache.ibatis.cache.SuperCacheTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.752 s -- in org.apache.ibatis.cache.SuperCacheTest
+[INFO] Running org.apache.ibatis.cache.FifoCacheTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.ibatis.cache.FifoCacheTest
+[INFO] Running org.apache.ibatis.cache.PerpetualCacheTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in org.apache.ibatis.cache.PerpetualCacheTest
+[INFO] Running org.apache.ibatis.cache.BaseCacheTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.cache.BaseCacheTest
+[INFO] Running org.apache.ibatis.cursor.defaults.DefaultCursorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.137 s -- in org.apache.ibatis.cursor.defaults.DefaultCursorTest
+[INFO] Running org.apache.ibatis.datasource.pooled.PooledDataSourceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.018 s -- in org.apache.ibatis.datasource.pooled.PooledDataSourceTest
+[INFO] Running org.apache.ibatis.datasource.jndi.JndiDataSourceFactoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.ibatis.datasource.jndi.JndiDataSourceFactoryTest
+[INFO] Running org.apache.ibatis.datasource.unpooled.UnpooledDataSourceTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in org.apache.ibatis.datasource.unpooled.UnpooledDataSourceTest
+[INFO] Running org.apache.ibatis.autoconstructor.AutoConstructorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s -- in org.apache.ibatis.autoconstructor.AutoConstructorTest
+[INFO] Running org.apache.ibatis.builder.AnnotationMapperBuilderTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in org.apache.ibatis.builder.AnnotationMapperBuilderTest
+[INFO] Running org.apache.ibatis.builder.xsd.XmlConfigBuilderTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s -- in org.apache.ibatis.builder.xsd.XmlConfigBuilderTest
+[INFO] Running org.apache.ibatis.builder.xsd.XmlMapperBuilderTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s -- in org.apache.ibatis.builder.xsd.XmlMapperBuilderTest
+[INFO] Running org.apache.ibatis.builder.xml.dynamic.DynamicSqlSourceTest
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.689 s -- in org.apache.ibatis.builder.xml.dynamic.DynamicSqlSourceTest
+[INFO] Running org.apache.ibatis.builder.xml.dynamic.ExpressionEvaluatorTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.builder.xml.dynamic.ExpressionEvaluatorTest
+[INFO] Running org.apache.ibatis.builder.SqlSourceBuilderTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.builder.SqlSourceBuilderTest
+[INFO] Running org.apache.ibatis.builder.ParameterExpressionTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.builder.ParameterExpressionTest
+[INFO] Running org.apache.ibatis.builder.XmlConfigBuilderTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.builder.XmlConfigBuilderTest
+[INFO] Running org.apache.ibatis.builder.XmlMapperBuilderTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.ibatis.builder.XmlMapperBuilderTest
+[INFO] Running org.apache.ibatis.type.NStringTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.277 s -- in org.apache.ibatis.type.NStringTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.IntegerTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.ibatis.type.IntegerTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.UnknownTypeHandlerTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s -- in org.apache.ibatis.type.UnknownTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.BigDecimalTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.BigDecimalTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ClobReaderTypeHandlerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in org.apache.ibatis.type.ClobReaderTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.DateOnlyTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.ibatis.type.DateOnlyTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.BlobInputStreamTypeHandlerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.050 s -- in org.apache.ibatis.type.BlobInputStreamTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.SqlTimeTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.SqlTimeTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.EnumOrdinalTypeHandlerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in org.apache.ibatis.type.EnumOrdinalTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.SqlDateTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.type.SqlDateTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.DoubleTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.type.DoubleTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.MonthTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.type.MonthTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ArrayTypeHandlerTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.ibatis.type.ArrayTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.EnumTypeHandlerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.type.EnumTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ZonedDateTimeTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.ZonedDateTimeTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.TypeHandlerRegistryTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in org.apache.ibatis.type.TypeHandlerRegistryTest
+[INFO] Running org.apache.ibatis.type.LocalDateTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.LocalDateTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.JapaneseDateTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.ibatis.type.JapaneseDateTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.Jsr310TypeHandlerRegistryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.type.Jsr310TypeHandlerRegistryTest
+[INFO] Running org.apache.ibatis.type.JdbcTypeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.ibatis.type.JdbcTypeTest
+[INFO] Running org.apache.ibatis.type.OffsetTimeTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.type.OffsetTimeTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ByteTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.ByteTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ClobTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.ClobTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.YearMonthTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.YearMonthTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ObjectTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.ObjectTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ByteArrayTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.type.ByteArrayTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.TimeOnlyTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.TimeOnlyTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.DateTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.DateTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.SimpleTypeRegistryTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.type.SimpleTypeRegistryTest
+[INFO] Running org.apache.ibatis.type.LocalTimeTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.LocalTimeTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.SqlTimetampTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.type.SqlTimetampTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.BooleanTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.BooleanTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.StringTypeHandlerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.type.StringTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ByteObjectArrayTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.ByteObjectArrayTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.InstantTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.InstantTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.CharacterTypeHandlerTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.ibatis.type.CharacterTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.NClobTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.NClobTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.YearTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.YearTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.LocalDateTimeTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.LocalDateTimeTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.GenericTypeSupportedInHierarchiesTestCase
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.type.GenericTypeSupportedInHierarchiesTestCase
+[INFO] Running org.apache.ibatis.type.TypeAliasRegistryTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.type.TypeAliasRegistryTest
+[INFO] Running org.apache.ibatis.type.LongTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.LongTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.BlobByteObjectArrayTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.ibatis.type.BlobByteObjectArrayTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.BigIntegerTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.BigIntegerTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.FloatTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.type.FloatTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.OffsetDateTimeTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.OffsetDateTimeTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.ShortTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.ShortTypeHandlerTest
+[INFO] Running org.apache.ibatis.type.BlobTypeHandlerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.type.BlobTypeHandlerTest
+[INFO] Running org.apache.ibatis.binding.MapperMethodParamTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.ibatis.binding.MapperMethodParamTest
+[INFO] Running org.apache.ibatis.binding.FlushTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 s -- in org.apache.ibatis.binding.FlushTest
+[INFO] Running org.apache.ibatis.binding.WrongMapperTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.ibatis.binding.WrongMapperTest
+[INFO] Running org.apache.ibatis.binding.BindingTest
+[WARNING] Tests run: 53, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.276 s -- in org.apache.ibatis.binding.BindingTest
+[INFO] Running org.apache.ibatis.binding.WrongNamespacesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.binding.WrongNamespacesTest
+[INFO] Running org.apache.ibatis.executor.resultset.DefaultResultSetHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s -- in org.apache.ibatis.executor.resultset.DefaultResultSetHandlerTest
+[INFO] Running org.apache.ibatis.executor.CachingSimpleExecutorTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.251 s -- in org.apache.ibatis.executor.CachingSimpleExecutorTest
+[INFO] Running org.apache.ibatis.executor.statement.BaseStatementHandlerTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.ibatis.executor.statement.BaseStatementHandlerTest
+[INFO] Running org.apache.ibatis.executor.CachingReuseExecutorTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.161 s -- in org.apache.ibatis.executor.CachingReuseExecutorTest
+[INFO] Running org.apache.ibatis.executor.ErrorContextTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.executor.ErrorContextTest
+[INFO] Running org.apache.ibatis.executor.loader.JavassistProxyTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.121 s -- in org.apache.ibatis.executor.loader.JavassistProxyTest
+[INFO] Running org.apache.ibatis.executor.BatchExecutorTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s -- in org.apache.ibatis.executor.BatchExecutorTest
+[INFO] Running org.apache.ibatis.executor.CachingBatchExecutorTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.159 s -- in org.apache.ibatis.executor.CachingBatchExecutorTest
+[INFO] Running org.apache.ibatis.executor.ResultExtractorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in org.apache.ibatis.executor.ResultExtractorTest
+[INFO] Running org.apache.ibatis.executor.ReuseExecutorTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.162 s -- in org.apache.ibatis.executor.ReuseExecutorTest
+[INFO] Running org.apache.ibatis.executor.BaseExecutorTest
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.151 s -- in org.apache.ibatis.executor.BaseExecutorTest
+[INFO] Running org.apache.ibatis.logging.jdbc.ResultSetLoggerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.ibatis.logging.jdbc.ResultSetLoggerTest
+[INFO] Running org.apache.ibatis.logging.jdbc.BaseJdbcLoggerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.logging.jdbc.BaseJdbcLoggerTest
+[INFO] Running org.apache.ibatis.logging.jdbc.StatementLoggerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.ibatis.logging.jdbc.StatementLoggerTest
+[INFO] Running org.apache.ibatis.logging.jdbc.ConnectionLoggerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.ibatis.logging.jdbc.ConnectionLoggerTest
+[INFO] Running org.apache.ibatis.logging.jdbc.PreparedStatementLoggerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.logging.jdbc.PreparedStatementLoggerTest
+[INFO] Running org.apache.ibatis.logging.LogFactoryTest
+22:59:29.178 [main] ERROR java.lang.Object - Error message.
+22:59:29.182 [main] ERROR java.lang.Object - Error with Exception.
+java.lang.Exception: Test exception.
+        at org.apache.ibatis.logging.LogFactoryTest.logSomething(LogFactoryTest.java:112) ~[test-classes/:?]
+        at org.apache.ibatis.logging.LogFactoryTest.shouldUseLog4J2(LogFactoryTest.java:61) ~[test-classes/:?]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+        at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.3.jar:1.11.3]
+        at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.3.1.jar:3.3.1]
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Warning message.
+Debug message.
+Error message.
+Error with Exception.
+java.lang.Exception: Test exception.
+        at org.apache.ibatis.logging.LogFactoryTest.logSomething(LogFactoryTest.java:112)
+        at org.apache.ibatis.logging.LogFactoryTest.shouldUseStdOut(LogFactoryTest.java:85)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+        at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+        at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+22:59:29.218 DEBUG [main] org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+22:59:29.220 ERROR [main] java.lang.Object - Error message.
+22:59:29.221 ERROR [main] java.lang.Object - Error with Exception.
+java.lang.Exception: Test exception.
+        at org.apache.ibatis.logging.LogFactoryTest.logSomething(LogFactoryTest.java:112)
+        at org.apache.ibatis.logging.LogFactoryTest.shouldUseLog4J(LogFactoryTest.java:53)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+        at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+        at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+00:59:29.223 DEBUG [main] o.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+00:59:29.224 ERROR [main] java.lang.Object - Error message.
+00:59:29.224 ERROR [main] java.lang.Object - Error with Exception.
+java.lang.Exception: Test exception.
+        at org.apache.ibatis.logging.LogFactoryTest.logSomething(LogFactoryTest.java:112)
+        at org.apache.ibatis.logging.LogFactoryTest.shouldUseSlf4j(LogFactoryTest.java:77)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+        at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+        at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Apr 14, 2025 10:59:29 PM org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl warn
+WARNING: Warning message.
+Apr 14, 2025 10:59:29 PM org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl error
+SEVERE: Error message.
+Apr 14, 2025 10:59:29 PM org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl error
+SEVERE: Error with Exception.
+java.lang.Exception: Test exception.
+        at org.apache.ibatis.logging.LogFactoryTest.logSomething(LogFactoryTest.java:112)
+        at org.apache.ibatis.logging.LogFactoryTest.shouldUseJdKLogging(LogFactoryTest.java:69)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+        at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+        at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+22:59:29.247 [main] ERROR java.lang.Object - Error message.
+22:59:29.248 [main] ERROR java.lang.Object - Error with Exception.
+java.lang.Exception: Test exception.
+        at org.apache.ibatis.logging.LogFactoryTest.logSomething(LogFactoryTest.java:112) ~[test-classes/:?]
+        at org.apache.ibatis.logging.LogFactoryTest.shouldUseCommonsLogging(LogFactoryTest.java:45) ~[test-classes/:?]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+        at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.3.jar:1.11.3]
+        at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.11.3.jar:1.11.3]
+        at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) [surefire-junit-platform-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.3.1.jar:3.3.1]
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.3.1.jar:3.3.1]
+00:59:29.249 DEBUG [main] o.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.371 s -- in org.apache.ibatis.logging.LogFactoryTest
+[INFO] Running org.apache.ibatis.exceptions.GeneralExceptionsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.exceptions.GeneralExceptionsTest
+[INFO] Running org.apache.ibatis.reflection.ExceptionUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.reflection.ExceptionUtilTest
+[INFO] Running org.apache.ibatis.reflection.MetaClassTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.reflection.MetaClassTest
+[INFO] Running org.apache.ibatis.reflection.wrapper.BeanWrapperTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.reflection.wrapper.BeanWrapperTest
+[INFO] Running org.apache.ibatis.reflection.wrapper.MapWrapperUnitTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 s -- in org.apache.ibatis.reflection.wrapper.MapWrapperUnitTest
+[INFO] Running org.apache.ibatis.reflection.wrapper.CollectionWrapperUnitTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s -- in org.apache.ibatis.reflection.wrapper.CollectionWrapperUnitTest
+[INFO] Running org.apache.ibatis.reflection.wrapper.MapWrapperTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s -- in org.apache.ibatis.reflection.wrapper.MapWrapperTest
+[INFO] Running org.apache.ibatis.reflection.wrapper.BeanWrapperUnitTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.ibatis.reflection.wrapper.BeanWrapperUnitTest
+[INFO] Running org.apache.ibatis.reflection.factory.DefaultObjectFactoryTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.ibatis.reflection.factory.DefaultObjectFactoryTest
+[INFO] Running org.apache.ibatis.reflection.MetaObjectTest
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.ibatis.reflection.MetaObjectTest
+[INFO] Running org.apache.ibatis.reflection.ArrayUtilTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.reflection.ArrayUtilTest
+[INFO] Running org.apache.ibatis.reflection.property.PropertyCopierTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.reflection.property.PropertyCopierTest
+[INFO] Running org.apache.ibatis.reflection.property.PropertyTokenizerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.ibatis.reflection.property.PropertyTokenizerTest
+[INFO] Running org.apache.ibatis.reflection.ReflectorTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.ibatis.reflection.ReflectorTest
+[INFO] Running org.apache.ibatis.reflection.TypeParameterResolverTest
+[INFO] Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.ibatis.reflection.TypeParameterResolverTest
+[INFO] Running org.apache.ibatis.io.ExternalResourcesTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s -- in org.apache.ibatis.io.ExternalResourcesTest
+[INFO] Running org.apache.ibatis.io.VFSTest
+00:59:29.555 ERROR [main] org.apache.ibatis.io.VFS - Method not found org.apache.ibatis.io.VFS.listXxx.  Cause: java.lang.NoSuchMethodException: org.apache.ibatis.io.VFS.listXxx(java.lang.String)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.io.VFSTest
+[INFO] Running org.apache.ibatis.io.ResourcesTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.ibatis.io.ResourcesTest
+[INFO] Running org.apache.ibatis.io.ResolverUtilTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in org.apache.ibatis.io.ResolverUtilTest
+[INFO] Running org.apache.ibatis.io.ClassLoaderWrapperTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.ibatis.io.ClassLoaderWrapperTest
+[INFO] Running org.apache.ibatis.session.SqlSessionTest
+[INFO] Tests run: 59, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.263 s -- in org.apache.ibatis.session.SqlSessionTest
+[INFO] Running org.apache.ibatis.session.AutoMappingUnknownColumnBehaviorTest
+00:59:29.948 WARN  [main] o.a.i.s.AutoMappingUnknownColumnBehavior - Unknown column is detected on 'org.apache.ibatis.session.AutoMappingUnknownColumnBehaviorTest$Mapper.selectSimpleAuthor' auto-mapping. Mapping parameters are [columnName=ID,propertyName=id,propertyType=java.util.concurrent.atomic.AtomicInteger]
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 s -- in org.apache.ibatis.session.AutoMappingUnknownColumnBehaviorTest
+[INFO] Running org.apache.ibatis.session.SqlSessionManagerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.117 s -- in org.apache.ibatis.session.SqlSessionManagerTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.VarDeclSqlNodeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.ibatis.scripting.xmltags.VarDeclSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.StaticTextSqlNodeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.scripting.xmltags.StaticTextSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.WhereSqlNodeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.scripting.xmltags.WhereSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.SetSqlNodeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.scripting.xmltags.SetSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.IfSqlNodeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.scripting.xmltags.IfSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.TrimSqlNodeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.scripting.xmltags.TrimSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.TextSqlNodeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.scripting.xmltags.TextSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.OgnlCacheTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in org.apache.ibatis.scripting.xmltags.OgnlCacheTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.MixedSqlNodeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.ibatis.scripting.xmltags.MixedSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.ChooseSqlNodeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.ibatis.scripting.xmltags.ChooseSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.xmltags.ForEachSqlNodeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.scripting.xmltags.ForEachSqlNodeTest
+[INFO] Running org.apache.ibatis.scripting.defaults.DefaultParameterHandlerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s -- in org.apache.ibatis.scripting.defaults.DefaultParameterHandlerTest
+[INFO] Running org.apache.ibatis.scripting.LanguageDriverRegistryTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.ibatis.scripting.LanguageDriverRegistryTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 1851, Failures: 0, Errors: 0, Skipped: 19
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:11 min
+[INFO] Finished at: 2025-04-15T00:59:30+02:00
+[INFO] ------------------------------------------------------------------------

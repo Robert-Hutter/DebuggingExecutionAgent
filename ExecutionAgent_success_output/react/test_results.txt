@@ -1,0 +1,734 @@
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react/src/__tests__/onlyChild-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzServerEdge-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMNestedEvents-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactEffectOrdering-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMLegacyComponentTree-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-native-renderer/src/__tests__/createReactNativeComponentClass-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js (7.056 s)
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/escapeTextForBrowser-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactErrorLoggingRecovery-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/events/__tests__/SyntheticFocusEvent-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react/src/__tests__/ReactCreateRef-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/shared/__tests__/ReactErrorProd-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  scripts/eslint-rules/__tests__/warning-args-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMInvalidARIAHook-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactErrorBoundariesHooks-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  scripts/eslint-rules/__tests__/prod-error-codes-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/shared/__tests__/ReactError-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReplyEdge-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/shared/__tests__/normalizeConsoleFormat-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactMockedComponent-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactOwnerStacks-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  scripts/error-codes/__tests__/invertObject-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  scripts/babel/__tests__/transform-prevent-infinite-loops-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react/src/__tests__/ReactVersion-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactTopLevelText-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-native-renderer/src/__tests__/ReactNativeError-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  scripts/shared/__tests__/evalToString-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactClassSetStateCallback-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactServerRenderingBrowser-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/shared/__tests__/ReactDOMFrameScheduling-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  scripts/babel/__tests__/transform-lazy-jsx-import-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  scripts/shared/__tests__/evalToString-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js
+ RUNS  packages/react/src/__tests__/ReactClassEquivalence-test.js
+ RUNS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-dom/src/__tests__/multiple-copies-of-react-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMLegacyFloat-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMIframe-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/shared/__tests__/ReactSymbols-test.internal.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-devtools-timeline/src/view-base/utils/__tests__/clamp-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMInput-test.js (33.22 s)
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-dom/src/__tests__/ReactLegacyRootWarnings-test.js
+
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js
+ RUNS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js
+ RUNS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ RUNS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js
+ RUNS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js
+ RUNS  packages/react-refresh/src/__tests__/ReactFresh-test.js
+ PASS  packages/react-test-renderer/__tests__/shallow-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMInReactServer-test.js
+ PASS  packages/react-server/src/__tests__/ReactServer-test.js
+ PASS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ PASS  scripts/eslint-rules/__tests__/no-to-warn-dev-within-to-throw-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMserverIntegrationProgress-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationObject-test.js
+ FAIL  packages/react-refresh/src/__tests__/ReactFresh-test.js (34.197 s)
+  ● ReactFresh › keeps a valid tree when forcing remount
+
+    thrown: "Exceeded timeout of 10000 ms for a test.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      1792 |   });
+      1793 |
+    > 1794 |   it('keeps a valid tree when forcing remount', async () => {
+           |   ^
+      1795 |     if (__DEV__) {
+      1796 |       const HelloV1 = prepare(() => {
+      1797 |         function Hello() {
+
+      at packages/react-refresh/src/__tests__/ReactFresh-test.js:1794:3
+      at Object.<anonymous> (packages/react-refresh/src/__tests__/ReactFresh-test.js:22:1)
+
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationFragment-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationClassContextType-test.js (5.81 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationCheckbox-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationNewContext-test.js (8.692 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js (35.628 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationInput-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationTextarea-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationSpecialTypes-test.js (5.335 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMEventPropagation-test.js (36.612 s)
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOM-test.js (36.798 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationBasic-test.js (6.734 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationReconnecting-test.js (11.767 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationSelect-test.js (8.708 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationUntrustedURL-test.js (9.591 s)
+ PASS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js (38.583 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationHooks-test.js (18.271 s)
+ PASS  packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js (41.488 s)
+ PASS  packages/react-refresh/src/__tests__/ReactFreshIntegration-test.js (42.24 s)
+ PASS  packages/react/src/__tests__/ReactClassEquivalence-test.js (11.028 s)
+ PASS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js (15.288 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js (51.447 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationElements-test.js (38.086 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js (58.711 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationAttributes-test.js (47.596 s)
+
+Summary of all failing tests
+ FAIL  packages/react-refresh/src/__tests__/ReactFresh-test.js (34.197 s)
+  ● ReactFresh › keeps a valid tree when forcing remount
+
+    thrown: "Exceeded timeout of 10000 ms for a test.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      1792 |   });
+      1793 |
+    > 1794 |   it('keeps a valid tree when forcing remount', async () => {
+           |   ^
+      1795 |     if (__DEV__) {
+      1796 |       const HelloV1 = prepare(() => {
+      1797 |         function Hello() {
+
+      at packages/react-refresh/src/__tests__/ReactFresh-test.js:1794:3
+      at Object.<anonymous> (packages/react-refresh/src/__tests__/ReactFresh-test.js:22:1)
+
+
+Test Suites: 1 failed, 321 passed, 322 total
+Tests:       1 failed, 25 skipped, 9738 passed, 9764 total
+Snapshots:   301 passed, 301 total
+Time:        69.485 s
+Ran all test suites.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

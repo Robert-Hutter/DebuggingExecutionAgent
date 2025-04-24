@@ -1,0 +1,1035 @@
+   Compiling regex v1.10.6
+   Compiling synstructure v0.12.6
+   Compiling Inflector v0.11.4
+   Compiling glibc_version v0.1.2
+   Compiling fancy-regex v0.10.0
+   Compiling onig v6.4.0
+   Compiling caseless v0.2.1
+   Compiling swc_macros_common v0.3.13
+   Compiling synstructure v0.13.1
+   Compiling darling_core v0.20.10
+   Compiling ptr_meta_derive v0.1.4
+   Compiling prost-derive v0.11.9
+   Compiling asn1-rs-derive v0.4.0
+   Compiling asn1-rs-impl v0.1.0
+   Compiling dynasm v1.2.3
+   Compiling color-print-proc-macro v0.3.5
+   Compiling dprint-core-macros v0.1.0
+   Compiling derive_more v0.99.17
+   Compiling rustyline-derive v0.7.0
+   Compiling flaky_test_impl v0.2.2
+   Compiling serde_derive v1.0.205
+   Compiling zerocopy-derive v0.7.32
+   Compiling thiserror-impl v1.0.64
+   Compiling futures-macro v0.3.30
+   Compiling tokio-macros v2.2.0
+   Compiling zeroize_derive v1.4.2
+   Compiling pin-project-internal v1.1.5
+   Compiling tracing-attributes v0.1.27
+   Compiling strum_macros v0.25.3
+   Compiling proc-macro-rules-macros v0.4.0
+   Compiling async-trait v0.1.80
+   Compiling phf_macros v0.11.2
+   Compiling ast_node v0.9.8
+   Compiling from_variant v0.1.8
+   Compiling swc_eq_ignore_macros v0.1.4
+   Compiling der_derive v0.7.3
+   Compiling string_enum v0.4.4
+   Compiling is-macro v0.3.5
+   Compiling enum-as-inner v0.6.0
+   Compiling lazy-regex-proc_macros v3.1.0
+   Compiling ptr_meta v0.1.4
+   Compiling async-stream-impl v0.3.5
+   Compiling swc_ecma_transforms_macros v0.5.5
+   Compiling swc_config_macro v0.1.4
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling swc_ecma_codegen_macros v0.7.7
+   Compiling serde_repr v0.1.16
+   Compiling displaydoc v0.2.4
+   Compiling swc_visit_macros v0.5.13
+   Compiling auto_impl v1.2.0
+   Compiling ref-cast-impl v1.0.22
+   Compiling zerofrom-derive v0.1.4
+   Compiling yoke-derive v0.7.4
+   Compiling dlopen2_derive v0.4.0
+   Compiling deno-tower-lsp-macros v0.9.0
+   Compiling raffia_macro v0.1.1
+   Compiling async-stream v0.3.5
+   Compiling tokio v1.36.0
+   Compiling zeroize v1.7.0
+   Compiling color-print v0.3.5
+   Compiling phf v0.11.2
+   Compiling futures-util v0.3.30
+   Compiling proc-macro-rules v0.4.0
+   Compiling rustls-webpki v0.102.5
+   Compiling lazy-regex v3.1.0
+   Compiling darling_macro v0.20.10
+   Compiling raffia v0.9.1
+   Compiling dlopen2 v0.6.1
+   Compiling der v0.7.9
+   Compiling pin-project v1.1.5
+   Compiling prost v0.11.9
+   Compiling crypto-common v0.1.6
+   Compiling block-buffer v0.10.4
+   Compiling block-padding v0.3.3
+   Compiling crypto-bigint v0.5.5
+   Compiling inout v0.1.3
+   Compiling universal-hash v0.5.1
+   Compiling aead v0.5.2
+   Compiling asn1-rs v0.5.2
+   Compiling win32job v2.0.0
+   Compiling pest v2.7.9
+   Compiling file_test_runner v0.7.2
+   Compiling digest v0.10.7
+   Compiling polyval v0.6.2
+   Compiling tracing v0.1.40
+   Compiling cipher v0.4.4
+   Compiling zstd v0.12.4
+   Compiling strum v0.25.0
+   Compiling sha2 v0.10.8
+   Compiling sha1 v0.10.6
+   Compiling hmac v0.12.1
+   Compiling signature v2.2.0
+   Compiling md4 v0.10.2
+   Compiling blake2 v0.10.6
+   Compiling sm3 v0.4.2
+   Compiling md-5 v0.10.6
+   Compiling sha3 v0.10.8
+   Compiling ripemd v0.1.3
+   Compiling ghash v0.5.1
+   Compiling zerofrom v0.1.4
+   Compiling deno_ops v0.190.1
+   Compiling pbkdf2 v0.12.2
+   Compiling hkdf v0.12.4
+   Compiling rfc6979 v0.4.0
+   Compiling aes v0.8.3
+   Compiling salsa20 v0.10.2
+   Compiling cbc v0.1.2
+   Compiling ctr v0.9.2
+   Compiling ecb v0.1.2
+   Compiling yoke v0.7.4
+   Compiling darling v0.20.10
+   Compiling scrypt v0.11.0
+   Compiling derive_builder_core v0.20.0
+   Compiling ed448-goldilocks v0.8.3
+   Compiling aes-gcm v0.10.3
+   Compiling aead-gcm-stream v0.3.0
+   Compiling aes-kw v0.2.1
+   Compiling spki v0.7.3
+   Compiling pkcs5 v0.7.1
+   Compiling x25519-dalek v2.0.1
+   Compiling rowan v0.15.15
+   Compiling pkcs8 v0.10.2
+   Compiling derive_builder_macro v0.20.0
+   Compiling pest_meta v2.7.9
+   Compiling pkcs1 v0.7.5
+   Compiling ed25519 v2.2.3
+   Compiling ed25519-dalek v2.1.1
+   Compiling yaml_parser v0.2.1
+   Compiling derive_builder v0.20.0
+   Compiling comrak v0.28.0
+   Compiling pest_generator v2.7.9
+   Compiling futures-executor v0.3.30
+   Compiling http-body-util v0.1.2
+   Compiling asynchronous-codec v0.7.0
+   Compiling flaky_test v0.2.2
+   Compiling futures v0.3.30
+   Compiling pretty_yaml v0.5.0
+   Compiling pest_derive v2.7.9
+   Compiling malva v0.11.0
+   Compiling dynasmrt v1.2.3
+   Compiling bitflags v2.6.0
+   Compiling url v2.4.1
+   Compiling indexmap v2.3.0
+   Compiling uuid v1.8.0
+   Compiling bincode v1.3.3
+   Compiling triomphe v0.1.13
+   Compiling arrayvec v0.7.4
+   Compiling chrono v0.4.37
+   Compiling serdect v0.2.0
+   Compiling text_lines v0.6.0
+   Compiling faster-hex v0.9.0
+   Compiling serde_urlencoded v0.7.1
+   Compiling swc_cached v0.3.20
+   Compiling ipnetwork v0.20.0
+   Compiling serde_bytes v0.11.14
+   Compiling serde-value v0.7.0
+   Compiling halfbrown v0.2.5
+   Compiling serde_spanned v0.6.6
+   Compiling toml_datetime v0.6.6
+   Compiling nix v0.27.1
+   Compiling gpu-descriptor-types v0.2.0
+   Compiling spirv v0.3.0+sdk-1.3.268.0
+   Compiling flate2 v1.0.31
+   Compiling sec1 v0.7.3
+   Compiling gpu-alloc-types v0.3.0
+   Compiling wgpu-types v0.20.0
+   Compiling hstr v0.2.9
+   Compiling swc_allocator v0.1.8
+   Compiling deno_unsync v0.4.1
+   Compiling debugid v0.8.0
+   Compiling vte v0.11.1
+   Compiling gpu-alloc v0.6.0
+   Compiling tokio-util v0.7.10
+   Compiling swc_atoms v0.6.7
+   Compiling ron v0.8.1
+   Compiling gpu-descriptor v0.3.0
+   Compiling tower v0.4.13
+   Compiling rustls-tokio-stream v0.3.0
+   Compiling value-trait v0.10.0
+   Compiling tokio-rustls v0.26.0
+   Compiling tokio-socks v0.5.1
+   Compiling tokio-stream v0.1.15
+   Compiling globset v0.4.14
+   Compiling env_logger v0.10.0
+   Compiling deno_path_util v0.2.1
+   Compiling deno_semver v0.5.16
+   Compiling deno_media_type v0.1.4
+   Compiling png v0.17.13
+   Compiling urlpattern v0.3.0
+   Compiling async-compression v0.4.11
+   Compiling petgraph v0.6.4
+   Compiling trust-dns-proto v0.23.2
+   Compiling dprint-core v0.66.2
+   Compiling ignore v0.4.20
+   Compiling editpe v0.1.0
+   Compiling toml_edit v0.19.15
+   Compiling tokio-metrics v0.3.1
+   Compiling console_static_text v0.8.1
+   Compiling libffi v3.2.0
+   Compiling strip-ansi-escapes v0.2.0
+   Compiling saffron v0.1.0
+   Compiling quick-junit v0.3.6
+   Compiling naga v0.20.0
+   Compiling h2 v0.4.4
+   Compiling der-parser v8.2.0
+   Compiling image v0.24.9
+   Compiling sourcemap v8.0.1
+   Compiling sourcemap v9.0.0
+   Compiling jsonc-parser v0.26.2
+   Compiling elliptic-curve v0.13.8
+   Compiling which v4.4.2
+   Compiling which v6.0.1
+   Compiling lsp-types v0.97.0
+   Compiling rsa v0.9.6
+   Compiling deno_package_json v0.1.2
+   Compiling swc_config v0.1.15
+   Compiling x509-parser v0.15.1
+   Compiling dsa v0.6.3
+   Compiling tempfile v3.10.1
+   Compiling xattr v1.3.1
+   Compiling v8_valueserializer v0.1.1
+   Compiling ecdsa v0.16.9
+   Compiling primeorder v0.13.6
+   Compiling simd-json v0.14.0
+   Compiling tar v0.4.40
+   Compiling napi_sym v0.104.0 (/app/deno/ext/napi/sym)
+   Compiling tower-http v0.6.1
+   Compiling swc_common v0.37.5
+   Compiling fd-lock v4.0.2
+   Compiling h2 v0.3.26
+   Compiling rustyline v13.0.0
+   Compiling p384 v0.13.0
+   Compiling p256 v0.13.2
+   Compiling p224 v0.13.2
+   Compiling p521 v0.13.3
+   Compiling k256 v0.13.3
+   Compiling node_resolver v0.13.0 (/app/deno/resolvers/node)
+   Compiling terminal_size v0.3.0
+   Compiling rusqlite v0.32.0
+   Compiling denokv_remote v0.8.1
+   Compiling clap_builder v4.5.15
+   Compiling import_map v0.20.1
+   Compiling deno_lockfile v0.23.1
+   Compiling deno_cache_dir v0.13.0
+   Compiling syntect v5.2.0
+   Compiling handlebars v6.1.0
+   Compiling deno_config v0.37.2
+   Compiling dprint-plugin-markdown v0.17.8
+   Compiling libsui v0.4.0
+   Compiling toml v0.7.8
+   Compiling denokv_sqlite v0.8.2
+   Compiling hyper v1.4.1
+   Compiling swc_ecma_ast v0.118.2
+   Compiling swc_fast_graph v0.25.0
+   Compiling swc_ecma_loader v0.49.1
+   Compiling trust-dns-resolver v0.23.2
+   Compiling swc_graph_analyzer v0.26.0
+   Compiling dprint-plugin-jupyter v0.1.5
+   Compiling dprint-plugin-json v0.19.4
+   Compiling deno_npm v0.25.4
+   Compiling hyper v0.14.28
+   Compiling hyper-util v0.1.7
+   Compiling clap v4.5.16
+   Compiling drain v0.1.2
+   Compiling clap_complete v4.5.24
+   Compiling clap_complete_fig v4.5.2
+   Compiling fast-socks5 v0.9.6
+   Compiling libuv-sys-lite v1.48.2
+   Compiling hyper-rustls v0.27.2
+   Compiling fastwebsockets v0.8.0
+   Compiling zeromq v0.4.0
+   Compiling deno_resolver v0.6.0 (/app/deno/resolvers/deno)
+   Compiling deno_task_shell v0.18.1
+   Compiling v8 v0.106.0
+   Compiling runtimelib v0.14.0
+   Compiling trust-dns-server v0.23.2
+   Compiling trust-dns-client v0.23.2
+   Compiling deno_tower_lsp v0.1.0
+   Compiling reqwest v0.12.5
+   Compiling swc_ecma_visit v0.104.8
+   Compiling swc_ecma_parser v0.149.1
+   Compiling swc_ecma_codegen v0.155.1
+   Compiling test_server v0.1.0 (/app/deno/tests/util/server)
+   Compiling serde_v8 v0.223.1
+   Compiling deno_core v0.314.2
+   Compiling swc_ecma_utils v0.134.2
+   Compiling swc_ecma_transforms_base v0.145.0
+   Compiling dprint-swc-ext v0.20.0
+   Compiling swc_ecma_transforms_react v0.191.0
+   Compiling swc_ecma_transforms_classes v0.134.0
+   Compiling swc_ecma_transforms_proposal v0.179.0
+   Compiling deno_permissions v0.34.0 (/app/deno/runtime/permissions)
+   Compiling deno_tls v0.161.0 (/app/deno/ext/tls)
+   Compiling deno_io v0.84.0 (/app/deno/ext/io)
+   Compiling deno_webgpu v0.141.0 (/app/deno/ext/webgpu)
+   Compiling deno_broadcast_channel v0.168.0 (/app/deno/ext/broadcast_channel)
+   Compiling deno_webidl v0.174.0 (/app/deno/ext/webidl)
+   Compiling deno_cache v0.106.0 (/app/deno/ext/cache)
+   Compiling deno_console v0.174.0 (/app/deno/ext/console)
+   Compiling deno_url v0.174.0 (/app/deno/ext/url)
+   Compiling deno_cron v0.54.0 (/app/deno/ext/cron)
+   Compiling deno_bench_util v0.168.0 (/app/deno/bench_util)
+   Compiling swc_ecma_transforms_typescript v0.198.1
+   Compiling deno_net v0.166.0 (/app/deno/ext/net)
+   Compiling deno_fetch v0.198.0 (/app/deno/ext/fetch)
+   Compiling deno_web v0.205.0 (/app/deno/ext/web)
+   Compiling deno_fs v0.84.0 (/app/deno/ext/fs)
+   Compiling deno_ffi v0.161.0 (/app/deno/ext/ffi)
+   Compiling deno_ast v0.42.2
+   Compiling swc_ecma_transforms_optimization v0.208.0
+   Compiling deno_kv v0.82.0 (/app/deno/ext/kv)
+   Compiling deno_crypto v0.188.0 (/app/deno/ext/crypto)
+   Compiling deno_webstorage v0.169.0 (/app/deno/ext/webstorage)
+   Compiling deno_websocket v0.179.0 (/app/deno/ext/websocket)
+   Compiling deno_http v0.172.0 (/app/deno/ext/http)
+   Compiling deno_canvas v0.43.0 (/app/deno/ext/canvas)
+   Compiling deno_graph v0.83.4
+   Compiling deno_lint v0.67.0
+   Compiling dprint-plugin-typescript v0.93.0
+   Compiling test_ffi v0.1.0 (/app/deno/tests/ffi)
+   Compiling deno_runtime v0.183.0 (/app/deno/runtime)
+   Compiling deno_doc v0.154.0
+   Compiling deno v2.0.3 (/app/deno/cli)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3m 14s
+     Running unittests lib.rs (target/debug/deps/cli_tests-c8c91fb74b86a935)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests main.rs (target/debug/deps/deno-ed90cddb2d2504fc)
+
+running 511 tests
+test args::flags::tests::bare_with_flag_no_file ... ok
+test args::flags::tests::bare_global ... ok
+test args::flags::tests::allow_env_allowlist_multiple ... ok
+test args::flags::tests::cache_import_map ... ok
+test args::flags::tests::allow_all ... ok
+test args::flags::tests::allow_read ... ok
+test args::flags::tests::allow_sys ... ok
+test args::flags::tests::allow_env_allowlist ... ok
+test args::flags::tests::allow_sys_allowlist_multiple ... ok
+test args::flags::tests::allow_sys_allowlist ... ok
+test args::flags::tests::bare_run ... ok
+test args::flags::tests::allow_net_allowlist ... ok
+test args::flags::tests::escape_and_split_commas_test ... ok
+test args::flags::tests::allow_net_allowlist_with_ports ... ok
+test args::flags::tests::allow_net_allowlist_with_ipv6_address ... ok
+test args::flags::tests::cache ... ok
+test args::flags::tests::cache_with_cafile ... ok
+test args::flags::tests::allow_read_allowlist ... ok
+test args::flags::tests::deny_net_denylist ... ok
+test args::flags::tests::coverage ... ok
+test args::flags::tests::compile ... ok
+test args::flags::tests::allow_write_allowlist ... ok
+test args::flags::tests::cache_multiple ... ok
+test args::flags::tests::coverage_with_default_files ... ok
+test args::flags::tests::bench_watch ... ok
+test args::flags::tests::cached_only ... ok
+test args::flags::tests::coverage_with_lcov_and_out_file ... ok
+test args::flags::tests::deny_net_denylist_with_ports ... ok
+test args::flags::tests::bench_with_flags ... ok
+test args::flags::tests::deny_env_denylist ... ok
+test args::flags::tests::deny_sys_denylist ... ok
+test args::flags::tests::deny_env_denylist_multiple ... ok
+test args::flags::tests::deny_read ... ok
+test args::flags::tests::deny_read_denylist ... ok
+test args::flags::tests::deny_sys ... ok
+test args::flags::tests::deny_sys_denylist_multiple ... ok
+test args::flags::tests::compile_with_flags ... ok
+test args::flags::tests::deny_write_denylist ... ok
+test args::flags::tests::deny_net_denylist_with_ipv6_address ... ok
+test args::flags::tests::allow_env_allowlist_validator ... ok
+test args::flags::tests::quiet ... ok
+test args::flags::tests::jupyter_unstable_flags ... ok
+test args::flags::tests::no_check ... ok
+test args::flags::tests::info_with_cafile ... ok
+test args::flags::tests::doc_import_map ... ok
+test args::flags::tests::no_npm ... ok
+test args::flags::tests::eval_args ... ok
+test args::flags::tests::info_import_map ... ok
+test args::flags::tests::location_with_bad_scheme ... ok
+test args::flags::tests::eval ... ok
+test args::flags::tests::eval_p ... ok
+test args::flags::tests::inspect_default_host ... ok
+test args::flags::tests::flag_before_subcommand ... ok
+test args::flags::tests::double_hyphen ... ok
+test args::flags::tests::eval_with_flags ... ok
+test args::flags::tests::local_npm ... ok
+test args::flags::tests::no_check_remote ... ok
+test args::flags::tests::no_remote ... ok
+test args::flags::tests::node_modules_dir_default ... ok
+test args::flags::tests::install_permissions_non_global ... ok
+test args::flags::tests::net_flag_with_url ... ok
+test args::flags::tests::eval_typescript ... ok
+test args::flags::tests::publish_args ... ok
+test args::flags::tests::deny_env_denylist_validator ... ok
+test args::flags::tests::log_level ... ok
+test args::flags::tests::install_with_flags ... ok
+test args::flags::tests::allow_sys_allowlist_validator ... ok
+test args::flags::tests::inspect_wait ... ok
+test args::flags::tests::global_flags ... ok
+test args::flags::tests::deny_sys_denylist_validator ... ok
+test args::flags::tests::no_config ... ok
+test args::flags::tests::allow_scripts ... ok
+test args::flags::tests::install ... ok
+test args::flags::tests::run_watch_with_external ... ok
+test args::flags::tests::run_env_file_defined ... ok
+test args::flags::tests::run_no_code_cache ... ok
+test args::flags::tests::repl_with_eval_flag ... ok
+test args::flags::tests::repl_with_unsafely_ignore_certificate_errors ... ok
+test args::flags::tests::run_env_default ... ok
+test args::flags::tests::repl_with_flags ... ok
+test args::flags::tests::run_seed ... ok
+test args::flags::tests::run_seed_with_v8_flags ... ok
+test args::flags::tests::has_permission_in_argv ... ok
+test args::flags::tests::repl ... ok
+test args::flags::tests::run_reload_allow_write ... ok
+test args::flags::tests::repl_with_unsafely_treat_insecure_origin_as_secure_with_ipv6_address ... ok
+test args::flags::tests::run_env_defined ... ok
+test args::flags::tests::test_allow_import_host_from_url ... ok
+test args::flags::tests::run_reload ... ok
+test args::flags::tests::has_permission ... ok
+test args::flags::tests::repl_with_eval_file_flag ... ok
+test args::flags::tests::run_import_map ... ok
+test args::flags::tests::run_watch_with_no_clear_screen ... ok
+test args::flags::tests::run_env_file_default ... ok
+test args::flags::tests::run_with_cafile ... ok
+test args::flags::tests::run_with_enable_testing_features ... ok
+test args::flags::tests::test_no_colon_in_value_name ... ok
+test args::flags::tests::repl_strace_ops ... ok
+test args::flags::tests::repl_user_args ... ok
+test args::flags::tests::init ... ok
+test args::flags::tests::jupyter ... ok
+test args::flags::tests::remove_subcommand ... ok
+test args::flags::tests::serve_with_allow_all ... ok
+test args::flags::tests::task_subcommand_noconfig_invalid ... ok
+test args::flags::tests::task_subcommand_config ... ok
+test args::flags::tests::task_following_arg ... ok
+test args::flags::tests::run_with_unsafely_ignore_certificate_errors ... ok
+test args::flags::tests::task_following_double_hyphen_arg ... ok
+test args::flags::tests::task_subcommand_config_short ... ok
+test args::flags::tests::task_with_global_flags ... ok
+test args::flags::tests::run_with_unsafely_treat_insecure_origin_as_secure_with_ipv6_address ... ok
+test args::flags::tests::task_subcommand_double_hyphen_only ... ok
+test args::flags::tests::task_subcommand_empty ... ok
+test args::flags::tests::script_args ... ok
+test args::flags_net::bare_port_tests::bare_port_parse_error1 ... ok
+test args::flags_net::bare_port_tests::bare_port_parse_error3 ... ok
+test args::flags_net::bare_port_tests::bare_port_parse_error5 ... ok
+test args::flags::tests::allow_all_conflicts_allow_perms ... ok
+test args::flags_net::bare_port_tests::bare_port_parse_error4 ... ok
+test args::flags_net::bare_port_tests::bare_port_parse_error2 ... ok
+test args::flags::tests::test_no_clear_watch_flag_without_watch_flag ... ok
+test args::flags::tests::short_permission_flags ... ok
+test args::flags_net::bare_port_tests::bare_port_parsed ... ok
+test args::flags_net::tests::parse_net_args_expansion ... ok
+test args::flags_net::tests::parse_net_args_ ... ok
+test args::flags_net::tests::parse_net_args_ipv6 ... ok
+test args::flags_net::tests::parse_net_args_ipv6_error2 ... ok
+test args::flags_net::tests::parse_net_args_ipv6_error1 ... ok
+test args::flags_net::tests::parse_net_args_ipv6_error3 ... ok
+test args::flags_net::tests::parse_net_args_ipv6_error6 ... ok
+test args::flags_net::tests::parse_net_args_ipv6_error4 ... ok
+test args::flags_net::tests::parse_net_args_ipv6_error7 ... ok
+test args::flags_net::tests::parse_net_args_ipv6_error5 ... ok
+test args::test::resolve_import_map_no_config ... ok
+test args::test::storage_key_resolver_test ... ok
+test args::test::jsr_urls ... ok
+test auth_tokens::tests::test_auth_tokens_contain_at ... ok
+test auth_tokens::tests::test_auth_tokens_multiple ... ok
+test auth_tokens::tests::test_auth_tokens_newline ... ok
+test args::test::resolve_import_map_none ... ok
+test auth_tokens::tests::test_auth_token ... ok
+test auth_tokens::tests::test_auth_token_basic ... ok
+test auth_tokens::tests::test_auth_tokens_port ... ok
+test args::flags::tests::test_hide_stacktraces ... ok
+test args::test::resolve_import_map_flags_take_precedence ... ok
+test args::flags::tests::test_watch ... ok
+test args::flags::tests::test_coverage_default_dir ... ok
+test args::flags::tests::test_watch_with_no_clear_screen ... ok
+test auth_tokens::tests::test_auth_tokens_space ... ok
+test cache::cache_db::tests::cache_db_hash_max_u64_value ... ok
+test auth_tokens::tests::test_case_insensitive ... ok
+test auth_tokens::tests::test_parse_ip ... ok
+test args::flags::tests::test_shuffle ... ok
+test args::flags::tests::run_v8_flags ... ok
+test auth_tokens::tests::test_matches ... ok
+test args::flags::tests::add_or_install_subcommand ... ok
+test cache::disk_cache::tests::test_get_cache_filename_invalid_urls ... ok
+test cache::disk_cache::tests::test_get_cache_filename_with_extension ... ok
+test cache::disk_cache::tests::test_get_cache_filename ... ok
+test args::flags::tests::test_watch_explicit_cwd ... ok
+test args::flags::tests::info ... ok
+test cache::disk_cache::tests::test_set_get_cache_file ... ok
+test args::flags::tests::test_with_enable_testing_features ... ok
+test cache::emit::test::emit_cache_general_use ... ok
+test cache::cache_db::tests::failure_mode_in_memory ... ok
+test args::flags::tests::check ... ok
+test file_fetcher::tests::test_fetch_cache_only ... FAILED
+test file_fetcher::tests::test_fetch_complex ... FAILED
+test args::flags::tests::run_with_check ... ok
+test file_fetcher::tests::test_fetch_no_remote ... FAILED
+test file_fetcher::tests::test_fetch_blob_url ... ok
+test file_fetcher::tests::test_fetch_multiple_redirects ... FAILED
+test file_fetcher::tests::test_fetch_redirected ... FAILED
+test file_fetcher::tests::test_fetch_remote_utf16_le ... FAILED
+test file_fetcher::tests::test_fetch_remote_utf16_be ... FAILED
+test file_fetcher::tests::test_fetch_remote_window_1255 ... FAILED
+test cache::cache_db::tests::bad_sql ... ok
+test file_fetcher::tests::test_fetch_same_host_redirect ... FAILED
+test file_fetcher::tests::test_fetch_uses_cache_with_redirects ... FAILED
+test file_fetcher::tests::test_fetch_uses_cache ... FAILED
+test args::flags::tests::task_subcommand_double_hyphen ... ok
+test file_fetcher::tests::test_get_validated_scheme ... ok
+test file_fetcher::tests::test_fetch_local_utf8_with_bom ... ok
+test file_fetcher::tests::test_fetch_data_url ... ok
+test file_fetcher::tests::test_fetch_local_bypasses_file_cache ... ok
+test file_fetcher::tests::test_fetcher_limits_redirects ... FAILED
+test file_fetcher::tests::test_fetch_local_utf_16be ... ok
+test file_fetcher::tests::test_fetch_local_utf_16le ... ok
+test file_fetcher::tests::test_respect_cache_revalidates ... FAILED
+test file_fetcher::tests::test_respect_cache_still_fresh ... FAILED
+test cache::cache_db::tests::simple_database ... ok
+test http_util::test::bad_redirect ... FAILED
+test http_util::test::test_fetch_accept ... FAILED
+test http_util::test::test_fetch_brotli ... FAILED
+test http_util::test::test_fetch_gzip ... FAILED
+test http_util::test::server_error ... FAILED
+test http_util::test::request_error ... FAILED
+test args::flags::tests::run_watch_with_excluded_paths ... ok
+test graph_util::test::bare_specifier_node_resolution_error ... ok
+test graph_util::test::import_map_node_resolution_error ... ok
+test http_util::test::test_fetch_with_cafile_brotli ... FAILED
+test http_util::test::test_fetch_string ... FAILED
+test http_util::test::test_fetch_no_follow_with_redirect ... FAILED
+test cache::incremental::test::incremental_cache_general_use ... ok
+test file_fetcher::tests::test_insert_cached ... ok
+test http_util::test::test_fetch_with_cafile_gzip ... FAILED
+test http_util::test::test_fetch_with_cafile_string ... FAILED
+test cache::code_cache::test::end_to_end ... ok
+test http_util::test::test_resolve_url_from_location_full_1 ... ok
+test lsp::analysis::tests::test_prepend_whitespace ... ok
+test http_util::test::test_fetch_with_cafile_with_etag ... FAILED
+test http_util::test::test_http_client_download_redirect ... FAILED
+test http_util::test::test_resolve_url_from_location_relative_2 ... ok
+test http_util::test::test_resolve_url_from_location_full_2 ... ok
+test lsp::analysis::tests::test_reference_to_diagnostic ... ok
+test http_util::test::test_fetch_with_etag ... FAILED
+test http_util::test::test_resolve_url_from_location_relative_1 ... ok
+test http_util::test::test_resolve_url_from_location_relative_3 ... ok
+test lsp::analysis::tests::test_try_reverse_map_package_json_exports ... ok
+test lsp::completions::tests::test_get_jsr_completions ... ok
+test lsp::completions::tests::test_get_jsr_completions_for_exports_import_mapped ... ok
+test lsp::completions::tests::test_get_jsr_completions_for_versions ... ok
+test lsp::completions::tests::test_get_jsr_completions_for_exports ... ok
+test lsp::completions::tests::test_get_relative_specifiers ... ok
+test lsp::completions::tests::test_to_narrow_lsp_range_no_trailing_quote ... ok
+test lsp::completions::tests::test_to_narrow_lsp_range ... ok
+test lsp::completions::tests::test_parse_bare_specifier_version_index ... ok
+test args::flags::tests::test_with_flags ... ok
+test args::flags::tests::upgrade_with_output_flag ... ok
+test lsp::completions::tests::test_get_npm_completions ... ok
+test args::flags::tests::upgrade_with_ca_file ... ok
+test args::flags::tests::task_subcommand ... ok
+test lsp::completions::tests::test_get_npm_completions_for_versions ... ok
+test args::flags::tests::types ... ok
+test args::flags::tests::upgrade ... ok
+test cache::fast_check::test::cache_general_use ... ok
+test args::flags::tests::uninstall_with_help_flag ... ok
+test lsp::completions::tests::test_get_local_completions ... ok
+test lsp::config::tests::config_specifier_enabled_matches_by_path_component ... ok
+test lsp::config::tests::test_config_specifier_enabled ... ok
+test lsp::config::tests::test_config_snapshot_specifier_enabled ... ok
+test lsp::config::tests::test_config_specifier_enabled_path ... ok
+test lsp::config::tests::test_config_specifier_disabled_path ... ok
+test lsp::config::tests::test_empty_config ... ok
+test lsp::config::tests::test_empty_cache ... ok
+test lsp::config::tests::test_empty_tls_certificate ... ok
+test lsp::config::tests::test_set_workspace_settings_defaults ... ok
+test cache::module_info::test::module_info_cache_general_use ... ok
+test cache::node::test::node_analysis_cache_general_use ... ok
+test lsp::config::tests::test_empty_import_map ... ok
+test lsp::diagnostics::tests::test_specifier_text_for_redirected ... ok
+test cache::incremental::test::sql_cache_general_use ... ok
+test cache::check::test::check_cache_general_use ... ok
+test args::flags::tests::test_watch_with_paths ... ok
+test lsp::npm::tests::test_parse_npm_search_response ... ok
+test args::flags::tests::tsconfig ... ok
+test lsp::performance::tests::test_averages ... ok
+test lsp::performance::tests::test_average ... ok
+test lsp::parent_process_checker::test::process_active ... ok
+test args::flags::tests::run_with_frozen_lockfile ... ok
+test lsp::diagnostics::tests::test_get_code_action_import_map_remap ... ok
+test lsp::code_lens::tests::test_deno_test_collector ... ok
+test lsp::resolver::tests::test_redirect_resolver ... ok
+test lsp::semantic_tokens::tests::test_semantic_tokens_builder_out_of_order_1 ... ok
+test lsp::semantic_tokens::tests::test_semantic_tokens_builder_out_of_order_2 ... ok
+test lsp::semantic_tokens::tests::test_semantic_tokens_builder_simple ... ok
+test lsp::semantic_tokens::tests::test_tokens_within_range ... ok
+test lsp::semantic_tokens::tests::test_tokens_within_range_empty ... ok
+test lsp::semantic_tokens::tests::test_tokens_within_range_include_end ... ok
+test lsp::documents::tests::test_documents_ensure_no_duplicates ... ok
+test args::flags::tests::version ... ok
+test lsp::config::tests::config_enable_via_config_file_detection ... ok
+test lsp::testing::collectors::tests::test_test_collector_destructure ... ok
+test lsp::testing::collectors::tests::test_test_collector_destructure_rebind_step ... ok
+test lsp::testing::collectors::tests::test_test_collector_a ... ok
+test lsp::testing::collectors::tests::test_test_collector_a_tpl ... ok
+test lsp::completions::tests::test_get_workspace_completions ... ok
+test lsp::testing::collectors::tests::test_test_collector_rebind ... ok
+test lsp::testing::collectors::tests::test_test_collector_function_only ... ok
+test lsp::testing::collectors::tests::test_test_collector_separate_test_function ... ok
+test lsp::testing::collectors::tests::test_test_collector_separate_test_function_with_string_name ... ok
+test lsp::testing::collectors::tests::test_test_collector_test ... ok
+test lsp::text::tests::test_char_len ... ok
+test lsp::text::tests::test_empty_index ... ok
+test lsp::testing::collectors::tests::test_test_collector_test_tpl ... ok
+test lsp::text::tests::test_line_index ... ok
+test lsp::testing::execution::tests::test_as_queue_and_filters ... ok
+test lsp::testing::collectors::tests::test_test_collector_nested_steps_same_name_and_level ... ok
+test lsp::text::tests::test_get_edits ... ok
+test lsp::text::tests::test_get_edits_mbc ... ok
+test lsp::testing::collectors::tests::test_test_collector_unknown_test ... ok
+test lsp::text::tests::test_single_char ... ok
+test lsp::text::tests::test_string ... ok
+test lsp::tsc::tests::include_suppress_inlay_hint_settings ... ok
+test lsp::tsc::tests::test_classification_to_semantic_tokens_multiline_tokens ... ok
+test lsp::tsc::tests::coalesce_pending_change ... ok
+test args::flags::tests::run_with_args ... ok
+test lsp::tsc::tests::test_completion_entry_filter_text ... ok
+test lsp::path_to_regex::tests::test_compiler ... ok
+test lsp::path_to_regex::tests::test_string_to_regex ... ok
+test lsp::path_to_regex::tests::test_compiler_ends_with_sep ... ok
+test args::flags::tests::upgrade_release_candidate ... ok
+test args::flags::tests::vendor_flag ... ok
+test args::flags::tests::run_watch ... ok
+test args::flags::tests::lint ... ok
+test lsp::urls::tests::test_file_like_to_file_specifier ... ok
+test lsp::urls::tests::test_hash_data_specifier ... ok
+test lsp::urls::tests::test_lsp_url_map ... ok
+test lsp::urls::tests::test_lsp_url_map_complex_encoding ... ok
+test lsp::urls::tests::test_lsp_url_map_data ... ok
+test lsp::urls::tests::test_lsp_url_map_host_with_port ... ok
+test lsp::urls::tests::test_lsp_url_reverse ... ok
+test lsp::urls::tests::test_normalize_deno_status ... ok
+test lsp::urls::tests::test_normalize_percent_encoded_path ... ok
+test args::flags::tests::test_with_fail_fast ... ok
+test npm::managed::cache::tarball_extract::test::test_verify_tarball ... ok
+test npm::managed::resolvers::local::test::test_get_package_folder_id_folder_name ... ok
+test args::flags::tests::test_watch_with_excluded_paths ... ok
+test lsp::tsc::tests::test_replace_links ... ok
+test args::flags::tests::doc ... ok
+test args::flags::tests::completions ... ok
+test args::flags::tests::serve_flags ... ok
+test task_runner::test::test_prepend_to_path ... ok
+test args::flags::tests::uninstall ... ok
+test tools::bench::mitata::tests::test_avg_to_iter_per_s ... ok
+test tools::bench::mitata::tests::test_into_decimal_and_fractional_parts ... ok
+test tools::check::test::get_leading_comments_test ... ok
+test args::flags::tests::reload_validator ... ok
+test task_runner::test::test_resolve_execution_path_from_npx_shim ... ok
+test tools::check::test::has_ts_check_test ... ok
+test tools::compile::test::test_os_specific_file_path ... ok
+test tools::compile::test::test_resolve_root_dir_from_specifiers ... ok
+test tools::coverage::merge::tests::empty ... ok
+test tools::coverage::merge::tests::merges_a_similar_sliding_chain_a_bc ... ok
+test tools::coverage::merge::tests::two_flat_trees ... ok
+test lsp::registries::tests::test_parse_replacement_variables ... ok
+test tools::coverage::merge::tests::two_trees_with_matching_children ... ok
+test tools::coverage::merge::tests::two_trees_with_with_complementary_children_summing_to_the_same_count ... ok
+test tools::coverage::merge::tests::two_trees_with_partially_overlapping_children ... ok
+test tools::coverage::range_tree::tests::from_sorted_ranges_empty ... ok
+test tools::coverage::util::tests::test_find_root_empty ... ok
+test tools::coverage::util::tests::test_find_root ... ok
+test tools::coverage::util::tests::test_find_root_with_similar_dirnames ... ok
+test tools::coverage::util::tests::test_find_root_with_similar_filenames ... ok
+test tools::coverage::util::tests::test_percent_to_class ... ok
+test tools::fmt::test::test_format_ensure_stable_error_first ... ok
+test tools::fmt::test::test_format_ensure_stable_error_second - should panic ... ok
+test tools::fmt::test::test_format_ensure_stable_unstable_format - should panic ... ok
+test tools::fmt::test::test_format_stable_after_two ... ok
+test tools::fmt::test::test_is_supported_ext_fmt ... ok
+test args::flags::tests::test_config_path_args ... ok
+test tools::fmt::test::test_single_quote_true_prefers_single_quote ... ok
+test args::flags::tests::fmt ... ok
+test lsp::registries::tests::test_validate_registry_configuration ... ok
+test tools::compile::test::resolve_compile_executable_output_path_target_windows ... ok
+test tools::compile::test::resolve_compile_executable_output_path_target_linux ... ok
+test standalone::virtual_fs::test::circular_symlink ... ok
+test standalone::virtual_fs::test::builds_and_uses_virtual_fs ... ok
+test tools::installer::tests::install_inferred_name_after_redirect_for_no_path_url ... FAILED
+test lsp::config::tests::config_specifier_enabled_for_test ... ok
+test args::flags::tests::test_reporter ... ok
+test npm::managed::resolvers::local::test::test_setup_cache ... ok
+test standalone::virtual_fs::test::test_open_file ... ok
+test cache::cache_db::tests::failure_mode_blackhole ... ok
+test cache::cache_db::tests::failure_mode_error ... ok
+test tools::installer::tests::install_unstable_features ... ok
+test tools::installer::tests::install_custom_dir_option ... ok
+test tools::installer::tests::install_npm_no_lock ... ok
+test tools::installer::tests::install_inferred_name ... ok
+test tools::installer::tests::install_inferred_name_from_parent ... ok
+test tools::installer::tests::install_with_flags ... ok
+test tools::installer::tests::install_force ... ok
+test tools::installer::tests::install_unstable ... ok
+test tools::installer::tests::install_unstable_legacy ... ok
+test tools::installer::tests::install_with_config ... ok
+test tools::installer::tests::install_with_import_map ... ok
+test tools::installer::tests::install_file_url ... ok
+test tools::registry::api::test::test_jsr_alternative ... ok
+test tools::installer::tests::uninstall_basic ... ok
+test tools::registry::provenance::tests::slsa_github_actions ... ok
+test tools::registry::pm::test::test_parse_add_package_req ... ok
+test tools::registry::publish_order::test::test_graph_circular_dep ... ok
+test tools::registry::publish_order::test::test_graph_no_deps ... ok
+test tools::registry::publish_order::test::test_graph_multiple_dep ... ok
+test tools::registry::publish_order::test::test_graph_single_dep ... ok
+test tools::lint::rules::test::recommended_rules_when_no_tags_in_config ... ok
+test tools::registry::tests::test_verify_version_manifest ... ok
+test tools::registry::tests::test_verify_version_manifest_invalid_hash ... ok
+test tools::registry::tests::test_verify_version_manifest_missing ... ok
+test tools::registry::tests::test_has_license_files ... ok
+test tools::repl::editor::test::validate_regex_looking_code ... ok
+test tools::repl::editor::test::validate_only_one_forward_slash_per_line ... ok
+test tools::registry::unfurl::tests::test_unfurling ... ok
+test tools::test::fmt::tests::op_unknown ... ok
+test tools::test::inner_test::test_is_supported_test_ext ... ok
+test tools::test::inner_test::test_is_supported_test_path ... ok
+test tools::test::reporters::junit::tests::construct_full_test_name_one_node ... ok
+test tools::test::reporters::junit::tests::construct_full_test_name_one_root_two_chains ... ok
+test tools::test::reporters::junit::tests::construct_full_test_name_three_level_hierarchy ... ok
+test tools::test::reporters::junit::tests::construct_full_test_name_two_level_hierarchy ... ok
+test tools::upgrade::test::blog_post_links ... ok
+test tools::upgrade::test::test_get_latest_version_url ... ok
+test tools::upgrade::test::test_normalize_version_server ... ok
+test tools::upgrade::test::test_parse_upgrade_check_file ... ok
+test tools::upgrade::test::test_requested_version ... ok
+test tools::upgrade::test::test_serialize_upgrade_check_file ... ok
+test http_util::test::test_fetch_with_default_certificate_store ... ok
+test tools::upgrade::test::test_update_checker ... ok
+test tools::upgrade::test::test_update_checker_current_newer_than_latest ... ok
+test tools::upgrade::test::test_upgrades_lsp ... ok
+test tsc::diagnostics::tests::test_de_diagnostics ... ok
+test tsc::diagnostics::tests::test_diagnostics_basic ... ok
+test tsc::diagnostics::tests::test_diagnostics_no_source ... ok
+test tsc::diagnostics::tests::test_diagnostics_related_info ... ok
+test tools::upgrade::test::test_should_not_prompt_if_current_cli_version_has_changed ... ok
+test lsp::registries::tests::test_registry_completions_origin_match ... FAILED
+test lsp::registries::tests::test_check_origin_supported ... FAILED
+test lsp::registries::tests::test_registry_completions_key_first ... FAILED
+test lsp::registries::tests::test_registry_completions_complex ... FAILED
+test npm::managed::cache::tarball_extract::test::rename_with_retries_succeeds_exists ... ok
+test lsp::registries::tests::test_registry_completions_import_map ... FAILED
+test lsp::registries::tests::test_check_origin_not_supported ... FAILED
+test tsc::tests::test_compiler_snapshot ... ignored
+test tools::test::channel::tests::test_runtime_shutdown ... ok
+test tools::installer::tests::install_prompt ... ok
+test tools::installer::tests::install_npm_lockfile_default ... ok
+test standalone::virtual_fs::test::test_include_dir_recursive ... ok
+test lsp::registries::tests::test_registry_completions ... FAILED
+test tools::installer::tests::install_allow_all ... ok
+test tools::installer::tests::install_local_module ... ok
+test tsc::tests::test_hash_url ... ok
+test util::checksum::tests::test_gen ... ok
+test tools::installer::tests::install_shell_escaping ... ok
+test util::diff::tests::test_eof_newline_missing ... ok
+test util::diff::tests::test_newlines_differing ... ok
+test lsp::documents::tests::test_documents_change ... ok
+test util::display::tests::test_human_elapsed ... ok
+test util::display::tests::test_human_download_size ... ok
+test util::display::tests::test_human_size ... ok
+test util::diff::tests::test_diff ... ok
+test lsp::documents::tests::test_documents_open_close ... ok
+test tsc::tests::test_emit_tsbuildinfo ... ok
+test tsc::tests::test_load_missing_specifier ... ok
+test tsc::tests::test_resolve ... ok
+test tsc::tests::test_load_tsbuildinfo ... ok
+test tsc::tests::test_respond ... ok
+test tsc::tests::test_create_hash ... ok
+test tsc::tests::test_load ... ok
+test util::path::test::test_is_importable_ext ... ok
+test lsp::language_server::tests::test_walk_workspace ... ok
+test util::fs::tests::test_normalize_path ... ok
+test tsc::tests::test_resolve_empty ... ok
+test util::path::test::test_specifier_has_extension ... ok
+test util::path::test::test_is_script_ext ... ok
+test util::path::test::test_to_percent_decoded_str ... ok
+test util::progress_bar::renderer::test::should_get_elapsed_text ... ok
+test util::progress_bar::renderer::test::should_render_text_only_progress ... ok
+test util::progress_bar::renderer::test::should_render_bar_progress ... ok
+test util::sync::task_queue::test::task_queue_future_dropped_before_poll ... ok
+test util::sync::task_queue::test::task_queue_middle_future_dropped_while_permit_acquired ... ok
+test util::path::test::test_relative_specifier ... ok
+test util::sync::task_queue::test::task_queue_run_in_sequence ... ok
+test util::fs::tests::test_collect_specifiers ... ok
+test util::text_encoding::tests::test_source_without_source_map ... ok
+test util::sync::value_creator::test::single_runtime ... ok
+test util::text_encoding::tests::test_source_map_from_code ... ok
+test util::sync::task_queue::test::task_queue_runs_one_after_other ... ok
+test util::sync::value_creator::test::multi_runtimes ... ok
+test util::extract::tests::test_export_collector ... ok
+test tsc::tests::test_load_asset ... ok
+test lsp::documents::tests::test_documents_refresh_dependencies_config_change ... ok
+test tools::test::channel::tests::test_sender_shutdown_before_receive ... ok
+test tools::test::channel::tests::spawn_worker ... ok
+test util::sync::task_queue::test::task_queue_many_future_dropped_before_poll ... ok
+test util::extract::tests::test_extract_snippet_files ... ok
+test util::extract::tests::test_extract_doc_tests ... ok
+test util::sync::value_creator::test::multi_runtimes_first_never_finishes ... ok
+test args::flags::tests::equal_help_output ... ok
+test worker::tests::execute_mod_esm_imports_a ... ok
+Hello World
+test lsp::diagnostics::tests::unable_to_load_a_local_module ... ok
+test worker::tests::execute_mod_circular ... ok
+test worker::tests::execute_mod_002_hello ... ok
+test worker::tests::execute_mod_resolve_error ... ok
+test lsp::diagnostics::tests::duplicate_diagnostics_for_duplicate_imports ... ok
+test util::fs::tests::lax_fs_lock_ordered ... ok
+test tools::installer::tests::install_unicode ... ok
+test util::fs::tests::lax_fs_lock ... ok
+test lsp::tsc::tests::resolve_unknown_dependency ... ok
+test lsp::diagnostics::tests::test_deno_diagnostics_with_import_map ... ok
+test http_util::test::test_fetch_with_empty_certificate_store ... ok
+test tools::test::channel::tests::test_interleave ... ok
+test lsp::tsc::tests::test_request_assets ... ok
+test lsp::tsc::tests::test_get_diagnostics ... ok
+test tools::installer::tests::install_infer_name_from_url ... ok
+test tsc::tests::test_exec_reexport_dts ... ok
+test tsc::tests::test_exec_basic ... ok
+test lsp::tsc::tests::test_module_resolution ... ok
+test lsp::diagnostics::tests::test_enabled_then_disabled_specifier ... ok
+test lsp::tsc::tests::test_bad_module_specifiers ... ok
+test lsp::tsc::tests::test_remote_modules ... ok
+test lsp::tsc::tests::test_modify_sources ... ok
+test lsp::tsc::tests::test_completions_fmt ... ok
+test lsp::tsc::tests::test_partial_modules ... ok
+test lsp::tsc::tests::test_completions ... ok
+test lsp::tsc::tests::test_get_edits_for_file_rename ... ok
+test lsp::tsc::tests::test_no_debug_failure ... ok
+test lsp::tsc::tests::test_get_diagnostics_lib ... ok
+test tsc::tests::fix_lib_ref ... ok
+test tools::test::channel::tests::test_flush_with_close ... ok
+test tools::test::channel::tests::test_flush_lots ... ok
+test tools::test::channel::tests::test_flush_large ... ok
+
+failures:
+
+---- file_fetcher::tests::test_fetch_cache_only stdout ----
+thread 'file_fetcher::tests::test_fetch_cache_only' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_complex stdout ----
+thread 'file_fetcher::tests::test_fetch_complex' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- file_fetcher::tests::test_fetch_no_remote stdout ----
+thread 'file_fetcher::tests::test_fetch_no_remote' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_multiple_redirects stdout ----
+thread 'file_fetcher::tests::test_fetch_multiple_redirects' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_redirected stdout ----
+thread 'file_fetcher::tests::test_fetch_redirected' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_remote_utf16_le stdout ----
+thread 'file_fetcher::tests::test_fetch_remote_utf16_le' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_remote_utf16_be stdout ----
+thread 'file_fetcher::tests::test_fetch_remote_utf16_be' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_remote_window_1255 stdout ----
+thread 'file_fetcher::tests::test_fetch_remote_window_1255' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_same_host_redirect stdout ----
+thread 'file_fetcher::tests::test_fetch_same_host_redirect' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_uses_cache_with_redirects stdout ----
+thread 'file_fetcher::tests::test_fetch_uses_cache_with_redirects' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetch_uses_cache stdout ----
+thread 'file_fetcher::tests::test_fetch_uses_cache' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_fetcher_limits_redirects stdout ----
+thread 'file_fetcher::tests::test_fetcher_limits_redirects' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_respect_cache_revalidates stdout ----
+thread 'file_fetcher::tests::test_respect_cache_revalidates' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- file_fetcher::tests::test_respect_cache_still_fresh stdout ----
+thread 'file_fetcher::tests::test_respect_cache_still_fresh' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::bad_redirect stdout ----
+thread 'http_util::test::bad_redirect' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_accept stdout ----
+thread 'http_util::test::test_fetch_accept' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_brotli stdout ----
+thread 'http_util::test::test_fetch_brotli' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_gzip stdout ----
+thread 'http_util::test::test_fetch_gzip' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::server_error stdout ----
+thread 'http_util::test::server_error' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::request_error stdout ----
+thread 'http_util::test::request_error' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_with_cafile_brotli stdout ----
+thread 'http_util::test::test_fetch_with_cafile_brotli' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_string stdout ----
+thread 'http_util::test::test_fetch_string' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_no_follow_with_redirect stdout ----
+thread 'http_util::test::test_fetch_no_follow_with_redirect' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_with_cafile_gzip stdout ----
+thread 'http_util::test::test_fetch_with_cafile_gzip' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_with_cafile_string stdout ----
+thread 'http_util::test::test_fetch_with_cafile_string' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_with_cafile_with_etag stdout ----
+thread 'http_util::test::test_fetch_with_cafile_with_etag' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_http_client_download_redirect stdout ----
+thread 'http_util::test::test_http_client_download_redirect' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- http_util::test::test_fetch_with_etag stdout ----
+thread 'http_util::test::test_fetch_with_etag' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- tools::installer::tests::install_inferred_name_after_redirect_for_no_path_url stdout ----
+thread 'tools::installer::tests::install_inferred_name_after_redirect_for_no_path_url' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- lsp::registries::tests::test_registry_completions_origin_match stdout ----
+thread 'lsp::registries::tests::test_registry_completions_origin_match' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- lsp::registries::tests::test_check_origin_supported stdout ----
+thread 'lsp::registries::tests::test_check_origin_supported' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- lsp::registries::tests::test_registry_completions_key_first stdout ----
+thread 'lsp::registries::tests::test_registry_completions_key_first' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- lsp::registries::tests::test_registry_completions_complex stdout ----
+thread 'lsp::registries::tests::test_registry_completions_complex' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- lsp::registries::tests::test_registry_completions_import_map stdout ----
+thread 'lsp::registries::tests::test_registry_completions_import_map' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- lsp::registries::tests::test_check_origin_not_supported stdout ----
+thread 'lsp::registries::tests::test_check_origin_not_supported' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+---- lsp::registries::tests::test_registry_completions stdout ----
+thread 'lsp::registries::tests::test_registry_completions' panicked at tests/util/server/src/lib.rs:265:5:
+Test server not found. Please cargo build before running the tests.
+
+
+failures:
+    file_fetcher::tests::test_fetch_cache_only
+    file_fetcher::tests::test_fetch_complex
+    file_fetcher::tests::test_fetch_multiple_redirects
+    file_fetcher::tests::test_fetch_no_remote
+    file_fetcher::tests::test_fetch_redirected
+    file_fetcher::tests::test_fetch_remote_utf16_be
+    file_fetcher::tests::test_fetch_remote_utf16_le
+    file_fetcher::tests::test_fetch_remote_window_1255
+    file_fetcher::tests::test_fetch_same_host_redirect
+    file_fetcher::tests::test_fetch_uses_cache
+    file_fetcher::tests::test_fetch_uses_cache_with_redirects
+    file_fetcher::tests::test_fetcher_limits_redirects
+    file_fetcher::tests::test_respect_cache_revalidates
+    file_fetcher::tests::test_respect_cache_still_fresh
+    http_util::test::bad_redirect
+    http_util::test::request_error
+    http_util::test::server_error
+    http_util::test::test_fetch_accept
+    http_util::test::test_fetch_brotli
+    http_util::test::test_fetch_gzip
+    http_util::test::test_fetch_no_follow_with_redirect
+    http_util::test::test_fetch_string
+    http_util::test::test_fetch_with_cafile_brotli
+    http_util::test::test_fetch_with_cafile_gzip
+    http_util::test::test_fetch_with_cafile_string
+    http_util::test::test_fetch_with_cafile_with_etag
+    http_util::test::test_fetch_with_etag
+    http_util::test::test_http_client_download_redirect
+    lsp::registries::tests::test_check_origin_not_supported
+    lsp::registries::tests::test_check_origin_supported
+    lsp::registries::tests::test_registry_completions
+    lsp::registries::tests::test_registry_completions_complex
+    lsp::registries::tests::test_registry_completions_import_map
+    lsp::registries::tests::test_registry_completions_key_first
+    lsp::registries::tests::test_registry_completions_origin_match
+    tools::installer::tests::install_inferred_name_after_redirect_for_no_path_url
+
+test result: FAILED. 474 passed; 36 failed; 1 ignored; 0 measured; 0 filtered out; finished in 48.18s
+
+error: test failed, to rerun pass `-p deno --bin deno`

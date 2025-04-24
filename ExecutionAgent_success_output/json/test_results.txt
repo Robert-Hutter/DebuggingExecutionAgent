@@ -1,0 +1,539 @@
+-- Using the multi-header code from /app/json/include/
+-- Operating system: Linux-5.15.0-136-generic; Linux cab2470974a6 5.15.0-136-generic #147-Ubuntu SMP Sat Mar 15 15:53:30 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+-- Compiler: c++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0; Copyright (C) 2019 Free Software Foundation, Inc.; This is free software; see the source for copying conditions.  There is NO; warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-- Testing standards: 11 14 17 20 [23]
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /app/json
+Scanning dependencies of target test_main
+[  1%] Building CXX object tests/CMakeFiles/test_main.dir/src/unit.cpp.o
+[  1%] Built target test_main
+Scanning dependencies of target test-comparison_legacy_cpp20
+[  2%] Building CXX object tests/CMakeFiles/test-comparison_legacy_cpp20.dir/src/unit-comparison.cpp.o
+[  2%] Linking CXX executable test-comparison_legacy_cpp20
+[  2%] Built target test-comparison_legacy_cpp20
+Scanning dependencies of target test-user_defined_input_cpp11
+[  3%] Building CXX object tests/CMakeFiles/test-user_defined_input_cpp11.dir/src/unit-user_defined_input.cpp.o
+[  4%] Linking CXX executable test-user_defined_input_cpp11
+[  4%] Built target test-user_defined_input_cpp11
+Scanning dependencies of target test-unicode5_cpp11
+[  5%] Building CXX object tests/CMakeFiles/test-unicode5_cpp11.dir/src/unit-unicode5.cpp.o
+[  5%] Linking CXX executable test-unicode5_cpp11
+[  5%] Built target test-unicode5_cpp11
+Scanning dependencies of target test-unicode2_cpp11
+[  5%] Building CXX object tests/CMakeFiles/test-unicode2_cpp11.dir/src/unit-unicode2.cpp.o
+[  6%] Linking CXX executable test-unicode2_cpp11
+[  6%] Built target test-unicode2_cpp11
+Scanning dependencies of target test-unicode1_cpp11
+[  7%] Building CXX object tests/CMakeFiles/test-unicode1_cpp11.dir/src/unit-unicode1.cpp.o
+[  8%] Linking CXX executable test-unicode1_cpp11
+[  8%] Built target test-unicode1_cpp11
+Scanning dependencies of target test-unicode3_cpp11
+[  8%] Building CXX object tests/CMakeFiles/test-unicode3_cpp11.dir/src/unit-unicode3.cpp.o
+[  9%] Linking CXX executable test-unicode3_cpp11
+[  9%] Built target test-unicode3_cpp11
+Scanning dependencies of target test-type_traits_cpp11
+[  9%] Building CXX object tests/CMakeFiles/test-type_traits_cpp11.dir/src/unit-type_traits.cpp.o
+[ 10%] Linking CXX executable test-type_traits_cpp11
+[ 10%] Built target test-type_traits_cpp11
+Scanning dependencies of target test-serialization_cpp11
+[ 11%] Building CXX object tests/CMakeFiles/test-serialization_cpp11.dir/src/unit-serialization.cpp.o
+[ 11%] Linking CXX executable test-serialization_cpp11
+[ 11%] Built target test-serialization_cpp11
+Scanning dependencies of target test-regression2_cpp20
+[ 11%] Building CXX object tests/CMakeFiles/test-regression2_cpp20.dir/src/unit-regression2.cpp.o
+[ 12%] Linking CXX executable test-regression2_cpp20
+[ 12%] Built target test-regression2_cpp20
+Scanning dependencies of target test-regression2_cpp17
+[ 12%] Building CXX object tests/CMakeFiles/test-regression2_cpp17.dir/src/unit-regression2.cpp.o
+[ 13%] Linking CXX executable test-regression2_cpp17
+[ 13%] Built target test-regression2_cpp17
+Scanning dependencies of target test-ubjson_cpp11
+[ 13%] Building CXX object tests/CMakeFiles/test-ubjson_cpp11.dir/src/unit-ubjson.cpp.o
+[ 14%] Linking CXX executable test-ubjson_cpp11
+[ 14%] Built target test-ubjson_cpp11
+Scanning dependencies of target test-conversions_cpp17
+[ 15%] Building CXX object tests/CMakeFiles/test-conversions_cpp17.dir/src/unit-conversions.cpp.o
+[ 16%] Linking CXX executable test-conversions_cpp17
+[ 16%] Built target test-conversions_cpp17
+Scanning dependencies of target test-pointer_access_cpp11
+[ 16%] Building CXX object tests/CMakeFiles/test-pointer_access_cpp11.dir/src/unit-pointer_access.cpp.o
+[ 17%] Linking CXX executable test-pointer_access_cpp11
+[ 17%] Built target test-pointer_access_cpp11
+Scanning dependencies of target test-conversions_cpp11
+[ 18%] Building CXX object tests/CMakeFiles/test-conversions_cpp11.dir/src/unit-conversions.cpp.o
+[ 18%] Linking CXX executable test-conversions_cpp11
+[ 18%] Built target test-conversions_cpp11
+Scanning dependencies of target test-bjdata_cpp11
+[ 19%] Building CXX object tests/CMakeFiles/test-bjdata_cpp11.dir/src/unit-bjdata.cpp.o
+[ 19%] Linking CXX executable test-bjdata_cpp11
+[ 19%] Built target test-bjdata_cpp11
+Scanning dependencies of target test-reference_access_cpp11
+[ 19%] Building CXX object tests/CMakeFiles/test-reference_access_cpp11.dir/src/unit-reference_access.cpp.o
+[ 20%] Linking CXX executable test-reference_access_cpp11
+[ 20%] Built target test-reference_access_cpp11
+Scanning dependencies of target test-to_chars_cpp11
+[ 21%] Building CXX object tests/CMakeFiles/test-to_chars_cpp11.dir/src/unit-to_chars.cpp.o
+[ 22%] Linking CXX executable test-to_chars_cpp11
+[ 22%] Built target test-to_chars_cpp11
+Scanning dependencies of target test-constructor1_cpp11
+[ 22%] Building CXX object tests/CMakeFiles/test-constructor1_cpp11.dir/src/unit-constructor1.cpp.o
+[ 23%] Linking CXX executable test-constructor1_cpp11
+[ 23%] Built target test-constructor1_cpp11
+Scanning dependencies of target test-testsuites_cpp11
+[ 24%] Building CXX object tests/CMakeFiles/test-testsuites_cpp11.dir/src/unit-testsuites.cpp.o
+[ 24%] Linking CXX executable test-testsuites_cpp11
+[ 24%] Built target test-testsuites_cpp11
+Scanning dependencies of target test-large_json_cpp11
+[ 24%] Building CXX object tests/CMakeFiles/test-large_json_cpp11.dir/src/unit-large_json.cpp.o
+[ 25%] Linking CXX executable test-large_json_cpp11
+[ 25%] Built target test-large_json_cpp11
+Scanning dependencies of target test-concepts_cpp11
+[ 26%] Building CXX object tests/CMakeFiles/test-concepts_cpp11.dir/src/unit-concepts.cpp.o
+[ 27%] Linking CXX executable test-concepts_cpp11
+[ 27%] Built target test-concepts_cpp11
+Scanning dependencies of target test-cbor_cpp11
+[ 27%] Building CXX object tests/CMakeFiles/test-cbor_cpp11.dir/src/unit-cbor.cpp.o
+[ 28%] Linking CXX executable test-cbor_cpp11
+[ 28%] Built target test-cbor_cpp11
+Scanning dependencies of target test-class_lexer_cpp11
+[ 29%] Building CXX object tests/CMakeFiles/test-class_lexer_cpp11.dir/src/unit-class_lexer.cpp.o
+[ 30%] Linking CXX executable test-class_lexer_cpp11
+[ 30%] Built target test-class_lexer_cpp11
+Scanning dependencies of target test-element_access2_cpp14
+[ 30%] Building CXX object tests/CMakeFiles/test-element_access2_cpp14.dir/src/unit-element_access2.cpp.o
+[ 31%] Linking CXX executable test-element_access2_cpp14
+[ 31%] Built target test-element_access2_cpp14
+Scanning dependencies of target test-constructor2_cpp11
+[ 31%] Building CXX object tests/CMakeFiles/test-constructor2_cpp11.dir/src/unit-constructor2.cpp.o
+[ 32%] Linking CXX executable test-constructor2_cpp11
+[ 32%] Built target test-constructor2_cpp11
+Scanning dependencies of target test-noexcept_cpp11
+[ 33%] Building CXX object tests/CMakeFiles/test-noexcept_cpp11.dir/src/unit-noexcept.cpp.o
+[ 33%] Linking CXX executable test-noexcept_cpp11
+[ 33%] Built target test-noexcept_cpp11
+Scanning dependencies of target test-binary_formats_cpp11
+[ 33%] Building CXX object tests/CMakeFiles/test-binary_formats_cpp11.dir/src/unit-binary_formats.cpp.o
+[ 34%] Linking CXX executable test-binary_formats_cpp11
+[ 34%] Built target test-binary_formats_cpp11
+Scanning dependencies of target test-udl_cpp11
+[ 34%] Building CXX object tests/CMakeFiles/test-udl_cpp11.dir/src/unit-udl.cpp.o
+[ 35%] Linking CXX executable test-udl_cpp11
+[ 35%] Built target test-udl_cpp11
+Scanning dependencies of target test-allocator_cpp11
+[ 36%] Building CXX object tests/CMakeFiles/test-allocator_cpp11.dir/src/unit-allocator.cpp.o
+[ 37%] Linking CXX executable test-allocator_cpp11
+[ 37%] Built target test-allocator_cpp11
+Scanning dependencies of target test-algorithms_cpp11
+[ 38%] Building CXX object tests/CMakeFiles/test-algorithms_cpp11.dir/src/unit-algorithms.cpp.o
+[ 38%] Linking CXX executable test-algorithms_cpp11
+[ 38%] Built target test-algorithms_cpp11
+Scanning dependencies of target test-class_const_iterator_cpp11
+[ 39%] Building CXX object tests/CMakeFiles/test-class_const_iterator_cpp11.dir/src/unit-class_const_iterator.cpp.o
+[ 39%] Linking CXX executable test-class_const_iterator_cpp11
+[ 39%] Built target test-class_const_iterator_cpp11
+Scanning dependencies of target test-diagnostics_cpp11
+[ 40%] Building CXX object tests/CMakeFiles/test-diagnostics_cpp11.dir/src/unit-diagnostics.cpp.o
+[ 40%] Linking CXX executable test-diagnostics_cpp11
+[ 40%] Built target test-diagnostics_cpp11
+Scanning dependencies of target test-regression1_cpp17
+[ 41%] Building CXX object tests/CMakeFiles/test-regression1_cpp17.dir/src/unit-regression1.cpp.o
+[ 41%] Linking CXX executable test-regression1_cpp17
+[ 41%] Built target test-regression1_cpp17
+Scanning dependencies of target test-wstring_cpp11
+[ 41%] Building CXX object tests/CMakeFiles/test-wstring_cpp11.dir/src/unit-wstring.cpp.o
+[ 42%] Linking CXX executable test-wstring_cpp11
+[ 42%] Built target test-wstring_cpp11
+Scanning dependencies of target test-comparison_cpp11
+[ 42%] Building CXX object tests/CMakeFiles/test-comparison_cpp11.dir/src/unit-comparison.cpp.o
+[ 43%] Linking CXX executable test-comparison_cpp11
+[ 43%] Built target test-comparison_cpp11
+Scanning dependencies of target test-class_iterator_cpp11
+[ 44%] Building CXX object tests/CMakeFiles/test-class_iterator_cpp11.dir/src/unit-class_iterator.cpp.o
+[ 44%] Linking CXX executable test-class_iterator_cpp11
+[ 44%] Built target test-class_iterator_cpp11
+Scanning dependencies of target test-bson_cpp11
+[ 45%] Building CXX object tests/CMakeFiles/test-bson_cpp11.dir/src/unit-bson.cpp.o
+[ 45%] Linking CXX executable test-bson_cpp11
+[ 45%] Built target test-bson_cpp11
+Scanning dependencies of target test-element_access2_cpp17
+[ 45%] Building CXX object tests/CMakeFiles/test-element_access2_cpp17.dir/src/unit-element_access2.cpp.o
+[ 46%] Linking CXX executable test-element_access2_cpp17
+[ 46%] Built target test-element_access2_cpp17
+Scanning dependencies of target test-class_parser_cpp11
+[ 46%] Building CXX object tests/CMakeFiles/test-class_parser_cpp11.dir/src/unit-class_parser.cpp.o
+[ 47%] Linking CXX executable test-class_parser_cpp11
+[ 47%] Built target test-class_parser_cpp11
+Scanning dependencies of target test-deserialization_cpp11
+[ 47%] Building CXX object tests/CMakeFiles/test-deserialization_cpp11.dir/src/unit-deserialization.cpp.o
+[ 48%] Linking CXX executable test-deserialization_cpp11
+[ 48%] Built target test-deserialization_cpp11
+Scanning dependencies of target test-disabled_exceptions_cpp11
+[ 49%] Building CXX object tests/CMakeFiles/test-disabled_exceptions_cpp11.dir/src/unit-disabled_exceptions.cpp.o
+[ 49%] Linking CXX executable test-disabled_exceptions_cpp11
+[ 49%] Built target test-disabled_exceptions_cpp11
+Scanning dependencies of target test-byte_container_with_subtype_cpp11
+[ 50%] Building CXX object tests/CMakeFiles/test-byte_container_with_subtype_cpp11.dir/src/unit-byte_container_with_subtype.cpp.o
+[ 51%] Linking CXX executable test-byte_container_with_subtype_cpp11
+[ 51%] Built target test-byte_container_with_subtype_cpp11
+Scanning dependencies of target test-iterators2_cpp11
+[ 52%] Building CXX object tests/CMakeFiles/test-iterators2_cpp11.dir/src/unit-iterators2.cpp.o
+[ 52%] Linking CXX executable test-iterators2_cpp11
+[ 52%] Built target test-iterators2_cpp11
+Scanning dependencies of target test-element_access1_cpp11
+[ 53%] Building CXX object tests/CMakeFiles/test-element_access1_cpp11.dir/src/unit-element_access1.cpp.o
+[ 53%] Linking CXX executable test-element_access1_cpp11
+[ 53%] Built target test-element_access1_cpp11
+Scanning dependencies of target test-element_access2_cpp11
+[ 54%] Building CXX object tests/CMakeFiles/test-element_access2_cpp11.dir/src/unit-element_access2.cpp.o
+[ 55%] Linking CXX executable test-element_access2_cpp11
+[ 55%] Built target test-element_access2_cpp11
+Scanning dependencies of target test-hash_cpp11
+[ 56%] Building CXX object tests/CMakeFiles/test-hash_cpp11.dir/src/unit-hash.cpp.o
+[ 56%] Linking CXX executable test-hash_cpp11
+[ 56%] Built target test-hash_cpp11
+Scanning dependencies of target test-unicode4_cpp11
+[ 57%] Building CXX object tests/CMakeFiles/test-unicode4_cpp11.dir/src/unit-unicode4.cpp.o
+[ 57%] Linking CXX executable test-unicode4_cpp11
+[ 57%] Built target test-unicode4_cpp11
+Scanning dependencies of target test-custom-base-class_cpp11
+[ 57%] Building CXX object tests/CMakeFiles/test-custom-base-class_cpp11.dir/src/unit-custom-base-class.cpp.o
+[ 58%] Linking CXX executable test-custom-base-class_cpp11
+[ 58%] Built target test-custom-base-class_cpp11
+Scanning dependencies of target test-inspection_cpp11
+[ 59%] Building CXX object tests/CMakeFiles/test-inspection_cpp11.dir/src/unit-inspection.cpp.o
+[ 59%] Linking CXX executable test-inspection_cpp11
+[ 59%] Built target test-inspection_cpp11
+Scanning dependencies of target test-json_patch_cpp11
+[ 60%] Building CXX object tests/CMakeFiles/test-json_patch_cpp11.dir/src/unit-json_patch.cpp.o
+[ 60%] Linking CXX executable test-json_patch_cpp11
+[ 60%] Built target test-json_patch_cpp11
+Scanning dependencies of target test-merge_patch_cpp11
+[ 61%] Building CXX object tests/CMakeFiles/test-merge_patch_cpp11.dir/src/unit-merge_patch.cpp.o
+[ 61%] Linking CXX executable test-merge_patch_cpp11
+[ 61%] Built target test-merge_patch_cpp11
+Scanning dependencies of target test-items_cpp11
+[ 62%] Building CXX object tests/CMakeFiles/test-items_cpp11.dir/src/unit-items.cpp.o
+[ 63%] Linking CXX executable test-items_cpp11
+[ 63%] Built target test-items_cpp11
+Scanning dependencies of target test-udt_cpp11
+[ 64%] Building CXX object tests/CMakeFiles/test-udt_cpp11.dir/src/unit-udt.cpp.o
+[ 64%] Linking CXX executable test-udt_cpp11
+[ 64%] Built target test-udt_cpp11
+Scanning dependencies of target test-items_cpp17
+[ 64%] Building CXX object tests/CMakeFiles/test-items_cpp17.dir/src/unit-items.cpp.o
+[ 65%] Linking CXX executable test-items_cpp17
+[ 65%] Built target test-items_cpp17
+Scanning dependencies of target test-ordered_json_cpp11
+[ 66%] Building CXX object tests/CMakeFiles/test-ordered_json_cpp11.dir/src/unit-ordered_json.cpp.o
+[ 66%] Linking CXX executable test-ordered_json_cpp11
+[ 66%] Built target test-ordered_json_cpp11
+Scanning dependencies of target test-comparison_legacy_cpp11
+[ 67%] Building CXX object tests/CMakeFiles/test-comparison_legacy_cpp11.dir/src/unit-comparison.cpp.o
+[ 67%] Linking CXX executable test-comparison_legacy_cpp11
+[ 67%] Built target test-comparison_legacy_cpp11
+Scanning dependencies of target test-windows_h_cpp11
+[ 67%] Building CXX object tests/CMakeFiles/test-windows_h_cpp11.dir/src/unit-windows_h.cpp.o
+[ 68%] Linking CXX executable test-windows_h_cpp11
+[ 68%] Built target test-windows_h_cpp11
+Scanning dependencies of target test-convenience_cpp11
+[ 69%] Building CXX object tests/CMakeFiles/test-convenience_cpp11.dir/src/unit-convenience.cpp.o
+[ 69%] Linking CXX executable test-convenience_cpp11
+[ 69%] Built target test-convenience_cpp11
+Scanning dependencies of target test-capacity_cpp11
+[ 69%] Building CXX object tests/CMakeFiles/test-capacity_cpp11.dir/src/unit-capacity.cpp.o
+[ 70%] Linking CXX executable test-capacity_cpp11
+[ 70%] Built target test-capacity_cpp11
+Scanning dependencies of target test-iterators1_cpp11
+[ 70%] Building CXX object tests/CMakeFiles/test-iterators1_cpp11.dir/src/unit-iterators1.cpp.o
+[ 71%] Linking CXX executable test-iterators1_cpp11
+[ 71%] Built target test-iterators1_cpp11
+Scanning dependencies of target test-iterators2_cpp20
+[ 72%] Building CXX object tests/CMakeFiles/test-iterators2_cpp20.dir/src/unit-iterators2.cpp.o
+[ 72%] Linking CXX executable test-iterators2_cpp20
+[ 72%] Built target test-iterators2_cpp20
+Scanning dependencies of target test-readme_cpp11
+[ 72%] Building CXX object tests/CMakeFiles/test-readme_cpp11.dir/src/unit-readme.cpp.o
+[ 73%] Linking CXX executable test-readme_cpp11
+[ 73%] Built target test-readme_cpp11
+Scanning dependencies of target test-json_pointer_cpp11
+[ 74%] Building CXX object tests/CMakeFiles/test-json_pointer_cpp11.dir/src/unit-json_pointer.cpp.o
+[ 75%] Linking CXX executable test-json_pointer_cpp11
+[ 75%] Built target test-json_pointer_cpp11
+Scanning dependencies of target test-no-mem-leak-on-adl-serialize_cpp11
+[ 75%] Building CXX object tests/CMakeFiles/test-no-mem-leak-on-adl-serialize_cpp11.dir/src/unit-no-mem-leak-on-adl-serialize.cpp.o
+[ 76%] Linking CXX executable test-no-mem-leak-on-adl-serialize_cpp11
+[ 76%] Built target test-no-mem-leak-on-adl-serialize_cpp11
+Scanning dependencies of target test-alt-string_cpp11
+[ 76%] Building CXX object tests/CMakeFiles/test-alt-string_cpp11.dir/src/unit-alt-string.cpp.o
+[ 77%] Linking CXX executable test-alt-string_cpp11
+[ 77%] Built target test-alt-string_cpp11
+Scanning dependencies of target test-json_pointer_cpp20
+[ 77%] Building CXX object tests/CMakeFiles/test-json_pointer_cpp20.dir/src/unit-json_pointer.cpp.o
+[ 78%] Linking CXX executable test-json_pointer_cpp20
+[ 78%] Built target test-json_pointer_cpp20
+Scanning dependencies of target test-udt_macro_cpp11
+[ 79%] Building CXX object tests/CMakeFiles/test-udt_macro_cpp11.dir/src/unit-udt_macro.cpp.o
+[ 79%] Linking CXX executable test-udt_macro_cpp11
+[ 79%] Built target test-udt_macro_cpp11
+Scanning dependencies of target test-modifiers_cpp11
+[ 80%] Building CXX object tests/CMakeFiles/test-modifiers_cpp11.dir/src/unit-modifiers.cpp.o
+[ 81%] Linking CXX executable test-modifiers_cpp11
+[ 81%] Built target test-modifiers_cpp11
+Scanning dependencies of target test-comparison_cpp20
+[ 81%] Building CXX object tests/CMakeFiles/test-comparison_cpp20.dir/src/unit-comparison.cpp.o
+[ 82%] Linking CXX executable test-comparison_cpp20
+[ 82%] Built target test-comparison_cpp20
+Scanning dependencies of target test-assert_macro_cpp11
+[ 82%] Building CXX object tests/CMakeFiles/test-assert_macro_cpp11.dir/src/unit-assert_macro.cpp.o
+[ 83%] Linking CXX executable test-assert_macro_cpp11
+[ 83%] Built target test-assert_macro_cpp11
+Scanning dependencies of target test-msgpack_cpp11
+[ 83%] Building CXX object tests/CMakeFiles/test-msgpack_cpp11.dir/src/unit-msgpack.cpp.o
+[ 84%] Linking CXX executable test-msgpack_cpp11
+[ 84%] Built target test-msgpack_cpp11
+Scanning dependencies of target test-meta_cpp11
+[ 85%] Building CXX object tests/CMakeFiles/test-meta_cpp11.dir/src/unit-meta.cpp.o
+[ 85%] Linking CXX executable test-meta_cpp11
+[ 85%] Built target test-meta_cpp11
+Scanning dependencies of target test-ordered_map_cpp11
+[ 86%] Building CXX object tests/CMakeFiles/test-ordered_map_cpp11.dir/src/unit-ordered_map.cpp.o
+[ 87%] Linking CXX executable test-ordered_map_cpp11
+[ 87%] Built target test-ordered_map_cpp11
+Scanning dependencies of target test-regression1_cpp11
+[ 88%] Building CXX object tests/CMakeFiles/test-regression1_cpp11.dir/src/unit-regression1.cpp.o
+[ 88%] Linking CXX executable test-regression1_cpp11
+[ 88%] Built target test-regression1_cpp11
+Scanning dependencies of target test-regression2_cpp11
+[ 89%] Building CXX object tests/CMakeFiles/test-regression2_cpp11.dir/src/unit-regression2.cpp.o
+[ 90%] Linking CXX executable test-regression2_cpp11
+[ 90%] Built target test-regression2_cpp11
+Scanning dependencies of target abi_compat_main
+[ 90%] Building CXX object tests/abi/CMakeFiles/abi_compat_main.dir/main.cpp.o
+[ 91%] Linking CXX static library libabi_compat_main.a
+[ 91%] Built target abi_compat_main
+Scanning dependencies of target abi_config_custom
+[ 92%] Building CXX object tests/abi/config/CMakeFiles/abi_config_custom.dir/custom.cpp.o
+[ 92%] Linking CXX executable abi_config_custom
+[ 92%] Built target abi_config_custom
+Scanning dependencies of target abi_config_noversion
+[ 93%] Building CXX object tests/abi/config/CMakeFiles/abi_config_noversion.dir/noversion.cpp.o
+[ 94%] Linking CXX executable abi_config_noversion
+[ 94%] Built target abi_config_noversion
+Scanning dependencies of target abi_config_default
+[ 95%] Building CXX object tests/abi/config/CMakeFiles/abi_config_default.dir/default.cpp.o
+[ 95%] Linking CXX executable abi_config_default
+[ 95%] Built target abi_config_default
+Scanning dependencies of target abi_compat_diag_on
+[ 95%] Building CXX object tests/abi/diag/CMakeFiles/abi_compat_diag_on.dir/diag_on.cpp.o
+[ 96%] Linking CXX static library libabi_compat_diag_on.a
+[ 96%] Built target abi_compat_diag_on
+Scanning dependencies of target abi_compat_diag_off
+[ 96%] Building CXX object tests/abi/diag/CMakeFiles/abi_compat_diag_off.dir/diag_off.cpp.o
+[ 97%] Linking CXX static library libabi_compat_diag_off.a
+[ 97%] Built target abi_compat_diag_off
+Scanning dependencies of target abi_compat_diag
+[ 97%] Building CXX object tests/abi/diag/CMakeFiles/abi_compat_diag.dir/diag.cpp.o
+[ 98%] Linking CXX executable abi_compat_diag
+[ 98%] Built target abi_compat_diag
+Scanning dependencies of target abi_compat_inline_ns
+[ 99%] Building CXX object tests/abi/inline_ns/CMakeFiles/abi_compat_inline_ns.dir/use_v3_10_5.cpp.o
+[ 99%] Building CXX object tests/abi/inline_ns/CMakeFiles/abi_compat_inline_ns.dir/use_current.cpp.o
+[100%] Linking CXX executable abi_compat_inline_ns
+[100%] Built target abi_compat_inline_ns
+Test project /app/json
+      Start  1: download_test_data
+ 1/93 Test  #1: download_test_data ...........................   Passed    0.12 sec
+      Start  2: test-algorithms_cpp11
+ 2/93 Test  #2: test-algorithms_cpp11 ........................   Passed    0.00 sec
+      Start  3: test-allocator_cpp11
+ 3/93 Test  #3: test-allocator_cpp11 .........................   Passed    0.00 sec
+      Start  4: test-alt-string_cpp11
+ 4/93 Test  #4: test-alt-string_cpp11 ........................   Passed    0.00 sec
+      Start  5: test-assert_macro_cpp11
+ 5/93 Test  #5: test-assert_macro_cpp11 ......................   Passed    0.00 sec
+      Start  6: test-binary_formats_cpp11
+ 6/93 Test  #6: test-binary_formats_cpp11 ....................   Passed   29.69 sec
+      Start  7: test-bjdata_cpp11
+ 7/93 Test  #7: test-bjdata_cpp11 ............................   Passed   13.88 sec
+      Start  8: test-bson_cpp11
+ 8/93 Test  #8: test-bson_cpp11 ..............................   Passed    0.02 sec
+      Start  9: test-byte_container_with_subtype_cpp11
+ 9/93 Test  #9: test-byte_container_with_subtype_cpp11 .......   Passed    0.00 sec
+      Start 10: test-capacity_cpp11
+10/93 Test #10: test-capacity_cpp11 ..........................   Passed    0.00 sec
+      Start 11: test-cbor_cpp11
+11/93 Test #11: test-cbor_cpp11 ..............................   Passed   54.41 sec
+      Start 12: test-class_const_iterator_cpp11
+12/93 Test #12: test-class_const_iterator_cpp11 ..............   Passed    0.00 sec
+      Start 13: test-class_iterator_cpp11
+13/93 Test #13: test-class_iterator_cpp11 ....................   Passed    0.00 sec
+      Start 14: test-class_lexer_cpp11
+14/93 Test #14: test-class_lexer_cpp11 .......................   Passed    0.00 sec
+      Start 15: test-class_parser_cpp11
+15/93 Test #15: test-class_parser_cpp11 ......................   Passed    0.14 sec
+      Start 16: test-comparison_cpp11
+16/93 Test #16: test-comparison_cpp11 ........................   Passed    0.01 sec
+      Start 17: test-comparison_cpp20
+17/93 Test #17: test-comparison_cpp20 ........................   Passed    0.01 sec
+      Start 18: test-concepts_cpp11
+18/93 Test #18: test-concepts_cpp11 ..........................   Passed    0.01 sec
+      Start 19: test-constructor1_cpp11
+19/93 Test #19: test-constructor1_cpp11 ......................   Passed    0.01 sec
+      Start 20: test-constructor2_cpp11
+20/93 Test #20: test-constructor2_cpp11 ......................   Passed    0.00 sec
+      Start 21: test-convenience_cpp11
+21/93 Test #21: test-convenience_cpp11 .......................   Passed    0.00 sec
+      Start 22: test-conversions_cpp11
+22/93 Test #22: test-conversions_cpp11 .......................   Passed    0.01 sec
+      Start 23: test-conversions_cpp17
+23/93 Test #23: test-conversions_cpp17 .......................   Passed    0.01 sec
+      Start 24: test-custom-base-class_cpp11
+24/93 Test #24: test-custom-base-class_cpp11 .................   Passed    0.00 sec
+      Start 25: test-deserialization_cpp11
+25/93 Test #25: test-deserialization_cpp11 ...................   Passed    0.01 sec
+      Start 26: test-diagnostics_cpp11
+26/93 Test #26: test-diagnostics_cpp11 .......................   Passed    0.00 sec
+      Start 27: test-disabled_exceptions_cpp11
+27/93 Test #27: test-disabled_exceptions_cpp11 ...............   Passed    0.00 sec
+      Start 28: test-element_access1_cpp11
+28/93 Test #28: test-element_access1_cpp11 ...................   Passed    0.01 sec
+      Start 29: test-element_access2_cpp11
+29/93 Test #29: test-element_access2_cpp11 ...................   Passed    0.02 sec
+      Start 30: test-element_access2_cpp14
+30/93 Test #30: test-element_access2_cpp14 ...................   Passed    0.02 sec
+      Start 31: test-element_access2_cpp17
+31/93 Test #31: test-element_access2_cpp17 ...................   Passed    0.03 sec
+      Start 32: test-hash_cpp11
+32/93 Test #32: test-hash_cpp11 ..............................   Passed    0.00 sec
+      Start 33: test-inspection_cpp11
+33/93 Test #33: test-inspection_cpp11 ........................   Passed    7.62 sec
+      Start 34: test-items_cpp11
+34/93 Test #34: test-items_cpp11 .............................   Passed    0.01 sec
+      Start 35: test-items_cpp17
+35/93 Test #35: test-items_cpp17 .............................   Passed    0.01 sec
+      Start 36: test-iterators1_cpp11
+36/93 Test #36: test-iterators1_cpp11 ........................   Passed    0.01 sec
+      Start 37: test-iterators2_cpp11
+37/93 Test #37: test-iterators2_cpp11 ........................   Passed    0.02 sec
+      Start 38: test-iterators2_cpp20
+38/93 Test #38: test-iterators2_cpp20 ........................   Passed    0.02 sec
+      Start 39: test-json_patch_cpp11
+39/93 Test #39: test-json_patch_cpp11 ........................   Passed    0.02 sec
+      Start 40: test-json_pointer_cpp11
+40/93 Test #40: test-json_pointer_cpp11 ......................   Passed    0.01 sec
+      Start 41: test-json_pointer_cpp20
+41/93 Test #41: test-json_pointer_cpp20 ......................   Passed    0.01 sec
+      Start 42: test-large_json_cpp11
+42/93 Test #42: test-large_json_cpp11 ........................   Passed    7.28 sec
+      Start 43: test-merge_patch_cpp11
+43/93 Test #43: test-merge_patch_cpp11 .......................   Passed    0.00 sec
+      Start 44: test-meta_cpp11
+44/93 Test #44: test-meta_cpp11 ..............................   Passed    0.00 sec
+      Start 45: test-modifiers_cpp11
+45/93 Test #45: test-modifiers_cpp11 .........................   Passed    0.01 sec
+      Start 46: test-msgpack_cpp11
+46/93 Test #46: test-msgpack_cpp11 ...........................   Passed   54.49 sec
+      Start 47: test-no-mem-leak-on-adl-serialize_cpp11
+47/93 Test #47: test-no-mem-leak-on-adl-serialize_cpp11 ......   Passed    0.00 sec
+      Start 48: test-noexcept_cpp11
+48/93 Test #48: test-noexcept_cpp11 ..........................   Passed    0.00 sec
+      Start 49: test-ordered_json_cpp11
+49/93 Test #49: test-ordered_json_cpp11 ......................   Passed    0.00 sec
+      Start 50: test-ordered_map_cpp11
+50/93 Test #50: test-ordered_map_cpp11 .......................   Passed    0.00 sec
+      Start 51: test-pointer_access_cpp11
+51/93 Test #51: test-pointer_access_cpp11 ....................   Passed    0.00 sec
+      Start 52: test-readme_cpp11
+52/93 Test #52: test-readme_cpp11 ............................   Passed    0.00 sec
+      Start 53: test-reference_access_cpp11
+53/93 Test #53: test-reference_access_cpp11 ..................   Passed    0.00 sec
+      Start 54: test-regression1_cpp11
+54/93 Test #54: test-regression1_cpp11 .......................   Passed    8.57 sec
+      Start 55: test-regression1_cpp17
+55/93 Test #55: test-regression1_cpp17 .......................   Passed   10.94 sec
+      Start 56: test-regression2_cpp11
+56/93 Test #56: test-regression2_cpp11 .......................   Passed    0.01 sec
+      Start 57: test-regression2_cpp17
+57/93 Test #57: test-regression2_cpp17 .......................   Passed    0.00 sec
+      Start 58: test-regression2_cpp20
+58/93 Test #58: test-regression2_cpp20 .......................   Passed    0.00 sec
+      Start 59: test-serialization_cpp11
+59/93 Test #59: test-serialization_cpp11 .....................   Passed    0.00 sec
+      Start 60: test-testsuites_cpp11
+60/93 Test #60: test-testsuites_cpp11 ........................   Passed    0.10 sec
+      Start 61: test-to_chars_cpp11
+61/93 Test #61: test-to_chars_cpp11 ..........................   Passed    0.01 sec
+      Start 62: test-type_traits_cpp11
+62/93 Test #62: test-type_traits_cpp11 .......................   Passed    0.00 sec
+      Start 63: test-ubjson_cpp11
+63/93 Test #63: test-ubjson_cpp11 ............................   Passed   17.89 sec
+      Start 64: test-udl_cpp11
+64/93 Test #64: test-udl_cpp11 ...............................   Passed    0.01 sec
+      Start 65: test-udt_cpp11
+65/93 Test #65: test-udt_cpp11 ...............................   Passed    0.01 sec
+      Start 66: test-udt_macro_cpp11
+66/93 Test #66: test-udt_macro_cpp11 .........................   Passed    0.01 sec
+      Start 67: test-unicode1_cpp11
+67/93 Test #67: test-unicode1_cpp11 ..........................   Passed    9.23 sec
+      Start 68: test-unicode2_cpp11
+68/93 Test #68: test-unicode2_cpp11 ..........................   Passed   17.03 sec
+      Start 69: test-unicode3_cpp11
+69/93 Test #69: test-unicode3_cpp11 ..........................   Passed   62.85 sec
+      Start 70: test-unicode4_cpp11
+70/93 Test #70: test-unicode4_cpp11 ..........................   Passed  207.22 sec
+      Start 71: test-unicode5_cpp11
+71/93 Test #71: test-unicode5_cpp11 ..........................   Passed   48.85 sec
+      Start 72: test-user_defined_input_cpp11
+72/93 Test #72: test-user_defined_input_cpp11 ................   Passed    0.00 sec
+      Start 73: test-windows_h_cpp11
+73/93 Test #73: test-windows_h_cpp11 .........................   Passed    0.00 sec
+      Start 74: test-wstring_cpp11
+74/93 Test #74: test-wstring_cpp11 ...........................   Passed    0.00 sec
+      Start 75: test-comparison_legacy_cpp11
+75/93 Test #75: test-comparison_legacy_cpp11 .................   Passed    0.01 sec
+      Start 76: test-comparison_legacy_cpp20
+76/93 Test #76: test-comparison_legacy_cpp20 .................   Passed    0.01 sec
+      Start 77: test-abi_config_default
+77/93 Test #77: test-abi_config_default ......................   Passed    0.01 sec
+      Start 78: test-abi_config_noversion
+78/93 Test #78: test-abi_config_noversion ....................   Passed    0.00 sec
+      Start 79: test-abi_config_custom
+79/93 Test #79: test-abi_config_custom .......................   Passed    0.00 sec
+      Start 80: test-abi_compat_diag
+80/93 Test #80: test-abi_compat_diag .........................   Passed    0.00 sec
+      Start 81: test-abi_compat_inline_ns
+81/93 Test #81: test-abi_compat_inline_ns ....................   Passed    0.00 sec
+      Start 82: cmake_import_configure
+82/93 Test #82: cmake_import_configure .......................   Passed    0.38 sec
+      Start 83: cmake_import_build
+83/93 Test #83: cmake_import_build ...........................   Passed    2.84 sec
+      Start 84: cmake_import_minver_configure
+84/93 Test #84: cmake_import_minver_configure ................   Passed    0.42 sec
+      Start 85: cmake_import_minver_build
+85/93 Test #85: cmake_import_minver_build ....................   Passed    1.53 sec
+      Start 86: cmake_add_subdirectory_configure
+86/93 Test #86: cmake_add_subdirectory_configure .............   Passed    0.45 sec
+      Start 87: cmake_add_subdirectory_build
+87/93 Test #87: cmake_add_subdirectory_build .................   Passed    4.29 sec
+      Start 88: cmake_fetch_content_configure
+88/93 Test #88: cmake_fetch_content_configure ................   Passed    1.78 sec
+      Start 89: cmake_fetch_content_build
+89/93 Test #89: cmake_fetch_content_build ....................   Passed    2.90 sec
+      Start 90: cmake_fetch_content2_configure
+90/93 Test #90: cmake_fetch_content2_configure ...............   Passed    1.21 sec
+      Start 91: cmake_fetch_content2_build
+91/93 Test #91: cmake_fetch_content2_build ...................   Passed    3.02 sec
+      Start 92: cmake_target_include_directories_configure
+92/93 Test #92: cmake_target_include_directories_configure ...   Passed    0.41 sec
+      Start 93: cmake_target_include_directories_build
+93/93 Test #93: cmake_target_include_directories_build .......   Passed    6.16 sec
+
+100% tests passed, 0 tests failed out of 93
+
+Label Time Summary:
+all                 = 550.60 sec*proc (75 tests)
+git_required        =   8.92 sec*proc (4 tests)
+not_reproducible    =  25.41 sec*proc (12 tests)
+
+Total Test time (real) = 576.21 sec

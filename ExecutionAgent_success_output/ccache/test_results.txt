@@ -1,0 +1,400 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- The ASM_MASM compiler identification is unknown
+-- Found assembler: ml
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Ccache version: HEAD.a9cd717b
+-- Ccache dev mode: ON
+-- Using gold linker
+-- Performing Test std_atomic_without_libatomic
+-- Performing Test std_atomic_without_libatomic - Success
+-- Performing Test std_filesystem_without_libfs
+-- Performing Test std_filesystem_without_libfs - Success
+-- Looking for cpuid.h
+-- Looking for cpuid.h - found
+-- Looking for dirent.h
+-- Looking for dirent.h - found
+-- Looking for linux/fs.h
+-- Looking for linux/fs.h - found
+-- Looking for pwd.h
+-- Looking for pwd.h - found
+-- Looking for spawn.h
+-- Looking for spawn.h - found
+-- Looking for sys/clonefile.h
+-- Looking for sys/clonefile.h - not found
+-- Looking for sys/file.h
+-- Looking for sys/file.h - found
+-- Looking for sys/ioctl.h
+-- Looking for sys/ioctl.h - found
+-- Looking for sys/mman.h
+-- Looking for sys/mman.h - found
+-- Looking for sys/sendfile.h
+-- Looking for sys/sendfile.h - found
+-- Looking for sys/utime.h
+-- Looking for sys/utime.h - not found
+-- Looking for sys/wait.h
+-- Looking for sys/wait.h - found
+-- Looking for syslog.h
+-- Looking for syslog.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for utime.h
+-- Looking for utime.h - found
+-- Looking for asctime_r
+-- Looking for asctime_r - found
+-- Looking for getopt_long
+-- Looking for getopt_long - found
+-- Looking for getpwuid
+-- Looking for getpwuid - found
+-- Looking for localtime_r
+-- Looking for localtime_r - found
+-- Looking for posix_fallocate
+-- Looking for posix_fallocate - found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for syslog
+-- Looking for syslog - found
+-- Looking for unsetenv
+-- Looking for unsetenv - found
+-- Looking for utimensat
+-- Looking for utimensat - found
+-- Looking for utimes
+-- Looking for utimes - found
+-- Performing Test HAVE_STRUCT_STAT_ST_ATIM
+-- Performing Test HAVE_STRUCT_STAT_ST_ATIM - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_ATIMENSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_ATIMENSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_ATIMESPEC
+-- Performing Test HAVE_STRUCT_STAT_ST_ATIMESPEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_CTIM
+-- Performing Test HAVE_STRUCT_STAT_ST_CTIM - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_CTIMENSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_CTIMENSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_CTIMESPEC
+-- Performing Test HAVE_STRUCT_STAT_ST_CTIMESPEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMENSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMENSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC - Failed
+-- Performing Test HAVE_STRUCT_STATFS_F_FSTYPENAME
+-- Performing Test HAVE_STRUCT_STATFS_F_FSTYPENAME - Failed
+-- Performing Test HAVE_AVX2
+-- Performing Test HAVE_AVX2 - Success
+-- Using bundled Blake3 since Blake3>=1.4.0 was not found locally
+-- Using bundled CppHttplib since CppHttplib>=0.10.6 was not found locally
+-- Using bundled Fmt since Fmt>=8.0.0 was not found locally
+-- Using bundled NonstdSpan since NonstdSpan>=0.10.3 was not found locally
+-- Using bundled TlExpected since TlExpected>=1.1.0 was not found locally
+-- Downloading Xxhash from the internet since Xxhash>=0.8.0 was not found locally and DEPS=AUTO
+-- Using system Zstd (/usr/lib/x86_64-linux-gnu/libzstd.so)
+-- Downloading doctest from the internet since Doctest>=2.4.6 was not found locally and DEPS=AUTO
+-- Using system Hiredis (/usr/lib/x86_64-linux-gnu/libhiredis.so)
+-- Performing Test HAVE_ASM_SSE2
+-- Performing Test HAVE_ASM_SSE2 - Success
+-- Performing Test HAVE_ASM_SSE41
+-- Performing Test HAVE_ASM_SSE41 - Success
+-- Performing Test HAVE_ASM_AVX2
+-- Performing Test HAVE_ASM_AVX2 - Success
+-- Performing Test HAVE_ASM_AVX512
+-- Performing Test HAVE_ASM_AVX512 - Success
+-- Performing Test HAVE_NEON
+-- Performing Test HAVE_NEON - Failed
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+CMake Warning at doc/CMakeLists.txt:5 (message):
+  Could not find asciidoctor; documentation will not be generated
+
+
+-- 
+-- Configuration summary:
+--   Storage backends:
+--     file  ON
+--     http  ON
+--     redis ON
+--   Dependencies:
+--     Blake3     1.5.1  BUNDLED
+--     CppHttplib 0.15.3 BUNDLED
+--     Doctest    2.4.11 DOWNLOADED
+--     Fmt        10.2.1 BUNDLED
+--     Hiredis    0.14.0 SYSTEM (/usr/lib/x86_64-linux-gnu/libhiredis.so)
+--     NonstdSpan 0.11.0 BUNDLED
+--     TlExpected 1.1.0  BUNDLED
+--     Xxhash     0.8.2  DOWNLOADED
+--     Zstd       1.4.4  SYSTEM (/usr/lib/x86_64-linux-gnu/libzstd.so)
+-- 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /app/ccache/build
+Scanning dependencies of target dep_fmt
+[  1%] Building CXX object src/third_party/fmt/CMakeFiles/dep_fmt.dir/fmt/format.cc.o
+[  2%] Linking CXX static library libdep_fmt.a
+[  2%] Built target dep_fmt
+Scanning dependencies of target dep_xxhash
+[  2%] Building C object CMakeFiles/dep_xxhash.dir/_deps/xxhash-src/xxhash.c.o
+[  3%] Linking C static library libdep_xxhash.a
+[  3%] Built target dep_xxhash
+Scanning dependencies of target dep_cxxurl
+[  4%] Building CXX object src/third_party/cxxurl/CMakeFiles/dep_cxxurl.dir/cxxurl/url.cpp.o
+[  5%] Linking CXX static library libdep_cxxurl.a
+[  5%] Built target dep_cxxurl
+Scanning dependencies of target dep_blake3
+[  6%] Building C object src/third_party/blake3/CMakeFiles/dep_blake3.dir/blake3/blake3.c.o
+[  6%] Building C object src/third_party/blake3/CMakeFiles/dep_blake3.dir/blake3/blake3_dispatch.c.o
+[  7%] Building C object src/third_party/blake3/CMakeFiles/dep_blake3.dir/blake3/blake3_portable.c.o
+[  8%] Building ASM object src/third_party/blake3/CMakeFiles/dep_blake3.dir/blake3/blake3_sse2_x86-64_unix.S.o
+[  9%] Building ASM object src/third_party/blake3/CMakeFiles/dep_blake3.dir/blake3/blake3_sse41_x86-64_unix.S.o
+[ 10%] Building ASM object src/third_party/blake3/CMakeFiles/dep_blake3.dir/blake3/blake3_avx2_x86-64_unix.S.o
+[ 11%] Building ASM object src/third_party/blake3/CMakeFiles/dep_blake3.dir/blake3/blake3_avx512_x86-64_unix.S.o
+[ 11%] Linking C static library libdep_blake3.a
+[ 11%] Built target dep_blake3
+Scanning dependencies of target ccache_framework
+[ 12%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/argprocessing.cpp.o
+[ 13%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/args.cpp.o
+[ 14%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/ccache.cpp.o
+[ 14%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/compopt.cpp.o
+[ 15%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/config.cpp.o
+[ 16%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/context.cpp.o
+[ 17%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/depfile.cpp.o
+[ 18%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/execute.cpp.o
+[ 19%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/hash.cpp.o
+[ 19%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/hashutil.cpp.o
+[ 20%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/language.cpp.o
+[ 21%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/progressbar.cpp.o
+[ 22%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/version.cpp.o
+[ 23%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/inodecache.cpp.o
+[ 23%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/signalhandler.cpp.o
+[ 25%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/atomicfile.cpp.o
+[ 26%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/cacheentry.cpp.o
+[ 27%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/common.cpp.o
+[ 28%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/filerecompressor.cpp.o
+[ 29%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/mainoptions.cpp.o
+[ 29%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/manifest.cpp.o
+[ 30%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/msvcshowincludesoutput.cpp.o
+[ 31%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/result.cpp.o
+[ 32%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/resultextractor.cpp.o
+[ 33%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/resultinspector.cpp.o
+[ 33%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/resultretriever.cpp.o
+[ 34%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/statistics.cpp.o
+[ 35%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/statisticscounters.cpp.o
+[ 36%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/statslog.cpp.o
+[ 37%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/core/types.cpp.o
+[ 38%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/local/localstorage.cpp.o
+[ 38%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/local/statsfile.cpp.o
+[ 39%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/local/util.cpp.o
+[ 40%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/remote/filestorage.cpp.o
+[ 41%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/remote/httpstorage.cpp.o
+[ 42%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/remote/remotestorage.cpp.o
+[ 42%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/remote/redisstorage.cpp.o
+[ 43%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/storage/storage.cpp.o
+[ 44%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/assertions.cpp.o
+[ 45%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/bytes.cpp.o
+[ 46%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/cpu.cpp.o
+[ 47%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/direntry.cpp.o
+[ 47%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/environment.cpp.o
+[ 48%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/error.cpp.o
+[ 50%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/file.cpp.o
+[ 51%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/filesystem.cpp.o
+[ 52%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/lockfile.cpp.o
+[ 52%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/logging.cpp.o
+[ 53%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/longlivedlockfilemanager.cpp.o
+[ 54%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/memorymap.cpp.o
+[ 55%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/path.cpp.o
+[ 56%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/process.cpp.o
+[ 57%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/string.cpp.o
+[ 57%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/temporaryfile.cpp.o
+[ 58%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/texttable.cpp.o
+[ 59%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/threadpool.cpp.o
+[ 60%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/time.cpp.o
+[ 61%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/timepoint.cpp.o
+[ 62%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/tokenizer.cpp.o
+[ 62%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/umaskscope.cpp.o
+[ 63%] Building CXX object src/ccache/CMakeFiles/ccache_framework.dir/util/zstd.cpp.o
+[ 64%] Linking CXX static library libccache_framework.a
+[ 64%] Built target ccache_framework
+Scanning dependencies of target ccache
+[ 64%] Building CXX object CMakeFiles/ccache.dir/src/ccache/main.cpp.o
+[ 65%] Linking CXX executable ccache
+[ 65%] Built target ccache
+Scanning dependencies of target test-lockfile
+[ 66%] Building CXX object src/ccache/CMakeFiles/test-lockfile.dir/test_lockfile.cpp.o
+[ 67%] Linking CXX executable test-lockfile
+[ 67%] Built target test-lockfile
+Scanning dependencies of target unittest
+[ 68%] Building CXX object unittest/CMakeFiles/unittest.dir/main.cpp.o
+[ 68%] Building CXX object unittest/CMakeFiles/unittest.dir/test_argprocessing.cpp.o
+[ 69%] Building CXX object unittest/CMakeFiles/unittest.dir/test_args.cpp.o
+[ 70%] Building CXX object unittest/CMakeFiles/unittest.dir/test_ccache.cpp.o
+[ 71%] Building CXX object unittest/CMakeFiles/unittest.dir/test_compopt.cpp.o
+[ 72%] Building CXX object unittest/CMakeFiles/unittest.dir/test_compression_types.cpp.o
+[ 72%] Building CXX object unittest/CMakeFiles/unittest.dir/test_config.cpp.o
+[ 73%] Building CXX object unittest/CMakeFiles/unittest.dir/test_core_atomicfile.cpp.o
+[ 75%] Building CXX object unittest/CMakeFiles/unittest.dir/test_core_common.cpp.o
+[ 76%] Building CXX object unittest/CMakeFiles/unittest.dir/test_core_msvcshowincludesoutput.cpp.o
+[ 77%] Building CXX object unittest/CMakeFiles/unittest.dir/test_core_statistics.cpp.o
+[ 78%] Building CXX object unittest/CMakeFiles/unittest.dir/test_core_statisticscounters.cpp.o
+[ 78%] Building CXX object unittest/CMakeFiles/unittest.dir/test_core_statslog.cpp.o
+[ 79%] Building CXX object unittest/CMakeFiles/unittest.dir/test_depfile.cpp.o
+[ 80%] Building CXX object unittest/CMakeFiles/unittest.dir/test_hash.cpp.o
+[ 81%] Building CXX object unittest/CMakeFiles/unittest.dir/test_hashutil.cpp.o
+[ 82%] Building CXX object unittest/CMakeFiles/unittest.dir/test_storage_local_statsfile.cpp.o
+[ 82%] Building CXX object unittest/CMakeFiles/unittest.dir/test_storage_local_util.cpp.o
+[ 83%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_bitset.cpp.o
+[ 84%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_bytes.cpp.o
+[ 85%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_conversion.cpp.o
+[ 86%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_direntry.cpp.o
+[ 87%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_duration.cpp.o
+[ 87%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_environment.cpp.o
+[ 88%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_expected.cpp.o
+[ 89%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_file.cpp.o
+[ 90%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_lockfile.cpp.o
+[ 91%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_path.cpp.o
+[ 91%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_string.cpp.o
+[ 92%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_texttable.cpp.o
+[ 93%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_timepoint.cpp.o
+[ 94%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_tokenizer.cpp.o
+[ 95%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_xxh3_128.cpp.o
+[ 96%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_xxh3_64.cpp.o
+[ 96%] Building CXX object unittest/CMakeFiles/unittest.dir/test_util_zstd.cpp.o
+[ 97%] Building CXX object unittest/CMakeFiles/unittest.dir/testutil.cpp.o
+[ 98%] Building CXX object unittest/CMakeFiles/unittest.dir/test_inodecache.cpp.o
+[100%] Linking CXX executable unittest
+[100%] Built target unittest
+Test project /app/ccache/build
+      Start  1: unittest
+ 1/47 Test  #1: unittest .........................   Passed    0.10 sec
+      Start  2: test.base
+ 2/47 Test  #2: test.base ........................   Passed   10.75 sec
+      Start  3: test.basedir
+ 3/47 Test  #3: test.basedir .....................   Passed    2.82 sec
+      Start  4: test.cache_levels
+ 4/47 Test  #4: test.cache_levels ................   Passed    0.83 sec
+      Start  5: test.cleanup
+ 5/47 Test  #5: test.cleanup .....................   Passed    5.16 sec
+      Start  6: test.color_diagnostics
+ 6/47 Test  #6: test.color_diagnostics ...........   Passed    7.40 sec
+      Start  7: test.config
+ 7/47 Test  #7: test.config ......................   Passed    0.27 sec
+      Start  8: test.cpp1
+ 8/47 Test  #8: test.cpp1 ........................   Passed    0.38 sec
+      Start  9: test.debug_prefix_map
+ 9/47 Test  #9: test.debug_prefix_map ............   Passed    0.49 sec
+      Start 10: test.depend
+10/47 Test #10: test.depend ......................   Passed    1.90 sec
+      Start 11: test.direct
+11/47 Test #11: test.direct ......................   Passed   12.77 sec
+      Start 12: test.fileclone
+12/47 Test #12: test.fileclone ...................***Skipped   0.18 sec
+      Start 13: test.hardlink
+13/47 Test #13: test.hardlink ....................   Passed    0.82 sec
+      Start 14: test.inode_cache
+14/47 Test #14: test.inode_cache .................***Skipped   0.24 sec
+      Start 15: test.input_charset
+15/47 Test #15: test.input_charset ...............   Passed    0.39 sec
+      Start 16: test.ivfsoverlay
+16/47 Test #16: test.ivfsoverlay .................***Skipped   0.20 sec
+      Start 17: test.masquerading
+17/47 Test #17: test.masquerading ................   Passed    0.55 sec
+      Start 18: test.modules
+18/47 Test #18: test.modules .....................***Skipped   0.18 sec
+      Start 19: test.multi_arch
+19/47 Test #19: test.multi_arch ..................***Skipped   0.18 sec
+      Start 20: test.namespace
+20/47 Test #20: test.namespace ...................   Passed    0.85 sec
+      Start 21: test.no_compression
+21/47 Test #21: test.no_compression ..............   Passed    0.64 sec
+      Start 22: test.nocpp2
+22/47 Test #22: test.nocpp2 ......................   Passed   10.55 sec
+      Start 23: test.nvcc
+23/47 Test #23: test.nvcc ........................***Skipped   0.16 sec
+      Start 24: test.nvcc_direct
+24/47 Test #24: test.nvcc_direct .................***Skipped   0.18 sec
+      Start 25: test.nvcc_ldir
+25/47 Test #25: test.nvcc_ldir ...................***Skipped   0.18 sec
+      Start 26: test.nvcc_nocpp2
+26/47 Test #26: test.nvcc_nocpp2 .................***Skipped   0.17 sec
+      Start 27: test.pch
+27/47 Test #27: test.pch .........................   Passed    7.01 sec
+      Start 28: test.profiling
+28/47 Test #28: test.profiling ...................   Passed    2.55 sec
+      Start 29: test.profiling_clang
+29/47 Test #29: test.profiling_clang .............***Skipped   0.19 sec
+      Start 30: test.profiling_gcc
+30/47 Test #30: test.profiling_gcc ...............   Passed    1.51 sec
+      Start 31: test.profiling_gcc_10+
+31/47 Test #31: test.profiling_gcc_10+ ...........***Skipped   0.23 sec
+      Start 32: test.profiling_hip_clang
+32/47 Test #32: test.profiling_hip_clang .........***Skipped   0.19 sec
+      Start 33: test.readonly
+33/47 Test #33: test.readonly ....................***Skipped   0.19 sec
+      Start 34: test.readonly_direct
+34/47 Test #34: test.readonly_direct .............***Skipped   0.20 sec
+      Start 35: test.remote_file
+35/47 Test #35: test.remote_file .................   Passed    3.73 sec
+      Start 36: test.remote_http
+36/47 Test #36: test.remote_http .................***Skipped   0.19 sec
+      Start 37: test.remote_only
+37/47 Test #37: test.remote_only .................   Passed    0.41 sec
+      Start 38: test.remote_redis
+38/47 Test #38: test.remote_redis ................   Passed    0.93 sec
+      Start 39: test.remote_redis_unix
+39/47 Test #39: test.remote_redis_unix ...........   Passed    0.97 sec
+      Start 40: test.remote_url
+40/47 Test #40: test.remote_url ..................   Passed    0.30 sec
+      Start 41: test.sanitize_blacklist
+41/47 Test #41: test.sanitize_blacklist ..........***Skipped   0.20 sec
+      Start 42: test.serialize_diagnostics
+42/47 Test #42: test.serialize_diagnostics .......***Skipped   0.21 sec
+      Start 43: test.source_date_epoch
+43/47 Test #43: test.source_date_epoch ...........   Passed    0.67 sec
+      Start 44: test.split_dwarf
+44/47 Test #44: test.split_dwarf .................   Passed    0.99 sec
+      Start 45: test.stats_log
+45/47 Test #45: test.stats_log ...................   Passed    0.27 sec
+      Start 46: test.trim_dir
+46/47 Test #46: test.trim_dir ....................   Passed    0.23 sec
+      Start 47: test.upgrade
+47/47 Test #47: test.upgrade .....................   Passed    0.26 sec
+
+100% tests passed, 0 tests failed out of 47
+
+Total Test time (real) =  79.79 sec
+
+The following tests did not run:
+         12 - test.fileclone (Skipped)
+         14 - test.inode_cache (Skipped)
+         16 - test.ivfsoverlay (Skipped)
+         18 - test.modules (Skipped)
+         19 - test.multi_arch (Skipped)
+         23 - test.nvcc (Skipped)
+         24 - test.nvcc_direct (Skipped)
+         25 - test.nvcc_ldir (Skipped)
+         26 - test.nvcc_nocpp2 (Skipped)
+         29 - test.profiling_clang (Skipped)
+         31 - test.profiling_gcc_10+ (Skipped)
+         32 - test.profiling_hip_clang (Skipped)
+         33 - test.readonly (Skipped)
+         34 - test.readonly_direct (Skipped)
+         36 - test.remote_http (Skipped)
+         41 - test.sanitize_blacklist (Skipped)
+         42 - test.serialize_diagnostics (Skipped)
+Build and test setup completed. All tests passed successfully.

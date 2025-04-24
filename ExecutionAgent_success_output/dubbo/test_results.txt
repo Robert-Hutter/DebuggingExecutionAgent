@@ -1,0 +1,1004 @@
+[INFO] ------------< org.apache.dubbo:dubbo-demo-native-interface >------------
+[INFO] Building dubbo-demo-native-interface 3.3.2-SNAPSHOT            [116/123]
+[INFO]   from dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-native-interface ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-native-interface ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-native-interface >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-native-interface ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-native-interface ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-native-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-native-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-native-interface ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-native-interface <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-native-interface ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/target/dubbo-demo-native-interface-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-native-interface ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-native-interface ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-native-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-native-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-native-interface ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-native-interface ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] Sorting file /tmp/pom8240844540236418213.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-native-interface ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dubbo-demo-native-interface ---
+[INFO] skip non existing resourceDirectory /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/src/main/resources
+[INFO] Copying 2 resources from ../../.. to target/classes/META-INF
+[INFO] Copying 1 resource from ../../.. to target/classes/META-INF/dubbo-versions
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-native-interface ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-native-interface:jar:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ dubbo-demo-native-interface ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [forked debug release 8] to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-native-interface ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dubbo-demo-native-interface ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ dubbo-demo-native-interface ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.1:test (default-test) @ dubbo-demo-native-interface ---
+[WARNING]  Parameter 'skipExec' (user property 'maven.test.skip.exec') is deprecated: Use skipTests instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ dubbo-demo-native-interface ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/target/dubbo-demo-native-interface-3.3.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-native-interface ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-native-interface ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-native-interface ---
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-native-interface ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-interface/3.3.2-SNAPSHOT/dubbo-demo-native-interface-3.3.2-SNAPSHOT.pom
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/target/dubbo-demo-native-interface-3.3.2-SNAPSHOT.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-interface/3.3.2-SNAPSHOT/dubbo-demo-native-interface-3.3.2-SNAPSHOT.jar
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-interface/target/dubbo-demo-native-interface-3.3.2-SNAPSHOT-sources.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-interface/3.3.2-SNAPSHOT/dubbo-demo-native-interface-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ------------< org.apache.dubbo:dubbo-demo-native-consumer >-------------
+[INFO] Building dubbo-demo-native-consumer 3.3.2-SNAPSHOT             [117/123]
+[INFO]   from dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-native-consumer ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-native-consumer ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-native-consumer >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-native-consumer ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-native-consumer ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-native-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-native-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-native-consumer ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-native-consumer <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-native-consumer ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/target/dubbo-demo-native-consumer-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-native-consumer ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-native-consumer ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-native-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-native-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-native-consumer ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-native-consumer ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] Sorting file /tmp/pom824427166569141750.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-native-consumer ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dubbo-demo-native-consumer ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from ../../.. to target/classes/META-INF
+[INFO] Copying 1 resource from ../../.. to target/classes/META-INF/dubbo-versions
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-native-consumer ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-native-consumer:jar:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ dubbo-demo-native-consumer ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [forked debug release 8] to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-native-consumer ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dubbo-demo-native-consumer ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ dubbo-demo-native-consumer ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.1:test (default-test) @ dubbo-demo-native-consumer ---
+[WARNING]  Parameter 'skipExec' (user property 'maven.test.skip.exec') is deprecated: Use skipTests instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ dubbo-demo-native-consumer ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/target/dubbo-demo-native-consumer-3.3.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-native-consumer ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-native-consumer ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-native-consumer ---
+[INFO] Analyzed bundle 'dubbo-demo-native-interface' with 0 classes
+[INFO] Analyzed bundle 'dubbo-config-api' with 43 classes
+[INFO] Analyzed bundle 'dubbo-registry-multicast' with 4 classes
+[INFO] Analyzed bundle 'dubbo-registry-zookeeper' with 13 classes
+[INFO] Analyzed bundle 'dubbo-rpc-dubbo' with 25 classes
+[INFO] Analyzed bundle 'dubbo-remoting-netty4' with 38 classes
+[INFO] Analyzed bundle 'dubbo-serialization-fastjson2' with 8 classes
+[INFO] Analyzed bundle 'dubbo-serialization-hessian2' with 9 classes
+[INFO] Analyzed bundle 'dubbo-filter-cache' with 16 classes
+[INFO] Analyzed bundle 'dubbo-filter-validation' with 7 classes
+[INFO] Analyzed bundle 'dubbo-native' with 23 classes
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-native-consumer ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-consumer/3.3.2-SNAPSHOT/dubbo-demo-native-consumer-3.3.2-SNAPSHOT.pom
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/target/dubbo-demo-native-consumer-3.3.2-SNAPSHOT.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-consumer/3.3.2-SNAPSHOT/dubbo-demo-native-consumer-3.3.2-SNAPSHOT.jar
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-consumer/target/dubbo-demo-native-consumer-3.3.2-SNAPSHOT-sources.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-consumer/3.3.2-SNAPSHOT/dubbo-demo-native-consumer-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ------------< org.apache.dubbo:dubbo-demo-native-provider >-------------
+[INFO] Building dubbo-demo-native-provider 3.3.2-SNAPSHOT             [118/123]
+[INFO]   from dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-native-provider ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-native-provider ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-native-provider >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-native-provider ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-native-provider ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-native-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-native-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-native-provider ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-native-provider <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-native-provider ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/target/dubbo-demo-native-provider-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-native-provider ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-native-provider ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-native-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-native-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-native-provider ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-native-provider ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 2 files clean - 0 needs changes to be clean, 2 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] Sorting file /tmp/pom61781538244188692.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-native-provider ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dubbo-demo-native-provider ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from ../../.. to target/classes/META-INF
+[INFO] Copying 1 resource from ../../.. to target/classes/META-INF/dubbo-versions
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-native-provider ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-native-provider:jar:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ dubbo-demo-native-provider ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [forked debug release 8] to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-native-provider ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dubbo-demo-native-provider ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ dubbo-demo-native-provider ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.1:test (default-test) @ dubbo-demo-native-provider ---
+[WARNING]  Parameter 'skipExec' (user property 'maven.test.skip.exec') is deprecated: Use skipTests instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ dubbo-demo-native-provider ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/target/dubbo-demo-native-provider-3.3.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-native-provider ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-native-provider ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-native-provider ---
+[INFO] Analyzed bundle 'dubbo-demo-native-interface' with 0 classes
+[INFO] Analyzed bundle 'dubbo-config-api' with 43 classes
+[INFO] Analyzed bundle 'dubbo-registry-multicast' with 4 classes
+[INFO] Analyzed bundle 'dubbo-registry-zookeeper' with 13 classes
+[INFO] Analyzed bundle 'dubbo-rpc-dubbo' with 25 classes
+[INFO] Analyzed bundle 'dubbo-remoting-netty4' with 38 classes
+[INFO] Analyzed bundle 'dubbo-serialization-fastjson2' with 8 classes
+[INFO] Analyzed bundle 'dubbo-serialization-hessian2' with 9 classes
+[INFO] Analyzed bundle 'dubbo-filter-cache' with 16 classes
+[INFO] Analyzed bundle 'dubbo-filter-validation' with 7 classes
+[INFO] Analyzed bundle 'dubbo-native' with 23 classes
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-native-provider ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-provider/3.3.2-SNAPSHOT/dubbo-demo-native-provider-3.3.2-SNAPSHOT.pom
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/target/dubbo-demo-native-provider-3.3.2-SNAPSHOT.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-provider/3.3.2-SNAPSHOT/dubbo-demo-native-provider-3.3.2-SNAPSHOT.jar
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-native/dubbo-demo-native-provider/target/dubbo-demo-native-provider-3.3.2-SNAPSHOT-sources.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-native-provider/3.3.2-SNAPSHOT/dubbo-demo-native-provider-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --------------< org.apache.dubbo:dubbo-demo-spring-boot >---------------
+[INFO] Building dubbo-demo-spring-boot 3.3.2-SNAPSHOT                 [119/123]
+[INFO]   from dubbo-demo/dubbo-demo-spring-boot/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-spring-boot >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-spring-boot <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-spring-boot ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Sorting file /tmp/pom10365283040286199057.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-spring-boot ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-spring-boot ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-spring-boot:pom:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-spring-boot ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-spring-boot ---
+[INFO] No site descriptor found: nothing to attach.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-spring-boot ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-spring-boot ---
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-spring-boot ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-3.3.2-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------< org.apache.dubbo:dubbo-demo-spring-boot-interface >----------
+[INFO] Building dubbo-demo-spring-boot-interface 3.3.2-SNAPSHOT       [120/123]
+[INFO]   from dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-spring-boot-interface ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-spring-boot-interface ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-spring-boot-interface >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-interface ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-interface ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-interface ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-spring-boot-interface <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-spring-boot-interface ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/target/dubbo-demo-spring-boot-interface-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-interface ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-interface ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-interface ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-interface ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-spring-boot-interface ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] Sorting file /tmp/pom15056209401538228329.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-spring-boot-interface ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dubbo-demo-spring-boot-interface ---
+[INFO] skip non existing resourceDirectory /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/src/main/resources
+[INFO] Copying 2 resources from ../../.. to target/classes/META-INF
+[INFO] Copying 1 resource from ../../.. to target/classes/META-INF/dubbo-versions
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-spring-boot-interface ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-spring-boot-interface:jar:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ dubbo-demo-spring-boot-interface ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [forked debug release 8] to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-spring-boot-interface ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dubbo-demo-spring-boot-interface ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ dubbo-demo-spring-boot-interface ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.1:test (default-test) @ dubbo-demo-spring-boot-interface ---
+[WARNING]  Parameter 'skipExec' (user property 'maven.test.skip.exec') is deprecated: Use skipTests instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ dubbo-demo-spring-boot-interface ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/target/dubbo-demo-spring-boot-interface-3.3.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-spring-boot-interface ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-spring-boot-interface ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-spring-boot-interface ---
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-spring-boot-interface ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-interface/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-interface-3.3.2-SNAPSHOT.pom
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/target/dubbo-demo-spring-boot-interface-3.3.2-SNAPSHOT.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-interface/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-interface-3.3.2-SNAPSHOT.jar
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-interface/target/dubbo-demo-spring-boot-interface-3.3.2-SNAPSHOT-sources.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-interface/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-interface-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ----------< org.apache.dubbo:dubbo-demo-spring-boot-consumer >----------
+[INFO] Building dubbo-demo-spring-boot-consumer 3.3.2-SNAPSHOT        [121/123]
+[INFO]   from dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-spring-boot-consumer ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-spring-boot-consumer ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-spring-boot-consumer >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-consumer ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-consumer ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-consumer ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-spring-boot-consumer <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/target/dubbo-demo-spring-boot-consumer-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-consumer ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-consumer ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-consumer ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] Sorting file /tmp/pom4301017863316824727.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from ../../.. to target/classes/META-INF
+[INFO] Copying 1 resource from ../../.. to target/classes/META-INF/dubbo-versions
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-spring-boot-consumer:jar:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [forked debug release 8] to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.1:test (default-test) @ dubbo-demo-spring-boot-consumer ---
+[WARNING]  Parameter 'skipExec' (user property 'maven.test.skip.exec') is deprecated: Use skipTests instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/target/dubbo-demo-spring-boot-consumer-3.3.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- spring-boot:2.7.18:repackage (default) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Analyzed bundle 'dubbo-demo-spring-boot-interface' with 1 classes
+[INFO] Analyzed bundle 'dubbo-registry-zookeeper' with 13 classes
+[INFO] Analyzed bundle 'dubbo-configcenter-zookeeper' with 4 classes
+[INFO] Analyzed bundle 'dubbo-metadata-report-zookeeper' with 3 classes
+[INFO] Analyzed bundle 'dubbo-config-spring' with 75 classes
+[INFO] Analyzed bundle 'dubbo-remoting-netty4' with 38 classes
+[INFO] Analyzed bundle 'dubbo-serialization-hessian2' with 9 classes
+[INFO] Analyzed bundle 'dubbo-serialization-fastjson2' with 8 classes
+[INFO] Analyzed bundle 'dubbo-tracing-otel-zipkin-spring-boot-starter' with 0 classes
+[INFO] Analyzed bundle 'dubbo-qos' with 83 classes
+[INFO] Analyzed bundle 'dubbo-spring-boot-starter' with 0 classes
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-spring-boot-consumer ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-consumer/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-consumer-3.3.2-SNAPSHOT.pom
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/target/dubbo-demo-spring-boot-consumer-3.3.2-SNAPSHOT.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-consumer/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-consumer-3.3.2-SNAPSHOT.jar
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-consumer/target/dubbo-demo-spring-boot-consumer-3.3.2-SNAPSHOT-sources.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-consumer/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-consumer-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ----------< org.apache.dubbo:dubbo-demo-spring-boot-provider >----------
+[INFO] Building dubbo-demo-spring-boot-provider 3.3.2-SNAPSHOT        [122/123]
+[INFO]   from dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-spring-boot-provider ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-spring-boot-provider ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-spring-boot-provider >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-provider ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-provider ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-provider ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-spring-boot-provider <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-spring-boot-provider ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/target/dubbo-demo-spring-boot-provider-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-provider ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-provider ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-provider ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-provider ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-spring-boot-provider ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 2 files clean - 0 needs changes to be clean, 2 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] Sorting file /tmp/pom15172493470853346087.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-spring-boot-provider ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dubbo-demo-spring-boot-provider ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from ../../.. to target/classes/META-INF
+[INFO] Copying 1 resource from ../../.. to target/classes/META-INF/dubbo-versions
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-spring-boot-provider ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-spring-boot-provider:jar:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ dubbo-demo-spring-boot-provider ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [forked debug release 8] to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-spring-boot-provider ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dubbo-demo-spring-boot-provider ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ dubbo-demo-spring-boot-provider ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.1:test (default-test) @ dubbo-demo-spring-boot-provider ---
+[WARNING]  Parameter 'skipExec' (user property 'maven.test.skip.exec') is deprecated: Use skipTests instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ dubbo-demo-spring-boot-provider ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/target/dubbo-demo-spring-boot-provider-3.3.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-spring-boot-provider ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- spring-boot:2.7.18:repackage (default) @ dubbo-demo-spring-boot-provider ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-spring-boot-provider ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-spring-boot-provider ---
+[INFO] Analyzed bundle 'dubbo-demo-spring-boot-interface' with 1 classes
+[INFO] Analyzed bundle 'dubbo-registry-zookeeper' with 13 classes
+[INFO] Analyzed bundle 'dubbo-configcenter-zookeeper' with 4 classes
+[INFO] Analyzed bundle 'dubbo-metadata-report-zookeeper' with 3 classes
+[INFO] Analyzed bundle 'dubbo-config-spring' with 75 classes
+[INFO] Analyzed bundle 'dubbo-remoting-netty4' with 38 classes
+[INFO] Analyzed bundle 'dubbo-serialization-hessian2' with 9 classes
+[INFO] Analyzed bundle 'dubbo-serialization-fastjson2' with 8 classes
+[INFO] Analyzed bundle 'dubbo-tracing-otel-zipkin-spring-boot-starter' with 0 classes
+[INFO] Analyzed bundle 'dubbo-qos' with 83 classes
+[INFO] Analyzed bundle 'dubbo-spring-boot-starter' with 0 classes
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-spring-boot-provider ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-provider/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-provider-3.3.2-SNAPSHOT.pom
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/target/dubbo-demo-spring-boot-provider-3.3.2-SNAPSHOT.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-provider/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-provider-3.3.2-SNAPSHOT.jar
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-provider/target/dubbo-demo-spring-boot-provider-3.3.2-SNAPSHOT-sources.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-provider/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-provider-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ----------< org.apache.dubbo:dubbo-demo-spring-boot-servlet >-----------
+[INFO] Building dubbo-demo-spring-boot-servlet 3.3.2-SNAPSHOT         [123/123]
+[INFO]   from dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ dubbo-demo-spring-boot-servlet ---
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ dubbo-demo-spring-boot-servlet ---
+[INFO] 
+[INFO] >>> source:3.3.0:jar (default-cli) > generate-sources @ dubbo-demo-spring-boot-servlet >>>
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-servlet ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-servlet ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-servlet ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/target/jacoco.exec
+[INFO] 
+[INFO] <<< source:3.3.0:jar (default-cli) < generate-sources @ dubbo-demo-spring-boot-servlet <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:jar (default-cli) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/target/dubbo-demo-spring-boot-servlet-3.3.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-maven-version) @ dubbo-demo-spring-boot-servlet ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-java-version) @ dubbo-demo-spring-boot-servlet ---
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-validation) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (checkstyle-unix-validation) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (jacoco-initialize) @ dubbo-demo-spring-boot-servlet ---
+[INFO] jacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/target/jacoco.exec
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 6 files clean - 0 needs changes to be clean, 6 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] Sorting file /tmp/pom13583281136097098663.xml
+[INFO] Pom file is already sorted, exiting
+[INFO] Spotless.Pom is keeping 1 files clean - 0 needs changes to be clean, 1 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- remote-resources:3.1.0:process (process-resource-bundles) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from ../../.. to target/classes/META-INF
+[INFO] Copying 1 resource from ../../.. to target/classes/META-INF/dubbo-versions
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.6.0:flatten (flatten) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Generating flattened POM of project org.apache.dubbo:dubbo-demo-spring-boot-servlet:jar:3.3.2-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [forked debug release 8] to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (get-version-infos) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.1:test (default-test) @ dubbo-demo-spring-boot-servlet ---
+[WARNING]  Parameter 'skipExec' (user property 'maven.test.skip.exec') is deprecated: Use skipTests instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Building jar: /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/target/dubbo-demo-spring-boot-servlet-3.3.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.12.1:attach-descriptor (attach-descriptor) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- spring-boot:2.7.18:repackage (default) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report-aggregate) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-aggregate (report-aggregate) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Analyzed bundle 'dubbo-registry-zookeeper' with 13 classes
+[INFO] Analyzed bundle 'dubbo-rpc-triple' with 353 classes
+[INFO] Analyzed bundle 'dubbo-triple-servlet' with 18 classes
+[INFO] Analyzed bundle 'dubbo-serialization-hessian2' with 9 classes
+[INFO] Analyzed bundle 'dubbo-remoting-netty4' with 38 classes
+[INFO] Analyzed bundle 'dubbo-config-spring' with 75 classes
+[INFO] Analyzed bundle 'dubbo-spring-boot-autoconfigure' with 40 classes
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ dubbo-demo-spring-boot-servlet ---
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/.flattened-pom.xml to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-servlet/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-servlet-3.3.2-SNAPSHOT.pom
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/target/dubbo-demo-spring-boot-servlet-3.3.2-SNAPSHOT.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-servlet/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-servlet-3.3.2-SNAPSHOT.jar
+[INFO] Installing /app/dubbo/dubbo-demo/dubbo-demo-spring-boot/dubbo-demo-spring-boot-servlet/target/dubbo-demo-spring-boot-servlet-3.3.2-SNAPSHOT-sources.jar to /root/.m2/repository/org/apache/dubbo/dubbo-demo-spring-boot-servlet/3.3.2-SNAPSHOT/dubbo-demo-spring-boot-servlet-3.3.2-SNAPSHOT-sources.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for dubbo-parent 3.3.2-SNAPSHOT:
+[INFO] 
+[INFO] dubbo-parent ....................................... SUCCESS [  4.715 s]
+[INFO] dubbo-common ....................................... SUCCESS [ 17.709 s]
+[INFO] dubbo-test ......................................... SUCCESS [  1.484 s]
+[INFO] dubbo-test-check ................................... SUCCESS [  4.705 s]
+[INFO] dubbo-serialization ................................ SUCCESS [  1.621 s]
+[INFO] dubbo-serialization-api ............................ SUCCESS [  3.800 s]
+[INFO] dubbo-plugin ....................................... SUCCESS [  1.742 s]
+[INFO] dubbo-native ....................................... SUCCESS [  3.946 s]
+[INFO] dubbo-serialization-hessian2 ....................... SUCCESS [  2.830 s]
+[INFO] dubbo-serialization-fastjson2 ...................... SUCCESS [  3.138 s]
+[INFO] dubbo-remoting ..................................... SUCCESS [  1.762 s]
+[INFO] dubbo-remoting-api ................................. SUCCESS [  6.545 s]
+[INFO] dubbo-remoting-netty ............................... SUCCESS [  3.466 s]
+[INFO] dubbo-rpc .......................................... SUCCESS [  1.954 s]
+[INFO] dubbo-rpc-api ...................................... SUCCESS [  6.289 s]
+[INFO] dubbo-test-common .................................. SUCCESS [  3.991 s]
+[INFO] dubbo-remoting-zookeeper-curator5 .................. SUCCESS [  4.310 s]
+[INFO] dubbo-metrics ...................................... SUCCESS [  2.069 s]
+[INFO] dubbo-metrics-event ................................ SUCCESS [  4.137 s]
+[INFO] dubbo-metrics-api .................................. SUCCESS [  5.468 s]
+[INFO] dubbo-metrics-netty ................................ SUCCESS [  3.336 s]
+[INFO] dubbo-remoting-netty4 .............................. SUCCESS [  5.027 s]
+[INFO] dubbo-remoting-http12 .............................. SUCCESS [  6.449 s]
+[INFO] dubbo-remoting-http3 ............................... SUCCESS [  4.326 s]
+[INFO] dubbo-rpc-injvm .................................... SUCCESS [  4.030 s]
+[INFO] dubbo-metrics-registry ............................. SUCCESS [  4.217 s]
+[INFO] dubbo-metrics-default .............................. SUCCESS [  5.160 s]
+[INFO] dubbo-cluster ...................................... SUCCESS [  8.253 s]
+[INFO] dubbo-rpc-dubbo .................................... SUCCESS [  7.009 s]
+[INFO] dubbo-compiler ..................................... SUCCESS [  4.402 s]
+[INFO] dubbo-maven-plugin ................................. SUCCESS [  4.191 s]
+[INFO] dubbo-rpc-triple ................................... SUCCESS [ 11.714 s]
+[INFO] dubbo-metrics-metadata ............................. SUCCESS [  3.759 s]
+[INFO] dubbo-metadata ..................................... SUCCESS [  2.894 s]
+[INFO] dubbo-metadata-api ................................. SUCCESS [  6.884 s]
+[INFO] dubbo-registry ..................................... SUCCESS [  2.757 s]
+[INFO] dubbo-registry-api ................................. SUCCESS [  8.156 s]
+[INFO] dubbo-registry-multicast ........................... SUCCESS [  4.380 s]
+[INFO] dubbo-registry-zookeeper ........................... SUCCESS [  4.806 s]
+[INFO] dubbo-registry-nacos ............................... SUCCESS [  6.404 s]
+[INFO] dubbo-registry-multiple ............................ SUCCESS [  4.466 s]
+[INFO] dubbo-metrics-config-center ........................ SUCCESS [  4.092 s]
+[INFO] dubbo-tracing ...................................... SUCCESS [  5.789 s]
+[INFO] dubbo-qos-api ...................................... SUCCESS [  4.890 s]
+[INFO] dubbo-metrics-prometheus ........................... SUCCESS [  5.198 s]
+[INFO] dubbo-configcenter ................................. SUCCESS [  3.483 s]
+[INFO] dubbo-configcenter-zookeeper ....................... SUCCESS [  5.332 s]
+[INFO] dubbo-metadata-report-zookeeper .................... SUCCESS [  4.851 s]
+[INFO] dubbo-configcenter-nacos ........................... SUCCESS [  5.750 s]
+[INFO] dubbo-filter-cache ................................. SUCCESS [  5.345 s]
+[INFO] dubbo-filter-validation ............................ SUCCESS [  5.462 s]
+[INFO] dubbo-config ....................................... SUCCESS [  3.800 s]
+[INFO] dubbo-config-api ................................... SUCCESS [  9.070 s]
+[INFO] dubbo-config-spring ................................ SUCCESS [  8.144 s]
+[INFO] dubbo-qos .......................................... SUCCESS [  7.969 s]
+[INFO] dubbo-auth ......................................... SUCCESS [  5.936 s]
+[INFO] dubbo-reactive ..................................... SUCCESS [  6.051 s]
+[INFO] dubbo-security ..................................... SUCCESS [ 11.294 s]
+[INFO] dubbo-spring-security .............................. SUCCESS [  8.603 s]
+[INFO] dubbo-rest-jaxrs ................................... SUCCESS [  6.989 s]
+[INFO] dubbo-triple-servlet ............................... SUCCESS [  6.681 s]
+[INFO] dubbo-rest-spring .................................. SUCCESS [  7.423 s]
+[INFO] dubbo-metadata-processor ........................... SUCCESS [  7.634 s]
+[INFO] dubbo-compatible ................................... SUCCESS [  8.289 s]
+[INFO] dubbo-dependencies-bom ............................. SUCCESS [  0.533 s]
+[INFO] dubbo-configcenter-file ............................ SUCCESS [  7.045 s]
+[INFO] dubbo-configcenter-apollo .......................... SUCCESS [  7.651 s]
+[INFO] dubbo-metadata-report-nacos ........................ SUCCESS [  6.625 s]
+[INFO] dubbo-metadata-definition-protobuf ................. SUCCESS [  6.494 s]
+[INFO] dubbo .............................................. SUCCESS [ 10.158 s]
+[INFO] dubbo-bom .......................................... SUCCESS [  5.603 s]
+[INFO] dubbo-distribution ................................. SUCCESS [  5.706 s]
+[INFO] dubbo-dependencies-zookeeper-curator5 .............. SUCCESS [  0.442 s]
+[INFO] dubbo-dependencies ................................. SUCCESS [  5.633 s]
+[INFO] dubbo-spring-boot .................................. SUCCESS [  3.691 s]
+[INFO] dubbo-spring-boot-compatible ....................... SUCCESS [  0.248 s]
+[INFO] dubbo-spring-boot-autoconfigure-compatible ......... SUCCESS [  5.425 s]
+[INFO] dubbo-spring-boot-actuator-compatible .............. SUCCESS [  3.318 s]
+[INFO] dubbo-spring-boot-autoconfigure .................... SUCCESS [  4.415 s]
+[INFO] dubbo-spring-boot-actuator ......................... SUCCESS [  3.261 s]
+[INFO] dubbo-spring-boot-starter .......................... SUCCESS [  0.636 s]
+[INFO] dubbo-spring-boot-starters ......................... SUCCESS [  0.456 s]
+[INFO] dubbo-observability-spring-boot-starters ........... SUCCESS [  0.153 s]
+[INFO] dubbo-tracing-otel-zipkin-spring-boot-starter ...... SUCCESS [  0.328 s]
+[INFO] dubbo-tracing-brave-zipkin-spring-boot-starter ..... SUCCESS [  0.378 s]
+[INFO] dubbo-observability-spring-boot-starter ............ SUCCESS [  0.362 s]
+[INFO] dubbo-tracing-otel-otlp-spring-boot-starter ........ SUCCESS [  0.339 s]
+[INFO] dubbo-nacos-spring-boot-starter .................... SUCCESS [  0.211 s]
+[INFO] dubbo-zookeeper-spring-boot-starter ................ SUCCESS [  0.229 s]
+[INFO] dubbo-zookeeper-curator5-spring-boot-starter ....... SUCCESS [  0.237 s]
+[INFO] dubbo-sentinel-spring-boot-starter ................. SUCCESS [  0.330 s]
+[INFO] dubbo-seata-spring-boot-starter .................... SUCCESS [  1.168 s]
+[INFO] dubbo-spring-boot-interceptor ...................... SUCCESS [  2.581 s]
+[INFO] dubbo-test-spring .................................. SUCCESS [  8.813 s]
+[INFO] dubbo-test-spring3.2 ............................... SUCCESS [  6.433 s]
+[INFO] dubbo-test-spring4.1 ............................... SUCCESS [  6.478 s]
+[INFO] dubbo-test-spring4.2 ............................... SUCCESS [  6.457 s]
+[INFO] dubbo-test-modules ................................. SUCCESS [  7.056 s]
+[INFO] dubbo-dependencies-all ............................. SUCCESS [ 10.925 s]
+[INFO] dubbo-demo ......................................... SUCCESS [  7.036 s]
+[INFO] dubbo-demo-interface ............................... SUCCESS [  8.211 s]
+[INFO] dubbo-demo-xml ..................................... SUCCESS [  7.681 s]
+[INFO] dubbo-demo-xml-provider ............................ SUCCESS [  9.818 s]
+[INFO] dubbo-demo-xml-consumer ............................ SUCCESS [  9.576 s]
+[INFO] dubbo-demo-spring-mvc-rest-consumer ................ SUCCESS [  9.198 s]
+[INFO] dubbo-demo-spring-mvc-rest-provider ................ SUCCESS [  8.931 s]
+[INFO] dubbo-demo-annotation .............................. SUCCESS [  7.668 s]
+[INFO] dubbo-demo-annotation-provider ..................... SUCCESS [  9.652 s]
+[INFO] dubbo-demo-annotation-consumer ..................... SUCCESS [  9.232 s]
+[INFO] dubbo-demo-api ..................................... SUCCESS [  7.554 s]
+[INFO] dubbo-demo-api-provider ............................ SUCCESS [  9.469 s]
+[INFO] dubbo-demo-api-consumer ............................ SUCCESS [  9.678 s]
+[INFO] dubbo-demo-generic-call ............................ SUCCESS [  9.311 s]
+[INFO] dubbo-demo-triple .................................. SUCCESS [ 12.181 s]
+[INFO] dubbo-demo-native .................................. SUCCESS [  7.818 s]
+[INFO] dubbo-demo-native-interface ........................ SUCCESS [  8.602 s]
+[INFO] dubbo-demo-native-consumer ......................... SUCCESS [  9.569 s]
+[INFO] dubbo-demo-native-provider ......................... SUCCESS [  9.558 s]
+[INFO] dubbo-demo-spring-boot ............................. SUCCESS [  8.325 s]
+[INFO] dubbo-demo-spring-boot-interface ................... SUCCESS [  8.881 s]
+[INFO] dubbo-demo-spring-boot-consumer .................... SUCCESS [  9.939 s]
+[INFO] dubbo-demo-spring-boot-provider .................... SUCCESS [  9.885 s]
+[INFO] dubbo-demo-spring-boot-servlet ..................... SUCCESS [ 10.711 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11:36 min
+[INFO] Finished at: 2025-04-11T19:57:37+02:00
+[INFO] ------------------------------------------------------------------------
