@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Install dependencies
 echo "Installing dependencies..."
 yarn install

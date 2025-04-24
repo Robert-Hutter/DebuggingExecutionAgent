@@ -102,7 +102,9 @@ This options useful for the ones who want to reuse the container already built b
 | Build Success Rate       | 80%              |  
 | Test Execution Rate      | 65%              |  
 
-Results are logged under `experimental_setups/experiment_XX`, where `XX` is an incremented number for each invocation of ExecutionAgent.  
+Results are logged under `experimental_setups/experiment_XX`, where `XX` is an incremented number for each invocation of ExecutionAgent.
+
+**The successful outputs of ExecutionAgent which corresponds to the results of Table 1 at page 13 can be found under the folder `ExecutionAgent_success_output`**
 
 ## 📁 Output Folder Structure Explanation  
 
@@ -124,7 +126,7 @@ The folder structure under `experimental_setups/experiment_XX` is organized to k
 ---
 
 ## 📜 Research Paper  
-Dive into the technical details and evaluation in our [paper](https://software-lab.org/publications/ExecutionAgent_2024-12-14.pdf).  
+Dive into the technical details and evaluation in our [paper](./paper_preprint.pdf).  
 
 ---
 
