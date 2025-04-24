@@ -1,6 +1,22 @@
 #!/bin/bash
 
 # Run autoconf to prepare the build system
+apt install -y \
+    build-essential \
+    liblzo2-dev \
+    libpam0g-dev \
+    liblz4-dev \
+    libcap-ng-dev \
+    libnl-genl-3-dev \
+    linux-libc-dev \
+    man2html \
+    libcmocka-dev \
+    python3-docutils \
+    autoconf \
+    automake \
+    libtool
+
+
 autoreconf -fvi
 
 # Configure the build system

@@ -1,19 +1,1042 @@
-Test Summary for Keras:
+keras/src/utils/file_utils_test.py::FilterSafePathsTest::test_invalid_path_warning PASSED                                                                                                                [ 98%]
+keras/src/utils/file_utils_test.py::FilterSafePathsTest::test_member_within_base_dir PASSED                                                                                                              [ 98%]
+keras/src/utils/file_utils_test.py::FilterSafePathsTest::test_symbolic_link_in_base_dir PASSED                                                                                                           [ 98%]
+keras/src/utils/file_utils_test.py::FilterSafePathsTest::test_symlink_within_base_dir PASSED                                                                                                             [ 98%]
+keras/src/utils/file_utils_test.py::ExtractArchiveTest::test_archive_format_none PASSED                                                                                                                  [ 98%]
+keras/src/utils/file_utils_test.py::ExtractArchiveTest::test_extract_auto PASSED                                                                                                                         [ 98%]
+keras/src/utils/file_utils_test.py::ExtractArchiveTest::test_extract_tar PASSED                                                                                                                          [ 98%]
+keras/src/utils/file_utils_test.py::ExtractArchiveTest::test_extract_zip PASSED                                                                                                                          [ 98%]
+keras/src/utils/file_utils_test.py::ExtractArchiveTest::test_keyboard_interrupt_during_extraction PASSED                                                                                                 [ 98%]
+keras/src/utils/file_utils_test.py::ExtractArchiveTest::test_non_existent_file PASSED                                                                                                                    [ 98%]
+keras/src/utils/file_utils_test.py::ExtractArchiveTest::test_runtime_error_during_extraction PASSED                                                                                                      [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_cache_invalidation PASSED                                                                                                                          [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_copy PASSED                                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_exists PASSED                                                                                                                                      [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_file_open_read PASSED                                                                                                                              [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_file_open_write PASSED                                                                                                                             [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_force_download PASSED                                                                                                                              [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_get_file_with_failed_integrity_check PASSED                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_get_file_with_integrity_check PASSED                                                                                                               [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_get_file_with_tgz_extension PASSED                                                                                                                 [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_handle_complex_paths PASSED                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_isdir PASSED                                                                                                                                       [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_join_simple PASSED                                                                                                                                 [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_join_single_directory PASSED                                                                                                                       [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_listdir PASSED                                                                                                                                     [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_makedirs_and_rmtree PASSED                                                                                                                         [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_remove_files_inside_directory PASSED                                                                                                               [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_remove_sub_directory PASSED                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_valid_tar_extraction PASSED                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_valid_text_file_download PASSED                                                                                                                    [ 98%]
+keras/src/utils/file_utils_test.py::GetFileTest::test_valid_zip_extraction PASSED                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::HashFileTest::test_hash_file_md5 PASSED                                                                                                                              [ 98%]
+keras/src/utils/file_utils_test.py::HashFileTest::test_hash_file_sha256 PASSED                                                                                                                           [ 98%]
+keras/src/utils/file_utils_test.py::TestValidateFile::test_validate_file_auto_md5 PASSED                                                                                                                 [ 98%]
+keras/src/utils/file_utils_test.py::TestValidateFile::test_validate_file_auto_sha256 PASSED                                                                                                              [ 98%]
+keras/src/utils/file_utils_test.py::TestValidateFile::test_validate_file_md5 PASSED                                                                                                                      [ 98%]
+keras/src/utils/file_utils_test.py::TestValidateFile::test_validate_file_sha256 PASSED                                                                                                                   [ 98%]
+keras/src/utils/file_utils_test.py::TestValidateFile::test_validate_file_wrong_hash PASSED                                                                                                               [ 98%]
+keras/src/utils/file_utils_test.py::ResolveHasherTest::test_resolve_hasher_auto_md5 PASSED                                                                                                               [ 98%]
+keras/src/utils/file_utils_test.py::ResolveHasherTest::test_resolve_hasher_auto_sha256 PASSED                                                                                                            [ 98%]
+keras/src/utils/file_utils_test.py::ResolveHasherTest::test_resolve_hasher_default PASSED                                                                                                                [ 98%]
+keras/src/utils/file_utils_test.py::ResolveHasherTest::test_resolve_hasher_sha256 PASSED                                                                                                                 [ 98%]
+keras/src/utils/file_utils_test.py::IsRemotePathTest::test_cfs_remote_path PASSED                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::IsRemotePathTest::test_cns_remote_path PASSED                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::IsRemotePathTest::test_gcs_remote_path PASSED                                                                                                                        [ 98%]
+keras/src/utils/file_utils_test.py::IsRemotePathTest::test_hdfs_remote_path PASSED                                                                                                                       [ 98%]
+keras/src/utils/file_utils_test.py::IsRemotePathTest::test_non_remote_paths PASSED                                                                                                                       [ 98%]
+keras/src/utils/file_utils_test.py::IsRemotePathTest::test_readahead_remote_path PASSED                                                                                                                  [ 98%]
+keras/src/utils/file_utils_test.py::TestRaiseIfNoGFile::test_raise_if_no_gfile_raises_correct_message PASSED                                                                                             [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_binary PASSED                                                                              [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_color_modes PASSED                                                                         [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_crop_to_aspect_ratio PASSED                                                                [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_errors PASSED                                                                              [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_follow_links PASSED                                                                        [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_manual_labels PASSED                                                                       [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_multiclass PASSED                                                                          [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_no_images PASSED                                                                           [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_no_labels PASSED                                                                           [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_not_batched PASSED                                                                         [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_pad_to_aspect_ratio PASSED                                                                 [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_shuffle PASSED                                                                             [ 98%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_image_dataset_from_directory_validation_split PASSED                                                                    [ 99%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_sample_count PASSED                                                                                                     [ 99%]
+keras/src/utils/image_dataset_utils_test.py::ImageDatasetFromDirectoryTest::test_static_shape_in_graph PASSED                                                                                            [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_ask_to_proceed_with_overwrite_invalid_then_no PASSED                                                                                                 [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_ask_to_proceed_with_overwrite_invalid_then_yes PASSED                                                                                                [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_ask_to_proceed_with_overwrite_no PASSED                                                                                                              [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_ask_to_proceed_with_overwrite_yes PASSED                                                                                                             [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_disable_interactive_logging PASSED                                                                                                                   [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_enable_interactive_logging PASSED                                                                                                                    [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_print_msg_interactive_with_line_break PASSED                                                                                                         [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_print_msg_interactive_without_line_break PASSED                                                                                                      [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_print_msg_non_interactive PASSED                                                                                                                     [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_set_logging_verbosity_invalid PASSED                                                                                                                 [ 99%]
+keras/src/utils/io_utils_test.py::TestIoUtils::test_set_logging_verbosity_valid PASSED                                                                                                                   [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_flax_layer_training_independent_bound_method SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                  [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_flax_layer_training_rng_state_no_method SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                       [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_flax_layer_training_rng_unbound_method SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                        [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_jax_layer_training_independent SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_jax_layer_training_state SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                      [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_rng_seeding SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                                   [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_state_mismatch_during_update_mapping_instead_of_sequence SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                      [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_state_mismatch_during_update_missing_dict_key SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                 [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_state_mismatch_during_update_missing_variable_in_list SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                         [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_state_mismatch_during_update_no_initial_state SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                 [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_state_mismatch_during_update_sequence_instead_of_mapping SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                      [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_state_mismatch_during_update_sequence_instead_of_variable SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                     [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_different_argument_order SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                 [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_flax_state_no_params SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                     [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_minimal_arguments SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                        [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_missing_inputs_in_call_fn SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_missing_inputs_in_init_fn SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_no_init_fn_and_no_params SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                 [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_polymorphic_shape_more_than_26_dimension_names SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                           [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_state_jax_registered_node_class SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                          [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_state_non_tensor_leaves SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                  [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_state_none_leaves SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                                        [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_structures_as_inputs_and_outputs SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                         [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_training_in_call_fn_but_not_init_fn SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                      [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_unsupported_argument_in_call_fn SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                          [ 99%]
+keras/src/utils/jax_layer_test.py::TestJaxLayer::test_with_unsupported_argument_in_init_fn SKIPPED (JaxLayer and FlaxLayer are only supported with JAX backend)                                          [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_auto_name PASSED                                                                                                                                   [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_get_object_name_for_functions PASSED                                                                                                               [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_get_object_name_for_keras_objects PASSED                                                                                                           [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_get_object_name_no_name_attribute PASSED                                                                                                           [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_get_object_name_no_name_or_class_attribute PASSED                                                                                                  [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_get_uid PASSED                                                                                                                                     [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_get_uid_existing_prefix PASSED                                                                                                                     [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_reset_uids PASSED                                                                                                                                  [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_to_snake_case_already_snake_cased PASSED                                                                                                           [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_to_snake_case_capital_after_any_character PASSED                                                                                                   [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_to_snake_case_lower_before_upper PASSED                                                                                                            [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_to_snake_case_no_changes PASSED                                                                                                                    [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_to_snake_case_single_uppercase_word PASSED                                                                                                         [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_to_snake_case_snake_case_name PASSED                                                                                                               [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_uniquify_already_uniquified_name PASSED                                                                                                            [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_uniquify_non_unique_name PASSED                                                                                                                    [ 99%]
+keras/src/utils/naming_test.py::NamingUtilsTest::test_uniquify_unique_name PASSED                                                                                                                        [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_normalize0 PASSED                                                                                                                      [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_normalize1 PASSED                                                                                                                      [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_normalize2 PASSED                                                                                                                      [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical0 PASSED                                                                                                                 [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical1 PASSED                                                                                                                 [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical2 PASSED                                                                                                                 [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical3 PASSED                                                                                                                 [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical4 PASSED                                                                                                                 [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical5 PASSED                                                                                                                 [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical_with_backend_tensor PASSED                                                                                              [ 99%]
+keras/src/utils/numerical_utils_test.py::TestNumericalUtils::test_to_categorical_without_num_classes PASSED                                                                                              [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_closure_processing PASSED                                                                                                                    [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_ensure_value_to_cell PASSED                                                                                                                  [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_func_dump_and_load PASSED                                                                                                                    [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_func_load_bad_encoded_code PASSED                                                                                                            [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_func_load_closure_conversion PASSED                                                                                                          [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_func_load_defaults_as_tuple PASSED                                                                                                           [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_func_load_valid_encoded_code PASSED                                                                                                          [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_func_load_with_closure PASSED                                                                                                                [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_remove_long_seq_standard_case PASSED                                                                                                         [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_removeprefix PASSED                                                                                                                          [ 99%]
+keras/src/utils/python_utils_test.py::PythonUtilsTest::test_removesuffix PASSED                                                                                                                          [ 99%]
+keras/src/utils/rng_utils_test.py::TestRandomSeedSetting::test_set_random_seed PASSED                                                                                                                    [ 99%]
+keras/src/utils/sequence_utils_test.py::PadSequencesTest::test_pad_sequences PASSED                                                                                                                      [ 99%]
+keras/src/utils/sequence_utils_test.py::PadSequencesTest::test_pad_sequences_float PASSED                                                                                                                [ 99%]
+keras/src/utils/sequence_utils_test.py::PadSequencesTest::test_pad_sequences_str PASSED                                                                                                                  [ 99%]
+keras/src/utils/sequence_utils_test.py::PadSequencesTest::test_pad_sequences_vector PASSED                                                                                                               [ 99%]
+keras/src/utils/summary_utils_test.py::SummaryUtilsTest::test_print_model_summary0 PASSED                                                                                                                [ 99%]
+keras/src/utils/summary_utils_test.py::SummaryUtilsTest::test_print_model_summary1 PASSED                                                                                                                [ 99%]
+keras/src/utils/summary_utils_test.py::SummaryUtilsTest::test_print_model_summary_custom_build PASSED                                                                                                    [ 99%]
+keras/src/utils/summary_utils_test.py::SummaryUtilsTest::test_print_model_summary_op_as_layer PASSED                                                                                                     [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_sample_count PASSED                                                                                                       [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_binary PASSED                                                                                 [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_errors PASSED                                                                                 [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_follow_links PASSED                                                                           [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_manual_labels PASSED                                                                          [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_multiclass PASSED                                                                             [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_no_files PASSED                                                                               [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_not_batched PASSED                                                                            [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_standalone PASSED                                                                             [ 99%]
+keras/src/utils/text_dataset_utils_test.py::TextDatasetFromDirectoryTest::test_text_dataset_from_directory_validation_split PASSED                                                                       [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_basics PASSED                                                                                                              [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_errors PASSED                                                                                                              [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_no_targets PASSED                                                                                                          [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_not_batched PASSED                                                                                                         [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_sampling_rate PASSED                                                                                                       [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_sequence_stride PASSED                                                                                                     [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_shuffle PASSED                                                                                                             [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_start_and_end_index PASSED                                                                                                 [ 99%]
+keras/src/utils/timeseries_dataset_utils_test.py::TimeseriesDatasetTest::test_timeseries_regression PASSED                                                                                               [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_basic_usage0 SKIPPED (Requires torch backend)                                                                                                  [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_basic_usage1 SKIPPED (Requires torch backend)                                                                                                  [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_from_config SKIPPED (Requires torch backend)                                                                                                   [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_load_weights0 SKIPPED (Requires torch backend)                                                                                                 [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_load_weights1 SKIPPED (Requires torch backend)                                                                                                 [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_load_weights2 SKIPPED (Requires torch backend)                                                                                                 [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_load_weights3 SKIPPED (Requires torch backend)                                                                                                 [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_load_weights_autowrapping SKIPPED (Requires torch backend)                                                                                     [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_module_autowrapping SKIPPED (Requires torch backend)                                                                                           [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_serialize_model0 SKIPPED (Requires torch backend)                                                                                              [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_serialize_model1 SKIPPED (Requires torch backend)                                                                                              [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_serialize_model2 SKIPPED (Requires torch backend)                                                                                              [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_serialize_model3 SKIPPED (Requires torch backend)                                                                                              [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_serialize_model_autowrapping SKIPPED (Requires torch backend)                                                                                  [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_training_args_explicit_torch_wrapper SKIPPED (Requires torch backend)                                                                          [ 99%]
+keras/src/utils/torch_utils_test.py::TorchUtilsTest::test_training_args_implicit_torch_wrapper SKIPPED (Requires torch backend)                                                                          [ 99%]
+keras/src/utils/tracking_test.py::TrackingTest::test_namedtuple_tracking PASSED                                                                                                                          [ 99%]
+keras/src/utils/tracking_test.py::TrackingTest::test_tuple_tracking PASSED                                                                                                                               [ 99%]
+keras/src/utils/tracking_test.py::TrackingTest::test_untracking_in_tracked_list PASSED                                                                                                                   [100%]
 
-Total Tests: 12455
-Passed: [Number of Passed Tests]
-Failed: [Number of Failed Tests]
+=================================================================================================== FAILURES ===================================================================================================
+_______________________________________________________________________________________________ test_custom_fit ________________________________________________________________________________________________
 
-Failures:
-1. Model Visualization Tests:
-   - test_plot_functional_model
-   - test_plot_functional_model_with_splits_and_merges
-   - test_plot_nested_functional_model
-   - test_plot_sequential_model
-   - test_plot_subclassed_model
+    def test_custom_fit():
+        class CustomModel(keras.Model):
+            def __init__(self, *args, **kwargs):
+                super().__init__(*args, **kwargs)
+                self.loss_tracker = keras.metrics.Mean(name="loss")
+                self.mae_metric = keras.metrics.MeanAbsoluteError(name="mae")
+                self.loss_fn = keras.losses.MeanSquaredError()
+    
+            def compute_loss_and_updates(
+                self,
+                trainable_variables,
+                non_trainable_variables,
+                x,
+                y,
+                training=False,
+            ):
+                y_pred, non_trainable_variables = self.stateless_call(
+                    trainable_variables,
+                    non_trainable_variables,
+                    x,
+                    training=training,
+                )
+                loss = self.loss_fn(y, y_pred)
+                return loss, (y_pred, non_trainable_variables)
+    
+            def train_step(self, state, data):
+                (
+                    trainable_variables,
+                    non_trainable_variables,
+                    optimizer_variables,
+                    metrics_variables,
+                ) = state
+                x, y = data
+                grad_fn = jax.value_and_grad(
+                    self.compute_loss_and_updates, has_aux=True
+                )
+                (loss, (y_pred, non_trainable_variables)), grads = grad_fn(
+                    trainable_variables,
+                    non_trainable_variables,
+                    x,
+                    y,
+                    training=True,
+                )
+                (
+                    trainable_variables,
+                    optimizer_variables,
+                ) = self.optimizer.stateless_apply(
+                    optimizer_variables, grads, trainable_variables
+                )
+                loss_tracker_vars = metrics_variables[
+                    : len(self.loss_tracker.variables)
+                ]
+                mae_metric_vars = metrics_variables[
+                    len(self.loss_tracker.variables) :
+                ]
+                loss_tracker_vars = self.loss_tracker.stateless_update_state(
+                    loss_tracker_vars, loss
+                )
+                mae_metric_vars = self.mae_metric.stateless_update_state(
+                    mae_metric_vars, y, y_pred
+                )
+                logs = {}
+                logs[self.loss_tracker.name] = self.loss_tracker.stateless_result(
+                    loss_tracker_vars
+                )
+                logs[self.mae_metric.name] = self.mae_metric.stateless_result(
+                    mae_metric_vars
+                )
+                new_metrics_vars = loss_tracker_vars + mae_metric_vars
+                state = (
+                    trainable_variables,
+                    non_trainable_variables,
+                    optimizer_variables,
+                    new_metrics_vars,
+                )
+                return logs, state
+    
+            @property
+            def metrics(self):
+                return [self.loss_tracker, self.mae_metric]
+    
+        inputs = keras.Input(shape=(32,))
+        outputs = keras.layers.Dense(1)(inputs)
+        model = CustomModel(inputs, outputs)
+        model.compile(optimizer="adam")
+        x = np.random.random((64, 32))
+        y = np.random.random((64, 1))
+>       history = model.fit(x, y, epochs=1)
 
-2. Workflow Tests:
-   - test_model_fit
-   - test_keras_layer_in_nn_module
+integration_tests/jax_custom_fit_test.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+keras/src/utils/traceback_utils.py:113: in error_handler
+    return fn(*args, **kwargs)
+keras/src/backend/tensorflow/trainer.py:328: in fit
+    logs = self.train_function(iterator)
+keras/src/backend/tensorflow/trainer.py:175: in function
+    opt_outputs = multi_step_on_iterator(iterator)
+.venv/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+keras/src/backend/tensorflow/trainer.py:125: in multi_step_on_iterator
+    one_step_on_data(iterator.get_next())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-Overall, the environment is set up correctly, and the majority of tests passed.
+data = (<tf.Tensor 'data:0' shape=(32, 32) dtype=float32>, <tf.Tensor 'data_1:0' shape=(32, 1) dtype=float32>)
+
+    @tf.autograph.experimental.do_not_convert
+    def one_step_on_data(data):
+        """Runs a single training step on a batch of data."""
+>       outputs = self.distribute_strategy.run(step_function, args=(data,))
+E       TypeError: test_custom_fit.<locals>.CustomModel.train_step() missing 1 required positional argument: 'data'
+
+keras/src/backend/tensorflow/trainer.py:106: TypeError
+______________________________________________________________________________ ModelVisualizationTest.test_plot_functional_model _______________________________________________________________________________
+
+self = <model_visualization_test.ModelVisualizationTest testMethod=test_plot_functional_model>
+
+    def test_plot_functional_model(self):
+        inputs = keras.Input((3,), name="input")
+        x = keras.layers.Dense(
+            4, activation="relu", trainable=False, name="dense"
+        )(inputs)
+        residual = x
+        x = keras.layers.Dense(4, activation="relu", name="dense_1")(x)
+        x = keras.layers.Dense(4, activation="relu", name="dense_2")(x)
+        x = keras.layers.Dense(4, activation="relu", name="dense_3")(x)
+        x += residual
+        residual = x
+        x = keras.layers.Dense(4, activation="relu", name="dense_4")(x)
+        x = keras.layers.Dense(4, activation="relu", name="dense_5")(x)
+        x = keras.layers.Dense(4, activation="relu", name="dense_6")(x)
+        x += residual
+        x = keras.layers.Dropout(0.5, name="dropout")(x)
+        outputs = keras.layers.Dense(1, activation="sigmoid", name="dense_7")(x)
+    
+        model = keras.Model(inputs, outputs)
+    
+>       edge_dict = get_edge_dict(model_to_dot(model))
+
+integration_tests/model_visualization_test.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model = <Functional name=functional, built=True>, show_shapes = False, show_dtype = False, show_layer_names = True, rankdir = 'TB', expand_nested = False, dpi = 200, subgraph = False
+show_layer_activations = False, show_trainable = False, kwargs = {}, make_node_key = <function make_node_key at 0x7f65bf4e45e0>
+functional = <module 'keras.src.models.functional' from '/app/keras/keras/src/models/functional.py'>, sequential = <module 'keras.src.models.sequential' from '/app/keras/keras/src/models/sequential.py'>
+
+    @keras_export("keras.utils.model_to_dot")
+    def model_to_dot(
+        model,
+        show_shapes=False,
+        show_dtype=False,
+        show_layer_names=True,
+        rankdir="TB",
+        expand_nested=False,
+        dpi=200,
+        subgraph=False,
+        show_layer_activations=False,
+        show_trainable=False,
+        **kwargs,
+    ):
+        """Convert a Keras model to dot format.
+    
+        Args:
+            model: A Keras model instance.
+            show_shapes: whether to display shape information.
+            show_dtype: whether to display layer dtypes.
+            show_layer_names: whether to display layer names.
+            rankdir: `rankdir` argument passed to PyDot,
+                a string specifying the format of the plot: `"TB"`
+                creates a vertical plot; `"LR"` creates a horizontal plot.
+            expand_nested: whether to expand nested Functional models
+                into clusters.
+            dpi: Image resolution in dots per inch.
+            subgraph: whether to return a `pydot.Cluster` instance.
+            show_layer_activations: Display layer activations (only for layers that
+                have an `activation` property).
+            show_trainable: whether to display if a layer is trainable.
+    
+        Returns:
+            A `pydot.Dot` instance representing the Keras model or
+            a `pydot.Cluster` instance representing nested model if
+            `subgraph=True`.
+        """
+        from keras.src.ops.function import make_node_key
+    
+        if not model.built:
+            raise ValueError(
+                "This model has not yet been built. "
+                "Build the model first by calling `build()` or by calling "
+                "the model on a batch of data."
+            )
+    
+        from keras.src.models import functional
+        from keras.src.models import sequential
+    
+        # from keras.src.layers import Wrapper
+    
+        if not check_pydot():
+>           raise ImportError(
+                "You must install pydot (`pip install pydot`) for "
+                "model_to_dot to work."
+            )
+E           ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+
+keras/src/utils/model_visualization.py:253: ImportError
+___________________________________________________________________ ModelVisualizationTest.test_plot_functional_model_with_splits_and_merges ___________________________________________________________________
+
+self = <model_visualization_test.ModelVisualizationTest testMethod=test_plot_functional_model_with_splits_and_merges>
+
+    def test_plot_functional_model_with_splits_and_merges(self):
+        class SplitLayer(keras.Layer):
+            def call(self, x):
+                return list(keras.ops.split(x, 2, axis=1))
+    
+        class ConcatLayer(keras.Layer):
+            def call(self, xs):
+                return keras.ops.concatenate(xs, axis=1)
+    
+        inputs = keras.Input((2,), name="input")
+        a, b = SplitLayer()(inputs)
+    
+        a = keras.layers.Dense(2, name="dense")(a)
+        b = keras.layers.Dense(2, name="dense_1")(b)
+    
+        outputs = ConcatLayer(name="concat_layer")([a, b])
+        model = keras.Model(inputs, outputs)
+    
+>       edge_dict = get_edge_dict(model_to_dot(model))
+
+integration_tests/model_visualization_test.py:499: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model = <Functional name=functional, built=True>, show_shapes = False, show_dtype = False, show_layer_names = True, rankdir = 'TB', expand_nested = False, dpi = 200, subgraph = False
+show_layer_activations = False, show_trainable = False, kwargs = {}, make_node_key = <function make_node_key at 0x7f65bf4e45e0>
+functional = <module 'keras.src.models.functional' from '/app/keras/keras/src/models/functional.py'>, sequential = <module 'keras.src.models.sequential' from '/app/keras/keras/src/models/sequential.py'>
+
+    @keras_export("keras.utils.model_to_dot")
+    def model_to_dot(
+        model,
+        show_shapes=False,
+        show_dtype=False,
+        show_layer_names=True,
+        rankdir="TB",
+        expand_nested=False,
+        dpi=200,
+        subgraph=False,
+        show_layer_activations=False,
+        show_trainable=False,
+        **kwargs,
+    ):
+        """Convert a Keras model to dot format.
+    
+        Args:
+            model: A Keras model instance.
+            show_shapes: whether to display shape information.
+            show_dtype: whether to display layer dtypes.
+            show_layer_names: whether to display layer names.
+            rankdir: `rankdir` argument passed to PyDot,
+                a string specifying the format of the plot: `"TB"`
+                creates a vertical plot; `"LR"` creates a horizontal plot.
+            expand_nested: whether to expand nested Functional models
+                into clusters.
+            dpi: Image resolution in dots per inch.
+            subgraph: whether to return a `pydot.Cluster` instance.
+            show_layer_activations: Display layer activations (only for layers that
+                have an `activation` property).
+            show_trainable: whether to display if a layer is trainable.
+    
+        Returns:
+            A `pydot.Dot` instance representing the Keras model or
+            a `pydot.Cluster` instance representing nested model if
+            `subgraph=True`.
+        """
+        from keras.src.ops.function import make_node_key
+    
+        if not model.built:
+            raise ValueError(
+                "This model has not yet been built. "
+                "Build the model first by calling `build()` or by calling "
+                "the model on a batch of data."
+            )
+    
+        from keras.src.models import functional
+        from keras.src.models import sequential
+    
+        # from keras.src.layers import Wrapper
+    
+        if not check_pydot():
+>           raise ImportError(
+                "You must install pydot (`pip install pydot`) for "
+                "model_to_dot to work."
+            )
+E           ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+
+keras/src/utils/model_visualization.py:253: ImportError
+___________________________________________________________________________ ModelVisualizationTest.test_plot_nested_functional_model ___________________________________________________________________________
+
+self = <model_visualization_test.ModelVisualizationTest testMethod=test_plot_nested_functional_model>
+
+    def test_plot_nested_functional_model(self):
+        inputs = keras.Input((3,), name="input")
+        x = keras.layers.Dense(4, activation="relu", name="dense")(inputs)
+        x = keras.layers.Dense(4, activation="relu", name="dense_1")(x)
+        outputs = keras.layers.Dense(3, activation="relu", name="dense_2")(x)
+        inner_model = keras.Model(inputs, outputs, name="inner_model")
+    
+        inputs = keras.Input((3,), name="input_1")
+        x = keras.layers.Dense(
+            3, activation="relu", trainable=False, name="dense_3"
+        )(inputs)
+        residual = x
+        x = inner_model(x)
+        x = keras.layers.Add(name="add")([x, residual])
+        residual = x
+        x = keras.layers.Dense(4, activation="relu", name="dense_4")(x)
+        x = keras.layers.Dense(4, activation="relu", name="dense_5")(x)
+        x = keras.layers.Dense(3, activation="relu", name="dense_6")(x)
+        x = keras.layers.Add(name="add_1")([x, residual])
+        x = keras.layers.Dropout(0.5, name="dropout")(x)
+        outputs = keras.layers.Dense(1, activation="sigmoid", name="dense_7")(x)
+        model = keras.Model(inputs, outputs)
+    
+>       edge_dict = get_edge_dict(model_to_dot(model))
+
+integration_tests/model_visualization_test.py:371: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model = <Functional name=functional, built=True>, show_shapes = False, show_dtype = False, show_layer_names = True, rankdir = 'TB', expand_nested = False, dpi = 200, subgraph = False
+show_layer_activations = False, show_trainable = False, kwargs = {}, make_node_key = <function make_node_key at 0x7f65bf4e45e0>
+functional = <module 'keras.src.models.functional' from '/app/keras/keras/src/models/functional.py'>, sequential = <module 'keras.src.models.sequential' from '/app/keras/keras/src/models/sequential.py'>
+
+    @keras_export("keras.utils.model_to_dot")
+    def model_to_dot(
+        model,
+        show_shapes=False,
+        show_dtype=False,
+        show_layer_names=True,
+        rankdir="TB",
+        expand_nested=False,
+        dpi=200,
+        subgraph=False,
+        show_layer_activations=False,
+        show_trainable=False,
+        **kwargs,
+    ):
+        """Convert a Keras model to dot format.
+    
+        Args:
+            model: A Keras model instance.
+            show_shapes: whether to display shape information.
+            show_dtype: whether to display layer dtypes.
+            show_layer_names: whether to display layer names.
+            rankdir: `rankdir` argument passed to PyDot,
+                a string specifying the format of the plot: `"TB"`
+                creates a vertical plot; `"LR"` creates a horizontal plot.
+            expand_nested: whether to expand nested Functional models
+                into clusters.
+            dpi: Image resolution in dots per inch.
+            subgraph: whether to return a `pydot.Cluster` instance.
+            show_layer_activations: Display layer activations (only for layers that
+                have an `activation` property).
+            show_trainable: whether to display if a layer is trainable.
+    
+        Returns:
+            A `pydot.Dot` instance representing the Keras model or
+            a `pydot.Cluster` instance representing nested model if
+            `subgraph=True`.
+        """
+        from keras.src.ops.function import make_node_key
+    
+        if not model.built:
+            raise ValueError(
+                "This model has not yet been built. "
+                "Build the model first by calling `build()` or by calling "
+                "the model on a batch of data."
+            )
+    
+        from keras.src.models import functional
+        from keras.src.models import sequential
+    
+        # from keras.src.layers import Wrapper
+    
+        if not check_pydot():
+>           raise ImportError(
+                "You must install pydot (`pip install pydot`) for "
+                "model_to_dot to work."
+            )
+E           ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+
+keras/src/utils/model_visualization.py:253: ImportError
+______________________________________________________________________________ ModelVisualizationTest.test_plot_sequential_model _______________________________________________________________________________
+
+self = <model_visualization_test.ModelVisualizationTest testMethod=test_plot_sequential_model>
+
+    def test_plot_sequential_model(self):
+        model = keras.Sequential(
+            [
+                keras.Input((3,), name="input"),
+                keras.layers.Dense(4, activation="relu", name="dense"),
+                keras.layers.Dense(1, activation="sigmoid", name="dense_1"),
+            ]
+        )
+    
+>       edge_dict = get_edge_dict(model_to_dot(model))
+
+integration_tests/model_visualization_test.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model = <Sequential name=sequential, built=True>, show_shapes = False, show_dtype = False, show_layer_names = True, rankdir = 'TB', expand_nested = False, dpi = 200, subgraph = False
+show_layer_activations = False, show_trainable = False, kwargs = {}, make_node_key = <function make_node_key at 0x7f65bf4e45e0>
+functional = <module 'keras.src.models.functional' from '/app/keras/keras/src/models/functional.py'>, sequential = <module 'keras.src.models.sequential' from '/app/keras/keras/src/models/sequential.py'>
+
+    @keras_export("keras.utils.model_to_dot")
+    def model_to_dot(
+        model,
+        show_shapes=False,
+        show_dtype=False,
+        show_layer_names=True,
+        rankdir="TB",
+        expand_nested=False,
+        dpi=200,
+        subgraph=False,
+        show_layer_activations=False,
+        show_trainable=False,
+        **kwargs,
+    ):
+        """Convert a Keras model to dot format.
+    
+        Args:
+            model: A Keras model instance.
+            show_shapes: whether to display shape information.
+            show_dtype: whether to display layer dtypes.
+            show_layer_names: whether to display layer names.
+            rankdir: `rankdir` argument passed to PyDot,
+                a string specifying the format of the plot: `"TB"`
+                creates a vertical plot; `"LR"` creates a horizontal plot.
+            expand_nested: whether to expand nested Functional models
+                into clusters.
+            dpi: Image resolution in dots per inch.
+            subgraph: whether to return a `pydot.Cluster` instance.
+            show_layer_activations: Display layer activations (only for layers that
+                have an `activation` property).
+            show_trainable: whether to display if a layer is trainable.
+    
+        Returns:
+            A `pydot.Dot` instance representing the Keras model or
+            a `pydot.Cluster` instance representing nested model if
+            `subgraph=True`.
+        """
+        from keras.src.ops.function import make_node_key
+    
+        if not model.built:
+            raise ValueError(
+                "This model has not yet been built. "
+                "Build the model first by calling `build()` or by calling "
+                "the model on a batch of data."
+            )
+    
+        from keras.src.models import functional
+        from keras.src.models import sequential
+    
+        # from keras.src.layers import Wrapper
+    
+        if not check_pydot():
+>           raise ImportError(
+                "You must install pydot (`pip install pydot`) for "
+                "model_to_dot to work."
+            )
+E           ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+
+keras/src/utils/model_visualization.py:253: ImportError
+______________________________________________________________________________ ModelVisualizationTest.test_plot_subclassed_model _______________________________________________________________________________
+
+self = <model_visualization_test.ModelVisualizationTest testMethod=test_plot_subclassed_model>
+
+    def test_plot_subclassed_model(self):
+        class MyModel(keras.Model):
+            def __init__(self, **kwargs):
+                super().__init__(**kwargs)
+                self.dense_1 = keras.layers.Dense(3, activation="relu")
+                self.dense_2 = keras.layers.Dense(1, activation="sigmoid")
+    
+            def call(self, x):
+                return self.dense_2(self.dense_1(x))
+    
+        model = MyModel()
+        model.build((None, 3))
+    
+        file_name = "subclassed.png"
+>       plot_model(model, file_name)
+
+integration_tests/model_visualization_test.py:263: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model = <MyModel name=my_model, built=True>, to_file = 'subclassed.png', show_shapes = False, show_dtype = False, show_layer_names = False, rankdir = 'TB', expand_nested = False, dpi = 200
+show_layer_activations = False, show_trainable = False, kwargs = {}, message = 'You must install pydot (`pip install pydot`) for `plot_model` to work.'
+
+    @keras_export("keras.utils.plot_model")
+    def plot_model(
+        model,
+        to_file="model.png",
+        show_shapes=False,
+        show_dtype=False,
+        show_layer_names=False,
+        rankdir="TB",
+        expand_nested=False,
+        dpi=200,
+        show_layer_activations=False,
+        show_trainable=False,
+        **kwargs,
+    ):
+        """Converts a Keras model to dot format and save to a file.
+    
+        Example:
+    
+        ```python
+        inputs = ...
+        outputs = ...
+        model = keras.Model(inputs=inputs, outputs=outputs)
+    
+        dot_img_file = '/tmp/model_1.png'
+        keras.utils.plot_model(model, to_file=dot_img_file, show_shapes=True)
+        ```
+    
+        Args:
+            model: A Keras model instance
+            to_file: File name of the plot image.
+            show_shapes: whether to display shape information.
+            show_dtype: whether to display layer dtypes.
+            show_layer_names: whether to display layer names.
+            rankdir: `rankdir` argument passed to PyDot,
+                a string specifying the format of the plot: `"TB"`
+                creates a vertical plot; `"LR"` creates a horizontal plot.
+            expand_nested: whether to expand nested Functional models
+                into clusters.
+            dpi: Image resolution in dots per inch.
+            show_layer_activations: Display layer activations (only for layers that
+                have an `activation` property).
+            show_trainable: whether to display if a layer is trainable.
+    
+        Returns:
+            A Jupyter notebook Image object if Jupyter is installed.
+            This enables in-line display of the model plots in notebooks.
+        """
+    
+        if not model.built:
+            raise ValueError(
+                "This model has not yet been built. "
+                "Build the model first by calling `build()` or by calling "
+                "the model on a batch of data."
+            )
+        if not check_pydot():
+            message = (
+                "You must install pydot (`pip install pydot`) "
+                "for `plot_model` to work."
+            )
+            if "IPython.core.magics.namespace" in sys.modules:
+                # We don't raise an exception here in order to avoid crashing
+                # notebook tests where graphviz is not available.
+                io_utils.print_msg(message)
+                return
+            else:
+>               raise ImportError(message)
+E               ImportError: You must install pydot (`pip install pydot`) for `plot_model` to work.
+
+keras/src/utils/model_visualization.py:437: ImportError
+________________________________________________________________________________________________ test_model_fit ________________________________________________________________________________________________
+
+    def test_model_fit():
+        cpus = tf.config.list_physical_devices("CPU")
+>       tf.config.set_logical_device_configuration(
+            cpus[0],
+            [
+                tf.config.LogicalDeviceConfiguration(),
+                tf.config.LogicalDeviceConfiguration(),
+            ],
+        )
+
+integration_tests/tf_distribute_training_test.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/tensorflow/python/framework/config.py:912: in set_logical_device_configuration
+    context.context().set_logical_device_configuration(device, logical_devices)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tensorflow.python.eager.context.Context object at 0x7f65bb4023b0>, dev = PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')
+virtual_devices = [LogicalDeviceConfiguration(memory_limit=None, experimental_priority=None, experimental_device_ordinal=None), LogicalDeviceConfiguration(memory_limit=None, experimental_priority=None, experimental_device_ordinal=None)]
+
+    def set_logical_device_configuration(self, dev, virtual_devices):
+      """Set the virtual device configuration for a PhysicalDevice."""
+      self._initialize_physical_devices()
+    
+      if dev not in self._physical_devices:
+        raise ValueError("Unrecognized device: %s" % repr(dev))
+    
+      if dev.device_type == "CPU":
+        for vdev in virtual_devices:
+          if vdev.memory_limit is not None:
+            raise ValueError("Setting memory limit on CPU virtual devices is "
+                             "currently not supported")
+          if vdev.experimental_priority is not None:
+            raise ValueError("Setting experimental_priority on CPU virtual "
+                             " devices is currently not supported")
+          if vdev.experimental_device_ordinal is not None:
+            raise ValueError("Setting experimental_device_ordinal on CPU virtual "
+                             " devices is currently not supported")
+      elif dev.device_type == "GPU":
+        for vdev in virtual_devices:
+          if vdev.memory_limit is None:
+            raise ValueError(
+                "Setting memory limit is required for GPU virtual devices")
+      else:
+        raise ValueError("Virtual devices are not supported for %s" %
+                         dev.device_type)
+    
+      if self._virtual_device_map.get(dev) == virtual_devices:
+        return
+    
+      if self._context_handle is not None:
+>       raise RuntimeError(
+            "Virtual devices cannot be modified after being initialized")
+E       RuntimeError: Virtual devices cannot be modified after being initialized
+
+.venv/lib/python3.10/site-packages/tensorflow/python/eager/context.py:1893: RuntimeError
+_______________________________________________________________________________________________ test_custom_fit ________________________________________________________________________________________________
+
+    def test_custom_fit():
+        class CustomModel(keras.Model):
+            def __init__(self, *args, **kwargs):
+                super().__init__(*args, **kwargs)
+                self.loss_tracker = keras.metrics.Mean(name="loss")
+                self.mae_metric = keras.metrics.MeanAbsoluteError(name="mae")
+                self.loss_fn = keras.losses.MeanSquaredError()
+    
+            def train_step(self, data):
+                x, y = data
+                self.zero_grad()
+                y_pred = self(x, training=True)
+                loss = self.loss_fn(y, y_pred)
+                loss.backward()
+                trainable_weights = [v for v in self.trainable_weights]
+                gradients = [v.value.grad for v in trainable_weights]
+                with torch.no_grad():
+                    self.optimizer.apply(gradients, trainable_weights)
+                self.loss_tracker.update_state(loss)
+                self.mae_metric.update_state(y, y_pred)
+                return {
+                    "loss": self.loss_tracker.result(),
+                    "mae": self.mae_metric.result(),
+                }
+    
+            @property
+            def metrics(self):
+                return [self.loss_tracker, self.mae_metric]
+    
+        inputs = keras.Input(shape=(32,))
+        outputs = keras.layers.Dense(1)(inputs)
+        model = CustomModel(inputs, outputs)
+        model.compile(optimizer="adam")
+        x = np.random.random((64, 32))
+        y = np.random.random((64, 1))
+>       history = model.fit(x, y, epochs=1)
+
+integration_tests/torch_custom_fit_test.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+keras/src/utils/traceback_utils.py:113: in error_handler
+    return fn(*args, **kwargs)
+keras/src/backend/tensorflow/trainer.py:328: in fit
+    logs = self.train_function(iterator)
+keras/src/backend/tensorflow/trainer.py:175: in function
+    opt_outputs = multi_step_on_iterator(iterator)
+.venv/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+keras/src/backend/tensorflow/trainer.py:125: in multi_step_on_iterator
+    one_step_on_data(iterator.get_next())
+keras/src/backend/tensorflow/trainer.py:106: in one_step_on_data
+    outputs = self.distribute_strategy.run(step_function, args=(data,))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <CustomModel name=custom_model_1, built=True>, data = (<tf.Tensor 'data:0' shape=(32, 32) dtype=float32>, <tf.Tensor 'data_1:0' shape=(32, 1) dtype=float32>)
+
+    def train_step(self, data):
+        x, y = data
+>       self.zero_grad()
+E       AttributeError: 'CustomModel' object has no attribute 'zero_grad'
+
+integration_tests/torch_custom_fit_test.py:17: AttributeError
+_______________________________________________________________________________ TorchWorkflowTest.test_keras_layer_in_nn_module ________________________________________________________________________________
+
+self = <torch_workflow_test.TorchWorkflowTest testMethod=test_keras_layer_in_nn_module>
+
+    def test_keras_layer_in_nn_module(self):
+        net = Net()
+    
+        # Test using Keras layer in a nn.Module.
+        # Test forward pass
+        self.assertAllEqual(list(net(torch.empty(100, 10)).shape), [100, 1])
+        # Test KerasVariables are added as nn.Parameter.
+>       self.assertLen(list(net.parameters()), 2)
+
+integration_tests/torch_workflow_test.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+keras/src/testing/test_case.py:80: in assertLen
+    self.assertEqual(len(iterable), expected_len, msg=msg)
+E   AssertionError: 0 != 2
+__________________________________________________________________________ DtypesTest.test_result_type_with_tensor_bfloat16_bfloat16 ___________________________________________________________________________
+
+    def backends() -> dict[str, xla_client.Client]:
+      global _backends
+      global _backend_errors
+      global _default_backend
+      global _at_fork_handler_installed
+    
+      _discover_and_register_pjrt_plugins()
+    
+      with _backend_lock:
+        if _backends:
+          return _backends
+    
+        # os.register_at_fork only exists on Unix.
+        if not _at_fork_handler_installed and hasattr(os, "register_at_fork"):
+          os.register_at_fork(before=_at_fork)
+          _at_fork_handler_installed = True
+    
+        if jax_platforms := config.jax_platforms.value:
+          platforms = []
+          # Allow platform aliases in the list of platforms.
+          for platform in jax_platforms.split(","):
+            platforms.extend(expand_platform_alias(platform))
+          priorities = range(len(platforms), 0, -1)
+          # If the user specified a list of platforms explicitly, always fail
+          # loudly.
+          fail_quietly_list = [False] * len(platforms)
+          platform_registrations = list(
+            zip(platforms, priorities, fail_quietly_list))
+        else:
+          platform_registrations = [
+              (platform, registration.priority, registration.fail_quietly)
+              for platform, registration
+              in _backend_factories.items()
+          ]
+        default_priority = -1000
+        for platform, priority, fail_quietly in platform_registrations:
+          try:
+>           backend = _init_backend(platform)
+
+.venv/lib/python3.10/site-packages/jax/_src/xla_bridge.py:874: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/jax/_src/xla_bridge.py:965: in _init_backend
+    backend = registration.factory()
+.venv/lib/python3.10/site-packages/jax/_src/xla_bridge.py:663: in factory
+    return xla_client.make_c_api_client(plugin_name, updated_options, None)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plugin_name = 'cuda', options = {'allocator': 'default', 'enable_mock_nccl': False, 'platform_name': 'cuda'}, distributed_client = None
+
+    def make_c_api_client(
+        plugin_name: str,
+        options: Optional[_NameValueMapping] = None,
+        distributed_client: Optional[_xla.DistributedRuntimeClient] = None,
+    ):
+      """Creates a PJRT C API client for a PJRT plugin.
+    
+      It is required that load_pjrt_plugin_dynamically is called once with the same
+      plugin_name before this method is called.
+    
+      Args:
+         plugin_name: the name of the PJRT plugin.
+         options: extra platform-specific options.
+         distributed_client: distributed client.
+    
+      Returns:
+         A PJRT C API client for plugin_name.
+      """
+      if options is None:
+        options = {}
+>     return _xla.get_c_api_client(plugin_name, options, distributed_client)
+E     jaxlib.xla_extension.XlaRuntimeError: FAILED_PRECONDITION: No visible GPU devices.
+
+.venv/lib/python3.10/site-packages/jaxlib/xla_client.py:199: XlaRuntimeError
+
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/app/keras/.venv/lib/python3.10/site-packages/jax/_src/xla_bridge.py", line 874, in backends
+    backend = _init_backend(platform)
+  File "/app/keras/.venv/lib/python3.10/site-packages/jax/_src/xla_bridge.py", line 965, in _init_backend
+    backend = registration.factory()
+  File "/app/keras/.venv/lib/python3.10/site-packages/jax/_src/xla_bridge.py", line 663, in factory
+    return xla_client.make_c_api_client(plugin_name, updated_options, None)
+  File "/app/keras/.venv/lib/python3.10/site-packages/jaxlib/xla_client.py", line 199, in make_c_api_client
+    return _xla.get_c_api_client(plugin_name, options, distributed_client)
+jaxlib.xla_extension.XlaRuntimeError: FAILED_PRECONDITION: No visible GPU devices.
+
+During handling of the above exception, another exception occurred:
+
+jax.errors.SimplifiedTraceback: For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
+
+The above exception was the direct cause of the following exception:
+
+self = <keras.src.backend.common.dtypes_test.DtypesTest testMethod=test_result_type_with_tensor_bfloat16_bfloat16>, dtype1 = 'bfloat16', dtype2 = 'bfloat16'
+
+    @parameterized.named_parameters(
+        named_product(dtype1=ALL_DTYPES, dtype2=ALL_DTYPES)
+    )
+    def test_result_type_with_tensor(self, dtype1, dtype2):
+        import jax.numpy as jnp
+    
+        x1 = ops.ones((1,), dtype=dtype1)
+        x2 = ops.ones((1,), dtype=dtype2)
+>       x1_jax = jnp.ones((1,), dtype=dtype1)
+
+keras/src/backend/common/dtypes_test.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/jax/_src/numpy/lax_numpy.py:2792: in ones
+    return lax.full(shape, 1, _jnp_dtype(dtype), sharding=_normalize_to_sharding(device))
+.venv/lib/python3.10/site-packages/jax/_src/lax/lax.py:1246: in full
+    fill_value = _convert_element_type(fill_value, dtype, weak_type)
+.venv/lib/python3.10/site-packages/jax/_src/lax/lax.py:559: in _convert_element_type
+    return convert_element_type_p.bind(operand, new_dtype=new_dtype,
+.venv/lib/python3.10/site-packages/jax/_src/core.py:387: in bind
+    return self.bind_with_trace(find_top_trace(args), args, params)
+.venv/lib/python3.10/site-packages/jax/_src/core.py:391: in bind_with_trace
+    out = trace.process_primitive(self, map(trace.full_raise, args), params)
+.venv/lib/python3.10/site-packages/jax/_src/core.py:879: in process_primitive
+    return primitive.impl(*tracers, **params)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prim = convert_element_type, args = (array(1, dtype=bfloat16),), params = {'new_dtype': dtype(bfloat16), 'weak_type': False}, fun = <PjitFunction of <function convert_element_type at 0x7f621f097400>>
+prev = None
+
+    def apply_primitive(prim, *args, **params):
+      """Impl rule that compiles and runs a single primitive 'prim' using XLA."""
+      fun = xla_primitive_callable(prim, **params)
+      # TODO(yashkatariya): Investigate adding is_primitive to jit and never
+      # triggering the disable jit path instead of messing around with it here.
+      prev = lib.jax_jit.swap_thread_local_state_disable_jit(False)
+      try:
+>       outs = fun(*args)
+E       RuntimeError: Unable to initialize backend 'cuda': FAILED_PRECONDITION: No visible GPU devices. (you may need to uninstall the failing plugin package, or set JAX_PLATFORMS=cpu to skip this backend.)
+
+.venv/lib/python3.10/site-packages/jax/_src/dispatch.py:86: RuntimeError
+=========================================================================================== short test summary info ============================================================================================
+FAILED integration_tests/jax_custom_fit_test.py::test_custom_fit - TypeError: test_custom_fit.<locals>.CustomModel.train_step() missing 1 required positional argument: 'data'
+FAILED integration_tests/model_visualization_test.py::ModelVisualizationTest::test_plot_functional_model - ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+FAILED integration_tests/model_visualization_test.py::ModelVisualizationTest::test_plot_functional_model_with_splits_and_merges - ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+FAILED integration_tests/model_visualization_test.py::ModelVisualizationTest::test_plot_nested_functional_model - ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+FAILED integration_tests/model_visualization_test.py::ModelVisualizationTest::test_plot_sequential_model - ImportError: You must install pydot (`pip install pydot`) for model_to_dot to work.
+FAILED integration_tests/model_visualization_test.py::ModelVisualizationTest::test_plot_subclassed_model - ImportError: You must install pydot (`pip install pydot`) for `plot_model` to work.
+FAILED integration_tests/tf_distribute_training_test.py::test_model_fit - RuntimeError: Virtual devices cannot be modified after being initialized
+FAILED integration_tests/torch_custom_fit_test.py::test_custom_fit - AttributeError: 'CustomModel' object has no attribute 'zero_grad'
+FAILED integration_tests/torch_workflow_test.py::TorchWorkflowTest::test_keras_layer_in_nn_module - AssertionError: 0 != 2
+FAILED keras/src/backend/common/dtypes_test.py::DtypesTest::test_result_type_with_tensor_bfloat16_bfloat16 - RuntimeError: Unable to initialize backend 'cuda': FAILED_PRECONDITION: No visible GPU devices. (you may need to uninstall the failing plugin package, or set JAX_PLATFORMS=cpu to skip this backend.)
+==================================================================== 10 failed, 12245 passed, 320 skipped, 1 xpassed in 1957.85s (0:32:37) =====================================================================

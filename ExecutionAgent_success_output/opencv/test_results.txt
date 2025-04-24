@@ -1,0 +1,99 @@
+      Start  3: opencv_sanity_core
+ 3/39 Test  #3: opencv_sanity_core ...............***Failed  114.30 sec
+      Start  4: opencv_test_flann
+ 4/39 Test  #4: opencv_test_flann ................   Passed    0.01 sec
+      Start  5: opencv_test_imgproc
+ 5/39 Test  #5: opencv_test_imgproc ..............***Failed   74.21 sec
+      Start  6: opencv_perf_imgproc
+ 6/39 Test  #6: opencv_perf_imgproc ..............***Failed  512.98 sec
+      Start  7: opencv_sanity_imgproc
+ 7/39 Test  #7: opencv_sanity_imgproc ............***Failed   89.86 sec
+      Start  8: opencv_test_ml
+ 8/39 Test  #8: opencv_test_ml ...................***Failed    3.01 sec
+      Start  9: opencv_test_photo
+ 9/39 Test  #9: opencv_test_photo ................***Failed    0.24 sec
+      Start 10: opencv_perf_photo
+10/39 Test #10: opencv_perf_photo ................***Failed    0.01 sec
+      Start 11: opencv_sanity_photo
+11/39 Test #11: opencv_sanity_photo ..............***Failed    0.01 sec
+      Start 12: opencv_test_dnn
+12/39 Test #12: opencv_test_dnn ..................***Failed    0.45 sec
+      Start 13: opencv_perf_dnn
+13/39 Test #13: opencv_perf_dnn ..................***Failed  133.17 sec
+      Start 14: opencv_sanity_dnn
+14/39 Test #14: opencv_sanity_dnn ................***Failed   19.43 sec
+      Start 15: opencv_test_features2d
+15/39 Test #15: opencv_test_features2d ...........***Failed   48.56 sec
+      Start 16: opencv_perf_features2d
+16/39 Test #16: opencv_perf_features2d ...........***Failed    4.12 sec
+      Start 17: opencv_sanity_features2d
+17/39 Test #17: opencv_sanity_features2d .........***Failed    1.07 sec
+      Start 18: opencv_test_imgcodecs
+18/39 Test #18: opencv_test_imgcodecs ............***Failed   18.20 sec
+      Start 19: opencv_perf_imgcodecs
+19/39 Test #19: opencv_perf_imgcodecs ............***Failed    0.01 sec
+      Start 20: opencv_sanity_imgcodecs
+20/39 Test #20: opencv_sanity_imgcodecs ..........***Failed    0.01 sec
+      Start 21: opencv_test_videoio
+21/39 Test #21: opencv_test_videoio ..............***Failed   88.95 sec
+      Start 22: opencv_perf_videoio
+22/39 Test #22: opencv_perf_videoio ..............***Failed    0.05 sec
+      Start 23: opencv_sanity_videoio
+23/39 Test #23: opencv_sanity_videoio ............***Failed    0.04 sec
+      Start 24: opencv_test_calib3d
+24/39 Test #24: opencv_test_calib3d ..............***Failed   43.35 sec
+      Start 25: opencv_perf_calib3d
+25/39 Test #25: opencv_perf_calib3d ..............***Failed  101.25 sec
+      Start 26: opencv_sanity_calib3d
+26/39 Test #26: opencv_sanity_calib3d ............***Failed    3.51 sec
+      Start 27: opencv_test_highgui
+27/39 Test #27: opencv_test_highgui ..............***Failed    0.02 sec
+      Start 28: opencv_test_objdetect
+28/39 Test #28: opencv_test_objdetect ............***Failed   14.62 sec
+      Start 29: opencv_perf_objdetect
+29/39 Test #29: opencv_perf_objdetect ............***Failed   51.99 sec
+      Start 30: opencv_sanity_objdetect
+30/39 Test #30: opencv_sanity_objdetect ..........***Failed    3.83 sec
+      Start 31: opencv_test_stitching
+31/39 Test #31: opencv_test_stitching ............***Failed    0.02 sec
+      Start 32: opencv_perf_stitching
+32/39 Test #32: opencv_perf_stitching ............***Failed   19.85 sec
+      Start 33: opencv_sanity_stitching
+33/39 Test #33: opencv_sanity_stitching ..........***Failed    2.08 sec
+      Start 34: opencv_test_video
+34/39 Test #34: opencv_test_video ................***Failed    1.86 sec
+      Start 35: opencv_perf_video
+35/39 Test #35: opencv_perf_video ................***Failed   26.82 sec
+      Start 36: opencv_sanity_video
+36/39 Test #36: opencv_sanity_video ..............***Failed    0.96 sec
+      Start 37: opencv_test_gapi
+37/39 Test #37: opencv_test_gapi .................***Failed   87.11 sec
+      Start 38: opencv_perf_gapi
+38/39 Test #38: opencv_perf_gapi .................***Failed  375.17 sec
+      Start 39: opencv_sanity_gapi
+39/39 Test #39: opencv_sanity_gapi ...............***Failed  115.05 sec
+
+5% tests passed, 37 tests failed out of 39
+
+Label Time Summary:
+Accuracy             = 631.46 sec*proc (15 tests)
+Main                 = 2975.95 sec*proc (39 tests)
+Performance          = 1994.35 sec*proc (12 tests)
+Sanity               = 350.14 sec*proc (12 tests)
+opencv_calib3d       = 148.11 sec*proc (3 tests)
+opencv_core          = 1134.07 sec*proc (3 tests)
+opencv_dnn           = 153.05 sec*proc (3 tests)
+opencv_features2d    =  53.75 sec*proc (3 tests)
+opencv_flann         =   0.01 sec*proc (1 test)
+opencv_gapi          = 577.33 sec*proc (3 tests)
+opencv_highgui       =   0.02 sec*proc (1 test)
+opencv_imgcodecs     =  18.22 sec*proc (3 tests)
+opencv_imgproc       = 677.05 sec*proc (3 tests)
+opencv_ml            =   3.01 sec*proc (1 test)
+opencv_objdetect     =  70.43 sec*proc (3 tests)
+opencv_photo         =   0.26 sec*proc (3 tests)
+opencv_stitching     =  21.94 sec*proc (3 tests)
+opencv_video         =  29.64 sec*proc (3 tests)
+opencv_videoio       =  89.04 sec*proc (3 tests)
+
+Total Test time (real) = 2976.72 sec

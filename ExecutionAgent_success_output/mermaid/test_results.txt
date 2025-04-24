@@ -1,0 +1,1049 @@
+Rule: nodeShapeNLabel:  [ A wide one in the middle ]
+Rule: node (NODE_ID nodeShapeNLabel separator):  B { typeStr: '[]', label: 'A wide one in the middle' }
+Rule: nodeStatement (node)  {
+  id: 'B',
+  label: 'A wide one in the middle',
+  typeStr: '[]',
+  directions: undefined
+}
+. 
+        
+Lex: EOF 
+Rule: statement:  {
+  type: 'applyStyles',
+  id: 'B',
+  stylesStr: 'fill:#f9F,stroke:#333,stroke-width:4px'
+}
+Rule: statement #2:  {
+  id: 'B',
+  label: 'A wide one in the middle',
+  type: 'square',
+  directions: undefined,
+  widthInColumns: 1
+}
+Rule: statement #2:  { type: 'column-setting', columns: 1 }
+Rule: hierarchy:  [
+  { type: 'column-setting', columns: 1 },
+  {
+    id: 'B',
+    label: 'A wide one in the middle',
+    type: 'square',
+    directions: undefined,
+    widthInColumns: 1
+  },
+  {
+    type: 'applyStyles',
+    id: 'B',
+    stylesStr: 'fill:#f9F,stroke:#333,stroke-width:4px'
+  }
+]
+
+stdout | packages/mermaid/src/diagrams/block/parser/block.spec.ts > Block diagram > prototype properties > should work with a __proto__ property
+. 
+
+Lex: NODE_ID __proto__
+Lex: EOF 
+Rule: node (NODE_ID separator):  __proto__
+Rule: nodeStatement (node)  { id: '__proto__' }
+Rule: statement:  {
+  id: '__proto__',
+  label: undefined,
+  type: 'na',
+  directions: undefined,
+  widthInColumns: 1
+}
+Rule: hierarchy:  [
+  {
+    id: '__proto__',
+    label: undefined,
+    type: 'na',
+    directions: undefined,
+    widthInColumns: 1
+  }
+]
+. 
+
+Lex: NODE_ID A;
+.  
+Rule: node (NODE_ID separator):  A;
+Rule: nodeStatement (node)  { id: 'A;' }
+Lex: EOF 
+Rule: statement:  {
+  type: 'classDef',
+  id: '__proto__',
+  css: 'color:#ffffff,fill:#000000; class A __proto__'
+}
+Rule: statement #2:  {
+  id: 'A;',
+  label: undefined,
+  type: 'na',
+  directions: undefined,
+  widthInColumns: 1
+}
+Rule: hierarchy:  [
+  {
+    id: 'A;',
+    label: undefined,
+    type: 'na',
+    directions: undefined,
+    widthInColumns: 1
+  },
+  {
+    type: 'classDef',
+    id: '__proto__',
+    css: 'color:#ffffff,fill:#000000; class A __proto__'
+  }
+]
+
+stdout | packages/mermaid/src/diagrams/block/parser/block.spec.ts > Block diagram > prototype properties > should work with a constructor property
+. 
+
+Lex: NODE_ID constructor
+Lex: EOF 
+Rule: node (NODE_ID separator):  constructor
+Rule: nodeStatement (node)  { id: 'constructor' }
+Rule: statement:  {
+  id: 'constructor',
+  label: undefined,
+  type: 'na',
+  directions: undefined,
+  widthInColumns: 1
+}
+Rule: hierarchy:  [
+  {
+    id: 'constructor',
+    label: undefined,
+    type: 'na',
+    directions: undefined,
+    widthInColumns: 1
+  }
+]
+. 
+
+Lex: NODE_ID A;
+.  
+Rule: node (NODE_ID separator):  A;
+Rule: nodeStatement (node)  { id: 'A;' }
+Lex: EOF 
+Rule: statement:  {
+  type: 'classDef',
+  id: 'constructor',
+  css: 'color:#ffffff,fill:#000000; class A constructor'
+}
+Rule: statement #2:  {
+  id: 'A;',
+  label: undefined,
+  type: 'na',
+  directions: undefined,
+  widthInColumns: 1
+}
+Rule: hierarchy:  [
+  {
+    id: 'A;',
+    label: undefined,
+    type: 'na',
+    directions: undefined,
+    widthInColumns: 1
+  },
+  {
+    type: 'classDef',
+    id: 'constructor',
+    css: 'color:#ffffff,fill:#000000; class A constructor'
+  }
+]
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > hiearchy > MMP-1 should handle a simple root definition abc122
+53.988 : INFO :  Node:  root
+53.988 : INFO :  addNode 4 root root 0
+53.988 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > hiearchy > MMP-2 should handle a hierachial mindmap definition
+54.004 : INFO :  Node:  root
+54.004 : INFO :  addNode 4 root root 0
+54.004 : TRACE :  Stop NL 
+54.004 : INFO :  Node:  child1
+54.004 : INFO :  addNode 6 child1 child1 0
+54.004 : TRACE :  Stop NL 
+54.004 : INFO :  Node:  child2
+54.004 : INFO :  addNode 6 child2 child2 0
+54.004 : TRACE :  Stop NL 
+54.004 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > hiearchy > 3 should handle a simple root definition with a shape and without an id abc123
+54.009 : TRACE :  Long description: root
+54.009 : TRACE :  node end )
+54.009 : TRACE :  node found .. (
+54.009 : DEBUG :  In get type ( )
+54.009 : INFO :  Node:  root
+54.009 : INFO :  addNode 4 root root 1
+54.009 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > hiearchy > MMP-4 should handle a deeper hierachial mindmap definition
+54.011 : INFO :  Node:  root
+54.011 : INFO :  addNode 4 root root 0
+54.012 : TRACE :  Stop NL 
+54.011 : INFO :  Node:  child1
+54.011 : INFO :  addNode 6 child1 child1 0
+54.012 : TRACE :  Stop NL 
+54.011 : INFO :  Node:  leaf1
+54.011 : INFO :  addNode 8 leaf1 leaf1 0
+54.012 : TRACE :  Stop NL 
+54.011 : INFO :  Node:  child2
+54.011 : INFO :  addNode 6 child2 child2 0
+54.012 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > hiearchy > 5 Multiple roots are illegal
+54.016 : INFO :  Node:  root
+54.016 : INFO :  addNode 4 root root 0
+54.017 : TRACE :  Stop NL 
+54.016 : INFO :  Node:  fakeRoot
+54.016 : INFO :  addNode 4 fakeRoot fakeRoot 0
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > hiearchy > MMP-6 real root in wrong place
+54.029 : INFO :  Node:  root
+54.029 : INFO :  addNode 10 root root 0
+54.029 : TRACE :  Stop NL 
+54.029 : INFO :  Node:  fakeRoot
+54.029 : INFO :  addNode 8 fakeRoot fakeRoot 0
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > nodes > MMP-7 should handle an id and type for a node definition
+54.034 : TRACE :  Long description: The root
+54.034 : TRACE :  node end ... ]
+54.034 : TRACE :  node found .. root
+54.034 : DEBUG :  In get type [ ]
+54.034 : INFO :  Node:  root
+54.034 : INFO :  addNode 4 root The root 2
+54.034 : TRACE :  Stop NL 
+54.034 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > nodes > MMP-8 should handle an id and type for a node definition
+54.037 : INFO :  Node:  root
+54.037 : INFO :  addNode 4 root root 0
+54.037 : TRACE :  Stop NL 
+54.037 : TRACE :  Long description: child1
+54.037 : TRACE :  node end )
+54.037 : TRACE :  node found .. theId
+54.037 : DEBUG :  In get type ( )
+54.037 : INFO :  Node:  theId
+54.037 : INFO :  addNode 6 theId child1 1
+54.037 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > nodes > MMP-9 should handle an id and type for a node definition
+54.040 : TRACE :  Node:  root
+54.040 : INFO :  addNode 0 root root 0
+54.040 : TRACE :  Stop NL 
+54.040 : TRACE :  Long description: child1
+54.040 : TRACE :  node end )
+54.040 : TRACE :  node found .. theId
+54.040 : DEBUG :  In get type ( )
+54.040 : INFO :  Node:  theId
+54.040 : INFO :  addNode 6 theId child1 1
+54.040 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > nodes > MMP-10 multiple types (circle)
+54.043 : TRACE :  Long description: the root
+54.043 : TRACE :  node end ))
+54.043 : TRACE :  node found .. root
+54.043 : DEBUG :  In get type (( ))
+54.043 : INFO :  Node:  root
+54.043 : INFO :  addNode 1 root the root 3
+54.043 : TRACE :  Stop NL 
+54.043 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > nodes > MMP-11 multiple types (cloud)
+54.045 : TRACE :  Cloud Bang
+54.045 : TRACE :  Long description: the root
+54.045 : TRACE :  node end ((
+54.045 : TRACE :  node found .. root
+54.045 : DEBUG :  In get type ) (
+54.045 : INFO :  Node:  root
+54.045 : INFO :  addNode 1 root the root 4
+54.045 : TRACE :  Stop NL 
+54.045 : TRACE :  Stop EOF2 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > nodes > MMP-12 multiple types (bang)
+54.047 : TRACE :  Explosion Bang
+54.047 : TRACE :  Long description: the root
+54.047 : TRACE :  node end ((
+54.047 : TRACE :  node found .. root
+54.046 : DEBUG :  In get type )) ((
+54.046 : INFO :  Node:  root
+54.046 : INFO :  addNode 1 root the root 5
+54.047 : TRACE :  Stop NL 
+54.047 : TRACE :  Stop EOF2 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > nodes > MMP-12-a multiple types (hexagon)
+54.048 : TRACE :  Long description: the root
+54.048 : TRACE :  node end ((
+54.048 : TRACE :  node found .. root
+54.048 : DEBUG :  In get type {{ }}
+54.048 : INFO :  Node:  root
+54.048 : INFO :  addNode 1 root the root 6
+54.048 : TRACE :  Stop NL 
+54.048 : TRACE :  Stop EOF2 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > decorations > MMP-13 should be possible to set an icon for the node
+54.059 : TRACE :  Long description: The root
+54.059 : TRACE :  node end ... ]
+54.059 : TRACE :  node found .. root
+54.059 : DEBUG :  In get type [ ]
+54.059 : INFO :  Node:  root
+54.059 : INFO :  addNode 4 root The root 2
+54.059 : TRACE :  Stop NL 
+54.059 : TRACE :  Begin icon
+54.059 : TRACE :  end icon
+54.059 : TRACE :  Icon:  bomb
+54.059 : TRACE :  Stop NL 
+54.059 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > decorations > MMP-14 should be possible to set classes for the node
+54.062 : TRACE :  Long description: The root
+54.062 : TRACE :  node end ... ]
+54.062 : TRACE :  node found .. root
+54.062 : DEBUG :  In get type [ ]
+54.062 : INFO :  Node:  root
+54.062 : INFO :  addNode 4 root The root 2
+54.062 : TRACE :  Stop NL 
+54.062 : TRACE :  Stop NL 
+54.062 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > decorations > MMP-15 should be possible to set both classes and icon for the node
+54.071 : TRACE :  Long description: The root
+54.071 : TRACE :  node end ... ]
+54.071 : TRACE :  node found .. root
+54.071 : DEBUG :  In get type [ ]
+54.071 : INFO :  Node:  root
+54.071 : INFO :  addNode 4 root The root 2
+54.071 : TRACE :  Stop NL 
+54.071 : TRACE :  Stop NL 
+54.071 : TRACE :  Begin icon
+54.071 : TRACE :  end icon
+54.071 : TRACE :  Icon:  bomb
+54.071 : TRACE :  Stop NL 
+54.071 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > decorations > MMP-16 should be possible to set both classes and icon for the node
+54.076 : TRACE :  Long description: The root
+54.076 : TRACE :  node end ... ]
+54.076 : TRACE :  node found .. root
+54.075 : DEBUG :  In get type [ ]
+54.075 : INFO :  Node:  root
+54.075 : INFO :  addNode 4 root The root 2
+54.076 : TRACE :  Stop NL 
+54.076 : TRACE :  Begin icon
+54.076 : TRACE :  end icon
+54.076 : TRACE :  Icon:  bomb
+54.076 : TRACE :  Stop NL 
+54.076 : TRACE :  Stop NL 
+54.076 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > descriptions > MMP-17 should be possible to use node syntax in the descriptions
+54.078 : TRACE :  Starting NSTR
+54.078 : TRACE :  description: String containing []
+54.078 : TRACE :  node end ... ]
+54.078 : TRACE :  node found .. root
+54.078 : DEBUG :  In get type [ ]
+54.078 : INFO :  Node:  root
+54.078 : INFO :  addNode 4 root String containing [] 2
+54.078 : TRACE :  Stop NL 
+54.078 : TRACE :  Stop EOF2 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > descriptions > MMP-18 should be possible to use node syntax in the descriptions in children
+54.080 : TRACE :  Starting NSTR
+54.080 : TRACE :  description: String containing []
+54.080 : TRACE :  node end ... ]
+54.080 : TRACE :  node found .. root
+54.080 : DEBUG :  In get type [ ]
+54.080 : INFO :  Node:  root
+54.080 : INFO :  addNode 4 root String containing [] 2
+54.080 : TRACE :  Stop NL 
+54.080 : TRACE :  Starting NSTR
+54.080 : TRACE :  description: String containing ()
+54.080 : TRACE :  node end ... ]
+54.080 : TRACE :  node found .. child1
+54.080 : DEBUG :  In get type [ ]
+54.080 : INFO :  Node:  child1
+54.080 : INFO :  addNode 6 child1 String containing () 2
+54.080 : TRACE :  Stop NL 
+54.080 : TRACE :  Stop EOF2 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > descriptions > MMP-19 should be possible to have a child after a class assignment
+54.090 : TRACE :  Long description: Root
+54.090 : TRACE :  node end )
+54.090 : TRACE :  node found .. root
+54.090 : DEBUG :  In get type ( )
+54.090 : INFO :  Node:  root
+54.090 : INFO :  addNode 2 root Root 1
+54.090 : TRACE :  Stop NL 
+54.090 : TRACE :  Long description: Child
+54.090 : TRACE :  node end )
+54.090 : TRACE :  node found .. Child
+54.090 : DEBUG :  In get type ( )
+54.090 : INFO :  Node:  Child
+54.090 : INFO :  addNode 4 Child Child 1
+54.090 : TRACE :  Stop NL 
+54.090 : TRACE :  Stop NL 
+54.090 : TRACE :  Long description: a
+54.090 : TRACE :  node end )
+54.090 : TRACE :  node found .. a
+54.090 : DEBUG :  In get type ( )
+54.090 : INFO :  Node:  a
+54.090 : INFO :  addNode 6 a a 1
+54.090 : TRACE :  Stop NL 
+54.090 : TRACE :  Long description: New Stuff
+54.090 : TRACE :  node end ... ]
+54.090 : TRACE :  node found .. b
+54.090 : DEBUG :  In get type [ ]
+54.090 : INFO :  Node:  b
+54.090 : INFO :  addNode 6 b New Stuff 2
+54.090 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > MMP-20 should be possible to have meaningless empty rows in a mindmap abc124
+54.106 : TRACE :  Long description: Root
+54.106 : TRACE :  node end )
+54.106 : TRACE :  node found .. root
+54.106 : DEBUG :  In get type ( )
+54.106 : INFO :  Node:  root
+54.106 : INFO :  addNode 2 root Root 1
+54.106 : TRACE :  Stop NL 
+54.106 : TRACE :  Long description: Child
+54.106 : TRACE :  node end )
+54.106 : TRACE :  node found .. Child
+54.106 : DEBUG :  In get type ( )
+54.106 : INFO :  Node:  Child
+54.106 : INFO :  addNode 4 Child Child 1
+54.106 : TRACE :  Stop NL 
+54.106 : TRACE :  Long description: a
+54.106 : TRACE :  node end )
+54.106 : TRACE :  SPACELINE
+54.106 : TRACE :  node found .. a
+54.106 : DEBUG :  In get type ( )
+54.106 : INFO :  Node:  a
+54.106 : INFO :  addNode 6 a a 1
+54.106 : TRACE :  Long description: New Stuff
+54.106 : TRACE :  node end ... ]
+54.106 : TRACE :  node found .. b
+54.106 : DEBUG :  In get type [ ]
+54.106 : INFO :  Node:  b
+54.106 : INFO :  addNode 6 b New Stuff 2
+54.106 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > MMP-21 should be possible to have comments in a mindmap
+54.110 : TRACE :  Long description: Root
+54.110 : TRACE :  node end )
+54.110 : TRACE :  node found .. root
+54.110 : DEBUG :  In get type ( )
+54.110 : INFO :  Node:  root
+54.110 : INFO :  addNode 2 root Root 1
+54.110 : TRACE :  Stop NL 
+54.110 : TRACE :  Long description: Child
+54.110 : TRACE :  node end )
+54.110 : TRACE :  node found .. Child
+54.110 : DEBUG :  In get type ( )
+54.110 : INFO :  Node:  Child
+54.110 : INFO :  addNode 4 Child Child 1
+54.110 : TRACE :  Stop NL 
+54.110 : TRACE :  Long description: a
+54.110 : TRACE :  node end )
+54.110 : TRACE :  Found comment 
+
+      %% This is a comment
+54.110 : TRACE :  node found .. a
+54.110 : DEBUG :  In get type ( )
+54.110 : INFO :  Node:  a
+54.110 : INFO :  addNode 6 a a 1
+54.110 : TRACE :  Stop NL2 
+54.110 : TRACE :  Long description: New Stuff
+54.110 : TRACE :  node end ... ]
+54.110 : TRACE :  node found .. b
+54.110 : DEBUG :  In get type [ ]
+54.110 : INFO :  Node:  b
+54.110 : INFO :  addNode 6 b New Stuff 2
+54.110 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > MMP-22 should be possible to have comments at the end of a line
+54.113 : TRACE :  Long description: Root
+54.113 : TRACE :  node end )
+54.113 : TRACE :  node found .. root
+54.113 : DEBUG :  In get type ( )
+54.113 : INFO :  Node:  root
+54.113 : INFO :  addNode 2 root Root 1
+54.113 : TRACE :  Stop NL 
+54.113 : TRACE :  Long description: Child
+54.113 : TRACE :  node end )
+54.113 : TRACE :  node found .. Child
+54.113 : DEBUG :  In get type ( )
+54.113 : INFO :  Node:  Child
+54.113 : INFO :  addNode 4 Child Child 1
+54.113 : TRACE :  Stop NL 
+54.113 : TRACE :  Long description: a
+54.113 : TRACE :  node end )
+54.113 : TRACE :  Found comment  %% This is a comment
+54.113 : TRACE :  node found .. a
+54.113 : DEBUG :  In get type ( )
+54.113 : INFO :  Node:  a
+54.113 : INFO :  addNode 6 a a 1
+54.113 : TRACE :  Stop NL2 
+54.113 : TRACE :  Long description: New Stuff
+54.113 : TRACE :  node end ... ]
+54.113 : TRACE :  node found .. b
+54.113 : DEBUG :  In get type [ ]
+54.113 : INFO :  Node:  b
+54.113 : INFO :  addNode 6 b New Stuff 2
+54.113 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > MMP-23 Rows with only spaces should not interfere
+54.116 : TRACE :  Node:  root
+54.116 : INFO :  addNode 0 root root 0
+54.116 : TRACE :  Stop NL 
+54.116 : TRACE :  SPACELINE
+54.116 : INFO :  Node:  A
+54.116 : INFO :  addNode 1 A A 0
+54.116 : INFO :  Node:  B
+54.116 : INFO :  addNode 1 B B 0
+54.116 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > MMP-24 Handle rows above the mindmap declarations
+54.119 : TRACE :  SPACELINE
+54.119 : TRACE :  Node:  root
+54.119 : INFO :  addNode 0 root root 0
+54.119 : TRACE :  Stop NL 
+54.119 : TRACE :  SPACELINE
+54.119 : INFO :  Node:  A
+54.119 : INFO :  addNode 1 A A 0
+54.119 : INFO :  Node:  B
+54.119 : INFO :  addNode 1 B B 0
+54.119 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts > when parsing a mindmap  > MMP-25 Handle rows above the mindmap declarations, no space
+54.121 : TRACE :  SPACELINE
+54.121 : TRACE :  Node:  root
+54.121 : INFO :  addNode 0 root root 0
+54.121 : TRACE :  Stop NL 
+54.121 : TRACE :  SPACELINE
+54.121 : INFO :  Node:  A
+54.121 : INFO :  addNode 1 A A 0
+54.121 : INFO :  Node:  B
+54.121 : INFO :  addNode 1 B B 0
+54.121 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > hiearchy > KNBN-1 should handle a simple root definition abc122
+53.969 : INFO :  Node:  root
+53.969 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > hiearchy > KNBN-2 should handle a hierachial kanban definition
+53.981 : INFO :  Node:  root
+53.981 : TRACE :  Stop NL 
+53.981 : INFO :  Node:  child1
+53.981 : TRACE :  Stop NL 
+53.981 : INFO :  Node:  child2
+53.981 : TRACE :  Stop NL 
+53.981 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > hiearchy > 3 should handle a simple root definition with a shape and without an id abc123
+53.986 : TRACE :  Long description: root
+53.986 : TRACE :  node end )
+53.986 : TRACE :  node found .. (
+53.986 : DEBUG :  In get type ( )
+53.986 : INFO :  Node:  root
+53.986 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > hiearchy > KNBN-4 should not dsitinguis between deeper hierachial levels in thr kanban definition
+53.989 : INFO :  Node:  root
+53.989 : TRACE :  Stop NL 
+53.989 : INFO :  Node:  child1
+53.989 : TRACE :  Stop NL 
+53.989 : INFO :  Node:  leaf1
+53.989 : TRACE :  Stop NL 
+53.989 : INFO :  Node:  child2
+53.989 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > hiearchy > 5 Multiple sections are ok
+53.995 : INFO :  Node:  section1
+53.995 : TRACE :  Stop NL 
+53.995 : INFO :  Node:  section2
+53.995 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > hiearchy > KNBN-6 real root in wrong place
+53.999 : INFO :  Node:  root
+53.999 : TRACE :  Stop NL 
+53.999 : INFO :  Node:  fakeRoot
+53.999 : TRACE :  Stop NL 
+53.999 : INFO :  Node:  realRootWrongPlace
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > nodes > KNBN-7 should handle an id and type for a node definition
+54.005 : TRACE :  Long description: The root
+54.005 : TRACE :  node end ... ]
+54.005 : TRACE :  node found .. root
+54.005 : DEBUG :  In get type [ ]
+54.005 : INFO :  Node:  root
+54.005 : TRACE :  Stop NL 
+54.005 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > nodes > KNBN-8 should handle an id and type for a node definition
+54.009 : INFO :  Node:  root
+54.009 : TRACE :  Stop NL 
+54.009 : TRACE :  Long description: child1
+54.009 : TRACE :  node end )
+54.009 : TRACE :  node found .. theId
+54.009 : DEBUG :  In get type ( )
+54.009 : INFO :  Node:  theId
+54.009 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > nodes > KNBN-9 should handle an id and type for a node definition
+54.013 : TRACE :  Node:  root
+54.013 : TRACE :  Stop NL 
+54.013 : TRACE :  Long description: child1
+54.013 : TRACE :  node end )
+54.013 : TRACE :  node found .. theId
+54.013 : DEBUG :  In get type ( )
+54.013 : INFO :  Node:  theId
+54.013 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > decorations > KNBN-13 should be possible to set an icon for the node
+54.018 : TRACE :  Long description: The root
+54.018 : TRACE :  node end ... ]
+54.018 : TRACE :  node found .. root
+54.018 : DEBUG :  In get type [ ]
+54.018 : INFO :  Node:  root
+54.018 : TRACE :  Stop NL 
+54.018 : TRACE :  Begin icon
+54.018 : TRACE :  end icon
+54.018 : TRACE :  Icon:  bomb
+54.018 : TRACE :  Stop NL 
+54.018 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > decorations > KNBN-14 should be possible to set classes for the node
+54.032 : TRACE :  Long description: The root
+54.032 : TRACE :  node end ... ]
+54.032 : TRACE :  node found .. root
+54.032 : DEBUG :  In get type [ ]
+54.032 : INFO :  Node:  root
+54.032 : TRACE :  Stop NL 
+54.032 : TRACE :  Stop NL 
+54.032 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > decorations > KNBN-15 should be possible to set both classes and icon for the node
+54.036 : TRACE :  Long description: The root
+54.036 : TRACE :  node end ... ]
+54.036 : TRACE :  node found .. root
+54.036 : DEBUG :  In get type [ ]
+54.036 : INFO :  Node:  root
+54.036 : TRACE :  Stop NL 
+54.036 : TRACE :  Stop NL 
+54.036 : TRACE :  Begin icon
+54.036 : TRACE :  end icon
+54.036 : TRACE :  Icon:  bomb
+54.036 : TRACE :  Stop NL 
+54.036 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > decorations > KNBN-16 should be possible to set both classes and icon for the node
+54.041 : TRACE :  Long description: The root
+54.041 : TRACE :  node end ... ]
+54.041 : TRACE :  node found .. root
+54.041 : DEBUG :  In get type [ ]
+54.041 : INFO :  Node:  root
+54.041 : TRACE :  Stop NL 
+54.041 : TRACE :  Begin icon
+54.041 : TRACE :  end icon
+54.041 : TRACE :  Icon:  bomb
+54.041 : TRACE :  Stop NL 
+54.041 : TRACE :  Stop NL 
+54.041 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > descriptions > KNBN-17 should be possible to use node syntax in the descriptions
+54.047 : TRACE :  Starting NSTR
+54.047 : TRACE :  description: String containing []
+54.047 : TRACE :  node end ... ]
+54.047 : TRACE :  node found .. root
+54.047 : DEBUG :  In get type [ ]
+54.047 : INFO :  Node:  root
+54.047 : TRACE :  Stop NL 
+54.047 : TRACE :  Stop EOF2 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > descriptions > KNBN-18 should be possible to use node syntax in the descriptions in children
+54.059 : TRACE :  Starting NSTR
+54.059 : TRACE :  description: String containing []
+54.059 : TRACE :  node end ... ]
+54.059 : TRACE :  node found .. root
+54.059 : DEBUG :  In get type [ ]
+54.059 : INFO :  Node:  root
+54.059 : TRACE :  Stop NL 
+54.059 : TRACE :  Starting NSTR
+54.059 : TRACE :  description: String containing ()
+54.059 : TRACE :  node end ... ]
+54.059 : TRACE :  node found .. child1
+54.059 : DEBUG :  In get type [ ]
+54.059 : INFO :  Node:  child1
+54.059 : TRACE :  Stop NL 
+54.059 : TRACE :  Stop EOF2 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > descriptions > KNBN-19 should be possible to have a child after a class assignment
+54.063 : TRACE :  Long description: Root
+54.063 : TRACE :  node end )
+54.063 : TRACE :  node found .. root
+54.063 : DEBUG :  In get type ( )
+54.063 : INFO :  Node:  root
+54.063 : TRACE :  Stop NL 
+54.063 : TRACE :  Long description: Child
+54.063 : TRACE :  node end )
+54.063 : TRACE :  node found .. Child
+54.063 : DEBUG :  In get type ( )
+54.063 : INFO :  Node:  Child
+54.063 : TRACE :  Stop NL 
+54.063 : TRACE :  Stop NL 
+54.063 : TRACE :  Long description: a
+54.063 : TRACE :  node end )
+54.063 : TRACE :  node found .. a
+54.063 : DEBUG :  In get type ( )
+54.063 : INFO :  Node:  a
+54.063 : TRACE :  Stop NL 
+54.063 : TRACE :  Long description: New Stuff
+54.063 : TRACE :  node end ... ]
+54.063 : TRACE :  node found .. b
+54.063 : DEBUG :  In get type [ ]
+54.063 : INFO :  Node:  b
+54.063 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > KNBN-20 should be possible to have meaningless empty rows in a kanban abc124
+54.077 : TRACE :  Long description: Root
+54.077 : TRACE :  node end )
+54.077 : TRACE :  node found .. root
+54.077 : DEBUG :  In get type ( )
+54.077 : INFO :  Node:  root
+54.077 : TRACE :  Stop NL 
+54.077 : TRACE :  Long description: Child
+54.077 : TRACE :  node end )
+54.077 : TRACE :  node found .. Child
+54.077 : DEBUG :  In get type ( )
+54.077 : INFO :  Node:  Child
+54.077 : TRACE :  Stop NL 
+54.077 : TRACE :  Long description: a
+54.077 : TRACE :  node end )
+54.077 : TRACE :  SPACELINE
+54.077 : TRACE :  node found .. a
+54.077 : DEBUG :  In get type ( )
+54.077 : INFO :  Node:  a
+54.077 : TRACE :  Long description: New Stuff
+54.077 : TRACE :  node end ... ]
+54.077 : TRACE :  node found .. b
+54.077 : DEBUG :  In get type [ ]
+54.077 : INFO :  Node:  b
+54.077 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > KNBN-21 should be possible to have comments in a kanban
+54.089 : TRACE :  Long description: Root
+54.089 : TRACE :  node end )
+54.089 : TRACE :  node found .. root
+54.089 : DEBUG :  In get type ( )
+54.089 : INFO :  Node:  root
+54.089 : TRACE :  Stop NL 
+54.089 : TRACE :  Long description: Child
+54.089 : TRACE :  node end )
+54.089 : TRACE :  node found .. Child
+54.089 : DEBUG :  In get type ( )
+54.089 : INFO :  Node:  Child
+54.089 : TRACE :  Stop NL 
+54.089 : TRACE :  Long description: a
+54.089 : TRACE :  node end )
+54.089 : TRACE :  Found comment 
+
+      %% This is a comment
+54.089 : TRACE :  node found .. a
+54.089 : DEBUG :  In get type ( )
+54.089 : INFO :  Node:  a
+54.089 : TRACE :  Stop NL2 
+54.089 : TRACE :  Long description: New Stuff
+54.089 : TRACE :  node end ... ]
+54.089 : TRACE :  node found .. b
+54.089 : DEBUG :  In get type [ ]
+54.089 : INFO :  Node:  b
+54.089 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > KNBN-22 should be possible to have comments at the end of a line
+54.103 : TRACE :  Long description: Root
+54.103 : TRACE :  node end )
+54.103 : TRACE :  node found .. root
+54.103 : DEBUG :  In get type ( )
+54.103 : INFO :  Node:  root
+54.103 : TRACE :  Stop NL 
+54.103 : TRACE :  Long description: Child
+54.103 : TRACE :  node end )
+54.103 : TRACE :  node found .. Child
+54.103 : DEBUG :  In get type ( )
+54.103 : INFO :  Node:  Child
+54.103 : TRACE :  Stop NL 
+54.103 : TRACE :  Long description: a
+54.103 : TRACE :  node end )
+54.103 : TRACE :  Found comment  %% This is a comment
+54.103 : TRACE :  node found .. a
+54.103 : DEBUG :  In get type ( )
+54.103 : INFO :  Node:  a
+54.103 : TRACE :  Stop NL2 
+54.103 : TRACE :  Long description: New Stuff
+54.103 : TRACE :  node end ... ]
+54.103 : TRACE :  node found .. b
+54.103 : DEBUG :  In get type [ ]
+54.103 : INFO :  Node:  b
+54.103 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > KNBN-23 Rows with only spaces should not interfere
+54.108 : TRACE :  Node:  root
+54.108 : TRACE :  Stop NL 
+54.108 : TRACE :  SPACELINE
+54.108 : INFO :  Node:  A
+54.108 : INFO :  Node:  B
+54.108 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > KNBN-24 Handle rows above the kanban declarations
+54.111 : TRACE :  SPACELINE
+54.111 : TRACE :  Node:  root
+54.111 : TRACE :  Stop NL 
+54.111 : TRACE :  SPACELINE
+54.111 : INFO :  Node:  A
+54.111 : INFO :  Node:  B
+54.111 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > when parsing a kanban  > KNBN-25 Handle rows above the kanban declarations, no space
+54.114 : TRACE :  SPACELINE
+54.114 : TRACE :  Node:  root
+54.114 : TRACE :  Stop NL 
+54.114 : TRACE :  SPACELINE
+54.114 : INFO :  Node:  A
+54.114 : INFO :  Node:  B
+54.114 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-30 should be possible to set the priority
+54.118 : INFO :  Node:  root
+54.118 : TRACE :  Stop NL 
+54.118 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-31 should be possible to set the assignment
+54.123 : INFO :  Node:  root
+54.123 : TRACE :  Stop NL 
+54.123 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-32 should be possible to set the icon
+54.125 : INFO :  Node:  root
+54.125 : TRACE :  Stop NL 
+54.125 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-33 should be possible to set the icon
+54.126 : INFO :  Node:  root
+54.126 : TRACE :  Stop NL 
+54.126 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-34 should be possible to set the metadata using multiple lines
+54.127 : INFO :  Node:  root
+54.127 : TRACE :  Stop NL 
+54.127 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-35 should be possible to set the metadata using one line
+54.129 : INFO :  Node:  root
+54.129 : TRACE :  Stop NL 
+54.129 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-36 should be possible to set the label using the new syntax
+54.138 : INFO :  Node:  root
+54.138 : TRACE :  Stop NL 
+54.138 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/kanban/kanban.spec.ts > item data data > KNBN-37 should be possible to set the external id
+54.140 : INFO :  Node:  root
+54.140 : TRACE :  Stop NL 
+54.140 : TRACE :  Stop EOF 
+
+stdout | packages/mermaid/src/diagrams/git/gitGraph.spec.ts > when parsing a gitGraph > when parsing basic gitGraph > should handle a gitGraph definition
+Ambiguous Alternatives Detected: <0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1> in <MANY2> inside <GitGraph​> Rule,
+<NEWLINE, commit, NEWLINE> may appears as a prefix path in all these alternatives.
+See: https://chevrotain.io/docs/guide/resolving_grammar_errors.html#AMBIGUOUS_ALTERNATIVES
+For Further details.
+
+stdout | packages/mermaid/src/diagrams/git/gitGraph.spec.ts > when parsing a gitGraph > when parsing basic gitGraph > should checkout a branch
+Ambiguous Alternatives Detected: <0, 0, 1, 1, 0, 1> in <MANY2> inside <GitGraph​> Rule,
+<NEWLINE, branch, ID> may appears as a prefix path in all these alternatives.
+See: https://chevrotain.io/docs/guide/resolving_grammar_errors.html#AMBIGUOUS_ALTERNATIVES
+For Further details.
+
+stdout | packages/mermaid/src/diagrams/git/gitGraph.spec.ts > when parsing a gitGraph > when parsing more advanced gitGraphs > should throw error when trying to merge, when current branch has no commits
+Ambiguous Alternatives Detected: <0, 0, 1, 1, 0, 1> in <MANY2> inside <GitGraph​> Rule,
+<NEWLINE, merge, ID> may appears as a prefix path in all these alternatives.
+See: https://chevrotain.io/docs/guide/resolving_grammar_errors.html#AMBIGUOUS_ALTERNATIVES
+For Further details.
+
+stdout | packages/mermaid/src/diagrams/git/gitGraph.spec.ts > when parsing a gitGraph > when parsing more advanced gitGraphs > accessibility > should handle a title and a description (accDescr)
+Ambiguous Alternatives Detected: <0, 0, 1, 1, 0, 1> in <MANY2> inside <GitGraph​> Rule,
+<NEWLINE, ACC_TITLE, NEWLINE> may appears as a prefix path in all these alternatives.
+See: https://chevrotain.io/docs/guide/resolving_grammar_errors.html#AMBIGUOUS_ALTERNATIVES
+For Further details.
+
+stdout | packages/mermaid/src/dagre-wrapper/edges.spec.js > Graphlib decorations > intersection > case 1 - intersection on left edge of box
+04.352 : DEBUG :  intersection calc abc89:
+  outsidePoint: {"x":31,"y":143.2257070163421}
+  insidePoint : {"x":99.3359375,"y":100}
+  node        : x:171 y:100 w:210 h:184
+04.352 : DEBUG :  sides calc abc89, Q 43.22570701634211, q 22.139152558958802, R 68.3359375, r 35 { _x: 66, _y: 122.1391525589588 }
+
+stdout | packages/mermaid/src/dagre-wrapper/edges.spec.js > Graphlib decorations > intersection > case 2 - intersection on left edge of box
+04.360 : DEBUG :  intersection calc abc89:
+  outsidePoint: {"x":310.2578125,"y":169.88002060631462}
+  insidePoint : {"x":127.96875,"y":100}
+  node        : x:100.23046875 y:176.75 w:184.4609375 h:337.5
+04.360 : DEBUG :  sides calc abc89, Q 69.88002060631462, q 45.15711441743504, R 182.2890625, r 117.796875 { _x: 192.4609375, _y: 145.15711441743503 }
+
+stdout | packages/mermaid/src/dagre-wrapper/edges.spec.js > Graphlib decorations > intersection > case 3 - intersection on top of box outside point greater then inside point
+04.361 : DEBUG :  intersection calc abc89:
+  outsidePoint: {"x":157,"y":39}
+  insidePoint : {"x":104,"y":105}
+  node        : x:114 y:164 w:212 h:176
+04.361 : DEBUG :  abc89 topp/bott calc, Q 66, q 37, R 53, r 29.71212121212121 { x: 133.71212121212122, y: 76 }
+
+stdout | packages/mermaid/src/dagre-wrapper/edges.spec.js > Graphlib decorations > intersection > case 4 - intersection on top of box inside point greater then inside point
+04.361 : DEBUG :  intersection calc abc89:
+  outsidePoint: {"x":144,"y":38}
+  insidePoint : {"x":198,"y":105}
+  node        : x:114 y:164 w:212 h:176
+04.361 : DEBUG :  abc89 topp/bott calc, Q 67, q 38, R 54, r 30.62686567164179 { x: 174.62686567164178, y: 76 }
+
+stdout | packages/mermaid/src/mermaidAPI.spec.ts > mermaidAPI > render > accessibility > gitGraph > should set aria-roledescription to the diagram type AND should call addSVGa11yTitleDescription
+Ambiguous Alternatives Detected: <0, 0, 1, 1, 0, 1> in <MANY2> inside <GitGraph​> Rule,
+<NEWLINE, ACC_TITLE, NEWLINE> may appears as a prefix path in all these alternatives.
+See: https://chevrotain.io/docs/guide/resolving_grammar_errors.html#AMBIGUOUS_ALTERNATIVES
+For Further details.
+
+ ✓ packages/mermaid/src/diagrams/xychart/parser/xychart.jison.spec.ts (48)
+ ✓ packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison.spec.ts (14)
+ ✓ packages/mermaid/src/rendering-util/layout-algorithms/dagre/mermaid-graphlib.spec.js (15)
+ ✓ packages/mermaid/src/dagre-wrapper/mermaid-graphlib.spec.js (15)
+ ✓ packages/mermaid/src/diagrams/class/classTypes.spec.ts (93)
+ ✓ packages/mermaid/src/diagrams/block/parser/block.spec.ts (24)
+ ✓ packages/mermaid/src/diagrams/kanban/kanban.spec.ts (30)
+ ✓ packages/mermaid/src/diagrams/mindmap/mindmap.spec.ts (26)
+ ✓ packages/mermaid/src/diagrams/class/classDiagram.spec.ts (367) 1977ms
+ ✓ packages/mermaid/src/diagrams/git/gitGraphRenderer.ts (30)
+ ✓ packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.spec.js (29)
+ ✓ packages/mermaid/src/diagrams/er/parser/erDiagram.spec.js (596) 526ms
+ ✓ packages/mermaid/src/diagrams/gantt/ganttDb.spec.ts (43)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-style.spec.js (24)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-text.spec.js (342) 844ms
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-edges.spec.js (247) 762ms
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-singlenode.spec.js (148) 493ms
+ ✓ packages/mermaid/src/utils.spec.ts (53)
+ ✓ packages/mermaid/src/diagrams/sequence/sequenceDiagram.spec.js (101) 2001ms
+ ✓ packages/mermaid/src/diagrams/git/gitGraph.spec.ts (68) 425ms
+ ✓ packages/mermaid/src/accessibility.spec.ts (20)
+ ✓ packages/mermaid/src/rendering-util/handle-markdown-text.spec.ts (19)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/subgraph.spec.js (22)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-node-data.spec.js (22)
+ ✓ packages/mermaid/src/diagrams/gantt/parser/gantt.spec.js (27)
+ ✓ packages/mermaid/src/rendering-util/splitText.spec.ts (35)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-arrows.spec.js (14)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-vertice-chaining.spec.js (7)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow.spec.js (25)
+ ✓ packages/mermaid/src/diagrams/sequence/svgDraw.spec.js (6)
+ ✓ packages/mermaid/src/diagrams/git/gitGraphParser.ts (6)
+ ✓ packages/parser/tests/gitGraph.test.ts (26)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-interactions.spec.js (13)
+ ✓ packages/mermaid/src/utils/lineWithOffset.ts (2)
+ ✓ packages/parser/tests/pie.test.ts (31)
+ ✓ packages/mermaid/src/diagram-api/frontmatter.spec.ts (12)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-comments.spec.js (9)
+ ✓ packages/mermaid/src/rendering-util/rendering-elements/nodes.spec.ts (39)
+ ✓ packages/mermaid/src/mermaid.spec.ts (13) 6771ms
+ ✓ packages/mermaid/src/diagrams/state/stateDiagram-v2.spec.js (29)
+ ✓ packages/mermaid/src/diagrams/state/stateDiagram.spec.js (29)
+ ✓ packages/mermaid/src/mermaidAPI.spec.ts (76) 8328ms
+ ✓ packages/mermaid/src/diagrams/state/parser/state-style.spec.js (15)
+ ✓ packages/mermaid/src/diagrams/state/parser/state-parser.spec.js (9)
+ ✓ packages/mermaid/src/diagrams/user-journey/parser/journey.spec.js (7)
+ ✓ packages/mermaid/src/diagrams/pie/pie.spec.ts (14) 450ms
+ ✓ packages/mermaid/src/diagrams/timeline/timeline.spec.js (7)
+ ✓ packages/mermaid/src/diagrams/packet/packet.spec.ts (9)
+ ✓ packages/mermaid/src/diagrams/common/common.spec.ts (20)
+ ✓ packages/mermaid/src/diagrams/flowchart/flowChartShapes.spec.js (11)
+ ✓ packages/mermaid/src/docs/.vitepress/theme/redirect.spec.ts (28)
+ ✓ |@mermaid-js/docs| .vitepress/theme/redirect.spec.ts (28)
+ ✓ packages/mermaid/src/config.spec.ts (5)
+ ✓ packages/mermaid/src/diagrams/c4/parser/c4Container.spec.js (48)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-lines.spec.js (9)
+ ✓ packages/mermaid/src/diagrams/c4/parser/c4System.spec.js (42)
+ ✓ packages/mermaid/src/styles.spec.ts (76) 5989ms
+ ✓ packages/mermaid/src/rendering-util/rendering-elements/edgeMarker.spec.ts (5)
+ ✓ packages/mermaid/src/dagre-wrapper/edgeMarker.spec.ts (5)
+ ✓ packages/mermaid/src/diagram-api/diagram-orchestration.spec.ts (23)
+ ✓ packages/mermaid/src/diagram.spec.ts (6) 3642ms
+ ✓ packages/mermaid/src/diagrams/user-journey/journeyDb.spec.js (9)
+ ✓ packages/mermaid/src/diagrams/c4/parser/c4PersonExt.spec.js (7)
+ ✓ packages/mermaid/src/diagrams/c4/parser/c4Person.spec.js (7)
+ ✓ packages/mermaid/src/diagrams/c4/parser/c4Boundary.spec.js (6)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-direction.spec.js (4)
+ ✓ packages/mermaid/src/diagram-api/comments.spec.ts (5)
+ ✓ packages/mermaid/src/diagrams/flowchart/flowDb.spec.ts (7)
+ ✓ packages/mermaid/src/diagrams/class/classDiagram-styles.spec.js (6)
+ ✓ packages/mermaid/src/utils/imperativeState.spec.ts (3)
+ ✓ packages/mermaid/src/diagrams/flowchart/parser/flow-md-string.spec.js (2)
+ ✓ packages/mermaid/src/diagrams/quadrant-chart/quadrantDb.spec.ts (4)
+ ✓ packages/mermaid/src/dagre-wrapper/edges.spec.js (4)
+ ✓ packages/mermaid/src/diagrams/info/info.spec.ts (4) 369ms
+ ✓ packages/mermaid/src/diagrams/c4/parser/c4Diagram.spec.js (3)
+ ✓ packages/mermaid/src/diagrams/sankey/parser/sankey.spec.ts (2)
+ ✓ packages/mermaid/src/rendering-util/createText.spec.ts (4)
+ ✓ packages/mermaid/src/diagrams/state/stateDb.spec.js (5)
+ ✓ packages/parser/tests/info.test.ts (12)
+ ✓ packages/mermaid/src/diagram-api/diagramAPI.spec.ts (3)
+ ↓ packages/mermaid/src/diagrams/flowchart/parser/flow-huge.spec.js (1) [skipped]
+ ✓ packages/mermaid/src/diagrams/class/svgDraw.spec.js (2)
+ ✓ packages/mermaid/src/utils/subGraphTitleMargins.spec.ts (1)
+ ✓ packages/mermaid/src/setupGraphViewbox.spec.js (2)
+ ❯ packages/mermaid/scripts/docs.spec.ts (13) 394ms
+   ❯ docs.mts (13) 393ms
+     ✓ transformMarkdownAst (7)
+     ✓ should add an editLink in the YAML frontmatter if `addEditLink: true`
+     ✓ transformToBlockQuote (4)
+     ❯ buildShapeDoc (1)
+       × should build shapesTable based on the shapeDefs
+ ✓ packages/mermaid/src/diagrams/block/layout.spec.ts (1)
+ ✓ packages/mermaid-example-diagram/src/exampleDiagram.spec.js (1)
+ ✓ packages/mermaid/src/diagrams/class/parser/class.spec.js (2)
+ ✓ packages/mermaid/src/diagrams/er/erRenderer.spec.ts (1)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/mermaid/scripts/docs.spec.ts > docs.mts > buildShapeDoc > should build shapesTable based on the shapeDefs
+Error: Snapshot `docs.mts > buildShapeDoc > should build shapesTable based on the shapeDefs 1` mismatched
+
+- Expected
++ Received
+
+@@ -19,10 +19,11 @@
+  | Event                             | Rounded Rectangle      | `rounded`      | Represents an event            | `event`                                                          |
+  | Extract                           | Triangle               | `tri`          | Extraction process             | `extract`, `triangle`                                            |
+  | Fork/Join                         | Filled Rectangle       | `fork`         | Fork or join in process flow   | `join`                                                           |
+  | Internal Storage                  | Window Pane            | `win-pane`     | Internal storage               | `internal-storage`, `window-pane`                                |
+  | Junction                          | Filled Circle          | `f-circ`       | Junction point                 | `filled-circle`, `junction`                                      |
++ | Kanban Item                       | Kanban Item            | `kanbanItem`   | Item on a kanban board         | `kanban-item`                                                    |
+  | Lined Document                    | Lined Document         | `lin-doc`      | Lined document                 | `lined-document`                                                 |
+  | Lined/Shaded Process              | Lined Rectangle        | `lin-rect`     | Lined process shape            | `lin-proc`, `lined-process`, `lined-rectangle`, `shaded-process` |
+  | Loop Limit                        | Trapezoidal Pentagon   | `notch-pent`   | Loop limit step                | `loop-limit`, `notched-pentagon`                                 |
+  | Manual File                       | Flipped Triangle       | `flip-tri`     | Manual file operation          | `flipped-triangle`, `manual-file`                                |
+  | Manual Input                      | Sloped Rectangle       | `sl-rect`      | Manual input step              | `manual-input`, `sloped-rectangle`                               |
+
+ ❯ packages/mermaid/scripts/docs.spec.ts:171:31
+    169|   describe('buildShapeDoc', () => {
+    170|     it('should build shapesTable based on the shapeDefs', () => {
+    171|       expect(buildShapeDoc()).toMatchInlineSnapshot(`
+       |                               ^
+    172|         "| **Semantic Name**                 | **Shape Name**         | **Short Name** | **Description**                | **Alias Supported**                                      …
+    173|         | --------------------------------- | ---------------------- | -------------- | ------------------------------ | ----------------------------------------------------------…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+  Snapshots  1 failed
+ Test Files  1 failed | 87 passed | 1 skipped (89)
+      Tests  1 failed | 3269 passed | 11 skipped | 2 todo (3283)
+   Start at  18:42:37
+   Duration  18.46s (transform 41.22s, setup 7.20s, collect 180.63s, tests 37.88s, environment 71.64s, prepare 22.43s)
+
+
+ FAIL  Tests failed. Watching for file changes...
+       press u to update snapshot, press h to show help
