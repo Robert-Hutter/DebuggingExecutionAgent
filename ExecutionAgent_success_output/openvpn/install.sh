@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Run autoconf to prepare the build system
 apt install -y \
     build-essential \
     liblzo2-dev \
@@ -15,7 +14,6 @@ apt install -y \
     autoconf \
     automake \
     libtool
-
 
 autoreconf -fvi
 

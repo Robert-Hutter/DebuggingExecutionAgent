@@ -1039,4 +1039,3 @@ FAILED integration_tests/tf_distribute_training_test.py::test_model_fit - Runtim
 FAILED integration_tests/torch_custom_fit_test.py::test_custom_fit - AttributeError: 'CustomModel' object has no attribute 'zero_grad'
 FAILED integration_tests/torch_workflow_test.py::TorchWorkflowTest::test_keras_layer_in_nn_module - AssertionError: 0 != 2
 FAILED keras/src/backend/common/dtypes_test.py::DtypesTest::test_result_type_with_tensor_bfloat16_bfloat16 - RuntimeError: Unable to initialize backend 'cuda': FAILED_PRECONDITION: No visible GPU devices. (you may need to uninstall the failing plugin package, or set JAX_PLATFORMS=cpu to skip this backend.)
-==================================================================== 10 failed, 12245 passed, 320 skipped, 1 xpassed in 1957.85s (0:32:37) =====================================================================

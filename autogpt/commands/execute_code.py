@@ -206,124 +206,123 @@ def validate_command(command: str, config: Config) -> bool:
 
 
 import time
+import subprocess
 import timeout_decorator
+
+from .docker_helpers_static import (
+    execute_command_in_container_screen,
+    read_file_from_container,
+    remove_progress_bars,
+    textify_output,
+)
+WAIT_TIME = 300  # seconds
+SCREEN_SESSION = "my_screen_session"
+
+def _preprocess_command(command: str) -> str:
+    if command.startswith("bash "):
+        return command[len("bash "):]
+    return command
+
+def _validate_and_block_interactive(command: str, agent: Agent) -> str | None:
+    if "nano " in command:
+        return "Error: interactive commands like nano are not allowed."
+    if command.startswith("docker "):
+        return (
+            "Error: docker commands must go through your Dockerfile / container helper."
+        )
+    if not validate_command(command, agent.config):
+        return "Error: This Shell Command is not allowed."
+    if command == "ls -R":
+        return "Error: ls -R is too verbose and is disallowed."
+    return None
+
+def _run_local(command: str, agent: Agent) -> str:
+    # run via agent.interact or subprocess if no container
+    return agent.interact_with_shell(command)
+
+def _run_in_container(command: str, agent: Agent) -> str:
+    # send the command into screen, then read back / handle stuck
+    screen_cmd = f"screen -S {SCREEN_SESSION} -X stuff '{command} 2>&1 | tee /tmp/cmd_result\n'"
+    execute_command_in_container_screen(agent.container, screen_cmd)
+
+    output = read_file_from_container(agent.container, "/tmp/cmd_result")
+    output = textify_output(output)
+
+    if len(output) > 10000:
+        output = remove_progress_bars(output)
+
+    return output
+
+def _handle_stuck(command: str, agent: Agent) -> str | None:
+    """If a previous command is still running, only allow special control commands."""
+    if not agent.command_stuck:
+        return None
+
+    control = {"TERMINATE", "WAIT", "WRITE:"}
+    if any(command.startswith(c) for c in control):
+        # handle each control command
+        if command == "WAIT":
+            before = read_file_from_container(agent.container, "/tmp/cmd_result")
+            time.sleep(WAIT_TIME)
+            after = read_file_from_container(agent.container, "/tmp/cmd_result")
+            if before == after:
+                return f"The command is still stuck. Partial output:\n{before}"
+            else:
+                agent.command_stuck = False
+                return f"Command finished. Output:\n{after}"
+        if command == "TERMINATE":
+            execute_command_in_container_screen(agent.container, f"screen -X -S {SCREEN_SESSION} quit")
+            agent.command_stuck = False
+            return "Previous command terminated; You can continue suggesting new commands."
+        if command.startswith("WRITE:"):
+            to_write = command.split("WRITE:", 1)[1]
+            write_cmd = f"screen -S {SCREEN_SESSION} -X stuff '{to_write}\n'"
+            execute_command_in_container_screen(agent.container, write_cmd)
+            agent.command_stuck = False
+            return "Sent input to stuck process."
+    else:
+        return (
+            "Error: previous command still running. "
+            "Use WAIT, TERMINATE or WRITE:... to control it."
+        )
 
 @command(
     "linux_terminal",
-    "Executes a Shell Command, non-interactive commands only",
-    {
-        "command": {
-            "type": "string",
-            "description": "The command line to execute",
-            "required": True,
-        }
-    },
+    "Executes a Shell Command, non-interactive only",
+    { "command": { "type": "string", "required": True } },
     enabled=True,
-    disabled_reason="You are not allowed to run local shell commands. To execute"
-    " shell commands, EXECUTE_LOCAL_COMMANDS must be set to 'True' "
-    "in your config file: .env - do not attempt to bypass the restriction.",
+    disabled_reason=(
+        "EXECUTE_LOCAL_COMMANDS must be 'True' in your config to run shell commands."
+    ),
 )
 def execute_shell(command: str, agent: Agent) -> str:
-    """Execute a shell command and return the output
+    command = _preprocess_command(command)
 
-    Args:
-        command (str): The command line to execute
+    # Quick‐fail interactive / docker / validation
+    if err := _validate_and_block_interactive(command, agent):
+        return err
 
-    Returns:
-        str: The output of the command
-    """
-    if "nano " in command:
-        return "You cannot execute call nano because it's an interactive command."
-    elif "docker " in command:
-        if agent.container:
-            return "You cannot execute docker commands. You already have access to a running container. If you are facing issues such as missing requirement or need to install a package, you can use linux_terminal to interact with the already running container and install or change whatever you want there. You cannot create another container"
+    # If container exists but a previous cmd is stuck, handle it
+    if agent.container and (stuck_msg := _handle_stuck(command, agent)):
+        return stuck_msg
+
+    # Dispatch
+    try:
+        if not agent.container:
+            raw = _run_local(command, agent)
         else:
-            return "You cannot execute docker commands. Use the command write_to_file to create a dockerfile script which will automatically build and launch a container. If you are facing build error or issues, you can simplify your dockerfile script to reduce the source of errors"
-    elif command.startswith("bash "):
-        command = command.replace("bash ", "")
-    if not validate_command(command, agent.config):
-        logger.info(f"Command '{command}' not allowed")
-        return "Error: This Shell Command is not allowed."
-    
-    if command == "ls -R":
-        return "This command usually returns too much output, hence, it is not allowed."
-    #current_dir = Path.cwd()
-    # Change dir into workspace if necessary
-    #if not current_dir.is_relative_to(agent.config.workspace_path):
-    #    os.chdir(os.path.join(agent.config.workspace_path, agent.project_path))
+            raw = _run_in_container(command, agent)
 
-    #logger.info(
-    #    f"Executing command '{command}' in working directory '{os.getcwd()}'"
-    #)
-
-    #result = subprocess.run(command, capture_output=True, shell=True)
-    #output = f"STDOUT:\n{result.stdout}\nSTDERR:\n{result.stderr}"
-
-    # Change back to whatever the prior working dir was
-
-    #os.chdir(current_dir)
-    #return output
-
-    WAIT_TIME = 300
-
-    if not agent.container:
-        ret_val = agent.interact_with_shell(command)
-    else:
-        if agent.command_stuck:
-            if not (command.startswith("TERMINATE") or command.startswith("WAIT") or command.startswith("WRITE:")):
-                return """The terminal is stuck at command before this one. You cannot request executing a new command before terminating the previous one. To do that, you can make the following as your next output action: {"command": {"name": "linux_terminal", "args": {"command": "TERMINATE"}}}"""
-            elif command == "WAIT":
-                old_output = read_file_from_container(agent.container, "/tmp/cmd_result")
-                time.sleep(WAIT_TIME)
-                new_output = read_file_from_container(agent.container, "/tmp/cmd_result")
-                if old_output == new_output:
-                    with open("prompt_files/command_stuck") as cst:
-                        stuck_m = cst.read()
-                    return "The command is still stuck somewhere, here is the output that the command has so far (it did not change for the last {} seconds):\n".format(60) + old_output + "\n\n" + stuck_m
-                else:
-                    agent.command_stuck = False
-                    return "The command is no longer stuck, here is the final output:\n" + new_output + "\n"
-            elif command == "TERMINATE":
-                execute_command_in_container_screen(agent.container, "screen -X -S my_screen_session quit")
-                create_screen_session(agent.container)
-                agent.command_stuck = False
-                return "The previous command was terminated, a fresh terminal has been instantiated."
-            elif command.startswith("WRITE:"):
-                write_input = command.replace("WRITE:", "")
-                interact_command = "screen -S my_screen_session -X stuff '{}\n'".format(write_input)
-                interact_ret_val = execute_command_in_container(agent.container, interact_command)
-                if ret_val[0].startswith("The command you executed seems to take some time to finish.."):
-                    agent.command_stuck = True
-                    return ret_val[0]
-                else:
-                    agent.command_stuck = False
-                    return "The text that appears on the terminal after executing your command is:\n" + str(ret_val[0])
-                    
-        new_command = "screen -S my_screen_session -X stuff '{} 2>&1 | tee /tmp/cmd_result\n'".format(command)
-        ret_val = execute_command_in_container(agent.container, new_command)
-        #print("----- OUTPUT ON DOCKER LEVEL: {}".format(ret_val))
-        try:
-            cmd_result = read_file_from_container(agent.container, "/tmp/cmd_result")
-        except Exception as e:
-            print("ERROR HAPPENED WHILE TRYING TO READ RESULT FILE FROM CONTAINER--------", e)
-            cmd_result = str(e)
-        #print("----- OUTPUT ON SCREEN LEVEL: {}".format(cmd_result))
-        cmd_result = textify_output(cmd_result)
-        print("----- OUTPUT AFTER TEXTIFYING:", cmd_result)
-        if len(cmd_result) > 2000:
-            cmd_result_temp = remove_progress_bars(cmd_result)
-            #print("------ OUTPUT AFTER REMOVING PROGRESS BARS:", cmd_result_temp)
-        else:
-            cmd_result_temp = cmd_result
-        #cmd_result = extract_test_sections(cmd_result)
-        ret_val = [cmd_result_temp, None]
-
-        if ret_val[0].startswith("The command you executed seems to take some time to finish.."):
+        # Detect long‐running start‐up
+        if raw.startswith("The command you executed seems to take some time"):
             agent.command_stuck = True
-            return ret_val[0]
-        else:
-            agent.command_stuck = False
-    return "The text that appears on the terminal after executing your command is:\n" + str(ret_val[0])
+            return raw
+
+        agent.command_stuck = False
+        return f"Output in terminal after executing the command:\n{raw}"
+    except Exception as e:
+        logger.error(f"Error running shell command: {e}", exc_info=True)
+        return f"Error: {e}"
 
 @command(
     "execute_shell_popen",
