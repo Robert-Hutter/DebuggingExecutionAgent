@@ -405,6 +405,110 @@ def read_file_from_container(container, file_path):
     else:
         return f'Failed to read {file_path} in the container. Output: {output.decode("utf-8")}'
 
+
+import uuid
+import time
+from docker.models.containers import Container
+
+SCREEN_SESSION = ACTIVE_SCREEN["name"]
+LOG_DIR        = "/tmp"
+THRESH         = 600   # seconds of no change before "stuck"
+WAIT           = 1     # polling interval in seconds
+
+import uuid
+import time
+from docker.models.containers import Container
+
+from .docker_helpers_static import (
+    ACTIVE_SCREEN,
+    get_screen_process_list,
+    read_file_from_container,
+    textify_output,
+    remove_progress_bars,
+)
+
+SCREEN_SESSION = ACTIVE_SCREEN["name"]
+LOG_DIR        = "/tmp"
+THRESH         = 600   # seconds of no-change → “stuck”
+WAIT           = 1     # polling interval
+
+def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str, str, bool]:
+    """
+    Improved: waits for first output before ever checking the process tree,
+    then breaks only after seeing both: 1) some output, and 2) the tree back to default.
+    """
+    run_id   = uuid.uuid4().hex
+    logfile  = f"{LOG_DIR}/{SCREEN_SESSION}_{run_id}.log"
+
+    # start per‐command logging
+    container.exec_run(f"screen -S {SCREEN_SESSION} -X logfile {logfile}")
+    container.exec_run(f"screen -S {SCREEN_SESSION} -X log on")
+
+    # prime old_output
+    try:
+        old_output = read_file_from_container(container, logfile)
+    except Exception:
+        old_output = ""
+
+    # send the actual shell command
+    container.exec_run(f"screen -S {SCREEN_SESSION} -X stuff '{cmd}\\n'", tty=False)
+
+    stuck     = False
+    threshold = THRESH
+    seen_any  = False
+
+    while True:
+        # read logfile each iteration
+        try:
+            new_output = read_file_from_container(container, logfile)
+        except Exception:
+            new_output = old_output
+
+        if new_output != old_output:
+            seen_any   = True
+            old_output = new_output
+            threshold  = THRESH
+        else:
+            threshold -= WAIT
+
+        # once we’ve seen some output, we can check for process completion
+        if seen_any:
+            tree = get_screen_process_list(container, ACTIVE_SCREEN["id"])
+            if tree == ACTIVE_SCREEN["default_process_list"]:
+                break
+
+        # if no change for too long, declare “stuck”
+        if threshold <= 0:
+            stuck = True
+            break
+
+        time.sleep(WAIT)
+
+    # stop logging
+    container.exec_run(f"screen -S {SCREEN_SESSION} -X log off")
+
+    # build the return values
+    if stuck:
+        with open("prompt_files/command_stuck") as f:
+            stuck_prompt = f.read()
+        cleaned = (
+            "The command you executed seems to take some time to finish...\n\n"
+            f"Partial output (no change for {THRESH}s):\n{ textify_output(old_output) }\n\n"
+            "You can:\n"
+            "  • WAIT to re-check for new output\n"
+            "  • TERMINATE to kill the command and reset\n"
+            "  • WRITE:<your text> to send input\n\n"
+            + stuck_prompt
+        )
+        return 1, cleaned, logfile, True
+
+    # normal completion
+    clean = textify_output(old_output)
+    if len(clean) > 2000:
+        clean = remove_progress_bars(clean)
+    return 0, clean, logfile, False
+
+
 if __name__ == "__main__":
     screen_text = """There is a screen on:
         37.my_screen_session    (09/13/24 10:12:26)     (Detached)

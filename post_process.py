@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 
 import openai
 
-def ask_chatgpt(query, system_message, model="gpt-4"):
+def ask_chatgpt(query, system_message, model="gpt-4.1-mini"):
     # Read the OpenAI API token from a file
     with open("openai_token.txt") as opt:
         token = opt.read().strip()
@@ -37,8 +37,6 @@ def main():
         sys.exit(1)
 
     project_name = sys.argv[1]
-    print("HEEEEEEERE------------------")
-    print(project_name)
 
     # Read the last line of experiments_list.txt
     experiments_file = "experimental_setups/experiments_list.txt"

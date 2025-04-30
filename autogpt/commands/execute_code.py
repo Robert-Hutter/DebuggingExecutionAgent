@@ -240,7 +240,7 @@ def _run_local(command: str, agent: Agent) -> str:
     # run via agent.interact or subprocess if no container
     return agent.interact_with_shell(command)
 
-def _run_in_container(command: str, agent: Agent) -> str:
+def _run_in_container_deprecated(command: str, agent: Agent) -> str:
     # send the command into screen, then read back / handle stuck
     screen_cmd = f"screen -S {SCREEN_SESSION} -X stuff '{command} 2>&1 | tee /tmp/cmd_result\n'"
     execute_command_in_container_screen(agent.container, screen_cmd)
@@ -253,38 +253,120 @@ def _run_in_container(command: str, agent: Agent) -> str:
 
     return output
 
+
+import uuid
+import time
+
+# Inside your module, near the top:
+SCREEN_SESSION = "my_screen_session"
+LOG_DIR        = "/tmp"  # must exist inside container
+
+def _run_in_container_deprecated_2(command: str, agent: Agent) -> str:
+    """
+    Send `command` into the running screen session and capture only
+    that command’s output via a per‐command logfile.
+    """
+    # 1) Generate a unique logfile name
+    run_id  = uuid.uuid4().hex
+    logfile = f"{LOG_DIR}/{SCREEN_SESSION}_{run_id}.log"
+
+    # 2) Tell screen to use that logfile, and start logging
+    execute_command_in_container_screen(
+        agent.container,
+        f"screen -S {SCREEN_SESSION} -X logfile {logfile}"
+    )
+    execute_command_in_container_screen(
+        agent.container,
+        f"screen -S {SCREEN_SESSION} -X log on"
+    )
+
+    # 3) Send the actual command
+    execute_command_in_container_screen(
+        agent.container,
+        f"screen -S {SCREEN_SESSION} -X stuff '{command}\\n'"
+    )
+
+    # 4) Give the process a moment to produce output
+    time.sleep(0.2)
+
+    # 5) Turn logging off so future commands start fresh
+    execute_command_in_container_screen(
+        agent.container,
+        f"screen -S {SCREEN_SESSION} -X log off"
+    )
+
+    # 6) Read back exactly that logfile
+    raw = read_file_from_container(agent.container, logfile)
+    clean = textify_output(raw)
+
+    # 7) (Optional) strip out progress bars if very large
+    if len(clean) > 2000:
+        clean = remove_progress_bars(clean)
+
+    return clean
+
+#@latest
+from autogpt.commands.docker_helpers_static import exec_in_screen_and_get_log
+from .docker_helpers_static import create_screen_session, ACTIVE_SCREEN
+
+WAIT_TIME     = 1      # seconds between polls
+SCREEN_SESSION= ACTIVE_SCREEN["name"]
+
+def _run_in_container(command: str, agent: Agent) -> str:
+    exit_code, output, logfile, stuck = exec_in_screen_and_get_log(agent.container, command)
+    agent.current_logfile = logfile
+    agent.command_stuck   = stuck
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print(output)
+    return output
+
 def _handle_stuck(command: str, agent: Agent) -> str | None:
-    """If a previous command is still running, only allow special control commands."""
-    if not agent.command_stuck:
+    """If a previous command is stuck, only allow WAIT, TERMINATE, or WRITE:<text>."""
+    if not getattr(agent, "command_stuck", False):
         return None
 
-    control = {"TERMINATE", "WAIT", "WRITE:"}
-    if any(command.startswith(c) for c in control):
-        # handle each control command
-        if command == "WAIT":
-            before = read_file_from_container(agent.container, "/tmp/cmd_result")
-            time.sleep(WAIT_TIME)
-            after = read_file_from_container(agent.container, "/tmp/cmd_result")
-            if before == after:
-                return f"The command is still stuck. Partial output:\n{before}"
-            else:
-                agent.command_stuck = False
-                return f"Command finished. Output:\n{after}"
-        if command == "TERMINATE":
-            execute_command_in_container_screen(agent.container, f"screen -X -S {SCREEN_SESSION} quit")
+    # WAIT: re-read the same logfile
+    if command == "WAIT":
+        raw = read_file_from_container(agent.container, agent.current_logfile)
+        clean = textify_output(raw)
+        # if our stuck‐message prefix is gone, it finished
+        if not clean.startswith("The command you executed seems to take some time"):
             agent.command_stuck = False
-            return "Previous command terminated; You can continue suggesting new commands."
-        if command.startswith("WRITE:"):
-            to_write = command.split("WRITE:", 1)[1]
-            write_cmd = f"screen -S {SCREEN_SESSION} -X stuff '{to_write}\n'"
-            execute_command_in_container_screen(agent.container, write_cmd)
-            agent.command_stuck = False
-            return "Sent input to stuck process."
-    else:
+            return f"Command finished. Output:\n{clean}"
+        # still stuck
+        with open("prompt_files/command_stuck") as f:
+            stuck_prompt = f.read()
         return (
-            "Error: previous command still running. "
-            "Use WAIT, TERMINATE or WRITE:... to control it."
+            f"Still waiting. Partial output:\n\n{clean}\n\n"
+            "You can:\n"
+            "  • WAIT to re-check\n"
+            "  • TERMINATE to kill & reset\n"
+            "  • WRITE:<text> to send input\n\n"
+            + stuck_prompt
         )
+
+    # TERMINATE: quit & recreate the screen session
+    if command == "TERMINATE":
+        execute_command_in_container_screen(agent.container, f"screen -S {SCREEN_SESSION} -X quit")
+        create_screen_session(agent.container)
+        agent.command_stuck = False
+        return "Previous command terminated; fresh screen session is ready."
+
+    # WRITE: send input to the running session
+    if command.startswith("WRITE:"):
+        user_input = command.split("WRITE:", 1)[1]
+        execute_command_in_container_screen(
+            agent.container,
+            f"screen -S {SCREEN_SESSION} -X stuff '{user_input}\\n'"
+        )
+        agent.command_stuck = False
+        return "Sent input to the stuck process."
+
+    # anything else → tell them how to control it
+    return (
+        "Error: a command is still running.\n"
+        "Please use WAIT, TERMINATE, or WRITE:<text>."
+    )
 
 @command(
     "linux_terminal",
@@ -309,7 +391,7 @@ def execute_shell(command: str, agent: Agent) -> str:
     # Dispatch
     try:
         if not agent.container:
-            raw = _run_local(command, agent)
+            raw = _run_local(command, agent)[0]
         else:
             raw = _run_in_container(command, agent)
 
@@ -321,7 +403,10 @@ def execute_shell(command: str, agent: Agent) -> str:
         agent.command_stuck = False
         return f"Output in terminal after executing the command:\n{raw}"
     except Exception as e:
-        logger.error(f"Error running shell command: {e}", exc_info=True)
+        print("-"*20 + "OUTPUT AS RETURNED BY SHELL" + "-"*20)
+        print(raw)
+        print("-"*20 + "-"*20 + "-"*20)
+        logger.error(f"Error running shell command: {e}")
         return f"Error: {e}"
 
 @command(
