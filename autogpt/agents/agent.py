@@ -155,7 +155,7 @@ class Agent(BaseAgent):
             if len(str(command_result)) < 15000:
                 result = f"Command {command_name} returned: " f"{command_result}"
             else:
-                result = f"Command {command_name} returned a lengthy response, we truncated it to the first 15000 characters: " f"{str(command_result)[:15000]}"
+                result = f"Command {command_name} returned a lengthy response, we truncated it: " f"The first 7000 characters:\n{str(command_result)[:7000]}\n...The last 7000 characters:\n{str(command_result)[-7000:]}"
             result_tlength = count_string_tokens(str(command_result), self.llm.name)
             memory_tlength = count_string_tokens(
                 str(self.history.summary_message()), self.llm.name
