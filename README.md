@@ -62,6 +62,12 @@ Run ExecutionAgent with the batch file:
 ```bash
 ./ExecutionAgent.sh /path/to/batch_file.txt
 ```  
+
+**For example, to reproduce the results of our experiments, the following command can be run**:
+```bash
+./ExecutionAgent.sh nightly_runs/all_projects.txt
+```
+
 ExecutionAgent will process each project listed in the file, performing the same steps as the single repository mode. The `-l` option can also be applied here by adding it to the command when running the script.
 
 To show the results of the last experiment for a specific project, you can call:
