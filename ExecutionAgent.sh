@@ -96,6 +96,7 @@ if [[ -n "$repo_url" ]]; then
 
   # Call get_main_language.py to determine the main language of the repository
   # The Python script is expected to return a string like "Primary language: <language>"
+  pip3.10 install requests
   primary_language=$(python3.10 get_main_language.py "$repo_url")
   echo "$primary_language"
 
