@@ -1,4 +1,4 @@
-# Tools
+## Tools
     1. linux_terminal: Execute commands within the current Linux terminal. 'linux_terminal' starts the first time inside the folder of the project (do not include the project name in your paths because you are inside the project folder already).
         * Example : {"command": {"name": "linux_terminal", "args": {"command": "ls"}}}
     2. read_file: Read a file.

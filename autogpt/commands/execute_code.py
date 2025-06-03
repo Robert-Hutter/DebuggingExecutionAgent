@@ -228,7 +228,7 @@ def _validate_and_block_interactive(command: str, agent: Agent) -> str | None:
         return "Error: interactive commands like nano are not allowed."
     if command.startswith("docker "):
         return (
-            "Error: docker commands must go through your Dockerfile / container helper."
+            "Error: docker commands are not allowed, if the container is already running you can directly access it through linux_terminal. If the docker container stopped abruptly, you need to end the task."
         )
     if not validate_command(command, agent.config):
         return "Error: This Shell Command is not allowed."
@@ -236,9 +236,94 @@ def _validate_and_block_interactive(command: str, agent: Agent) -> str | None:
         return "Error: ls -R is too verbose and is disallowed."
     return None
 
+import shlex
+import re
+
 def _run_local(command: str, agent: Agent) -> str:
-    # run via agent.interact or subprocess if no container
+    # ------------------------------------------------------------
+    # 1) Original blacklist checks (with the same return messages)
+    # ------------------------------------------------------------
+    if command.startswith("docker "):
+        return (
+            "Docker commands are not allowed directly. "
+            "Please create a Dockerfile instead—it will handle building the image "
+            "and starting the container for you."
+        )
+    if command.startswith("bash "):
+        return (
+            "Running a bash script is disallowed at this stage. "
+            "Write a Dockerfile first. Once the Dockerfile is built and the container is running, "
+            "you can issue commands one at a time to debug and isolate issues."
+        )
+    if command.startswith("sudo "):
+        return "‘sudo’ is not needed. You already have the required permissions—please omit ‘sudo.’"
+    if command.startswith("rm "):
+        return (
+            "Removing files (using ‘rm’) is not permitted right now. "
+            "First, create a Dockerfile to manage file modifications inside the container."
+        )
+    if "SETUP_AND_INSTALL.sh" in command:
+        return (
+            "Executing setup/install scripts is not allowed at this point. "
+            "Please create a Dockerfile first. When you build that Dockerfile, "
+            "it will run any installation steps in a controlled way."
+        )
+    # ------------------------------------------------------------
+    # 2) Disallow pipes, redirections, backgrounding, etc.
+    # ------------------------------------------------------------
+    if re.search(r'[|&;`$><]', command):
+        return (
+            "Piping, redirection, or chaining multiple commands is not allowed. "
+            "Submit one simple command at a time (e.g., ‘ls’, ‘cat file.txt’, ‘grep pattern file’)."
+        )
+
+    # ------------------------------------------------------------
+    # 3) Tokenize to catch malformed quotes or syntax
+    # ------------------------------------------------------------
+    try:
+        parts = shlex.split(command)
+    except ValueError:
+        return "Invalid shell syntax—please check your quotes and try again."
+
+    if not parts:
+        return "No command provided. Please enter a valid command."
+
+    cmd = parts[0]
+
+    # ------------------------------------------------------------
+    # 4) Whitelist only safe commands
+    # ------------------------------------------------------------
+    ALLOWED_COMMANDS = {
+        "tree",
+        "ls",
+        "cat",
+        "head",
+        "tail",
+        "more",
+        "less",
+        "grep",
+        "find",
+    }
+
+    if cmd not in ALLOWED_COMMANDS:
+        return (
+            f"‘{cmd}’ is not permitted. "
+            f"Allowed commands at this point are: {', '.join(sorted(ALLOWED_COMMANDS))}. You would have access to more commands once you have written a Dockerfile which would automatically instantiate a docker container in which you can run more commands."
+        )
+
+    # ------------------------------------------------------------
+    # 5) Per-command flag checks (e.g., block ‘find -exec’)
+    # ------------------------------------------------------------
+    if cmd == "find":
+        if "-exec" in parts or "-ok" in parts:
+            return "Using ‘-exec’ or ‘-ok’ with ‘find’ is disallowed. Stick to simple file searches."
+
+    # ------------------------------------------------------------
+    # 6) All checks passed—run the command
+    # ------------------------------------------------------------
     return agent.interact_with_shell(command)
+
+
 
 def _run_in_container_deprecated(command: str, agent: Agent) -> str:
     # send the command into screen, then read back / handle stuck
@@ -312,13 +397,84 @@ from .docker_helpers_static import create_screen_session, ACTIVE_SCREEN
 WAIT_TIME     = 1      # seconds between polls
 SCREEN_SESSION= ACTIVE_SCREEN["name"]
 
+import re
+
 def _run_in_container(command: str, agent: Agent) -> str:
+    """
+    Runs a command inside the container, unless it’s disallowed:
+      - ‘sudo’ is unnecessary (you already have root inside).
+      - ‘SETUP_AND_INSTALL.sh’ is discouraged until after build & tests.
+      - ‘docker’ commands are forbidden inside the container.
+    Additionally, if the user installs a new Linux package (via apt/apt-get), 
+    remind them to set it as the default and verify it.
+    """
+    # ------------------------------------------------------------
+    # 1) Reject any use of sudo
+    # ------------------------------------------------------------
+    if command.startswith("sudo ") or command == "sudo":
+        return "‘sudo’ is not required inside the container—you already have root access."
+
+    # ------------------------------------------------------------
+    # 2) Discourage running SETUP_AND_INSTALL.sh prematurely
+    # ------------------------------------------------------------
+    if "SETUP_AND_INSTALL.sh" in command:
+        return (
+            "Running SETUP_AND_INSTALL.sh right now is not recommended. "
+            "Please execute each step manually in the terminal until the project is built "
+            "and the test suite has passed, after that you can end task."
+        )
+
+    # ------------------------------------------------------------
+    # 3) Forbid docker commands inside the container
+    # ------------------------------------------------------------
+    if command.startswith("docker ") or command == "docker":
+        return "Docker commands are not allowed inside the container."
+
+    # ------------------------------------------------------------
+    # 4) Detect if this is an apt/apt-get install command
+    # ------------------------------------------------------------
+    install_detected = False
+    # Match “apt install …” or “apt-get install …” at the very start
+    if re.match(r"^(apt|apt-get)\s+install\b", command):
+        install_detected = True
+
+    # ------------------------------------------------------------
+    # 5) Execute the command via screen+log and capture output
+    # ------------------------------------------------------------
     exit_code, output, logfile, stuck = exec_in_screen_and_get_log(agent.container, command)
     agent.current_logfile = logfile
     agent.command_stuck   = stuck
+
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print(output)
+
+    # ------------------------------------------------------------
+    # 6) If a new package was installed, append a reminder
+    # ------------------------------------------------------------
+    if install_detected:
+        reminder = (
+            "\nNOTE: It looks like you just installed a new package. If it provides an executable "
+            "that should be set as the default, don’t forget to update alternatives (non-interactively) "
+            "and verify the change. For example:\n\n"
+            "  1) If you installed OpenJDK 17 (e.g. `apt install openjdk-17-jdk`), set it as default:\n"
+            "       update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java\n"
+            "     Then confirm with:\n"
+            "       java -version\n\n"
+            "  2) If you installed Python 3.9 (e.g. `apt install python3.9`), switch the “python3” link:\n"
+            "       update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1\n"
+            "       update-alternatives --set python3 /usr/bin/python3.9\n"
+            "     Then verify:\n"
+            "       python3 --version\n\n"
+            "Replace paths or package names as needed for other tools. Ensure the new version is active before proceeding."
+        )
+        print(reminder)
+        return output + reminder
+
+    # ------------------------------------------------------------
+    # 7) Otherwise, just return the raw output
+    # ------------------------------------------------------------
     return output
+
 
 def _handle_stuck(command: str, agent: Agent) -> str | None:
     """If a previous command is stuck, only allow WAIT, TERMINATE, or WRITE:<text>."""
@@ -391,7 +547,9 @@ def execute_shell(command: str, agent: Agent) -> str:
     # Dispatch
     try:
         if not agent.container:
-            raw = _run_local(command, agent)[0]
+            raw = _run_local(command, agent)
+            if type(raw) != str:
+                raw = raw[0]
         else:
             raw = _run_in_container(command, agent)
 
@@ -404,7 +562,6 @@ def execute_shell(command: str, agent: Agent) -> str:
         return f"Output in terminal after executing the command:\n{raw}"
     except Exception as e:
         print("-"*20 + "OUTPUT AS RETURNED BY SHELL" + "-"*20)
-        print(raw)
         print("-"*20 + "-"*20 + "-"*20)
         logger.error(f"Error running shell command: {e}")
         return f"Error: {e}"

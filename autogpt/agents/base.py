@@ -484,9 +484,10 @@ class BaseAgent(metaclass=ABCMeta):
         for k in self.steps_list:
             text += self.steps_object[k]["static_header"] + self.steps_object[k]["step_line"] + "\n"
 
-        text += "\nBelow is a list of commands that you have executed so far and summary of the result of each command:\n"
+        text += "\n## History of executed commands:\n(Remember the executed commands ant their outcomes to avoid repetition and also to build up on top of them, e.g, remember to set java to jdk 17 after install the package... but not only that...)\nBelow is a list of commands that you have executed so far and summary of the result of each command:\n"
         for command, summary in self.commands_and_summary:
-            text += command + "\nThe summary of the output of above command: " + str(summary)+"\n\n" 
+            text += command + "\nThe summary of the output of above command: " + str(summary)+"\n"
+        text +="END OF COMMANDS HISTORY SECTION\n\n"
         return text
 
 
@@ -506,17 +507,6 @@ class BaseAgent(metaclass=ABCMeta):
         append_messages: list[Message] = [],
         reserve_tokens: int = 0,
     ) -> ChatSequence:
-        """Constructs and returns a prompt with the following structure:
-        1. System prompt
-        2. `prepend_messages`
-        3. Message history of the agent, truncated & prepended with running summary as needed
-        4. `append_messages`
-
-        Params:
-            prepend_messages: Messages to insert between the system prompt and message history
-            append_messages: Messages to insert after the message history
-            reserve_tokens: Number of tokens to reserve for content that is added later
-        """
 
         ## added this part to change the prompt structure
 
@@ -540,30 +530,26 @@ class BaseAgent(metaclass=ABCMeta):
             else:
                 raise TypeError("For now we only support list and str types.")
         
-        definitions_prompt += "\nProject path: the project under scope has the following path/name within the file system, which you should use when calling the tools: {}".format(self.project_path) + "\n"
+        definitions_prompt += "\n## Information about the project:\n\nProject path: the project under scope has the following path/name within the file system, which you should use when calling the tools: {}".format(self.project_path) + "\n"
         definitions_prompt += "\nProject github url (needed for dockerfile script): {}\n".format(self.project_url)
         
         if os.path.exists("problems_memory/{}".format(self.project_path)):
             with open("problems_memory/{}".format(self.project_path)) as pm:
                 previous_memory = pm.read()
-            definitions_prompt += "\nFrom previous attempts we learned that: {}\n".format(previous_memory)
+            definitions_prompt += "\nFrom previous attempts we learned that:\n {}\n\n".format(previous_memory)
         
         if self.found_workflows and self.customize["WORKFLOWS_SEARCH"]:
-            definitions_prompt += "\nThe following workflow files might contain information on how to setup the project and run test cases. We extracted the most important installation steps found in those workflows and turned them into a bash script. This might be useful later on when building/installing and testing the project:\n"
+            definitions_prompt += "\n## Relevant installation instructions from web search and workflows/docker files:\n\nThe following workflow files might contain information on how to setup the project and run test cases. We extracted the most important installation steps found in those workflows and turned them into a bash script. This might be useful later on when building/installing and testing the project. However, you might need to adapt them to your current setup (e.g, docker container, language version...). These files also give inspiration of packages to install and their versions. It is recommeneded to pick the newest version.\n"
             for w in self.found_workflows:
-                definitions_prompt += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(w, self.workflow_to_script(w))
+                wn = w.plit("/")[-1] if "/" in w else w
+                definitions_prompt += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(wn, self.workflow_to_script(w))
         
         if self.dockerfiles and self.customize["WORKFLOWS_SEARCH"]:
-            definitions_prompt += "\nWe found the following dockerfile scripts within the repo. The dockerfile scripts might help you build a suitable docker image for this repository: "+ " ,".join(self.dockerfiles) + "\n"
+            definitions_prompt += "\n\n We found the following dockerfile scripts within the repo. The dockerfile scripts might help you build a suitable docker image for this repository: "+ " ,".join(self.dockerfiles) + "\n"
         
         if self.search_results and self.customize["WEB_SEARCH"]:
             definitions_prompt += "\nWe searched on google for installing / building {} from source code on Ubuntu/Debian.".format(self.project_path)
-            definitions_prompt += "Here is the summary of the top 5 results:\n" + self.search_results + "\n"
-        
-        
-        #if self.hyperparams["image"]!="NIL":
-        #    definitions_prompt += "For this particular project, the docker image have been already created and the container have been launched, you can #skip steps 1 and 2; You can start directly from step 3 (see the steps list below).\n"
-        #definitions_prompt += steps_text + "\n"
+            definitions_prompt += "Here is the summary of the top 5 results:\n" + self.search_results + "\n\n"
         
         if len(self.history) > 2:
             last_command = self.history[-2]

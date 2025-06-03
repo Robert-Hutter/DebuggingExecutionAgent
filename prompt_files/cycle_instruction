@@ -2,24 +2,28 @@ Determine exactly one command to use based on the given goals and the progress y
 Respond strictly with JSON. The JSON should be compatible with the TypeScript type `Response` from the following:
 ```ts
 interface Response {
-// Express your thoughts based on the information that you have collected so far, the possible steps that you could do next and also your reasoning. Always express your thoughts in english."
-thoughts: string;
-command: {
-name: string;
-args: Record<string, any>;
-};
+  // Your thoughts should include:
+  // 1. A brief analysis and interpretation of the result of the last executed command.
+  // 2. An updated view (description) of the overall picture so far.
+  // 3. An explanation of what makes sense to do next and how to achieve it in a robust and effective way, including the reasoning behind this next step.
+  thoughts: string;
+  command: {
+    name: string;
+    args: Record<string, any>;
+  };
 }
-```
-Here is an example of command call that you can output:
+
+
+Here is an example of a command call that you can output:
 
 {
-"thoughts": "I need to check for the available folders and files within the project's root folder.",
+"thoughts": "Last time I ran ls, I saw that only the src/ directory and README.md file exist. That indicates the project is still at its initial layout with no build artifacts. Overall, we’ve confirmed the repository structure and there are no binary or compiled files yet. Next, it makes sense to inspect inside src/ to understand the code organization and locate any build scripts. By listing the contents of src/, I can determine where to focus the build steps. This approach minimizes guessing and ensures we know exactly which files to compile or run first.",
 "command": {
 "name": "linux_terminal",
 "args": {
-"command": "ls"
+"command": "ls src"
 }
 }
 }
 
-**IMPORTANT NOTE TO THE ASSISTANT:** DO NOT OUTPUT ANY OTHER TEXT AROUND YOUR JSON RESPONSE.
+**IMPORTANT NOTE TO THE ASSISTANT: DO NOT OUTPUT ANY OTHER TEXT AROUND YOUR JSON RESPONSE.**

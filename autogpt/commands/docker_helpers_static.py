@@ -237,11 +237,11 @@ def start_container(image_tag):
     client = docker.from_env()
     try:
         print(f"Running container from image {image_tag}...")
-        container = client.containers.run(image_tag, detach=True, tty=True)
+        container = client.containers.run(image_tag, command=["tail", "-f", "/dev/null"], detach=True, tty=True)
         print(f"Container {container.short_id} is running.")
         print("CREATING SCREEN SESSION")
         create_screen_session(container)
-        execute_command_in_container(container, "screen -S my_screen_session -X stuff 'apt install coreutils'")
+        execute_command_in_container(container, "screen -S my_screen_session -X stuff 'apt update && apt install -y coreutils'")
         return container
     except Exception as e:
         print(f"ERRRRRRRRRRRR: An error occurred while running the container: {e}")
@@ -262,7 +262,7 @@ def execute_command_in_container_old(container, command):
 def execute_command_in_container(container, command):
     try:
         # Wrap the command in a shell execution context
-        shell_command = "/bin/sh -c \"{}\"".format(command)
+        shell_command = "/bin/bash -c \"{}\"".format(command)
         #print(f"Executing command '{command}' in container {container.short_id}...")
 
         # Execute the command without a TTY, but with streaming output
@@ -301,7 +301,7 @@ def execute_command_in_container(container, command):
 def execute_command_in_container_screen(container, command):
     try:
         # Wrap the command in a shell execution context
-        shell_command = "/bin/sh -c \"{}\"".format(command)
+        shell_command = "/bin/bash -c \"{}\"".format(command)
         #print(f"Executing command '{command}' in container {container.short_id}...")
 
         # Execute the command without a TTY, but with streaming output
