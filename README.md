@@ -51,13 +51,6 @@ The `-l` option allows you to specify the number of cycles which corresponds to 
 Prepare a batch file listing projects to process in the format:  
 `<project_name> <github_url> <language>`  
 
-Example (notice how for now we leave one empty line after each entry):  
-```plaintext
-scipy https://github.com/scipy/scipy Python
-
-pytest https://github.com/pytest-dev/pytest Python
-```
-
 Run ExecutionAgent with the batch file:  
 ```bash
 ./ExecutionAgent.sh /path/to/batch_file.txt
@@ -101,12 +94,7 @@ This options useful for the ones who want to reuse the container already built b
 
 ---
 
-## 📊 Results Summary  
-
-| **Metric**              | **Success Rate** |  
-|--------------------------|------------------|  
-| Build Success Rate       | 80%              |  
-| Test Execution Rate      | 65%              |  
+## 📊 Find Your Results  
 
 Results are logged under `experimental_setups/experiment_XX`, where `XX` is an incremented number for each invocation of ExecutionAgent.
 
@@ -127,14 +115,3 @@ The folder structure under `experimental_setups/experiment_XX` is organized to k
 
 - **saved_contexts**: Contains the saved states of the agent object at each iteration of the execution process. These snapshots are useful for debugging, tracking changes, and extracting subcomponents of the prompt across different cycles.  
   - Example: `cycle_1`, `cycle_10`, etc.  
-
-
----
-
-## 📜 Research Paper  
-Dive into the technical details and evaluation in our [paper](./paper_preprint.pdf).  
-
----
-
-## 📬 Feedback  
-Have suggestions or found a bug? Open an issue or contact us at [my_email](mailto:fi_bouzenia@esi.dz).
