@@ -541,7 +541,7 @@ class BaseAgent(metaclass=ABCMeta):
         if self.found_workflows and self.customize["WORKFLOWS_SEARCH"]:
             definitions_prompt += "\n## Relevant installation instructions from web search and workflows/docker files:\n\nThe following workflow files might contain information on how to setup the project and run test cases. We extracted the most important installation steps found in those workflows and turned them into a bash script. This might be useful later on when building/installing and testing the project. However, you might need to adapt them to your current setup (e.g, docker container, language version...). These files also give inspiration of packages to install and their versions. It is recommeneded to pick the newest version.\n"
             for w in self.found_workflows:
-                wn = w.plit("/")[-1] if "/" in w else w
+                wn = w.split("/")[-1] if "/" in w else w
                 definitions_prompt += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(wn, self.workflow_to_script(w))
         
         if self.dockerfiles and self.customize["WORKFLOWS_SEARCH"]:
