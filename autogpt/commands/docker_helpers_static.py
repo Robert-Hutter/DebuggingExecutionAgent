@@ -461,8 +461,8 @@ def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str
         # read logfile each iteration
         try:
             new_output = read_file_from_container(container, logfile)
-        except Exception:
-            new_output = old_output
+        except Exception as e:
+            new_output = f"An Error happened during executing the command:{e}"
 
         if new_output != old_output:
             seen_any   = True

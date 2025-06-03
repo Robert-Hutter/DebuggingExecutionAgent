@@ -9,21 +9,21 @@
 
 3. **Install Dependencies**  
    Run the following command to install project dependencies:  
-   ```sh
+   ```bash
    npm install  
    ```  
    or, if the project uses Yarn:  
-   ```sh
+   ```bash
    yarn install  
    ```  
 
 4. **Build the Project**  
    If the project requires a build step, refer to the `scripts` section in the `package.json` file. Common build commands include:  
-   ```sh
+   ```bash
    npm run build  
    ```  
    or  
-   ```sh
+   ```bash
    yarn build  
    ```  
 
@@ -32,21 +32,21 @@
 
 6. **Run Tests (if available)**  
    If the project provides tests, it’s a good idea to run them to ensure everything is working correctly. Common test commands include:  
-   ```sh
+   ```bash
    npm test  
    ```  
    or  
-   ```sh
+   ```bash
    yarn test  
    ```  
 
 7. **Run the Project**  
    Follow the instructions in the README to run the project. Common commands might include:  
-   ```sh
+   ```bash
    npm start  
    ```  
    or  
-   ```sh
+   ```bash
    yarn start  
    ```  
 
@@ -55,12 +55,12 @@
 
 9. **Code Linting and Formatting**  
    Use linters and formatters to ensure code quality and consistency. Common tools include ESLint for linting and Prettier for formatting. You can typically run these with:  
-   ```sh
+   ```bash
    npm run lint  
    npm run format  
    ```  
    or  
-   ```sh
+   ```bash
    yarn lint  
    yarn format  
    ```  

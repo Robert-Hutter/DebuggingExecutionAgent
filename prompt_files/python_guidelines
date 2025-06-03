@@ -9,7 +9,7 @@
 
 3. **Virtual Environment**  
    It’s a good practice to create a virtual environment for each Python project to avoid conflicts with system-wide packages. Use the command:  
-   ```sh
+   ```bash
    python3.X -m venv .venv  
    ```  
 
@@ -21,7 +21,7 @@
 
 6. **Run Tests (if available)**  
    If the project provides tests, it’s a good idea to run them to ensure everything is working correctly. Some projects include a `tox.ini` file, which allows you to run tests with `tox`. Install `tox` first using:  
-   ```sh
+   ```bash
    pip install tox  
    ```  
 
@@ -36,13 +36,13 @@
 
 10. **Shell Compatibility**  
    In some shells, the `source` command may not work. In such cases, replace `source` with just `.` (a single dot). For example:  
-   ```sh
+   ```bash
    . .venv/bin/activate  
    ```  
 
 11. **Avoid Using Conda**  
    Instead of Conda, prefer the following commands to set up your virtual environment:  
-   ```sh
+   ```bash
    python -m venv .venv  
-   . .venv/bin/activate  
+   source .venv/bin/activate  
    ```  
