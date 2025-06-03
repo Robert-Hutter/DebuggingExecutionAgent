@@ -241,7 +241,7 @@ def start_container(image_tag):
         print(f"Container {container.short_id} is running.")
         print("CREATING SCREEN SESSION")
         create_screen_session(container)
-        execute_command_in_container(container, "screen -S my_screen_session -X stuff 'apt update && apt install -y coreutils'")
+        execute_command_in_container(container, "screen -S my_screen_session -X stuff 'apt update && apt install -y coreutils\\n'")
         return container
     except Exception as e:
         print(f"ERRRRRRRRRRRR: An error occurred while running the container: {e}")
@@ -262,7 +262,7 @@ def execute_command_in_container_old(container, command):
 def execute_command_in_container(container, command):
     try:
         # Wrap the command in a shell execution context
-        shell_command = "/bin/bash -c \"{}\"".format(command)
+        shell_command = "/bin/bash -c \"{}\" > /tmp/cmd_result\n".format(command)
         #print(f"Executing command '{command}' in container {container.short_id}...")
 
         # Execute the command without a TTY, but with streaming output
@@ -439,11 +439,16 @@ def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str
     """
     run_id   = uuid.uuid4().hex
     logfile  = f"{LOG_DIR}/{SCREEN_SESSION}_{run_id}.log"
-
+        
     # start per‐command logging
     container.exec_run(f"screen -S {SCREEN_SESSION} -X logfile {logfile}")
     container.exec_run(f"screen -S {SCREEN_SESSION} -X log on")
 
+    if cmd in ['exec "$SHELL" -l', "exec '$SHELL' -l", 'exec "$SHELL" -l ', "exec '$SHELL' -l "]:
+        container.exec_run(f"screen -S {SCREEN_SESSION} -X stuff 'exec /bin/bash -l\\n'", tty=False)
+        special_output = read_file_from_container(container, logfile)
+        container.exec_run(f"screen -S {SCREEN_SESSION} -X log off")
+        return 0, f"The shell has been renewed. Here is what appears on the new terminal: {special_output}", f"The shell has been renewed. Here is what appears on the new terminal: {special_output}", False
     # prime old_output
     try:
         old_output = read_file_from_container(container, logfile)

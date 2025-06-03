@@ -285,14 +285,9 @@ def write_to_file(filename: str, text: str, agent: Agent) -> str:
     """
     if "COPY" in text:
         return "The usage of command 'COPY' is prohibited inside the Dockerfile script. You should just clone the repository inside the docker images and all the files of that repository would be there. No need to copy."
-    #checksum = text_checksum(text)
-    #if is_duplicate_operation("write", filename, agent, checksum):
-    #    return "Error: File has already been updated."
     agent.written_files.append((filename, text))
     if not agent.container:
         try:
-            #directory = os.path.dirname(filename)
-            #os.makedirs(directory, exist_ok=True)
             workspace = agent.workspace_path
             print("AGENT RPOJECT PATH:::::::", agent.project_path)
             if (agent.project_path + "/") in filename:
@@ -300,13 +295,6 @@ def write_to_file(filename: str, text: str, agent: Agent) -> str:
                 full_path = os.path.join(workspace, filename)
             else:
                 full_path = os.path.join(workspace, agent.project_path, filename)
-                #print("PATH TAKEN FROM HERE 2222")
-                #print("FULL PATH++++++", full_path)
-                #print(workspace)
-                #print(agent.project_path)
-                #print(filename)
-            #if "dockerfile" in filename.lower():
-            #    text = update_dockerfile_content(text)
 
             with open(full_path, "w", encoding="utf-8") as f:
                 f.write(text)
