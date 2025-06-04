@@ -4,9 +4,6 @@ from googlesearch import search
 import openai
 import json
 
-# Set your OpenAI API key here
-openai.api_key = 'your_openai_api_key'
-
 def google_search(query, num_results=5, pause=2.0):
     """
     Perform Google search using the 'googlesearch-python' package
