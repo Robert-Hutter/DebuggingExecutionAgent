@@ -83,13 +83,16 @@ def main():
     # Extract the desired content
     try:
         extracted_content = file_content["steps_object"]["1"]["result_of_step"]
+        relevant_context = file_content["found_workflows_summary"]
     except KeyError as e:
         print(f"Error: Missing key in JSON structure: {e}")
         sys.exit(1)
 
     # Prepare the query for ask_chatgpt
-    query = "the following would represent the sequence of commands and reasoning made by an LLM trying to install \"{}\" project from source code and execute test cases. I want you to summarize the encountered problems and give advice for next attempt. Be precise and concise. Address the most important and critical issues (ignore non critical warnings and so). Your response should have one header: ### Feedback from previous installation attempts\n".format(project_name) + f" {extracted_content}"
-
+    query = "the following would represent the sequence of commands and reasoning made by an LLM-agent trying to install \"{}\" project from source code and execute test cases. The agent runs over multiple iterations and at each iteration invokes a tool/command. The endgoal of the agent is to setup and run the test suite of the project. However, the agent is struggling with the task and already run for many iterations. I want you to summarize the encountered problems and give advice for next attempt. Address the most important and critical issues (ignore non critical warnings and so). In addition to the commands executed by the agent so far, we also give you some context extract from the project files or from websearch. This context is also given to the agent. Use the given context to further detect problems with the agent approach and to further suggest good advice and good next steps which should be concrete and include all details (without confilicting instructions). Your response should have the header: ### Feedback from previous installation attempts\n".format(project_name)
+    
+    query += f"# Agent commands (and their summarized output:\n{extracted_content}\n"
+    query += f"# Relevant context (summarized):\n{relevant_context}\n"
     
     system_message = (
         "You are a helpful software engineering assistant with capabilities of installing, building, configuring, and testing software projects."
