@@ -7,11 +7,22 @@ import json
 # Set your OpenAI API key here
 openai.api_key = 'your_openai_api_key'
 
-def google_search(query, num_results=5):
-    """Perform Google search and return top results."""
+def google_search(query, num_results=5, pause=2.0):
+    """
+    Perform Google search using the 'googlesearch-python' package
+    and return the top `num_results` URLs.
+    """
     results = []
-    for url in search(query, num_results=num_results):
-        results.append(url)
+    try:
+        for i, url in enumerate(search(query,
+                                      num_results=num_results,
+                                      lang="en")):
+            print(f"{i+1}. {url}")
+            results.append(url)
+            if len(results) >= num_results:
+                break
+    except Exception as e:
+        print("Error during search:", e)
     return results
 
 from bs4 import BeautifulSoup
@@ -50,8 +61,7 @@ def fetch_webpage(url):
 
 
 import subprocess
-def analyze_content_with_gpt3(content, prompt):
-    """Analyze the webpage content using GPT-3.5 via a curl request to the /chat/completions endpoint."""
+def analyze_content_with_llm(content, prompt):
     with open("openai_token.txt") as opt:
         token = opt.read()
     try:
@@ -62,7 +72,7 @@ def analyze_content_with_gpt3(content, prompt):
 
         # Prepare the request data for the /chat/completions endpoint
         data = {
-            "model": "gpt-3.5-turbo",
+            "model": "gpt-4o-mini",
             "messages": messages
         }
 
@@ -105,11 +115,11 @@ def save_search_results(project_id, search_query, results):
 
 def search_install_doc(project_id):
     search_query = "{} build install from source".format(project_id)
-    prompt = "Extract instructions relevant to install or building the project '{}' on a Debian/Ubuntu Linux system from source code (extract a list of steps/requirements in a structered way and also the commands that needs to be installed). If the web page does not provide such information then just say that it does not.".format(project_id)
+    prompt = "Extract instructions relevant to install or building the project '{}' on a Debian/Ubuntu Linux system from source code (extract a list of steps/requirements in a structered way and also the commands that needs to be installed). If the web page does not provide such information then just answer with the special string: 'NOT RELEVANT'.".format(project_id)
     # Step 1: Perform Google search
     print(f"Searching Google for: {search_query}")
     urls = google_search(search_query)
-
+    print(urls)
     # Step 2: Retrieve and analyze each web page
     results = []
     for url in set(urls):
@@ -117,7 +127,7 @@ def search_install_doc(project_id):
         content = fetch_webpage(url)
         if content:
             print(f"Analyzing content from: {url}")
-            analysis = analyze_content_with_gpt3(content, prompt)
+            analysis = analyze_content_with_llm(content, prompt)
             results.append({
                     'url': url,
                     'analysis': analysis
@@ -131,4 +141,4 @@ def search_install_doc(project_id):
 if __name__ == "__main__":
     # Example usage:
     project_id = "scipy"
-    main(project_id)
+    search_install_doc(project_id)

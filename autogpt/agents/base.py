@@ -191,6 +191,7 @@ class BaseAgent(metaclass=ABCMeta):
                 self.hyperparams["image"] = "NIL"
 
         self.found_workflows = self.find_workflows(self.project_path)
+        self.found_workflows_summary = {}
         self.search_results = self.search_documentation()
         self.dockerfiles = self.find_dockerfiles()
         self.command_stuck = False
@@ -230,6 +231,7 @@ class BaseAgent(metaclass=ABCMeta):
             "found_workflows": self.found_workflows,
             "search_results": self.search_results,
             "dockerfiles": self.dockerfiles,
+            "found_workflows_summary": self.found_workflows_summary
         }
 
     def save_to_file(self, filename):
@@ -238,21 +240,32 @@ class BaseAgent(metaclass=ABCMeta):
             json.dump(self.to_dict(), file, indent=4)
 
     def workflow_to_script(self, workflow_path):
-        system_prompt = "This is the content of a workflow file used to run a test workflow for a repository. I want you to turn the file into a '.sh' script that I can use on my machine to prepare and run tests of that specific repository (the file might contain multiple configurations, I want a simple configuration for linux ubuntu). The workflow might be irrelevant or contain no steps for building and testing. In such case, just mention that the script is not about setting up the project for running tests."
+
+        wp = workflow_path.split("/")[-1] if "/" in workflow_path else workflow_path
+
+        system_prompt = "You are an experienced software engineer. You can analyze, create, build and install arbitrary software. You have strong analytical skills covering all possibilities and cases from obvious steps to complicated and advanced ones. You also predict possible problems and challenges and suggest solutions in advance. Your current tasks include analyzing CI/CD scripts and workflows of arbitrary projects and extracts detailed steps and procedures to follow to build/compile the project and launch its test suite."
 
         with open(workflow_path) as wpth:
-            query = wpth.read()
+            content = wpth.read()
 
-        return ask_chatgpt(system_prompt, query)
+        query= """Extract installation and test execution steps from the following workflow if available. 
+        Make sure to explain everything that you find in the script. Also explain how to combine the findings into a proper step-by-step project setup. Your answer should contain the following sections: Workflow Analysis, Usefull commands, Inferred dependencies, Possible install and test setup with analysis of possible problems and their solutions.
+        # file: {}
+        ```
+        {}
+        ```
+        """.format(wp, content)
+        llm_result = ask_chatgpt(system_prompt, query)
+        self.found_workflows_summary[workflow_path] = llm_result
+        return llm_result
 
     def search_documentation(self,):
         if os.path.exists("search_logs/{}".format(self.project_path)):
             with open(os.path.join("search_logs", self.project_path, "{}_build_install_from_source.json".format(self.project_path))) as bifs:
                 results = json.load(bifs)
-            return json.dumps(results)
+            return results
         results = search_install_doc(self.project_path)
-        return json.dumps(results)
-
+        return results
     def find_dockerfiles(self,):
         DOCKERFILE_NAME = "Dockerfile"
         PROJ_DIR = "execution_agent_workspace/{}".format(self.project_path)
@@ -538,18 +551,27 @@ class BaseAgent(metaclass=ABCMeta):
                 previous_memory = pm.read()
             definitions_prompt += "\nFrom previous attempts we learned that:\n {}\n\n".format(previous_memory)
         
+
+
         if self.found_workflows and self.customize["WORKFLOWS_SEARCH"]:
             definitions_prompt += "\n## Relevant installation instructions from web search and workflows/docker files:\n\nThe following workflow files might contain information on how to setup the project and run test cases. We extracted the most important installation steps found in those workflows and turned them into a bash script. This might be useful later on when building/installing and testing the project. However, you might need to adapt them to your current setup (e.g, docker container, language version...). These files also give inspiration of packages to install and their versions. It is recommeneded to pick the newest version.\n"
             for w in self.found_workflows:
                 wn = w.split("/")[-1] if "/" in w else w
-                definitions_prompt += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(wn, self.workflow_to_script(w))
+                definitions_prompt += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(
+                    wn, 
+                    self.found_workflows_summary.get(w, self.workflow_to_script(w)))
         
         if self.dockerfiles and self.customize["WORKFLOWS_SEARCH"]:
             definitions_prompt += "\n\n We found the following dockerfile scripts within the repo. The dockerfile scripts might help you build a suitable docker image for this repository: "+ " ,".join(self.dockerfiles) + "\n"
         
         if self.search_results and self.customize["WEB_SEARCH"]:
             definitions_prompt += "\nWe searched on google for installing / building {} from source code on Ubuntu/Debian.".format(self.project_path)
-            definitions_prompt += "Here is the summary of the top 5 results:\n" + self.search_results + "\n\n"
+            definitions_prompt += "Here is the summary of the top 5 results:\n"
+            for w_result in self.search_results:
+                if len(w_result["analysis"]) < 100:
+                    continue
+                definitions_prompt += "Web page url: {}\n".format(w_result["url"])
+                definitions_prompt += "Summary of page content: {}\n\n".format(w_result["analysis"])
         
         if len(self.history) > 2:
             last_command = self.history[-2]
@@ -562,7 +584,7 @@ class BaseAgent(metaclass=ABCMeta):
         if self.cycle_type == "CMD":
             cycle_instruction = self.cmd_cycle_instruction
             if self.track_budget:
-                cycle_instruction += "\n" + "In this conversation you can only have a limited number of calls tools. You have so far consumed {} call and {} left.\n".format(self.max_budget - self.left_commands, self.left_commands) + "\n Consider this limitation, so you repeat the same commands unless it is really necessary, such as for debugging and resolving issues.\n"
+                cycle_instruction += "\n" + "In this conversation you can only have a limited number of calls tools." + "\n Consider this limitation, so you repeat the same commands unless it is really necessary, such as for debugging and resolving issues.\n"
             prompt.extend(ChatSequence.for_model(
                 self.llm.name,
                 [Message("user", definitions_prompt + "\n" + steps_text + "\n\n" + cycle_instruction)] + prepend_messages,
