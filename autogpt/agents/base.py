@@ -376,23 +376,78 @@ class BaseAgent(metaclass=ABCMeta):
         else:
             return False
         
-    def detect_command_repetition(self, ref_cmd):
-        #TODO("change this")
-        return False
-        assistant_outputs = [str(extract_dict_from_response(msg.content)["command"]) for msg in self.history if msg.role == "assistant"]
-        with open("assistant_output_from_command_repetition.json", "w") as aocr:
-            json.dump(assistant_outputs+[str(ref_cmd["command"])], aocr)
+    def detect_command_repetition(self, ref_cmd: dict) -> bool:
+        """
+        Returns True if the last 6 commands (including ref_cmd) form:
+          - a period‐1 repetition (A A A A A A), or
+          - a period‐2 alternating loop (A B A B A B), or
+          - a period‐3 loop (A B C A B C), or
+          - a “3 + 3” loop (A A A B B B).
+        Otherwise returns False.
+
+        ref_cmd is expected to be the parsed LLM response dict:
+            {
+              "thoughts": "...",
+              "command": {
+                "name": "...",
+                "args": { ... }
+              }
+            }
+        """
+        # 1) Gather serialized strings for all previous assistant commands
+        previous_cmds: list[str] = []
+        for msg in self.history:
+            if msg.role != "assistant":
+                continue
+            try:
+                parsed = extract_dict_from_response(msg.content)
+                cmd_dict = parsed.get("command", None)
+                if cmd_dict is None:
+                    continue
+                # Canonicalize via JSON‐dump with sorted keys
+                cmd_str = json.dumps(cmd_dict)
+                previous_cmds.append(cmd_str)
+            except Exception:
+                continue
+
+        # 2) Serialize the incoming (candidate) command
         try:
-            if str(ref_cmd["command"]) in assistant_outputs:
-                logger.info("REPETITION DETECTED !!! CODE 2")
-                return True
-            else:
-                return False
-        except Exception as e:
-            with open("exception_files.txt", "w") as ef:
-                ef.write(str(e))
-            print("Exception raised,", e)
+            new_cmd_dict = ref_cmd["command"]
+            new_cmd_str = json.dumps(new_cmd_dict)
+        except Exception:
             return False
+
+        # 3) If fewer than 5 prior commands exist, we cannot form a 6‐element window yet
+        if len(previous_cmds) < 5:
+            return False
+
+        # The window of exactly six “stringified” commands
+        window: list[str] = previous_cmds[-5:] + [new_cmd_str]
+
+        # 4) Check for period‐1, period‐2, or period‐3
+        for p in (1, 2, 3):
+            repetitive = True
+            for i in range(6):
+                if window[i] != window[i % p]:
+                    repetitive = False
+                    break
+            if repetitive:
+                logger.info(f"REPETITION DETECTED (period={p}): {window}")
+                return True
+
+        # 5) Check for “AAA BBB” pattern:
+        #    - window[0]==window[1]==window[2]
+        #    - window[3]==window[4]==window[5]
+        #    - window[0] != window[3]   (so it’s really two distinct blocks of three)
+        if (
+            window[0] == window[1] == window[2]
+            and window[3] == window[4] == window[5]
+            and window[0] != window[3]
+        ):
+            logger.info(f"REPETITION DETECTED (AAA BBB): {window}")
+            return True
+
+        return False
         
     def handle_command_repitition(self, repeated_command: dict, handling_strategy: str = ""):
         if handling_strategy == "":
@@ -446,34 +501,43 @@ class BaseAgent(metaclass=ABCMeta):
         )
         
         try:
-            response_dict = extract_dict_from_response(
-                raw_response.content
-            )
-            repetition = self.detect_command_repetition(response_dict)
-            if repetition:
-                logger.info("REPETITION DETECTED, WARNING CODE RR1")
-                logger.info(str(self.handle_command_repitition(response_dict, self.hyperparams["repetition_handling"])))
-                prompt.extend([Message("user", self.handle_command_repitition(response_dict, self.hyperparams["repetition_handling"]))])
-                new_response = create_chat_completion(
-                        prompt,
-                        self.config,
-                        functions=get_openai_command_specs(self.command_registry)
-                        if self.config.openai_functions
-                        else None,
-                    )
-                if self.hyperparams["repetition_handling"] == "TOP3":
-                    top3_list = json.loads(new_response.content)
-                    for r in top3_list:
-                        repetition = self.detect_command_repetition(r)
-                        if not repetition:
-                            raw_response = Message("assistant", str(r))
-                elif self.hyperparams["repetition_handling"] == "RESTRICT":
-                    raw_response = new_response
+            response_dict = extract_dict_from_response(raw_response.content)
+        except Exception:
+            # If parsing fails, just hand it off to on_response as usual
             self.cycle_count += 1
+            return self.on_response(raw_response, thought_process_id, prompt, instruction)
 
-            return self.on_response(raw_response, thought_process_id, prompt, instruction)
-        except SyntaxError as e:
-            return self.on_response(raw_response, thought_process_id, prompt, instruction)
+        repetition = self.detect_command_repetition(response_dict)
+        if repetition:
+            # Build the 6‐element window (same as in detect_command_repetition)
+            previous_cmds: list[str] = []
+            for msg in self.history:
+                if msg.role != "assistant":
+                    continue
+                try:
+                    parsed = extract_dict_from_response(msg.content)
+                    cmd_dict = parsed.get("command", None)
+                    if cmd_dict is None:
+                        continue
+                    cmd_str = json.dumps(cmd_dict)
+                    previous_cmds.append(cmd_str)
+                except Exception:
+                    continue
+
+            # Serialize the incoming (candidate) command again
+            new_cmd_str = json.dumps(response_dict["command"])
+
+            window_payload = previous_cmds[-5:] + [new_cmd_str]
+
+            # Directly return the special repetition_detected command:
+            cmd_name = "repetition_detected"
+            cmd_args = {"repetition_window": str(window_payload)}
+            agent_thoughts = {"thoughts": "REPETITION DETECTED!"}
+
+            self.cycle_count += 1
+            return cmd_name, cmd_args, agent_thoughts
+        self.cycle_count += 1
+        return self.on_response(raw_response, thought_process_id, prompt, instruction)
         
     @abstractmethod
     def execute(

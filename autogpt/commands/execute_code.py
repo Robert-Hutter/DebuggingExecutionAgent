@@ -184,6 +184,36 @@ def execute_python_file(filename: str, agent: Agent) -> str:
         return f"Error: {str(e)}"
 
 
+@command(
+    "repetition_detected",
+    "Warn the LLM that a six‐command repetition was detected and request a fresh next step.",
+    {
+        "repetition_window": {
+            "type": "string",
+            "description": "A single string representing the last six commands that triggered repetition.",
+            "required": True,
+        },
+    },
+)
+def repetition_detected(repetition_window: str, agent: Agent) -> str:
+    """
+    Called whenever the agent detects that the last six commands are looping
+    (e.g. A A A A A A, A B A B A B, or A B C A B C).
+
+    repetition_window is provided as one concatenated string of those six commands.
+    """
+    return (
+        "Repetition detected: the last six commands form a cycle with no apparent progress.\n\n"
+        "Here is the concatenated string of the last 6 commands (in order):\n"
+        f"{repetition_window}\n\n"
+        "Please analyze everything you know about the task so far, break out of this loop, "
+        "and suggest exactly one new command (with its arguments) that will move the task forward.\n\n"
+        "Important:\n"
+        "  • The `thoughts` field should explain why these commands were looping and how the new "
+        "command breaks the pattern.\n"
+    )
+
+
 def validate_command(command: str, config: Config) -> bool:
     """Validate a command to ensure it is allowed
 
@@ -504,8 +534,14 @@ def _handle_stuck(command: str, agent: Agent) -> str | None:
 
     # TERMINATE: quit & recreate the screen session
     if command == "TERMINATE":
-        execute_command_in_container_screen(agent.container, f"screen -S {SCREEN_SESSION} -X quit")
-        create_screen_session(agent.container)
+        # Send SIGTERM to whatever is running in window 0 of SCREEN_SESSION
+        execute_command_in_container_screen(
+            agent.container,
+            f"screen -S {SCREEN_SESSION} -p 0 -X signal SIGTERM"
+        )
+        # (Optionally, wait a moment here to let it shut down cleanly…)
+        time.sleep(5)
+        #create_screen_session(agent.container)
         agent.command_stuck = False
         return "Previous command terminated; fresh screen session is ready."
 
@@ -522,7 +558,10 @@ def _handle_stuck(command: str, agent: Agent) -> str | None:
     # anything else → tell them how to control it
     return (
         "Error: a command is still running.\n"
-        "Please use WAIT, TERMINATE, or WRITE:<text>."
+        "Please use linux_terminal with special args: WAIT, TERMINATE, or WRITE:<text>."
+        " WAIT to wait more for the process\n"
+        " TERMINATE to kill the last command & reset\n"
+        " WRITE:<text> to send input to the stuck command\n\n"
     )
 
 @command(

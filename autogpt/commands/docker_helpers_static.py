@@ -272,7 +272,7 @@ def execute_command_in_container(container, command):
         output = exec_result.output.decode('utf-8')
         #print(f"Command output:\n{output}")
         
-        THRESH = 600
+        THRESH = 180
         WAIT = 1
         command_threshold = THRESH
         old_command_output = read_file_from_container(container, "/tmp/cmd_result")
