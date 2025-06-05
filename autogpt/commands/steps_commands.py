@@ -90,7 +90,7 @@ def extract_language_and_version(agent: Agent) -> str:
         readme_content = fpp.read()
     query += readme_content
 
-    return ask_chatgpt(query, system_prompt)
+    return ask_llm(query, system_prompt)
 
 """@command(
     "write_language_version_to_file",
@@ -137,7 +137,7 @@ def extract_dependencies(agent: Agent) -> str:
         readme_content = fpp.read()
     query += readme_content
 
-    return ask_chatgpt(query, system_prompt)
+    return ask_llm(query, system_prompt)
 
 """@command(
     "list_files",
@@ -149,7 +149,7 @@ def extract_dependencies(agent: Agent) -> str:
 def list_files(agent: Agent) -> str:
     return os.listdir(os.path.join(workspace_folder, agent.project_path))
 
-@command(
+"""@command(
     "read_file",
     "",
     {
@@ -159,7 +159,7 @@ def list_files(agent: Agent) -> str:
             "required": True,
         }
     },
-)
+)"""
 def read_file(file_path: str, agent: Agent) -> str:
     project_path = agent.project_path
     with open(os.path.join(workspace_folder, project_path, file_path)) as fpp:
@@ -231,7 +231,7 @@ def extract_build_and_test_info_from_readme(agent: Agent) -> str:
     with open(os.path.join(workspace_folder, project_path, readme_name)) as fpp:
         readme_content = fpp.read()
     query += readme_content
-    return ask_chatgpt(query, system_prompt)
+    return ask_llm(query, system_prompt)
 
 """@command(
     "write_build_test_commands",

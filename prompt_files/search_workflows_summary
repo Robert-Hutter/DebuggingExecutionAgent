@@ -1,0 +1,42 @@
+Use the summaries of the top web pages (from searching “How to install and run tests of the project: {}, from source code in a fresh container”) and the CI/CD script excerpts to create one unified, detailed guide on how to install run test suites of the project in a docker container. Resolve any version conflicts and list every command and package needed.
+    
+    Mention these points:
+    - Reading any relevant documentation files in the repo (e.g., README, project_config) to gather project-specific details before proceeding.
+    - The first step should always contain reading a documentation file like readme, or project_config.yaml, or autobuild.sh (of course assuming that such files exist) 
+    - Creating a minimal Dockerfile that builds a container quickly. Avoid one large, complex Dockerfile that’s likely to fail multiple times. For any risky commands inside the Dockerfile, append || exit 0 to prevent the build from stopping on errors. 
+    - MENTION MANDATORY: Do not add '|| exit 0' to commands you run directly on the Linux terminal. Only add it to RUN instructions within the Dockerfile.
+    - Mention that: No usage of docker commands is needed. Creating a docker image can be done by writing dockerfile to a file and the process of building the image and starting the container would be triggered automatically.
+    - MENTION MANDATORY THIS MESSAGE: YOU ARE NOT ALLOWED TO USE DOCKER COMMANDS IN TERMINAL TOOL MEANING COMMANDS LIKE: "docker something..."
+    - It is also recommeneded that the dockerfile clones the repo and sets the main dir of the repo as the workdir. Template example of dockerfile given:
+    ```
+    FROM python:3.10-slim  # Adjust the base image based on the project's language and dependencies
+
+    # Avoid interruptive messages from tzdata
+    ENV TZ=Europe/Berlin
+    RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+    # Install git, gcc, bash, and other necessary build tools
+    RUN apt-get update && \
+        apt-get install -y git gcc bash && \
+        apt-get clean && \
+        rm -rf /var/lib/apt/lists/* || exit 0
+
+    WORKDIR /app
+
+    # Clone the repository
+    RUN git clone project_git_url || exit 0
+
+    WORKDIR /app/project_name
+
+    CMD ["bash"]
+    ```
+    - It should be emphasized that the installation of project and its dependencies should be done post creation of the dockerfiles, meaning that the docker file should NOT have project specific dependencies being installed. Focus only on system and langauge runtime packages that are needed.
+    It should be mentioend that once the docker container has been launched:
+    - Install required system packages and language runtimes.
+    - Install any language-specific dependencies (e.g., pip, npm, bundles) exactly as specified in docs or CI scripts, resolving conflicting versions.
+    - Run any setup or migration scripts manually inside the container, referring to project_config or other config files as necessary.
+    - Execute the test suite command-by-command inside the container, ensuring each command completes successfully. If there is a linting step, demonstrate how to run the linter but emphasize that fixing lint errors is not required—focus solely on getting tests to run.
+    - If tests reference database or external services, start those services manually (e.g., via a command) and configure connection settings based on README or project_config before running tests.
+    - If test automation scripts already exist, they should be checked before using them (meaning reading them and trying to understand if the scripts were reazlly meant to be run just like that. Some workflow files might contain scripts or steps relevant to the CI/CD platform which cannot be directly applied or used in our case.)
+
+    Summarize the exact commands and package names in the guide so someone can follow step-by-step from a fresh container to a successful test run while adhering to the points mentioend above in your explanation (Do not mention anything about the CI/CD pipeline or whatever just focus on the process of setting up and installing the project in a fresh docker container on a ubuntu machine usually.).

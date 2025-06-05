@@ -37,7 +37,7 @@ from autogpt.speech import say_text
 from autogpt.workspace import Workspace
 from scripts.install_plugin_deps import install_plugin_dependencies
 from autogpt.commands.docker_helpers_static import stop_and_remove
-
+from autogpt.commands.commands_summary_helper import condense_history
 
 def run_auto_gpt(
     continuous: bool,
@@ -387,6 +387,8 @@ def run_interaction_loop(
                 agent.history = agent.history[:-2]
                 
                 agent.commands_and_summary.append(("Call to tool {} with arguments {}".format(command_name, command_args), agent.summary_result))
+                agent.condensed_history.append(
+                    "\nCommand:{}\nResult summary:{}\n---".format(str(command_name) + str(command_args), condense_history(agent.summary_result["summary"])))
                 with open(parsable_log_file) as plf:
                     parsable_content = json.load(plf)
 

@@ -15,7 +15,7 @@ ACTIVE_SCREEN = {
     "prep_end": False
 }
 
-def ask_chatgpt(query, system_message, model="gpt-4o-mini"):
+def ask_llm(query, system_message, model="gpt-4o-mini"):
     with open("openai_token.txt") as opt:
         token = opt.read()
     chat = ChatOpenAI(openai_api_key=token, model=model)
@@ -142,7 +142,7 @@ def remove_progress_bars(text):
         summary = ""
         for i in range(int(len(text)/100000)+1):
             query= "Here is the output of a command that you should clean:\n"+ text[i*100000: (i+1)*100000]
-            summary += "\n" + ask_chatgpt(query, system_prompt)
+            summary += "\n" + ask_llm(query, system_prompt)
             print("CLEANED 100K CHARACTERS.........")
             print("LEN CLEANED:", len(summary))
     except Exception as e:

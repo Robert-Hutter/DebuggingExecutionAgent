@@ -62,7 +62,7 @@ def extract_instructions_from_readme(agent: Agent) -> str:
 
     query = "Here is the content of the readme file(s). Please extract any information related to installation including step-by-step points, environement, required software and their versions and also any manaual steps that needs to be done.\n\n" + readme_text
 
-    return ask_chatgpt(query, system_prompt)
+    return ask_llm(query, system_prompt)
 
 """@command(
     "identify_testing_framework",
@@ -103,7 +103,7 @@ def extract_installation_documentation(project_path: str, agent: Agent) -> str:
     pass
 
 
-def ask_chatgpt(query, system_message, model="gpt-4o-mini"):
+def ask_llm(query, system_message, model="gpt-4o-mini"):
     with open("openai_token.txt") as opt:
         token = opt.read()
     chat = ChatOpenAI(openai_api_key=token, model=model)

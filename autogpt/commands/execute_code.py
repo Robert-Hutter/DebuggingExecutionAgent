@@ -219,6 +219,7 @@ WAIT_TIME = 300  # seconds
 SCREEN_SESSION = "my_screen_session"
 
 def _preprocess_command(command: str) -> str:
+    command = command.replace(" || exit 0", "")
     if command.startswith("bash "):
         return command[len("bash "):]
     return command
@@ -228,7 +229,7 @@ def _validate_and_block_interactive(command: str, agent: Agent) -> str | None:
         return "Error: interactive commands like nano are not allowed."
     if command.startswith("docker "):
         return (
-            "Error: docker commands are not allowed, if the container is already running you can directly access it through linux_terminal. If the docker container stopped abruptly, you need to end the task."
+            "Error: docker commands are not allowed. You can create a docker image an container by simply writing a dockerfile using the 'write_to_file' tool. This would automatically trigger the building of the image, start a container and gives you access to it."
         )
     if not validate_command(command, agent.config):
         return "Error: This Shell Command is not allowed."

@@ -26,8 +26,9 @@ from autogpt.memory.message_history import MessageHistory
 from autogpt.prompts.prompt import DEFAULT_TRIGGERING_PROMPT
 from autogpt.json_utils.utilities import extract_dict_from_response
 from autogpt.commands.info_collection_static import collect_requirements, infer_requirements, extract_instructions_from_readme
-from autogpt.commands.docker_helpers_static import start_container, remove_ansi_escape_sequences, ask_chatgpt
+from autogpt.commands.docker_helpers_static import start_container, remove_ansi_escape_sequences, ask_llm
 from autogpt.commands.search_documentation import search_install_doc
+from autogpt.commands.commands_summary_helper import condense_history
 
 CommandName = str
 CommandArgs = dict[str, str]
@@ -155,7 +156,7 @@ class BaseAgent(metaclass=ABCMeta):
         self.keep_container = True if self.hyperparams["keep_container"] == "TRUE" else False
         
         self.current_step = "1"
-        self.steps_list = ["1", "2", "3", "4", "5", "6", "7"]
+        self.steps_list = ["1", "2", "3", "4", "5", "6"]
         
         with open(os.path.join(prompt_files, "steps_list.json")) as slj:
             self.steps_object = json.load(slj)
@@ -195,7 +196,8 @@ class BaseAgent(metaclass=ABCMeta):
         self.search_results = self.search_documentation()
         self.dockerfiles = self.find_dockerfiles()
         self.command_stuck = False
-
+        self.condensed_history = []
+        self.unified_summary = None
 
     def to_dict(self):
         return {
@@ -234,6 +236,7 @@ class BaseAgent(metaclass=ABCMeta):
             "found_workflows_summary": self.found_workflows_summary
         }
 
+
     def save_to_file(self, filename):
         # Save object attributes as JSON to a file
         with open(filename, 'w') as file:
@@ -255,7 +258,7 @@ class BaseAgent(metaclass=ABCMeta):
         {}
         ```
         """.format(wp, content)
-        llm_result = ask_chatgpt(system_prompt, query)
+        llm_result = ask_llm(system_prompt, query)
         self.found_workflows_summary[workflow_path] = llm_result
         return llm_result
 
@@ -337,7 +340,7 @@ class BaseAgent(metaclass=ABCMeta):
             summary = ""
             for i in range(int(len(text)/100000)+1):
                 query= "Here is the output of a command that you should clean:\n"+ text[i*100000: (i+1)*100000]
-                summary += "\n" + ask_chatgpt(query, system_prompt)
+                summary += "\n" + ask_llm(query, system_prompt)
                 print("CLEANED 100K CHARACTERS.........")
                 print("LEN CLEANED:", len(summary))
         except Exception as e:
@@ -492,17 +495,15 @@ class BaseAgent(metaclass=ABCMeta):
         ...
 
     def construct_executed_steps_text(self,):
-        text = "# List of Steps to Achieve Your Goals:\n"
-        text = "Here is the overall list of steps that you might need to fulfill inorder to achieve your goals:\n"
+        text = "# Additional Guidelines on the process of setup and installation (Might not be suitable to every case.):\n"
         for k in self.steps_list:
             text += self.steps_object[k]["static_header"] + self.steps_object[k]["step_line"] + "\n"
 
-        text += "\n## History of executed commands:\n(Remember the executed commands ant their outcomes to avoid repetition and also to build up on top of them, e.g, remember to set java to jdk 17 after install the package... but not only that...)\nBelow is a list of commands that you have executed so far and summary of the result of each command:\n"
+        text = "\n# History of executed commands:\n(Remember the executed commands and their outcomes to avoid repetition and also to build up on top of them, e.g, remember to set java to jdk 17 after installing jdk 17 ... but not only that...)\nBelow is a list of commands that you have executed so far and summary of the result of each command:\n"
         for command, summary in self.commands_and_summary:
-            text += command + "\nThe summary of the output of above command: " + str(summary)+"\n"
+            text += command + "\nThe summary of the output of above command: " + json.dumps(summary, indent=4)+"\n"
         text +="END OF COMMANDS HISTORY SECTION\n\n"
         return text
-
 
     def go_to_next_step(self,):
         step_ind = self.steps_list.index(self.current_step)
@@ -552,34 +553,58 @@ class BaseAgent(metaclass=ABCMeta):
             definitions_prompt += "\nFrom previous attempts we learned that:\n {}\n\n".format(previous_memory)
         
 
-
+        workflows_summary = ""
         if self.found_workflows and self.customize["WORKFLOWS_SEARCH"]:
-            definitions_prompt += "\n## Relevant installation instructions from web search and workflows/docker files:\n\nThe following workflow files might contain information on how to setup the project and run test cases. We extracted the most important installation steps found in those workflows and turned them into a bash script. This might be useful later on when building/installing and testing the project. However, you might need to adapt them to your current setup (e.g, docker container, language version...). These files also give inspiration of packages to install and their versions. It is recommeneded to pick the newest version.\n"
+            definitions_prompt += "\n\n"
+            #"The following workflow files might contain information on how to setup the project and run test cases. We extracted the most important installation steps found in those workflows and turned them into a bash script. This might be useful later on when building/installing and testing the project. However, you might need to adapt them to your current setup (e.g, docker container, language version...). These files also give inspiration of packages to install and their versions. It is recommeneded to pick the newest version.\n"
             for w in self.found_workflows:
                 wn = w.split("/")[-1] if "/" in w else w
-                definitions_prompt += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(
+                workflows_summary += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(
                     wn, 
-                    self.found_workflows_summary.get(w, self.workflow_to_script(w)))
-        
-        if self.dockerfiles and self.customize["WORKFLOWS_SEARCH"]:
-            definitions_prompt += "\n\n We found the following dockerfile scripts within the repo. The dockerfile scripts might help you build a suitable docker image for this repository: "+ " ,".join(self.dockerfiles) + "\n"
+                    self.found_workflows_summary.get(w, self.workflow_to_script(w))) 
         
         if self.search_results and self.customize["WEB_SEARCH"]:
-            definitions_prompt += "\nWe searched on google for installing / building {} from source code on Ubuntu/Debian.".format(self.project_path)
-            definitions_prompt += "Here is the summary of the top 5 results:\n"
+            #definitions_prompt += "\nWe searched on google for installing / building {} from source code on Ubuntu/Debian.".format(self.project_path)
+            #definitions_prompt += "Here is the summary of the top 5 results:\n".format()
+            merged_summary = ""
             for w_result in self.search_results:
                 if len(w_result["analysis"]) < 100:
                     continue
-                definitions_prompt += "Web page url: {}\n".format(w_result["url"])
-                definitions_prompt += "Summary of page content: {}\n\n".format(w_result["analysis"])
+                merged_summary += "Web page url: {}\n".format(w_result["url"])
+                merged_summary += "Summary of page content: {}\n\n".format(w_result["analysis"])
         
+
+            if not self.unified_summary:
+                s_prompt = "You are an expert in developing and deploying software. Particularly, you are good at creating environment for installing and setting up arbitrary projects from source code in a dev-environment that is suitable for running tests. In addition you know how to run test suites of different projects in different languages and different testing and building frameworks. Use this ability to produce an easy to follow structured guide from the given information."
+
+                with open("prompt_files/search_workflows_summary") as sws:
+                    query = sws.read()
+
+                print("-"*50)
+                print(workflows_summary)
+                print("-"*50)
+                print(merged_summary)
+                print("-"*50)
+                query = query.format(self.project_path) 
+                query+= merged_summary
+                query+="\n<--- End of search resutls"
+                query+= "--> Workflows content (summarized and rephrased):\n"
+                query+= workflows_summary
+                query+="\n<--- End of workflows content"
+                self.unified_summary = ask_llm(query, s_prompt)
+
+            definitions_prompt += self.unified_summary
+
+        if self.dockerfiles and self.customize["WORKFLOWS_SEARCH"]:
+            definitions_prompt += "\n\n We found the following dockerfile scripts within the repo. The dockerfile scripts might help you build a suitable docker image for this repository: "+ " ,".join(self.dockerfiles) + "\n"
+
         if len(self.history) > 2:
             last_command = self.history[-2]
             command_result = self.history[-1]
             last_command_section = "{}\n".format(last_command.content)
             append_messages.append(Message("assistant", last_command_section))
             result_last_command = "The result of executing that last command is:\n {}".format(command_result.content)
-            append_messages.append((Message("user", result_last_command)))
+            append_messages.append((Message("user", result_last_command + "\nReminder of the sequence of commands executed so far and a condense summary of their results:\n" + "\n".join(self.condensed_history) + "\nEND OF REMINDER ABOUT SEQUENCE OF COMMANDS EXECUTED SO FAR.\n")))
 
         if self.cycle_type == "CMD":
             cycle_instruction = self.cmd_cycle_instruction

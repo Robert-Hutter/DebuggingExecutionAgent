@@ -156,7 +156,7 @@ def log_operation(
     )
 
 
-"""@command(
+@command(
     "read_file",
     "Read an existing file",
     {
@@ -166,8 +166,7 @@ def log_operation(
             "required": True,
         }
     },
-)"""
-#@sanitize_path_arg("file_path")
+)
 def read_file(file_path: str, agent: Agent) -> str:
     """Read a file and return the contents
 
@@ -197,7 +196,10 @@ def read_file(file_path: str, agent: Agent) -> str:
         except Exception as e:
             return f"Error: {str(e)}"
     else:
-        return read_file_from_container(agent.container, os.path.join("/app", agent.project_path, file_path.split("/")[-1]))
+        return "The read_file tool always assumes that you are in directory {}\n".format(os.path.join("/app", agent.project_path)) + \
+        "This means that the read_file tool is trying to read the file from: {}\n".format(os.path.join("/app", agent.project_path, file_path)) + \
+        "If this returns an error or this is not the path you meant, you should explicitly pass an absolute file path to the read_file tool[REMEMBER THIS DETAIL].\n" + \
+        read_file_from_container(agent.container, os.path.join("/app", agent.project_path, file_path))
 
 
 def ingest_file(
@@ -305,6 +307,8 @@ def write_to_file(filename: str, text: str, agent: Agent) -> str:
             
             if "dockerfile" in filename.lower():
                 image_log = "IMAGE ALREADY EXISTS"
+                if len(text.split("\n")) > 30 or len(text.split("&&")) > 30:
+                    return "Dockerfile is too long. Focus on a minimally functional docker file that mostly include image, system package and language runtime packages. The project sepecific dependencies (+building/testing) should be installed later through terminal after having a running container."
                 if not check_image_exists(agent.project_path.lower()+"_image:ExecutionAgent"):
                     image_log = build_image(os.path.join(workspace, agent.project_path), agent.project_path.lower()+"_image:ExecutionAgent")
                     if image_log.startswith("An error occurred while building the Docker image"):
