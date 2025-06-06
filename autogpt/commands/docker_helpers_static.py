@@ -15,7 +15,7 @@ ACTIVE_SCREEN = {
     "prep_end": False
 }
 
-def ask_llm(query, system_message, model="gpt-4o-mini"):
+def ask_llm(query, system_message, model="gpt-4.1-mini"):
     with open("openai_token.txt") as opt:
         token = opt.read()
     chat = ChatOpenAI(openai_api_key=token, model=model)
@@ -405,14 +405,9 @@ def read_file_from_container(container, file_path):
     else:
         return f'Failed to read {file_path} in the container. Output: {output.decode("utf-8")}'
 
-
-import uuid
-import time
-from docker.models.containers import Container
-
 SCREEN_SESSION = ACTIVE_SCREEN["name"]
 LOG_DIR        = "/tmp"
-THRESH         = 600   # seconds of no change before "stuck"
+THRESH         = 180   # seconds of no change before "stuck"
 WAIT           = 1     # polling interval in seconds
 
 import uuid
@@ -427,11 +422,6 @@ from .docker_helpers_static import (
     remove_progress_bars,
 )
 
-SCREEN_SESSION = ACTIVE_SCREEN["name"]
-LOG_DIR        = "/tmp"
-THRESH         = 600   # seconds of no-change → “stuck”
-WAIT           = 1     # polling interval
-
 def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str, str, bool]:
     """
     Improved: waits for first output before ever checking the process tree,
@@ -443,6 +433,7 @@ def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str
     # start per‐command logging
     container.exec_run(f"screen -S {SCREEN_SESSION} -X logfile {logfile}")
     container.exec_run(f"screen -S {SCREEN_SESSION} -X log on")
+    time.sleep(0.5) 
 
     if cmd in ['exec "$SHELL" -l', "exec '$SHELL' -l", 'exec "$SHELL" -l ', "exec '$SHELL' -l "]:
         container.exec_run(f"screen -S {SCREEN_SESSION} -X stuff 'exec /bin/bash -l\\n'", tty=False)
@@ -458,31 +449,32 @@ def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str
     # send the actual shell command
     container.exec_run(f"screen -S {SCREEN_SESSION} -X stuff '{cmd}\\n'", tty=False)
 
-    stuck     = False
-    threshold = THRESH
-    seen_any  = False
+    stuck      = False
+    threshold  = THRESH
+    seen_any   = False
+    grace_deadline = None   # timestamp by which we must confirm the tree
 
     while True:
-        # read logfile each iteration
         try:
             new_output = read_file_from_container(container, logfile)
         except Exception as e:
             new_output = f"An Error happened during executing the command:{e}"
 
         if new_output != old_output:
-            seen_any   = True
-            old_output = new_output
-            threshold  = THRESH
+            seen_any     = True
+            old_output   = new_output
+            threshold    = THRESH
+            grace_deadline = time.time() + 2   # give 50 ms for “tree check”
         else:
             threshold -= WAIT
 
-        # once we’ve seen some output, we can check for process completion
         if seen_any:
             tree = get_screen_process_list(container, ACTIVE_SCREEN["id"])
             if tree == ACTIVE_SCREEN["default_process_list"]:
+                time.sleep(2)
                 break
 
-        # if no change for too long, declare “stuck”
+
         if threshold <= 0:
             stuck = True
             break
@@ -491,7 +483,8 @@ def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str
 
     # stop logging
     container.exec_run(f"screen -S {SCREEN_SESSION} -X log off")
-
+    time.sleep(2)
+    old_output = read_file_from_container(container, logfile)
     # build the return values
     if stuck:
         with open("prompt_files/command_stuck") as f:
@@ -499,10 +492,10 @@ def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str
         cleaned = (
             "The command you executed seems to take some time to finish...\n\n"
             f"Partial output (no change for {THRESH}s):\n{ textify_output(old_output) }\n\n"
-            "You can:\n"
-            "  • WAIT to re-check for new output\n"
-            "  • TERMINATE to kill the command and reset\n"
-            "  • WRITE:<your text> to send input\n\n"
+            "You can call the linux_terminal again with one of the following options:\n"
+            "  • WAIT which would allow you to wait more for the process to finish if it makes sense based on the partial progress so far.\n"
+            "  • TERMINATE to kill the command if necessary.\n"
+            "  • WRITE:<your text> to send input to a command that is requiring input (some inputs such as [ENTER] might require usage of special characters to represent [ENETER] as a string.\n\n"
             + stuck_prompt
         )
         return 1, cleaned, logfile, True

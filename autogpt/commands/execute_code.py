@@ -430,6 +430,8 @@ SCREEN_SESSION= ACTIVE_SCREEN["name"]
 
 import re
 
+import re
+
 def _run_in_container(command: str, agent: Agent) -> str:
     """
     Runs a command inside the container, unless it’s disallowed:
@@ -438,6 +440,9 @@ def _run_in_container(command: str, agent: Agent) -> str:
       - ‘docker’ commands are forbidden inside the container.
     Additionally, if the user installs a new Linux package (via apt/apt-get), 
     remind them to set it as the default and verify it.
+
+    After executing the given command, we also run `pwd` in the same screen
+    session to report the current working directory.
     """
     # ------------------------------------------------------------
     # 1) Reject any use of sudo
@@ -452,7 +457,7 @@ def _run_in_container(command: str, agent: Agent) -> str:
         return (
             "Running SETUP_AND_INSTALL.sh right now is not recommended. "
             "Please execute each step manually in the terminal until the project is built "
-            "and the test suite has passed, after that you can end task."
+            "and the test suite has passed; then you can run the installer in one shot."
         )
 
     # ------------------------------------------------------------
@@ -465,7 +470,6 @@ def _run_in_container(command: str, agent: Agent) -> str:
     # 4) Detect if this is an apt/apt-get install command
     # ------------------------------------------------------------
     install_detected = False
-    # Match “apt install …” or “apt-get install …” at the very start
     if re.match(r"^(apt|apt-get)\s+install\b", command):
         install_detected = True
 
@@ -480,12 +484,36 @@ def _run_in_container(command: str, agent: Agent) -> str:
     print(output)
 
     # ------------------------------------------------------------
-    # 6) If a new package was installed, append a reminder
+    # 5.a) If the command itself got “stuck,” don’t run `pwd`—just return the stuck prompt
+    # ------------------------------------------------------------
+    if stuck:
+        # In the “stuck” scenario, _handle_stuck() will be invoked by execute_shell(),
+        # so here we simply return the same “output” (which already contains the stuck‐message).
+        return output
+
+    # ------------------------------------------------------------
+    # 5.b) Otherwise, run `pwd` in the same screen session to get cwd
+    # ------------------------------------------------------------
+    # We re‐use exec_in_screen_and_get_log(…) so that we reliably capture the “pwd” output.
+    # – We don’t care about a new logfile name here; we just want the returned string.
+    _, pwd_output, _, pwd_stuck = exec_in_screen_and_get_log(agent.container, "pwd")
+
+    # If somehow “pwd” got stuck (extremely unlikely), fall back to an empty string:
+    if pwd_stuck:
+        cwd_str = "\n"
+    else:
+        # textify_output() will strip out control codes, trailing newlines, etc.
+        cwd_str = textify_output(pwd_output)
+        if cwd_str.startswith("pwd "):
+            cwd_str = cwd_str[4:]
+
+    # ------------------------------------------------------------
+    # 6) If a new package was installed, append a reminder + the cwd
     # ------------------------------------------------------------
     if install_detected:
         reminder = (
-            "\nNOTE: It looks like you just installed a new package. If it provides an executable "
-            "that should be set as the default, don’t forget to update alternatives (non-interactively) "
+            "\n\nNOTE: It looks like you just installed a new package. If it provides an executable "
+            "that should be set as the default, don’t forget to update alternatives (non‐interactively) "
             "and verify the change. For example:\n\n"
             "  1) If you installed OpenJDK 17 (e.g. `apt install openjdk-17-jdk`), set it as default:\n"
             "       update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java\n"
@@ -496,15 +524,20 @@ def _run_in_container(command: str, agent: Agent) -> str:
             "       update-alternatives --set python3 /usr/bin/python3.9\n"
             "     Then verify:\n"
             "       python3 --version\n\n"
-            "Replace paths or package names as needed for other tools. Ensure the new version is active before proceeding."
+            "Replace paths or package names as needed for other tools. Ensure the new version is active.  \n"
         )
-        print(reminder)
-        return output + reminder
+        # Notice we insert the cwd right before the final return
+        return (
+            output
+            + reminder
+            + f"\nThe current working directory after executing the last command is: {cwd_str}"
+        )
 
     # ------------------------------------------------------------
-    # 7) Otherwise, just return the raw output
+    # 7) Otherwise, just return the raw output + cwd
     # ------------------------------------------------------------
-    return output
+    return output + f"\n\nThe current working directory after executing the last command is: {cwd_str}"
+
 
 
 def _handle_stuck(command: str, agent: Agent) -> str | None:

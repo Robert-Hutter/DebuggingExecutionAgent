@@ -464,6 +464,149 @@ class BaseAgent(metaclass=ABCMeta):
         instruction: Optional[str] = None,
         thought_process_id: ThoughtProcessID = "one-shot",
     ) -> tuple[CommandName | None, CommandArgs | None, AgentThoughts]:
+        instruction = instruction or self.default_cycle_instruction
+
+        # 1) Build and potentially augment the prompt
+        prompt: ChatSequence = self.construct_prompt(instruction, thought_process_id)
+        prompt = self.on_before_think(prompt, thought_process_id, instruction)
+
+        # Optional: save prompt text for logs
+        self.prompt_text = prompt.dump()
+        #logger.info("CURRENT DIRECTORY {}".format(os.getcwd()))
+        
+
+        with open(os.path.join("experimental_setups", self.exp_number, "logs", "prompt_history_{}".format(self.project_path.replace("/", ""))), "a+") as patf:
+            patf.write(prompt.dump())
+        
+        with open(os.path.join("experimental_setups", self.exp_number, "logs", "cycles_list_{}".format(self.project_path.replace("/", ""))), "a+") as patf:
+            patf.write(self.cycle_type+"\n")
+        # 2) Query the LLM normally
+        raw_response = create_chat_completion(
+            prompt,
+            self.config,
+            functions=get_openai_command_specs(self.command_registry)
+            if self.config.openai_functions
+            else None,
+        )
+
+        # 3) Try to parse the JSON out of the LLM’s reply, then check repetition
+        try:
+            response_dict = extract_dict_from_response(raw_response.content)
+            repetition = self.detect_command_repetition(response_dict)
+        except Exception as e:
+            # If parsing fails, just treat this as a “no repetition” case and pass through.
+            self.cycle_count += 1
+            return self.on_response(raw_response, thought_process_id, prompt, instruction)
+
+        # 4) If repetition is detected, invoke the “re-planner” sub-call via ask_llm
+        if repetition:
+            # 4.1) Build a system prompt that instructs the LLM to emit exactly one JSON object
+            system_prompt = (
+                "You are a re-planning module inside an execution agent whose job is to break "
+                "out of a looping pattern of commands. Your output must be exactly one raw JSON "
+                "object matching the `Response` interface shown below—nothing else:\n\n"
+                "```\n"
+                "interface Response {\n"
+                "  thoughts: string;\n"
+                "  command: {\n"
+                "    name: string;\n"
+                "    args: Record<string, any>;\n"
+                "  };\n"
+                "}\n"
+                "```\n\n"
+                "In your `thoughts`, include:\n"
+                "  1. A brief analysis of why the previous commands repeated.\n"
+                "  2. An updated view of the system state.\n"
+                "  3. A single new command (name + args) that will break the loop and advance the task.\n"
+                "Do NOT wrap your JSON in markdown fences—emit raw JSON only."
+            )
+
+            # 4.2) Build a textual “history of commands & summaries” block
+            history_block = []
+            for (cmd_str, summary_obj) in self.commands_and_summary:
+                summary_json = json.dumps(summary_obj, indent=2, sort_keys=True)
+                history_block.append(f"COMMAND: {cmd_str}\nRESULT SUMMARY: {summary_json}")
+            history_text = "\n\n".join(history_block)
+
+            # 4.3) Identify the last attempted command (which triggered repetition)
+            last_cmd_attempt = json.dumps(response_dict["command"], sort_keys=True)
+
+            # 4.4) Compose the user‐level query for the re-planner
+            query = (
+                "We detected a repetition pattern in the last six commands.\n\n"
+                f"Last attempted command (which caused repetition):\n{last_cmd_attempt}\n\n"
+                "Below is the full list of previously executed commands and their summaries:\n"
+                f"{history_text}\n\n"
+                "Given this context, suggest exactly one new command (and its args) that does NOT continue "
+                "the repetition. Output must be a single raw JSON object of the form:\n\n"
+                "```\n"
+                "{\n"
+                "  \"thoughts\": \"<your analysis>\",\n"
+                "  \"command\": {\n"
+                "    \"name\": \"<some_command_name>\",\n"
+                "    \"args\": { … }\n"
+                "  }\n"
+                "}\n"
+                "```\n"
+                "Do NOT include any extra wrapper text or markdown fencing—just raw JSON."
+            )
+
+            # 4.5) Ask the LLM for a “break‐out‐of‐repetition” response
+            llm_response_str = ask_llm(system_prompt, query)
+
+            # 4.6) Attempt to parse what the re‐planner returned; if it fails, build a minimal fallback
+            try:
+                new_response_dict = extract_dict_from_response(llm_response_str)
+            except Exception:
+                fallback_response = {
+                    "thoughts": "Failed to parse the re‐planner response; issuing a repetition_detected stub.",
+                    "command": {
+                        "name": "repetition_detected",
+                        "args": {
+                            "repetition_window": "see logs for last six commands"
+                        },
+                    },
+                }
+                llm_response_str = json.dumps(fallback_response)
+
+                # Construct a ChatModelResponse from the fallback JSON
+                replan_model_info = ""
+                replan_function_call = None
+                replan_chat_response = ChatModelResponse(
+                    model_info=replan_model_info,
+                    content=llm_response_str,
+                    function_call=replan_function_call,
+                )
+                self.cycle_count += 1
+                return self.on_response(
+                    replan_chat_response, thought_process_id, prompt, instruction
+                )
+
+            # 4.7) If parsing succeeded, re‐serialize the JSON so we know it’s valid
+            #       And build a ChatModelResponse from it
+            replan_model_info = ""
+            replan_function_call = None
+            replan_content = json.dumps(new_response_dict)
+            replan_chat_response = ChatModelResponse(
+                model_info=replan_model_info,
+                content=replan_content,
+                function_call=replan_function_call,
+            )
+
+            self.cycle_count += 1
+            return self.on_response(
+                replan_chat_response, thought_process_id, prompt, instruction
+            )
+
+        # 5) No repetition → handle the original LLM reply as usual
+        self.cycle_count += 1
+        return self.on_response(raw_response, thought_process_id, prompt, instruction)
+
+    def think_2(
+        self,
+        instruction: Optional[str] = None,
+        thought_process_id: ThoughtProcessID = "one-shot",
+    ) -> tuple[CommandName | None, CommandArgs | None, AgentThoughts]:
         """Runs the agent for one cycle.
 
         Params:
@@ -534,8 +677,19 @@ class BaseAgent(metaclass=ABCMeta):
             cmd_args = {"repetition_window": str(window_payload)}
             agent_thoughts = {"thoughts": "REPETITION DETECTED!"}
 
-            self.cycle_count += 1
-            return cmd_name, cmd_args, agent_thoughts
+            #self.cycle_count += 1
+            #return cmd_name, cmd_args, agent_thoughts
+            raw_response_content = json.dumps(
+                {
+                    "thoughts": "REPETITION DETECTED!",
+                    "command": {
+                        "name": cmd_name,
+                        "args": cmd_args
+                }
+                }
+            )
+            raw_response = ChatModelResponse(model_info="", content=raw_response_content, function_call=None)
+            
         self.cycle_count += 1
         return self.on_response(raw_response, thought_process_id, prompt, instruction)
         
