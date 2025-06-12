@@ -16,17 +16,6 @@ To get started in a VSCode Dev Container:
 
 ---
 
-## ✨ Key Features  
-- **Dual Mode Execution**: Run ExecutionAgent with a batch file or directly with a GitHub repository URL.  
-- **Autonomous Workflow**: Clone, build, and test GitHub projects with no human intervention (we will add human-in-the-loop soon).
-- **Language Support**: Multiple languages like Python, C, C++, Java, JavaScript, and more.  
-- **Dev Container Integration**: Preconfigured for VSCode Dev Containers for seamless development.  
-- **Metrics** (based on evaluation set of 50 projects):  
-  - Build Success Rate: **80%**  
-  - Test Success Rate: **65%**  
-
----
-
 ## 🚀 How It Works  
 
 ### 1️⃣ Single Repository Mode  
