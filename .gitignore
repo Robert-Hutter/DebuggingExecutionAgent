@@ -63,3 +63,7 @@ poetry.lock
 
 # tokens
 openai_token.txt
+
+# additional files
+TODO
+todo

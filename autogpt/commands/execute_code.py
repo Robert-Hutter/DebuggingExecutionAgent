@@ -252,6 +252,8 @@ def _preprocess_command(command: str) -> str:
     command = command.replace(" || exit 0", "")
     if command.startswith("bash "):
         return command[len("bash "):]
+    elif command == "bash":
+        return command[len("bash"):]
     return command
 
 def _validate_and_block_interactive(command: str, agent: Agent) -> str | None:
@@ -274,6 +276,18 @@ def _run_local(command: str, agent: Agent) -> str:
     # ------------------------------------------------------------
     # 1) Original blacklist checks (with the same return messages)
     # ------------------------------------------------------------
+    ALLOWED_COMMANDS = {
+        "tree",
+        "ls",
+        "cat",
+        "head",
+        "tail",
+        "more",
+        "less",
+        "grep",
+        "find",
+    }
+
     if command.startswith("docker "):
         return (
             "Docker commands are not allowed directly. "
@@ -306,6 +320,7 @@ def _run_local(command: str, agent: Agent) -> str:
         return (
             "Piping, redirection, or chaining multiple commands is not allowed. "
             "Submit one simple command at a time (e.g., ‘ls’, ‘cat file.txt’, ‘grep pattern file’)."
+            f"Allowed commands at this point are: {', '.join(sorted(ALLOWED_COMMANDS))}. You would have access to more commands once you have written a Dockerfile which would automatically instantiate a docker container in which you can run more commands."
         )
 
     # ------------------------------------------------------------
@@ -324,17 +339,7 @@ def _run_local(command: str, agent: Agent) -> str:
     # ------------------------------------------------------------
     # 4) Whitelist only safe commands
     # ------------------------------------------------------------
-    ALLOWED_COMMANDS = {
-        "tree",
-        "ls",
-        "cat",
-        "head",
-        "tail",
-        "more",
-        "less",
-        "grep",
-        "find",
-    }
+    
 
     if cmd not in ALLOWED_COMMANDS:
         return (
@@ -466,6 +471,10 @@ def _run_in_container(command: str, agent: Agent) -> str:
     if command.startswith("docker ") or command == "docker":
         return "Docker commands are not allowed inside the container."
 
+    if "echo " in command:
+        return "Commands containing 'echo' are not allowed. You do not need to print anything to the terminal. If you want to write to a file, just use the tool write_to_file."
+
+
     # ------------------------------------------------------------
     # 4) Detect if this is an apt/apt-get install command
     # ------------------------------------------------------------
@@ -504,7 +513,7 @@ def _run_in_container(command: str, agent: Agent) -> str:
     else:
         # textify_output() will strip out control codes, trailing newlines, etc.
         cwd_str = textify_output(pwd_output)
-        if cwd_str.startswith("pwd "):
+        if cwd_str.startswith("pwd") or cwd_str.startswith(" pwd"):
             cwd_str = cwd_str[4:]
 
     # ------------------------------------------------------------
@@ -559,9 +568,9 @@ def _handle_stuck(command: str, agent: Agent) -> str | None:
         return (
             f"Still waiting. Partial output:\n\n{clean}\n\n"
             "You can:\n"
-            "  • WAIT to re-check\n"
-            "  • TERMINATE to kill & reset\n"
-            "  • WRITE:<text> to send input\n\n"
+            " WAIT to re-check\n"
+            " TERMINATE to kill & reset\n"
+            " WRITE:<your text> to send input to a command that is requiring input (some inputs such as [ENTER] might require usage of special characters to represent [ENETER] as a string, e.g, represented as a backslash n or a baskslash r).\n\n"
             + stuck_prompt
         )
 
@@ -594,7 +603,7 @@ def _handle_stuck(command: str, agent: Agent) -> str | None:
         "Please use linux_terminal with special args: WAIT, TERMINATE, or WRITE:<text>."
         " WAIT to wait more for the process\n"
         " TERMINATE to kill the last command & reset\n"
-        " WRITE:<text> to send input to the stuck command\n\n"
+        " WRITE:<your text> to send input to a command that is requiring input (some inputs such as [ENTER] might require usage of special characters to represent [ENETER] as a string, e.g, represented as a backslash n or a baskslash r).\n\n"
     )
 
 @command(

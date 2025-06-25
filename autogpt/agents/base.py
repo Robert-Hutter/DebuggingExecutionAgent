@@ -196,7 +196,7 @@ class BaseAgent(metaclass=ABCMeta):
         self.search_results = self.search_documentation()
         self.dockerfiles = self.find_dockerfiles()
         self.command_stuck = False
-        self.condensed_history = []
+        #self.condensed_history = []
         self.unified_summary = None
 
     def to_dict(self):
@@ -774,12 +774,15 @@ class BaseAgent(metaclass=ABCMeta):
         workflows_summary = ""
         if self.found_workflows and self.customize["WORKFLOWS_SEARCH"]:
             definitions_prompt += "\n\n"
-            #"The following workflow files might contain information on how to setup the project and run test cases. We extracted the most important installation steps found in those workflows and turned them into a bash script. This might be useful later on when building/installing and testing the project. However, you might need to adapt them to your current setup (e.g, docker container, language version...). These files also give inspiration of packages to install and their versions. It is recommeneded to pick the newest version.\n"
+            "The following workflow files might contain information on how to setup the project and run test cases. However, you might need to adapt them to your task and goal current setup (e.g, docker container, language version...). In case the file are not relevant ro not suitable, just ignore them.\n"
             for w in self.found_workflows:
                 wn = w.split("/")[-1] if "/" in w else w
-                workflows_summary += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(
-                    wn, 
-                    self.found_workflows_summary.get(w, self.workflow_to_script(w))) 
+                with open(w) as wfp:
+                    w_content = wfp.read()
+                definitions_prompt += "File: wn \n```\n{}\n```\n".format(w_content)
+                #workflows_summary += "\nWorkflow file: {}\nExtracted installation steps:\n{}\n".format(
+                #    wn, 
+                #    self.found_workflows_summary.get(w, self.workflow_to_script(w))) 
         
         if self.search_results and self.customize["WEB_SEARCH"]:
             #definitions_prompt += "\nWe searched on google for installing / building {} from source code on Ubuntu/Debian.".format(self.project_path)
@@ -791,30 +794,36 @@ class BaseAgent(metaclass=ABCMeta):
                 merged_summary += "Web page url: {}\n".format(w_result["url"])
                 merged_summary += "Summary of page content: {}\n\n".format(w_result["analysis"])
         
+            merged_summary += "Dockerfiles:\n"
+            for file in self.dockerfiles:
+                merged_summary += "\n{}\n```\n".format(file.replace("execution_agent_workspace/", ""))
+                with open(file) as dfp:
+                    df_content = dfp.read()
+                merged_summary += df_content
+                merged_summary += "\n```\n"
 
             if not self.unified_summary:
-                s_prompt = "You are an expert in developing and deploying software. Particularly, you are good at creating environment for installing and setting up arbitrary projects from source code in a dev-environment that is suitable for running tests. In addition you know how to run test suites of different projects in different languages and different testing and building frameworks. Use this ability to produce an easy to follow structured guide from the given information."
+                s_prompt = "You are an expert in developing and deploying software. Particularly, you are good at creating environment for installing and setting up arbitrary projects from source code in a dev-environment that is suitable for running tests. In addition you know how to run test suites of different projects in different languages and different testing and building frameworks. Use this ability to produce information context that I am going to include in the prompt of and LLM (your answer should be ready to copy paste without edits.)"
 
                 with open("prompt_files/search_workflows_summary") as sws:
                     query = sws.read()
-
-                print("-"*50)
-                print(workflows_summary)
-                print("-"*50)
-                print(merged_summary)
-                print("-"*50)
                 query = query.format(self.project_path) 
                 query+= merged_summary
                 query+="\n<--- End of search resutls"
-                query+= "--> Workflows content (summarized and rephrased):\n"
-                query+= workflows_summary
-                query+="\n<--- End of workflows content"
+                print(merged_summary)
                 self.unified_summary = ask_llm(query, s_prompt)
 
-            definitions_prompt += self.unified_summary
+            definitions_prompt += "Summary of some info that I already know about the repo:\n```\n" + self.unified_summary + "\n```\n"
 
         if self.dockerfiles and self.customize["WORKFLOWS_SEARCH"]:
-            definitions_prompt += "\n\n We found the following dockerfile scripts within the repo. The dockerfile scripts might help you build a suitable docker image for this repository: "+ " ,".join(self.dockerfiles) + "\n"
+            definitions_prompt += "\n\n We found the following dockerfile scripts within the repo. The dockerfile scripts might help you build a suitable docker image for this repository: "+ " ,".join(self.dockerfiles).replace("execution_agent_workspace/", "") + "\n"
+            for file in self.dockerfiles:
+                definitions_prompt += "\n{}\n```\n".format(file.replace("execution_agent_workspace/", ""))
+                with open(file) as dfp:
+                    df_content = dfp.read()
+                definitions_prompt += df_content
+                definitions_prompt += "\n```\n"
+            
 
         if len(self.history) > 2:
             last_command = self.history[-2]
@@ -822,7 +831,7 @@ class BaseAgent(metaclass=ABCMeta):
             last_command_section = "{}\n".format(last_command.content)
             append_messages.append(Message("assistant", last_command_section))
             result_last_command = "The result of executing that last command is:\n {}".format(command_result.content)
-            append_messages.append((Message("user", result_last_command + "\nReminder of the sequence of commands executed so far and a condense summary of their results:\n" + "\n".join(self.condensed_history) + "\nEND OF REMINDER ABOUT SEQUENCE OF COMMANDS EXECUTED SO FAR.\n")))
+            append_messages.append((Message("user", result_last_command )))
 
         if self.cycle_type == "CMD":
             cycle_instruction = self.cmd_cycle_instruction

@@ -8,20 +8,32 @@ COMMAND_CATEGORY_TITLE = "File Operations"
 import contextlib
 import hashlib
 import os
+import re
 import os.path
 from pathlib import Path
 from typing import Generator, Literal
+
+import xml.etree.ElementTree as ET
+import yaml
 
 from autogpt.agents.agent import Agent
 from autogpt.command_decorator import command
 from autogpt.logs import logger
 from autogpt.memory.vector import MemoryItem, VectorMemory
-from autogpt.commands.docker_helpers_static import build_image, start_container, execute_command_in_container, write_string_to_file, read_file_from_container, check_image_exists
+from autogpt.commands.docker_helpers_static import (
+    build_image,
+    start_container,
+    execute_command_in_container,
+    write_string_to_file,
+    read_file_from_container,
+    check_image_exists,
+    exec_in_screen_and_get_log,
+    textify_output
+    )
+
 from .decorators import sanitize_path_arg
 from .file_operations_utils import read_textual_file
 
-import xml.etree.ElementTree as ET
-import yaml
 
 def xml_to_dict(element):
     """ Recursively converts XML elements to a dictionary. """
@@ -37,13 +49,10 @@ def convert_xml_to_yaml(xml_file):
     # Parse the XML file
     tree = ET.parse(xml_file)
     root = tree.getroot()
-    
     # Convert XML to a dictionary
     xml_dict = xml_to_dict(root)
-    
     # Convert the dictionary to a YAML string
     yaml_str = yaml.dump(xml_dict, default_flow_style=False)
-    
     return yaml_str
 
 Operation = Literal["write", "append", "delete"]
@@ -183,8 +192,10 @@ def read_file(file_path: str, agent: Agent) -> str:
             project_path = agent.project_path
             if file_path.lower().endswith("xml"):
                 yaml_content = convert_xml_to_yaml(os.path.join(workspace, project_path, file_path))
-                return "The xml file was converted to yaml format for better readability:\n"+ yaml_content
-        
+                return \
+                    "The xml file was converted to yaml format for better readability:\n{}".format(
+                    yaml_content
+                )
             content = read_textual_file(os.path.join(workspace, project_path, file_path), logger)
             return content
             # TODO: invalidate/update memory when file is edited
@@ -196,10 +207,17 @@ def read_file(file_path: str, agent: Agent) -> str:
         except Exception as e:
             return f"Error: {str(e)}"
     else:
-        return "The read_file tool always assumes that you are in directory {}\n".format(os.path.join("/app", agent.project_path)) + \
-        "This means that the read_file tool is trying to read the file from: {}\n".format(os.path.join("/app", agent.project_path, file_path)) + \
+        return "The read_file tool always assumes that you are in directory {}\n".format(
+            os.path.join("/app", agent.project_path)
+            ) + \
+        "This means that the read_file tool is trying to read the file from: {}\n".format(
+            os.path.join("/app", agent.project_path, file_path)
+            ) + \
         "If this returns an error or this is not the path you meant, you should explicitly pass an absolute file path to the read_file tool[REMEMBER THIS DETAIL].\n" + \
-        read_file_from_container(agent.container, os.path.join("/app", agent.project_path, file_path))
+        read_file_from_container(
+            agent.container,
+            os.path.join("/app", agent.project_path, file_path)
+            )
 
 
 def ingest_file(
@@ -231,10 +249,8 @@ def update_dockerfile_content(dockerfile_content: str) -> str:
     lines = dockerfile_content.splitlines()
     modified_lines = []
     in_run_command = False
-
     for line in lines:
-        stripped_line = line.strip()
-        
+        stripped_line = line.strip()      
         # Check if the line starts with 'RUN' and is not a continuation of a previous 'RUN' command
         if stripped_line.startswith("RUN ") and not in_run_command:
             in_run_command = True
@@ -242,7 +258,9 @@ def update_dockerfile_content(dockerfile_content: str) -> str:
                 modified_lines.append(line.rstrip())
             else:
                 # Add || exit 0 with an error message
-                modified_lines.append(line.rstrip() + " || { echo \"Command failed with exit code $?\"; exit 0; }")
+                modified_lines.append(
+                    line.rstrip() + " || { echo \"Command failed with exit code $?\"; exit 0; }"
+                )
                 in_run_command = False
         elif in_run_command:
             # Check if the line ends with '\', which indicates continuation
@@ -251,7 +269,9 @@ def update_dockerfile_content(dockerfile_content: str) -> str:
             else:
                 in_run_command = False
                 # Add || exit 0 with an error message
-                modified_lines.append(line.rstrip() + " || { echo \"Command failed with exit code $?\"; exit 0; }")
+                modified_lines.append(
+                    line.rstrip() + " || { echo \"Command failed with exit code $?\"; exit 0; }"
+                )
         else:
             modified_lines.append(line)
 
@@ -274,129 +294,150 @@ def update_dockerfile_content(dockerfile_content: str) -> str:
     },
     aliases=["write_file", "create_file"],
 )
-#@sanitize_path_arg("filename")
 def write_to_file(filename: str, text: str, agent: Agent) -> str:
-    """Write text to a file
+    """
+    Robustly write text to file or container with Docker handling.
 
     Args:
-        filename (str): The name of the file to write to
-        text (str): The text to write to the file
+        filename: Relative path under the workspace/project or absolute path in container.
+        text: Content to write.
+        agent: Execution agent with workspace, project_path, container, and helpers.
 
     Returns:
-        str: A message indicating success or failure
+        Status message indicating success or detailed failure.
     """
-    if "COPY" in text:
-        return "The usage of command 'COPY' is prohibited inside the Dockerfile script. You should just clone the repository inside the docker images and all the files of that repository would be there. No need to copy."
-    agent.written_files.append((filename, text))
-    if not agent.container:
-        try:
-            workspace = agent.workspace_path
-            print("AGENT RPOJECT PATH:::::::", agent.project_path)
-            if (agent.project_path + "/") in filename:
-                print("PATH TAKEN FROM HERE 1111")
-                full_path = os.path.join(workspace, filename)
-            else:
-                full_path = os.path.join(workspace, agent.project_path, filename)
+    # Normalize filename for Dockerfile detection; preserve original for container writes
+    normalized = os.path.normpath(filename)
+    base = os.path.basename(normalized)
+    is_dockerfile = base.lower() == 'dockerfile' or base.lower().endswith('.dockerfile')
 
-            with open(full_path, "w", encoding="utf-8") as f:
-                f.write(text)
-            
-            log_operation("write", filename, agent, "STATIC CHECK SUM WAS WRITTEN FROM file_operations:write_to_file")
-            
-            print("DOCKER FILE WAS WRITTEN TO ------ ", full_path)
-            
-            if "dockerfile" in filename.lower():
-                image_log = "IMAGE ALREADY EXISTS"
-                if len(text.split("\n")) > 30 or len(text.split("&&")) > 30:
-                    return "Dockerfile is too long. Focus on a minimally functional docker file that mostly include image, system package and language runtime packages. The project sepecific dependencies (+building/testing) should be installed later through terminal after having a running container."
-                if not check_image_exists(agent.project_path.lower()+"_image:ExecutionAgent"):
-                    image_log = build_image(os.path.join(workspace, agent.project_path), agent.project_path.lower()+"_image:ExecutionAgent")
-                    if image_log.startswith("An error occurred while building the Docker image"):
-                        return "The following error occured while trying to build a docker image from the docker script you provide (if the error persists, try to simplify your docker script), please fix it:\n" + image_log
-                container = start_container(agent.project_path.lower()+"_image:ExecutionAgent")
-                if container is not None:
-                    agent.container = container
-                    cwd = execute_command_in_container(container, "pwd")
-                    return image_log + "\nContainer launched successfuly\n" + "\nThe current working directory within the container is: {}".format(cwd)
-                else:
-                    return str(image_log) + "\n" + str(container)
-            return "File written to successfully."
-        except Exception as err:
-            return f"Error: {err}"
-    else:
-        print("I am HERE TRYING TO WRITE FILE IN CONTAINER 191919191919191919919191919119999911111111111111119")
-        print("PROJECT_PATH:", agent.project_path)
-        print("FILENAME:", filename)
-        if "dockerfile" in filename.lower():
-            return "You cannot create another docker image, you already have access to a running container. If a pacakge is missing or error happened during installation, you can debug and fix the problem inside the running container by interacting with the linux_terminal tool."
-        write_result = str(write_string_to_file(agent.container, text, os.path.join("/app", agent.project_path, filename.split("/")[-1])))
-        if write_result=="None":
-            if "setup" in filename.lower() or "install" in filename.lower() or ".sh" in filename.lower():
-                return "installation script was written successfully, you should not run this script. If test cases were not yet run, you should do that with the help of linux_terminal. If you arleady run test cases successfully, you are done with the task."
-            else:
-                return "File written successfully."
-        else:
-            return write_result
-@sanitize_path_arg("filename")
-def append_to_file(
-    filename: str, text: str, agent: Agent, should_log: bool = True
-) -> str:
-    """Append text to a file
+    # Only enforce COPY prohibition in Dockerfiles
+    if is_dockerfile and 'COPY ' in text:
+        return (
+            "Usage of 'COPY' in Dockerfile is prohibited. "
+            "Clone the repository inside the image instead."
+        )
 
-    Args:
-        filename (str): The name of the file to append to
-        text (str): The text to append to the file
-        should_log (bool): Should log output
-
-    Returns:
-        str: A message indicating success or failure
-    """
     try:
-        directory = os.path.dirname(filename)
-        os.makedirs(directory, exist_ok=True)
-        with open(filename, "a", encoding="utf-8") as f:
-            f.write(text)
+        if not agent.container:
+            return _write_locally(normalized, text, agent, is_dockerfile)
+        else:
+            return _write_in_container(filename, text, agent, is_dockerfile)
 
-        if should_log:
-            with open(filename, "r", encoding="utf-8") as f:
-                checksum = text_checksum(f.read())
-            log_operation("append", filename, agent, checksum=checksum)
-
-        return "Text appended successfully."
-    except Exception as err:
-        return f"Error: {err}"
+    except Exception as e:
+        logger.debug("Failed to write file %s", filename)
+        return f"Error writing '{filename}': {e}"
 
 
-@command(
-    "list_files",
-    "Lists Files in a Directory",
-    {
-        "directory": {
-            "type": "string",
-            "description": "The directory to list files in",
-            "required": True,
-        }
-    },
-)
-@sanitize_path_arg("directory")
-def list_files(directory: str, agent: Agent) -> list[str]:
-    """lists files in a directory recursively
+def _write_locally(filename: str, text: str, agent: Agent, is_dockerfile: bool) -> str:
+    # Normalize and reject absolute paths
+    if os.path.isabs(filename):
+        return f"Error: absolute paths are not allowed: {filename}"
+    filename = os.path.normpath(filename)
 
-    Args:
-        directory (str): The directory to search in
+    workspace = os.path.abspath(agent.workspace_path)
+    project = agent.project_path
 
-    Returns:
-        list[str]: A list of files found in the directory
-    """
-    found_files = []
+    # Resolve full path under workspace
+    if filename.startswith(project + os.sep):
+        rel = filename[len(project) + 1:]
+        full_path = os.path.join(workspace, rel)
+    else:
+        full_path = os.path.join(workspace, project, filename)
+    full_path = os.path.abspath(full_path)
 
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if file.startswith("."):
-                continue
-            relative_path = os.path.relpath(
-                os.path.join(root, file), agent.config.workspace_path
+    # Prevent path traversal
+    if not full_path.startswith(workspace + os.sep):
+        return f"Error: path traversal detected: {filename}"
+
+    # Ensure parent directory exists
+    os.makedirs(os.path.dirname(full_path), exist_ok=True)
+
+    # Write file
+    with open(full_path, 'w', encoding='utf-8') as f:
+        f.write(text)
+
+    # Record successful write
+    agent.written_files.append((filename, text))
+    logger.info("Wrote file %s", full_path)
+
+    # Dockerfile-specific workflow
+    if is_dockerfile:
+        return _handle_dockerfile(full_path, text, agent)
+
+    return "File written successfully."
+
+
+def _handle_dockerfile(full_path: str, text: str, agent: Agent) -> str:
+    lines = text.splitlines()
+    run_cmds = sum(1 for line in lines if line.strip().upper().startswith('RUN '))
+
+    if len(lines) > 30 or run_cmds > 20:
+        return (
+            "Dockerfile too long. Keep it minimal: base image, system packages, "
+            "and runtime. Install app dependencies later in a running container."
+        )
+
+    tag = f"{agent.project_path.lower()}_image:executionagent"
+    if not check_image_exists(tag):
+        build_log = build_image(os.path.dirname(full_path), tag)
+        if 'error' in build_log.lower():
+            return (
+                "Error building Docker image. Simplify your Dockerfile and try again:\n"
+                f"{build_log}"
             )
-            found_files.append(relative_path)
 
-    return found_files
+    container = start_container(tag)
+    if not container:
+        return f"Error: failed to start container for image {tag}"
+
+    agent.container = container
+    cwd_raw = execute_command_in_container(container, "pwd")
+    cwd = _sanitize_cwd(cwd_raw)
+    return (
+        f"Image built and container started. Working directory: {cwd}"
+    )
+
+
+def _sanitize_cwd(raw: str) -> str:
+    # Strip control codes and whitespace
+    text = raw.strip()
+    # Take last line only
+    last = text.splitlines()[-1]
+    # Remove any prompt prefix ending with '#' or '$'
+    last = re.sub(r'^.*[#\$]\s*', '', last)
+    return last
+
+
+def _write_in_container(
+    filename: str, text: str, agent: Agent, is_dockerfile: bool
+) -> str:
+    # Prevent new Dockerfile in container
+    if is_dockerfile:
+        return (
+            "Cannot write another Dockerfile after container is running. "
+            "Debug inside with linux_terminal tool."
+        )
+
+    # Determine working directory inside container
+    _, pwd_out, _, stuck = exec_in_screen_and_get_log(agent.container, "pwd")
+    cwd = _sanitize_cwd(pwd_out) if not stuck else f"/app/{agent.project_path}"
+
+    # Determine target path: absolute stays, relative is under cwd
+    if os.path.isabs(filename):
+        target = filename
+    else:
+        target = os.path.normpath(os.path.join(cwd, filename))
+
+    # Write into container at target path
+    result = write_string_to_file(agent.container, text, target)
+    if result is None:
+        agent.written_files.append((filename, text))
+        base = os.path.basename(filename)
+        if base.lower().endswith(('.sh', 'setup', 'install')):
+            return (
+                f"File written successfully to {target}"
+            )
+        return f"File written successfully to {target}"
+
+    return f"Error writing in container: {result}"

@@ -124,10 +124,10 @@ def search_install_doc(project_id):
         content = fetch_webpage(url)
         if content:
             print(f"Analyzing content from: {url}")
-            analysis = analyze_content_with_llm(content, prompt)
+            #analysis = analyze_content_with_llm(content, prompt)
             results.append({
                     'url': url,
-                    'analysis': analysis
+                    'analysis': content
                 })
     
     # Step 3: Save the search query and analysis results to a folder

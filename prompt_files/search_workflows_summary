@@ -1,42 +1,44 @@
-Use the summaries of the top web pages (from searching “How to install and run tests of the project: {}, from source code in a fresh container”) and the CI/CD script excerpts to create one unified, detailed guide on how to install run test suites of the project in a docker container. Resolve any version conflicts and list every command and package needed.
+Use the summaries of the top web pages (from searching “How to install and run tests of the project: {}, from source code in a fresh container”) to create a section of a prompt that I am going to use to ask an LLM to reason about a project, build it, install it and run its test suite inside of a container. Your task is to create this section of the prompt (just this section, no need to add other parts or task description as I will do that by myself in other sections.). There might be also Dockerfiles relevant to the project as well which you need to infer form them.
     
-    Mention these points:
-    - Reading any relevant documentation files in the repo (e.g., README, project_config) to gather project-specific details before proceeding.
-    - The first step should always contain reading a documentation file like readme, or project_config.yaml, or autobuild.sh (of course assuming that such files exist) 
-    - Creating a minimal Dockerfile that builds a container quickly. Avoid one large, complex Dockerfile that’s likely to fail multiple times. For any risky commands inside the Dockerfile, append || exit 0 to prevent the build from stopping on errors. 
-    - MENTION MANDATORY: Do not add '|| exit 0' to commands you run directly on the Linux terminal. Only add it to RUN instructions within the Dockerfile.
-    - Mention that: No usage of docker commands is needed. Creating a docker image can be done by writing dockerfile to a file and the process of building the image and starting the container would be triggered automatically.
-    - MENTION MANDATORY THIS MESSAGE: YOU ARE NOT ALLOWED TO USE DOCKER COMMANDS IN TERMINAL TOOL MEANING COMMANDS LIKE: "docker something..."
-    - It is also recommeneded that the dockerfile clones the repo and sets the main dir of the repo as the workdir. Template example of dockerfile given:
-    ```
-    FROM python:3.10-slim  # Adjust the base image based on the project's language and dependencies
+Mention these points:
+- MENTION MANDATORY: Do not add '|| exit 0' to commands you run directly on the Linux terminal. Only add it to RUN instructions within the Dockerfile.
+- Mention that: No usage of docker commands is needed. Creating a docker image can be done by writing dockerfile to a file and the process of building the image and starting the container would be triggered automatically.
+- MENTION MANDATORY THIS MESSAGE: YOU ARE NOT ALLOWED TO USE DOCKER COMMANDS IN TERMINAL TOOL MEANING COMMANDS LIKE: "docker something..."
+- It is also recommeneded that the dockerfile clones the repo and sets the main dir of the repo as the workdir. Template example of dockerfile given:
+- Give a reminder to always include a command to install git in the dockerfile so the project cloning happens without issues (see example below). Strongly Emphasize that git installation in the docker file should get its own line and whould not combined with other installations. This is to prevent the installation of git from failing in case one of the other packages causes apt install to fail (See example for how they are separated).
+```
+FROM python:3.10-slim  # Adjust the base image based on the project's language and dependencies
 
-    # Avoid interruptive messages from tzdata
-    ENV TZ=Europe/Berlin
-    RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# Avoid interruptive messages from tzdata
+ENV TZ=Europe/Berlin
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-    # Install git, gcc, bash, and other necessary build tools
-    RUN apt-get update && \
-        apt-get install -y git gcc bash && \
-        apt-get clean && \
-        rm -rf /var/lib/apt/lists/* || exit 0
+# Install git first, separately from other packages
+RUN apt-get update && apt-get install -y git
 
-    WORKDIR /app
+# Install other relevant packages gcc, bash, and other necessary build tools
+RUN apt-get update && \
+    apt-get install -y gcc bash && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* || exit 0
 
-    # Clone the repository
-    RUN git clone project_git_url || exit 0
+WORKDIR /app
 
-    WORKDIR /app/project_name
+# Clone the repository
+RUN git clone project_git_url || exit 0
 
-    CMD ["bash"]
-    ```
-    - It should be emphasized that the installation of project and its dependencies should be done post creation of the dockerfiles, meaning that the docker file should NOT have project specific dependencies being installed. Focus only on system and langauge runtime packages that are needed.
-    It should be mentioend that once the docker container has been launched:
-    - Install required system packages and language runtimes.
-    - Install any language-specific dependencies (e.g., pip, npm, bundles) exactly as specified in docs or CI scripts, resolving conflicting versions.
-    - Run any setup or migration scripts manually inside the container, referring to project_config or other config files as necessary.
-    - Execute the test suite command-by-command inside the container, ensuring each command completes successfully. If there is a linting step, demonstrate how to run the linter but emphasize that fixing lint errors is not required—focus solely on getting tests to run.
-    - If tests reference database or external services, start those services manually (e.g., via a command) and configure connection settings based on README or project_config before running tests.
-    - If test automation scripts already exist, they should be checked before using them (meaning reading them and trying to understand if the scripts were reazlly meant to be run just like that. Some workflow files might contain scripts or steps relevant to the CI/CD platform which cannot be directly applied or used in our case.)
+WORKDIR /app/project_name
 
-    Summarize the exact commands and package names in the guide so someone can follow step-by-step from a fresh container to a successful test run while adhering to the points mentioend above in your explanation (Do not mention anything about the CI/CD pipeline or whatever just focus on the process of setting up and installing the project in a fresh docker container on a ubuntu machine usually.).
+CMD ["/bin/bash"]
+```
+It should be mentioend that once the docker container has been launched:
+- Install required system packages and language runtimes.
+- Install any language-specific dependencies (e.g., pip, npm, bundles) exactly as specified in docs or CI scripts, resolving conflicting versions.
+- Run any setup or migration scripts manually inside the container, referring to project_config or other config files as necessary.
+
+Summarize the exact commands and package names so someone can get hints on the process while adhering to the points mentioend above in your explanation (Do not mention anything about the CI/CD pipeline or whatever just focus on the parts relevant to the process of setting up and installing the project in a fresh docker container on a ubuntu machine usually.). 
+However, the content of the webpages (and probably dockerfriles) is not garanteed to be all correct and suitable for the task. 
+Meaning that the information might be incomplete, specific to another case or might have some assumptions that we do not know about. 
+Always phrase your summary as possible hints and always mention what could be missing and why it might not work and why looking at other resources to cross check or to find extra instructions or details is useful and would be helpful. 
+The instructions that you produce should sound more like possible suggestions that could work (or not) accompagnied with evidence or thoughts why it could not work and alternatives (specific to the project).
+If there are multiple ways to invoke a command (e.g, different parameters combinations for a build command or different build framework or test frameworks), mention all the variations with such a command and explain all the parameters and the difference between different combinations.

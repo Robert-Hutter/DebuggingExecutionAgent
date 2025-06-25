@@ -387,8 +387,8 @@ def run_interaction_loop(
                 agent.history = agent.history[:-2]
                 
                 agent.commands_and_summary.append(("Call to tool {} with arguments {}".format(command_name, command_args), agent.summary_result))
-                agent.condensed_history.append(
-                    "\nCommand:{}\nResult summary:{}\n---".format(str(command_name) + str(command_args), condense_history(agent.summary_result["summary"])))
+                #agent.condensed_history.append(
+                #    "\nCommand:{}\nResult summary:{}\n---".format(str(command_name) + str(command_args), condense_history(agent.summary_result["summary"])))
                 with open(parsable_log_file) as plf:
                     parsable_content = json.load(plf)
 

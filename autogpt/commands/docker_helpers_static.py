@@ -272,7 +272,7 @@ def execute_command_in_container(container, command):
         output = exec_result.output.decode('utf-8')
         #print(f"Command output:\n{output}")
         
-        THRESH = 180
+        THRESH = 300
         WAIT = 1
         command_threshold = THRESH
         old_command_output = read_file_from_container(container, "/tmp/cmd_result")
@@ -407,7 +407,7 @@ def read_file_from_container(container, file_path):
 
 SCREEN_SESSION = ACTIVE_SCREEN["name"]
 LOG_DIR        = "/tmp"
-THRESH         = 180   # seconds of no change before "stuck"
+THRESH         = 300   # seconds of no change before "stuck"
 WAIT           = 1     # polling interval in seconds
 
 import uuid
@@ -493,9 +493,9 @@ def exec_in_screen_and_get_log(container: Container, cmd: str) -> tuple[int, str
             "The command you executed seems to take some time to finish...\n\n"
             f"Partial output (no change for {THRESH}s):\n{ textify_output(old_output) }\n\n"
             "You can call the linux_terminal again with one of the following options:\n"
-            "  • WAIT which would allow you to wait more for the process to finish if it makes sense based on the partial progress so far.\n"
-            "  • TERMINATE to kill the command if necessary.\n"
-            "  • WRITE:<your text> to send input to a command that is requiring input (some inputs such as [ENTER] might require usage of special characters to represent [ENETER] as a string.\n\n"
+            " WAIT which would allow you to wait more for the process to finish if it makes sense based on the partial progress so far.\n"
+            " TERMINATE to kill the command if necessary.\n"
+            " WRITE:<your text> to send input to a command that is requiring input (some inputs such as [ENTER] might require usage of special characters to represent [ENETER] as a string, e.g, represented as a backslash n or a baskslash r).\n\n"
             + stuck_prompt
         )
         return 1, cleaned, logfile, True
