@@ -195,6 +195,7 @@ class BaseAgent(metaclass=ABCMeta):
         self.found_workflows_summary = {}
         self.search_results = self.search_documentation()
         self.dockerfiles = self.find_dockerfiles()
+        self.dockerfiles = [] if not self.dockerfiles else self.dockerfiles
         self.command_stuck = False
         #self.condensed_history = []
         self.unified_summary = None
@@ -293,6 +294,8 @@ class BaseAgent(metaclass=ABCMeta):
         except Exception as e:
             print(f"An error occurred: {e}")
             return []
+
+        return []
             
     def find_workflows(self, project_name):
         found_files = []
