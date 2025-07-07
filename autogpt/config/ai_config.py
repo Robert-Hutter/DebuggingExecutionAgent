@@ -15,6 +15,44 @@ if TYPE_CHECKING:
     from .config import Config
 
 
+def format_ai_goals(raw_goals):
+    formatted = []
+    for goal in raw_goals:
+        if not isinstance(goal, dict):
+            formatted.append(str(goal).strip())
+            continue
+
+        title, items = next(iter(goal.items()))
+        title = title.strip()
+
+        if not isinstance(items, list):
+            formatted.append(f"{title}: {items}")
+            continue
+
+        # nested dicts → bullets
+        if any(isinstance(it, dict) for it in items):
+            lines = [f"{title}:"]
+            for it in items:
+                if isinstance(it, dict):
+                    sub_title, sub_items = next(iter(it.items()))
+                    # if sub_items isn’t a list, treat it as a single string
+                    if not isinstance(sub_items, list):
+                        lines.append(f"    - {sub_title}: {str(sub_items).strip().rstrip('.')}.")
+                    else:
+                        joined = " ".join(str(x).rstrip(".,") + "." for x in sub_items)
+                        lines.append(f"    - {sub_title}: {joined}")
+                else:
+                    txt = str(it).strip().rstrip(".") + "."
+                    lines.append(f"    - {txt}")
+            formatted.append("\n".join(lines))
+        else:
+            # flat list → one sentence
+            joined = " ".join(str(it).rstrip(".,") + "." for it in items)
+            formatted.append(f"{title}: {joined}")
+    return formatted
+
+
+
 class AIConfig:
     """
     A class object that contains the configuration information for the AI
@@ -72,12 +110,14 @@ class AIConfig:
 
         ai_name = config_params.get("ai_name", "")
         ai_role = config_params.get("ai_role", "")
-        ai_goals = [
-            str(goal).strip("{}").replace("'", "").replace('"', "")
-            if isinstance(goal, dict)
-            else str(goal)
-            for goal in config_params.get("ai_goals", [])
-        ]
+        rawgoals = config_params.get("ai_goals", [])
+        ai_goals = format_ai_goals(rawgoals)
+        #ai_goals = [
+        #    str(goal).strip("{}").replace("'", "").replace('"', "")
+        #    if isinstance(goal, dict)
+        #    else str(goal)
+        #    for goal in config_params.get("ai_goals", [])
+        #]
         api_budget = config_params.get("api_budget", 0.0)
 
         return AIConfig(ai_name, ai_role, ai_goals, api_budget)
@@ -149,11 +189,14 @@ class AIConfig:
             full_prompt_parts.append(f"The OS you are running on is: {os_info}")
 
         if self.ai_goals:
+            # apply your formatter here
+            #formatted_goals = format_ai_goals(self.ai_goals)
             full_prompt_parts["goals"] = [
-                        "## Goals",
-                        "For your task, you must fulfill the following goals:",
-                        *[f"{i+1}. {goal}" for i, goal in enumerate(self.ai_goals)],
-                    ]
+                "## Goals",
+                "For your task, you must fulfill the following goals:",
+                *[f"{i+1}. {goal}" for i, goal in enumerate(self.ai_goals)],
+            ]
+
             
         additional_constraints: list[str] = []
         if self.api_budget > 0.0:

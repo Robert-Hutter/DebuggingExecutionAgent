@@ -21,5 +21,5 @@ ai_role: |
 api_budget: 0.0
 """
 
-with open("ai_settings.yaml", "w") as set_yaml:
-    set_yaml.write(template)
+#with open("ai_settings.yaml", "w") as set_yaml:
+#    set_yaml.write(template)
