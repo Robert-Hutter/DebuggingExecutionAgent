@@ -48,7 +48,6 @@ ftfy==6.2.0
 future-fstrings==1.2.0
 ghp-import==2.1.0
 gitdb==4.0.11
-GitPython==3.1.31
 google-api-core==2.19.0
 google-api-python-client==2.131.0
 google-auth==2.29.0
@@ -219,3 +218,7 @@ whatthepatch==1.0.5
 wrapt==1.16.0
 wsproto==1.2.0
 yarl==1.9.4
+
+reportlab
+websockets
+GitPython==3.1.44

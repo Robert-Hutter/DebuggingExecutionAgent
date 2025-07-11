@@ -67,3 +67,11 @@ openai_token.txt
 # additional files
 TODO
 todo
+
+
+debugger
+logs
+auto_gpt_workspace
+.env
+.vscode
+Python-3*

@@ -11,6 +11,7 @@
     },
 
     "postCreateCommand": "chmod +x .devcontainer/install_python.sh && sudo .devcontainer/install_python.sh",
+    "runArgs": ["--network=host"],
 
     "customizations": {
         "vscode": {

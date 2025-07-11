@@ -39,6 +39,8 @@ from scripts.install_plugin_deps import install_plugin_dependencies
 from autogpt.commands.docker_helpers_static import stop_and_remove
 from autogpt.commands.commands_summary_helper import condense_history
 
+from autogpt.debugger.debugger_client import AgentDebugger
+
 def run_auto_gpt(
     continuous: bool,
     continuous_limit: int,
@@ -224,189 +226,195 @@ def run_interaction_loop(
         config.continuous_mode, config.continuous_limit
     )
     spinner = Spinner("Thinking...", plain_output=config.plain_output)
-
-    def graceful_agent_interrupt(signum: int, frame: Optional[FrameType]) -> None:
-        nonlocal cycle_budget, cycles_remaining, spinner
-        if cycles_remaining in [0, 1, math.inf]:
-            logger.typewriter_log(
-                "Interrupt signal received. Stopping continuous command execution "
-                "immediately.",
-                Fore.RED,
-            )
-            sys.exit()
-        else:
-            restart_spinner = spinner.running
-            if spinner.running:
-                spinner.stop()
-
-            logger.typewriter_log(
-                "Interrupt signal received. Stopping continuous command execution.",
-                Fore.RED,
-            )
-            cycles_remaining = 1
-            if restart_spinner:
-                spinner.start()
-
-    # Set up an interrupt signal for the agent.
-    signal.signal(signal.SIGINT, graceful_agent_interrupt)
-
-    #########################
-    # Application Main Loop #
-    #########################
-
-
-    ## create log file
-    project_path = agent.project_path
-    current_ts = time.time()
-    parsable_log_file = "parsable_logs/{}".format(project_path+str(current_ts)) + ".json"
     
-    with open(parsable_log_file, "w") as plf:
-        json.dump({
-            "project": project_path,
-            "language": agent.hyperparams["language"],
-            "ExecutionAgent_attempt": []
-        }, plf)
+    debugger: AgentDebugger
+    with AgentDebugger('RepairAgent', 'localhost', 8765) as debugger:
+        agent.debugger = debugger
 
-    while cycles_remaining > 0:
-        logger.debug(f"Cycle budget: {cycle_budget}; remaining: {cycles_remaining}")
-        #logger.info("XXXXXXXXXXXXXXXXXXX {} XXXXXXXXXXXXXXXXXXXX".format(agent.cycle_type))
-        if agent.cycle_type != "CMD":
-            #agent.think()
-            agent.cycle_type = "CMD"
-            #logger.info(" YYYYYYYYYYYYYYYYY SUMMARY CYCLE EXECUTED YYYYYYYYYYYYYYYYYYYY")
-            logger.info(str(agent.summary_result))
-            continue
-        ########
-        # Plan #
-        ########
-        # Have the agent determine the next action to take.
-        with spinner:
-            command_name, command_args, assistant_reply_dict = agent.think()
-
-        ###############
-        # Update User #
-        ###############
-        # Print the assistant's thoughts and the next command to the user.
-        update_user(config, ai_config, command_name, command_args, assistant_reply_dict)
-
-        ##################
-        # Get user input #
-        ##################
-        if cycles_remaining == 1:  # Last cycle
-            if not agent.keep_container and agent.container:
-                stop_and_remove(agent.container)
-                os.system("docker system prune -af")
-            exit()
-            user_feedback, user_input, new_cycles_remaining = get_user_feedback(
-                config,
-                ai_config,
-            )
-
-            if user_feedback == UserFeedback.AUTHORIZE:
-                if new_cycles_remaining is not None:
-                    # Case 1: User is altering the cycle budget.
-                    if cycle_budget > 1:
-                        cycle_budget = new_cycles_remaining + 1
-                    # Case 2: User is running iteratively and
-                    #   has initiated a one-time continuous cycle
-                    cycles_remaining = new_cycles_remaining + 1
-                else:
-                    # Case 1: Continuous iteration was interrupted -> resume
-                    if cycle_budget > 1:
-                        logger.typewriter_log(
-                            "RESUMING CONTINUOUS EXECUTION: ",
-                            Fore.MAGENTA,
-                            f"The cycle budget is {cycle_budget}.",
-                        )
-                    # Case 2: The agent used up its cycle budget -> reset
-                    cycles_remaining = cycle_budget + 1
+        def graceful_agent_interrupt(signum: int, frame: Optional[FrameType]) -> None:
+            nonlocal cycle_budget, cycles_remaining, spinner
+            if cycles_remaining in [0, 1, math.inf]:
                 logger.typewriter_log(
-                    "-=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-=",
-                    Fore.MAGENTA,
-                    "",
+                    "Interrupt signal received. Stopping continuous command execution "
+                    "immediately.",
+                    Fore.RED,
                 )
-            elif user_feedback == UserFeedback.EXIT:
-                logger.typewriter_log("Exiting...", Fore.YELLOW)
+                sys.exit()
+            else:
+                restart_spinner = spinner.running
+                if spinner.running:
+                    spinner.stop()
+
+                logger.typewriter_log(
+                    "Interrupt signal received. Stopping continuous command execution.",
+                    Fore.RED,
+                )
+                cycles_remaining = 1
+                if restart_spinner:
+                    spinner.start()
+
+        # Set up an interrupt signal for the agent.
+        signal.signal(signal.SIGINT, graceful_agent_interrupt)
+
+        #########################
+        # Application Main Loop #
+        #########################
+
+
+        ## create log file
+        project_path = agent.project_path
+        current_ts = time.time()
+        parsable_log_file = "parsable_logs/{}".format(project_path+str(current_ts)) + ".json"
+        
+        with open(parsable_log_file, "w") as plf:
+            json.dump({
+                "project": project_path,
+                "language": agent.hyperparams["language"],
+                "ExecutionAgent_attempt": []
+            }, plf)
+
+        while cycles_remaining > 0:
+            logger.debug(f"Cycle budget: {cycle_budget}; remaining: {cycles_remaining}")
+            #logger.info("XXXXXXXXXXXXXXXXXXX {} XXXXXXXXXXXXXXXXXXXX".format(agent.cycle_type))
+            if agent.cycle_type != "CMD":
+                #agent.think()
+                agent.cycle_type = "CMD"
+                #logger.info(" YYYYYYYYYYYYYYYYY SUMMARY CYCLE EXECUTED YYYYYYYYYYYYYYYYYYYY")
+                logger.info(str(agent.summary_result))
+                continue
+            ########
+            # Plan #
+            ########
+            # Have the agent determine the next action to take.
+            with spinner:
+                command_name, command_args, assistant_reply_dict = agent.think()
+
+            ###############
+            # Update User #
+            ###############
+            # Print the assistant's thoughts and the next command to the user.
+            update_user(config, ai_config, command_name, command_args, assistant_reply_dict)
+
+            ##################
+            # Get user input #
+            ##################
+            if cycles_remaining == 1:  # Last cycle
+                if not agent.keep_container and agent.container:
+                    stop_and_remove(agent.container)
+                    os.system("docker system prune -af")
                 exit()
-            else:  # user_feedback == UserFeedback.TEXT
-                command_name = "human_feedback"
-        else:
-            user_input = None
-            # First log new-line so user can differentiate sections better in console
-            logger.typewriter_log("\n")
-            if cycles_remaining != math.inf:
-                # Print authorized commands left value
-                logger.typewriter_log(
-                    "AUTHORISED COMMANDS LEFT: ", Fore.CYAN, f"{cycles_remaining}"
+                user_feedback, user_input, new_cycles_remaining = get_user_feedback(
+                    config,
+                    ai_config,
                 )
 
-        ###################
-        # Execute Command #
-        ###################
-        # Decrement the cycle counter first to reduce the likelihood of a SIGINT
-        # happening during command execution, setting the cycles remaining to 1,
-        # and then having the decrement set it to 0, exiting the application.
-        agent.left_commands = cycles_remaining
-        if agent.max_budget == -1:
-            agent.max_budget = cycles_remaining
-        if command_name != "human_feedback":
-            cycles_remaining -= 1
-        if agent.cycle_type == "CMD":
-            if command_name == "write_to_file":
-                simple_name = command_args["filename"].split("/")[-1] if "/" in command_args["filename"] else command_args["filename"]
-                # todo save written files here
-                if not os.path.exists("experimental_setups/{}/files/{}".format(agent.exp_number, agent.project_path)):
-                    os.system("mkdir experimental_setups/{}/files/{}".format(agent.exp_number, agent.project_path))
+                if user_feedback == UserFeedback.AUTHORIZE:
+                    if new_cycles_remaining is not None:
+                        # Case 1: User is altering the cycle budget.
+                        if cycle_budget > 1:
+                            cycle_budget = new_cycles_remaining + 1
+                        # Case 2: User is running iteratively and
+                        #   has initiated a one-time continuous cycle
+                        cycles_remaining = new_cycles_remaining + 1
+                    else:
+                        # Case 1: Continuous iteration was interrupted -> resume
+                        if cycle_budget > 1:
+                            logger.typewriter_log(
+                                "RESUMING CONTINUOUS EXECUTION: ",
+                                Fore.MAGENTA,
+                                f"The cycle budget is {cycle_budget}.",
+                            )
+                        # Case 2: The agent used up its cycle budget -> reset
+                        cycles_remaining = cycle_budget + 1
+                    logger.typewriter_log(
+                        "-=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-=",
+                        Fore.MAGENTA,
+                        "",
+                    )
+                elif user_feedback == UserFeedback.EXIT:
+                    logger.typewriter_log("Exiting...", Fore.YELLOW)
+                    exit()
+                else:  # user_feedback == UserFeedback.TEXT
+                    command_name = "human_feedback"
+            else:
+                user_input = None
+                # First log new-line so user can differentiate sections better in console
+                logger.typewriter_log("\n")
+                if cycles_remaining != math.inf:
+                    # Print authorized commands left value
+                    logger.typewriter_log(
+                        "AUTHORISED COMMANDS LEFT: ", Fore.CYAN, f"{cycles_remaining}"
+                    )
 
-                files_list = os.listdir("experimental_setups/{}/files/{}".format(agent.exp_number, agent.project_path))
+            ###################
+            # Execute Command #
+            ###################
+            # Decrement the cycle counter first to reduce the likelihood of a SIGINT
+            # happening during command execution, setting the cycles remaining to 1,
+            # and then having the decrement set it to 0, exiting the application.
+            agent.left_commands = cycles_remaining
+            if agent.max_budget == -1:
+                agent.max_budget = cycles_remaining
+            if command_name != "human_feedback":
+                cycles_remaining -= 1
+            if agent.cycle_type == "CMD":
+                if command_name == "write_to_file":
+                    simple_name = command_args["filename"].split("/")[-1] if "/" in command_args["filename"] else command_args["filename"]
+                    # todo save written files here
+                    if not os.path.exists("experimental_setups/{}/files/{}".format(agent.exp_number, agent.project_path)):
+                        os.system("mkdir experimental_setups/{}/files/{}".format(agent.exp_number, agent.project_path))
 
-                with open("experimental_setups/{}/files/{}/{}".format(agent.exp_number, agent.project_path, simple_name+"_{}".format(len(files_list))), "w") as wrf:
-                    wrf.write(command_args["text"])
+                    files_list = os.listdir("experimental_setups/{}/files/{}".format(agent.exp_number, agent.project_path))
 
-            result = agent.execute(command_name, command_args, user_input)
+                    with open("experimental_setups/{}/files/{}/{}".format(agent.exp_number, agent.project_path, simple_name+"_{}".format(len(files_list))), "w") as wrf:
+                        wrf.write(command_args["text"])
 
-            with open(parsable_log_file) as plf:
-                parsable_content = json.load(plf)
+                command_args = debugger.begin_tool_invocation_breakpoint(command_name, command_args)
+                result = agent.execute(command_name, command_args, user_input)
+                result = debugger.end_tool_invocation_breakpoint(result)
 
-            parsable_content["ExecutionAgent_attempt"].append(
-                {
-                    "command_name": command_name,
-                    "command_args": command_args,
-                    "command_result": result,
-                    "prompt_content": agent.prompt_text
-                }
-            )
-
-            with open(parsable_log_file, "w") as plf:
-                json.dump(parsable_content, plf)
-
-            if result is not None:
-                logger.typewriter_log("SYSTEM: ", Fore.YELLOW, result)
-                agent.cycle_type = "SUMMARY"
-                agent.think()
-                agent.history = agent.history[:-2]
-                
-                agent.commands_and_summary.append(("Call to tool {} with arguments {}".format(command_name, command_args), agent.summary_result))
-                #agent.condensed_history.append(
-                #    "\nCommand:{}\nResult summary:{}\n---".format(str(command_name) + str(command_args), condense_history(agent.summary_result["summary"])))
                 with open(parsable_log_file) as plf:
                     parsable_content = json.load(plf)
 
-                parsable_content["ExecutionAgent_attempt"][-1]["result_summary"] = agent.summary_result
+                parsable_content["ExecutionAgent_attempt"].append(
+                    {
+                        "command_name": command_name,
+                        "command_args": command_args,
+                        "command_result": result,
+                        "prompt_content": agent.prompt_text
+                    }
+                )
 
                 with open(parsable_log_file, "w") as plf:
                     json.dump(parsable_content, plf)
 
-                agent.cycle_type = "CMD"
-                parsing_tests = parse_test_results(str(result))
-                if parsing_tests != "No test results found in log file.":
-                    agent.tests_executed = True
-            else:
-                logger.typewriter_log("SYSTEM: ", Fore.YELLOW, "Unable to execute command")
+                if result is not None:
+                    logger.typewriter_log("SYSTEM: ", Fore.YELLOW, result)
+                    agent.cycle_type = "SUMMARY"
+                    agent.think()
+                    agent.history = agent.history[:-2]
+                    
+                    agent.commands_and_summary.append(("Call to tool {} with arguments {}".format(command_name, command_args), agent.summary_result))
+                    #agent.condensed_history.append(
+                    #    "\nCommand:{}\nResult summary:{}\n---".format(str(command_name) + str(command_args), condense_history(agent.summary_result["summary"])))
+                    with open(parsable_log_file) as plf:
+                        parsable_content = json.load(plf)
 
-            if not os.path.exists("experimental_setups/{}/saved_contexts/{}".format(agent.exp_number, agent.project_path)):
-                os.system("mkdir experimental_setups/{}/saved_contexts/{}".format(agent.exp_number, agent.project_path))
-            agent.save_to_file("experimental_setups/{}/saved_contexts/{}/cycle_{}".format(agent.exp_number, agent.project_path, cycle_budget - cycles_remaining))
+                    parsable_content["ExecutionAgent_attempt"][-1]["result_summary"] = agent.summary_result
+
+                    with open(parsable_log_file, "w") as plf:
+                        json.dump(parsable_content, plf)
+
+                    agent.cycle_type = "CMD"
+                    parsing_tests = parse_test_results(str(result))
+                    if parsing_tests != "No test results found in log file.":
+                        agent.tests_executed = True
+                else:
+                    logger.typewriter_log("SYSTEM: ", Fore.YELLOW, "Unable to execute command")
+
+                if not os.path.exists("experimental_setups/{}/saved_contexts/{}".format(agent.exp_number, agent.project_path)):
+                    os.system("mkdir experimental_setups/{}/saved_contexts/{}".format(agent.exp_number, agent.project_path))
+                agent.save_to_file("experimental_setups/{}/saved_contexts/{}/cycle_{}".format(agent.exp_number, agent.project_path, cycle_budget - cycles_remaining))
 
 import re
 

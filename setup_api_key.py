@@ -16,6 +16,20 @@ def replace_placeholder(file_path, placeholder, new_value):
         print(f"Updated {placeholder} in {file_path}")
     except Exception as e:
         print(f"Failed to update {file_path}: {e}")
+        
+def get_key_and_replace(files_and_placeholders):
+    replacement_value = os.getenv("OPENAI_API_KEY")
+    if not replacement_value:
+        print("Please provide your OpenAI API-KEY.")
+        replacement_value = input("OpenAI API-KEY: ").strip()
+        if not replacement_value:
+            print("Error: API key cannot be empty")
+            exit(1)
+    for file_path, placeholder in files_and_placeholders:
+        replace_placeholder(file_path, placeholder, replacement_value)
+    # Save the replacement value to token.txt
+    with open("openai_token.txt", "w") as token_file:
+        token_file.write(replacement_value)
 
 
 def main():
@@ -31,21 +45,10 @@ def main():
             for file_path, placeholder in files_and_placeholders:
                 replace_placeholder(file_path, placeholder, replacement_value)
         else:
-            print("Please provide your OpenAI API-KEY.")
-            replacement_value = input("OpenAI API-KEY: ").strip()
-            for file_path, placeholder in files_and_placeholders:
-                replace_placeholder(file_path, placeholder, replacement_value)
-            # Save the replacement value to token.txt
-            with open("openai_token.txt", "w") as token_file:
-                token_file.write(replacement_value)
+            get_key_and_replace(files_and_placeholders)
     else:
-            print("Please provide your OpenAI API-KEY.")
-            replacement_value = input("OpenAI API-KEY: ").strip()
-            for file_path, placeholder in files_and_placeholders:
-                replace_placeholder(file_path, placeholder, replacement_value)
-            # Save the replacement value to token.txt
-            with open("openai_token.txt", "w") as token_file:
-                token_file.write(replacement_value)
+        get_key_and_replace(files_and_placeholders)
+            
 
 if __name__ == "__main__":
     main()

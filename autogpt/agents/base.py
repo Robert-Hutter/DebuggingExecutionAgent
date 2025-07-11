@@ -30,6 +30,8 @@ from autogpt.commands.docker_helpers_static import start_container, remove_ansi_
 from autogpt.commands.search_documentation import search_install_doc
 from autogpt.commands.commands_summary_helper import condense_history
 
+from autogpt.debugger.debugger_client import AgentDebugger
+
 CommandName = str
 CommandArgs = dict[str, str]
 AgentThoughts = dict[str, Any]
@@ -38,6 +40,7 @@ class BaseAgent(metaclass=ABCMeta):
     """Base class for all Auto-GPT agents."""
 
     ThoughtProcessID = Literal["one-shot"]
+    debugger: AgentDebugger
 
     def __init__(
         self,
@@ -483,7 +486,10 @@ class BaseAgent(metaclass=ABCMeta):
         
         with open(os.path.join("experimental_setups", self.exp_number, "logs", "cycles_list_{}".format(self.project_path.replace("/", ""))), "a+") as patf:
             patf.write(self.cycle_type+"\n")
+        
         # 2) Query the LLM normally
+        if self.debugger:
+            self.debugger.begin_llm_query_breakpoint({'MessageSequence': prompt.raw()})
         raw_response = create_chat_completion(
             prompt,
             self.config,
@@ -496,9 +502,14 @@ class BaseAgent(metaclass=ABCMeta):
         try:
             response_dict = extract_dict_from_response(raw_response.content)
             repetition = self.detect_command_repetition(response_dict)
+            
+            if self.debugger:
+                response_dict = self.debugger.end_llm_query_breakpoint(response_dict)
         except Exception as e:
             # If parsing fails, just treat this as a “no repetition” case and pass through.
             self.cycle_count += 1
+            if self.debugger:
+                raw_response = self.debugger.end_llm_query_breakpoint(raw_response)
             return self.on_response(raw_response, thought_process_id, prompt, instruction)
 
         # 4) If repetition is detected, invoke the “re-planner” sub-call via ask_llm
@@ -555,6 +566,8 @@ class BaseAgent(metaclass=ABCMeta):
             )
 
             # 4.5) Ask the LLM for a “break‐out‐of‐repetition” response
+            if self.debugger:
+                self.debugger.begin_llm_query_breakpoint({'System Prompt': system_prompt, 'Query:' : query})
             llm_response_str = ask_llm(system_prompt, query)
 
             # 4.6) Attempt to parse what the re‐planner returned; if it fails, build a minimal fallback
@@ -581,6 +594,9 @@ class BaseAgent(metaclass=ABCMeta):
                     function_call=replan_function_call,
                 )
                 self.cycle_count += 1
+                
+                if self.debugger:
+                    self.debugger.end_llm_query_breakpoint(extract_dict_from_response(llm_response_str))
                 return self.on_response(
                     replan_chat_response, thought_process_id, prompt, instruction
                 )
@@ -597,6 +613,9 @@ class BaseAgent(metaclass=ABCMeta):
             )
 
             self.cycle_count += 1
+            
+            if self.debugger:
+                self.debugger.end_llm_query_breakpoint(new_response_dict)
             return self.on_response(
                 replan_chat_response, thought_process_id, prompt, instruction
             )
