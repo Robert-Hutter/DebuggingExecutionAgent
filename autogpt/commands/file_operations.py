@@ -380,6 +380,8 @@ def _handle_dockerfile(full_path: str, text: str, agent: Agent) -> str:
 
     tag = f"{agent.project_path.lower()}_image:executionagent"
     if not check_image_exists(tag):
+        if agent.debugger:
+            agent.debugger.post_debug_message(f"Building Docker image from {os.path.dirname(full_path)} with tag {tag}...")
         build_log = build_image(os.path.dirname(full_path), tag)
         if 'error' in build_log.lower():
             return (
@@ -387,7 +389,7 @@ def _handle_dockerfile(full_path: str, text: str, agent: Agent) -> str:
                 f"{build_log}"
             )
 
-    container = start_container(tag)
+    container = start_container(tag, agent)
     if not container:
         return f"Error: failed to start container for image {tag}"
 

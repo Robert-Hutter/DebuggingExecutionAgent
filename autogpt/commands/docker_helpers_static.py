@@ -233,13 +233,16 @@ def build_image(dockerfile_path, tag):
         return None
 import docker
 
-def start_container(image_tag):
+def start_container(image_tag, agent=None):
     client = docker.from_env()
     try:
         print(f"Running container from image {image_tag}...")
+        if agent and agent.debugger: agent.debugger.post_debug_message(f"Running container from image {image_tag}...")
         container = client.containers.run(image_tag, command=["tail", "-f", "/dev/null"], detach=True, tty=True)
         print(f"Container {container.short_id} is running.")
+        if agent and agent.debugger: agent.debugger.post_debug_message(f"Container {container.short_id} is running.")
         print("CREATING SCREEN SESSION")
+        if agent and agent.debugger: agent.debugger.post_debug_message("CREATING SCREEN SESSION")
         create_screen_session(container)
         execute_command_in_container(container, "screen -S my_screen_session -X stuff 'apt update && apt install -y coreutils\\n'")
         return container
