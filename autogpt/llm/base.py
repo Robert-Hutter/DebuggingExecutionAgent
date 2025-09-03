@@ -41,7 +41,38 @@ class Message:
 
     def raw(self) -> MessageDict:
         return {"role": self.role, "content": self.content}
+        
+    @classmethod
+    def fromDict(cls, dict: "MessageDict", type: Optional["MessageType"] = None) -> "Message":
+        """
+        Create a Message instance from a dictionary.
 
+        Args:
+            dict (MessageDict): Dictionary containing 'role' and 'content'.
+            type (MessageType, optional): Type of the message.
+
+        Returns:
+            Message: A new Message instance.
+        """
+        return cls(
+            role=dict["role"],
+            content=dict["content"],
+            type=type
+        )
+        
+    @classmethod
+    def fromDictList(cls, data_list: list["MessageDict"], type: Optional["MessageType"] = None) -> list["Message"]:
+        """
+        Create a list of Message instances from a list of dictionaries.
+
+        Args:
+            data_list (List[MessageDict]): List of dictionaries each containing 'role' and 'content'.
+            type (MessageType, optional): Type of the messages.
+
+        Returns:
+            List[Message]: A list of Message instances.
+        """
+        return [cls.fromDict(data, type=type) for data in data_list]
 
 @dataclass
 class ModelInfo:
@@ -131,6 +162,10 @@ class ChatSequence:
     def insert(self, index: int, *messages: Message):
         for message in reversed(messages):
             self.messages.insert(index, message)
+            
+    def setFromDictList(self, messages: list[MessageDict]):
+        self.messages.clear()
+        self.extend(Message.fromDictList(messages))
 
     @classmethod
     def for_model(

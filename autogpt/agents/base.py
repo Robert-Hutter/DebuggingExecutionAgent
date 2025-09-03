@@ -489,7 +489,11 @@ class BaseAgent(metaclass=ABCMeta):
         
         # 2) Query the LLM normally
         if self.debugger:
-            self.debugger.begin_llm_query_breakpoint({'MessageSequence': prompt.raw()})
+            modifiedMessages = self.debugger.begin_llm_query_breakpoint({'MessageSequence': prompt.raw()})
+            try:
+                prompt.setFromDictList(modifiedMessages['MessageSequence'])
+            except e:
+                pass # Don't apply changes if there's a problem with parsing them.
         raw_response = create_chat_completion(
             prompt,
             self.config,
@@ -567,12 +571,19 @@ class BaseAgent(metaclass=ABCMeta):
 
             # 4.5) Ask the LLM for a “break‐out‐of‐repetition” response
             if self.debugger:
-                self.debugger.begin_llm_query_breakpoint({'System Prompt': system_prompt, 'Query:' : query})
+                modifiedPrompt = self.debugger.begin_llm_query_breakpoint({'System Prompt': system_prompt, 'Query:' : query})
+                try:
+                    system_prompt = modifiedPrompt['System Prompt']
+                    query = modifiedPrompt['Query']
+                except e:
+                    pass # Don't apply changes if there an issue parsing them.
             llm_response_str = ask_llm(system_prompt, query)
 
             # 4.6) Attempt to parse what the re‐planner returned; if it fails, build a minimal fallback
             try:
                 new_response_dict = extract_dict_from_response(llm_response_str)
+                if self.debugger:
+                    new_response_dict = self.debugger.end_llm_query_breakpoint(new_response_dict)
             except Exception:
                 fallback_response = {
                     "thoughts": "Failed to parse the re‐planner response; issuing a repetition_detected stub.",
@@ -583,6 +594,8 @@ class BaseAgent(metaclass=ABCMeta):
                         },
                     },
                 }
+                if self.debugger:
+                    fallback_response = self.debugger.end_llm_query_breakpoint(fallback_response)
                 llm_response_str = json.dumps(fallback_response)
 
                 # Construct a ChatModelResponse from the fallback JSON
@@ -595,8 +608,6 @@ class BaseAgent(metaclass=ABCMeta):
                 )
                 self.cycle_count += 1
                 
-                if self.debugger:
-                    self.debugger.end_llm_query_breakpoint(extract_dict_from_response(llm_response_str))
                 return self.on_response(
                     replan_chat_response, thought_process_id, prompt, instruction
                 )
@@ -614,8 +625,6 @@ class BaseAgent(metaclass=ABCMeta):
 
             self.cycle_count += 1
             
-            if self.debugger:
-                self.debugger.end_llm_query_breakpoint(new_response_dict)
             return self.on_response(
                 replan_chat_response, thought_process_id, prompt, instruction
             )
