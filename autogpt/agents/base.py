@@ -501,19 +501,17 @@ class BaseAgent(metaclass=ABCMeta):
             if self.config.openai_functions
             else None,
         )
+        
+        if self.debugger:
+            raw_response.content = self.debugger.end_llm_query_breakpoint(raw_response.content)
 
         # 3) Try to parse the JSON out of the LLM’s reply, then check repetition
         try:
             response_dict = extract_dict_from_response(raw_response.content)
             repetition = self.detect_command_repetition(response_dict)
-            
-            if self.debugger:
-                response_dict = self.debugger.end_llm_query_breakpoint(response_dict)
         except Exception as e:
             # If parsing fails, just treat this as a “no repetition” case and pass through.
             self.cycle_count += 1
-            if self.debugger:
-                raw_response = self.debugger.end_llm_query_breakpoint(raw_response)
             return self.on_response(raw_response, thought_process_id, prompt, instruction)
 
         # 4) If repetition is detected, invoke the “re-planner” sub-call via ask_llm
@@ -570,20 +568,11 @@ class BaseAgent(metaclass=ABCMeta):
             )
 
             # 4.5) Ask the LLM for a “break‐out‐of‐repetition” response
-            if self.debugger:
-                modifiedPrompt = self.debugger.begin_llm_query_breakpoint({'System Prompt': system_prompt, 'Query:' : query})
-                try:
-                    system_prompt = modifiedPrompt['System Prompt']
-                    query = modifiedPrompt['Query']
-                except e:
-                    pass # Don't apply changes if there an issue parsing them.
             llm_response_str = ask_llm(system_prompt, query)
 
             # 4.6) Attempt to parse what the re‐planner returned; if it fails, build a minimal fallback
             try:
                 new_response_dict = extract_dict_from_response(llm_response_str)
-                if self.debugger:
-                    new_response_dict = self.debugger.end_llm_query_breakpoint(new_response_dict)
             except Exception:
                 fallback_response = {
                     "thoughts": "Failed to parse the re‐planner response; issuing a repetition_detected stub.",
@@ -594,8 +583,6 @@ class BaseAgent(metaclass=ABCMeta):
                         },
                     },
                 }
-                if self.debugger:
-                    fallback_response = self.debugger.end_llm_query_breakpoint(fallback_response)
                 llm_response_str = json.dumps(fallback_response)
 
                 # Construct a ChatModelResponse from the fallback JSON
