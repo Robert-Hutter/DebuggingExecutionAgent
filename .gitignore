@@ -75,3 +75,4 @@ auto_gpt_workspace
 .env
 .vscode
 Python-3*
+search_logs
