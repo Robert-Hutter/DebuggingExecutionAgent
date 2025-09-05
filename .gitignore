@@ -76,3 +76,4 @@ auto_gpt_workspace
 .vscode
 Python-3*
 search_logs
+traces

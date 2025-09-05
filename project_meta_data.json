@@ -1,11 +1,11 @@
 {
     "repetition_handling": "RESTRICT",
-    "project_path": "marshmallow",
-    "project_url": "https://github.com/marshmallow-code/marshmallow",
+    "project_path": "gson",
+    "project_url": "https://github.com/google/gson",
     "budget_control": {
         "name": "NO-TRACK"
     },
     "language": "Python",
-    "image": "marshmallow_image:ExecutionAgent",
-    "keep_container": "FALSE"
+    "image": "gson_image:ExecutionAgent",
+    "keep_container": false
 }
