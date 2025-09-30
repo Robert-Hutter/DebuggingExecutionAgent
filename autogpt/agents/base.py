@@ -30,7 +30,7 @@ from autogpt.commands.docker_helpers_static import start_container, remove_ansi_
 from autogpt.commands.search_documentation import search_install_doc
 from autogpt.commands.commands_summary_helper import condense_history
 
-from autogpt.debugger.debugger_client import AgentDebugger
+from agentstepper.api.debugger import AgentStepper
 
 CommandName = str
 CommandArgs = dict[str, str]
@@ -40,7 +40,7 @@ class BaseAgent(metaclass=ABCMeta):
     """Base class for all Auto-GPT agents."""
 
     ThoughtProcessID = Literal["one-shot"]
-    debugger: AgentDebugger
+    debugger: AgentStepper
 
     def __init__(
         self,

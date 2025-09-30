@@ -39,7 +39,7 @@ from scripts.install_plugin_deps import install_plugin_dependencies
 from autogpt.commands.docker_helpers_static import stop_and_remove
 from autogpt.commands.commands_summary_helper import condense_history
 
-from autogpt.debugger.debugger_client import AgentDebugger
+from agentstepper.api.debugger import AgentStepper
 import git
 
 def run_auto_gpt(
@@ -228,7 +228,7 @@ def run_interaction_loop(
     )
     spinner = Spinner("Thinking...", plain_output=config.plain_output)
     
-    debugger: AgentDebugger
+    debugger: AgentStepper
     repository_path = 'execution_agent_workspace/gson'
     if os.path.exists(os.path.join(repository_path, '.git')):
         repo = git.Repo(repository_path)
@@ -236,7 +236,7 @@ def run_interaction_loop(
             repo.git.add(all=True)
             repo.git.commit('-m', 'Prepare repository for ExecutionAgent')
     
-    with AgentDebugger('ExecutionAgent', 'localhost', 8765, repository_path) as debugger:
+    with AgentStepper('ExecutionAgent', 'localhost', 8765, repository_path) as debugger:
         agent.debugger = debugger
 
         def graceful_agent_interrupt(signum: int, frame: Optional[FrameType]) -> None:
