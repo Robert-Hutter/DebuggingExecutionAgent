@@ -6,6 +6,42 @@ ExecutionAgent is a robust tool leveraging a large language model (LLM) to auton
   <img src="execution_agent.png" alt="Alt text" width="300" height="300">
 </div>
 
+## ⚠️ Important Information Regarding AgentStepper Integration
+
+In the current state of this repository, **AgentStepper** is fully integrated into **ExecutionAgent**.  
+This means that **AgentStepper will automatically become active when running the agent**.  
+
+To ensure correct operation, follow the setup steps below.  
+
+### 1. Start the AgentStepper Core
+
+Before running ExecutionAgent, first start the **AgentStepper Core** service.  
+Then, configure the API integration inside `autogpt/app/main.py:232`:
+```python
+repository_path = 'execution_agent_workspace/gson'
+# ...
+with AgentStepper('ExecutionAgent', 'localhost', 8765, repository_path) as debugger:
+````
+
+Adjust the parameters to match your environment:
+* **Core host** (e.g., `localhost`)
+* **Port** (e.g., `8765`)
+* **Agent workspace** (e.g., 'execution_agent_workspace/gson')
+
+Contact the developer of the agent for more information on which repository path to specify for which project.
+
+### 2. Install the AgentStepper API Package
+
+Make sure the **`agentstepper-api`** Python package is installed in the same environment where ExecutionAgent is executed.
+
+### 3. Configure OpenAI API Access
+
+Set your **OpenAI API key** as an environment variable in your terminal:
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
 ---
 
 ## 📦 Dev Container Setup  
